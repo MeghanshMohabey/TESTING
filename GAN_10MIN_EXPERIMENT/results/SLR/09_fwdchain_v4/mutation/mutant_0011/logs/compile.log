@@ -1,0 +1,7 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/09_fwdchain_v4/mutation/mutant_0011/09_fwdchain_v4.c:10:21: error: missing terminating ‘>’ character
+   10 | #include <string.h<=
+      |                     ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/09_fwdchain_v4/mutation/mutant_0011/09_fwdchain_v4.c:10:10: fatal error: string.h<=: No such file or directory
+   10 | #include <string.h<=
+      |          ^
+compilation terminated.

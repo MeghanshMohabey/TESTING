@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/49_proofsteps_v4/mutation/mutant_0041/49_proofsteps_v4.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/49_proofsteps_v4/mutation/mutant_0041/49_proofsteps_v4.c:44:33: error: expected expression before ‘>=’ token
+   44 |                 if (facts & (1 <>= a)) facts |= (1 << b);
+      |                                 ^~

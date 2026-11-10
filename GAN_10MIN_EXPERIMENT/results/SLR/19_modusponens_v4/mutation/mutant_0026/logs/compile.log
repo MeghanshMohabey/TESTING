@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/19_modusponens_v4/mutation/mutant_0026/19_modusponens_v4.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/19_modusponens_v4/mutation/mutant_0026/19_modusponens_v4.c:38:48: error: expected expression before ‘<=’ token
+   38 |         int implication_holds = !((block_mask ><= i) & 1);
+      |                                                ^~

@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/13_clausesat_v3/mutation/mutant_0033/13_clausesat_v3.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/13_clausesat_v3/mutation/mutant_0033/13_clausesat_v3.c:45:43: error: expected expression before ‘)’ token
+   45 |     for (int v2 = 1; v2 <= MAX_BOUND; v2+-) assign[v2] = (bits >> (v2 - 1)) & 1;
+      |                                           ^

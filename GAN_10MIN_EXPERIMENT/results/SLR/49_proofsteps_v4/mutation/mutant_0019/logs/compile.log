@@ -1,0 +1,8 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/49_proofsteps_v4/mutation/mutant_0019/49_proofsteps_v4.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/49_proofsteps_v4/mutation/mutant_0019/49_proofsteps_v4.c:35:34: error: expected expression before ‘)’ token
+   35 |     for (size_t i = 0; i < n; i-+) {
+      |                                  ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/49_proofsteps_v4/mutation/mutant_0019/49_proofsteps_v4.c:39:17: error: ‘op’ undeclared (first use in this function)
+   39 |         switch (op) {
+      |                 ^~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/49_proofsteps_v4/mutation/mutant_0019/49_proofsteps_v4.c:39:17: note: each undeclared identifier is reported only once for each function it appears in

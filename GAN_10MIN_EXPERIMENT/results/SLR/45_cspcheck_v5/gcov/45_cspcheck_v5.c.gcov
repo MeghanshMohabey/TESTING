@@ -1,0 +1,89 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/SLR/45_cspcheck_v5.c
+        -:    0:Graph:./program-45_cspcheck_v5.gcno
+        -:    0:Data:./program-45_cspcheck_v5.gcda
+        -:    0:Runs:5655
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 45  Family: cspcheck  Variant: 5 (Sensor Network)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 5655 returned 100% blocks executed 56%
+     5655:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     5655:   16:    FILE *f = stdin;
+     5655:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5655
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     5655:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 5655
+    5655*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5655
+call    2 never executed
+     5655:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:typedef struct { int a, b, require_equal; } Constraint;
+        -:   27:
+        -:   28:/* Domain: Sensor Network */
+        -:   29:static const Constraint CONSTRAINTS[] = {
+        -:   30:    {0, 1, 1},
+        -:   31:    {1, 2, 1},
+        -:   32:    {2, 3, 0},
+        -:   33:    {3, 4, 1},
+        -:   34:    {4, 5, 0},
+        -:   35:    {5, 6, 1}
+        -:   36:};
+        -:   37:#define NUM_CONSTRAINTS ((int)(sizeof(CONSTRAINTS)/sizeof(CONSTRAINTS[0])))
+        -:   38:
+function main called 5655 returned 100% blocks executed 91%
+     5655:   39:int main(int argc, char **argv) {
+        -:   40:    unsigned char buf[2];
+     5655:   41:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 5655
+    5655*:   42:    unsigned int bits = n > 0 ? buf[0] : 0;
+branch  0 taken 5655 (fallthrough)
+branch  1 taken 0
+    5655*:   43:    bits |= (n > 1 ? (unsigned int)buf[1] : 0) << 8;
+branch  0 taken 5655 (fallthrough)
+branch  1 taken 0
+        -:   44:
+        -:   45:    int assign[MAX_BOUND];
+    62205:   46:    for (int i = 0; i < MAX_BOUND; i++) assign[i] = (bits >> i) & 1;
+branch  0 taken 56550
+branch  1 taken 5655 (fallthrough)
+        -:   47:
+     5655:   48:    int satisfied = 1, violated_idx = -1;
+    39585:   49:    for (int c = 0; c < NUM_CONSTRAINTS && c < MAX_BOUND; c++) { /* bounded constraint check */
+branch  0 taken 33930 (fallthrough)
+branch  1 taken 5655
+branch  2 taken 33930
+branch  3 taken 0 (fallthrough)
+    33930:   50:        int eq = (assign[CONSTRAINTS[c].a] == assign[CONSTRAINTS[c].b]);
+    33930:   51:        int ok = CONSTRAINTS[c].require_equal ? eq : !eq;
+branch  0 taken 11310 (fallthrough)
+branch  1 taken 22620
+    33930:   52:        if (!ok) { satisfied = 0; if (violated_idx < 0) violated_idx = c; }
+branch  0 taken 14348 (fallthrough)
+branch  1 taken 19582
+branch  2 taken 5655 (fallthrough)
+branch  3 taken 8693
+        -:   53:    }
+     5655:   54:    printf("SLR_CSPCHECK_V5 satisfied=%d first_violation=%d\n", satisfied, violated_idx);
+call    0 returned 5655
+     5655:   55:    return 0;
+        -:   56:}

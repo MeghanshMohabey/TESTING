@@ -1,0 +1,92 @@
+        -:    0:Source:/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/programs/SLR/46_proofsteps_v1.c
+        -:    0:Graph:./program-46_proofsteps_v1.gcno
+        -:    0:Data:./program-46_proofsteps_v1.gcda
+        -:    0:Runs:6656
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 46  Family: proofsteps  Variant: 1 (Natural Deduction A)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 6656 returned 100% blocks executed 56%
+     6656:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     6656:   16:    FILE *f = stdin;
+     6656:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6656
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     6656:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 6656
+    6656*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6656
+call    2 never executed
+     6656:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:/* Domain: Natural Deduction A */
+        -:   27:#define GOAL_BIT (1 << 9) /* fact 9 is the proof goal */
+        -:   28:
+function main called 6656 returned 100% blocks executed 96%
+     6656:   29:int main(int argc, char **argv) {
+        -:   30:    unsigned char buf[MAX_BOUND];
+     6656:   31:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 6656
+    6656*:   32:    if (n > MAX_BOUND) n = MAX_BOUND; /* at most MAX_BOUND proof steps applied */
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6656
+        -:   33:
+     6656:   34:    int facts = 1; /* fact 0 given as axiom */
+    73216:   35:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 66560
+branch  1 taken 6656 (fallthrough)
+    66560:   36:        int op = buf[i] % 4;
+    66560:   37:        int a = (buf[i] >> 2) % 10;
+    66560:   38:        int b = (buf[i] >> 5) % 8;
+    66560:   39:        switch (op) {
+branch  0 taken 16425
+branch  1 taken 16908
+branch  2 taken 16468
+branch  3 taken 16759
+    16425:   40:            case 0: /* AND-intro: facts a,b known -> derive fact (a+b) mod 10 */
+    16425:   41:                if ((facts & (1 << a)) && (facts & (1 << b))) facts |= (1 << ((a + b) % 10));
+branch  0 taken 4263 (fallthrough)
+branch  1 taken 12162
+branch  2 taken 3358 (fallthrough)
+branch  3 taken 905
+    16425:   42:                break;
+    16908:   43:            case 1: /* OR-intro: fact a known -> derive fact b */
+    16908:   44:                if (facts & (1 << a)) facts |= (1 << b);
+branch  0 taken 4203 (fallthrough)
+branch  1 taken 12705
+    16908:   45:                break;
+    16468:   46:            case 2: /* Modus-ponens-style: fact a known -> derive fact (a+1) mod 10 */
+    16468:   47:                if (facts & (1 << a)) facts |= (1 << ((a + 1) % 10));
+branch  0 taken 4484 (fallthrough)
+branch  1 taken 11984
+    16468:   48:                break;
+    16759:   49:            default: /* NOT-elim-style: fact a known -> derive fact (9-a) */
+    16759:   50:                if (facts & (1 << a)) facts |= (1 << (9 - a));
+branch  0 taken 4949 (fallthrough)
+branch  1 taken 11810
+    16759:   51:                break;
+        -:   52:        }
+        -:   53:    }
+     6656:   54:    int goal_reached = (facts & GOAL_BIT) ? 1 : 0;
+     6656:   55:    printf("SLR_PROOFSTEPS_V1 facts=0x%03x goal_reached=%d\n", facts, goal_reached);
+call    0 returned 6656
+     6656:   56:    return 0;
+        -:   57:}

@@ -1,0 +1,248 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm17’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:104:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  104 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm18’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:115:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  115 |         }printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:120:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  120 |          printf("");//printf("%d\n", 26); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm19’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:142:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  142 |          printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm20’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:161:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  161 |          printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm21’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:169:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  169 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:180:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  180 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:191:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  191 |          printf("");//printf("%d\n", 16); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm22’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:199:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  199 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:210:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  210 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm23’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:233:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  233 |         }printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:244:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  244 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:255:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  255 |          printf("");//printf("%d\n", 19); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm24’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:267:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  267 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm25’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:279:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  279 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:290:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  290 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm26’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:309:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  309 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:324:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  324 |         }printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:338:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  338 |         }printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:349:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  349 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:360:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  360 |          printf("");//printf("%d\n", 16); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:381:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  381 |         }printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:390:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  390 |         }printf("");//printf("%d\n", 26); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:405:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  405 |         }printf("");//printf("%d\n", 19); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:416:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  416 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:424:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  424 |         }printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm27’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:443:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  443 |          printf("");//printf("%d\n", 22); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:448:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  448 |          printf("");//printf("%d\n", 22); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:459:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  459 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm28’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:478:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  478 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:489:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  489 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:500:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  500 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:521:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  521 |         }printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:532:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  532 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:553:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  553 |         }printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:564:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  564 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:575:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  575 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:586:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  586 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:607:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  607 |         }printf("");//printf("%d\n", 16); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm29’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:626:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  626 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm30’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:645:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  645 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm31’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:657:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  657 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:661:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  661 |          printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm32’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:668:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  668 |          printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:679:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  679 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm33’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:686:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  686 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm34’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:711:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  711 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:715:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  715 |          printf("");//printf("%d\n", 26); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm35’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:723:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  723 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:733:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  733 |          printf("");//printf("%d\n", 19); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm36’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:749:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  749 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:760:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  760 |          printf("");//printf("%d\n", 19); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm37’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:768:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  768 |          printf("");//printf("%d\n", 22); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:779:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  779 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:790:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  790 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm38’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:806:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  806 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm39’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:820:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  820 |          printf("");//printf("%d\n", 19); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:824:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  824 |          printf("");//printf("%d\n", 16); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:832:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  832 |         }printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:847:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  847 |         }printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:862:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  862 |         }printf("");//printf("%d\n", 16); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:877:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  877 |         }printf("");//printf("%d\n", 26); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:881:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  881 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:892:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  892 |          printf("");//printf("%d\n", 26); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:913:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  913 |         }printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:924:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  924 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm40’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:946:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  946 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:957:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  957 |          printf("");//printf("%d\n", 26); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm41’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:964:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  964 |          printf("");//printf("%d\n", 17); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:969:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  969 |          printf("");//printf("%d\n", 23); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:974:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  974 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c: In function ‘calculate_outputm42’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:991:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  991 |         }printf("");//printf("%d\n", 18); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:1002:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+ 1002 |          printf("");//printf("%d\n", 24); fflush(stdout);
+      |                 ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/RERS/Prob3-LTL-DS-SEQ-B8/mutation/mutant_0080/Prob3-LTL-DS-SEQ-B8.c:1013:17: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+ 1013 |          printf("");//printf("%d\n", 25); fflush(stdout);
+      |                 ^~

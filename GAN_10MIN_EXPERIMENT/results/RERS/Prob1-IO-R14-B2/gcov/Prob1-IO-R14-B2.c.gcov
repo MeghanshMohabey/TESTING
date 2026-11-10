@@ -1,0 +1,3017 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/RERS/Prob1-IO-R14-B2.c
+        -:    0:Graph:./program-Prob1-IO-R14-B2.gcno
+        -:    0:Data:./program-Prob1-IO-R14-B2.gcda
+        -:    0:Runs:2961
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:#include<stdio.h>
+        -:    5:#include <stdio.h> 
+        -:    6:#include <assert.h>
+        -:    7:#include <math.h>
+        -:    8:#include <stdlib.h>
+        -:    9:
+        -:   10:#define BOUND 2
+        -:   11:int kappa;
+        -:   12:	int inputs[] = {3,1,6,5,2,4};
+        -:   13:
+        -:   14:	 int a378 = 11;
+        -:   15:	 int a28  = 32;
+        -:   16:	 int a195 = 2;
+        -:   17:	 int a262 = 7;
+        -:   18:	 int a363  = 33;
+        -:   19:	 int a106  = 34;
+        -:   20:	 int a83  = 34;
+        -:   21:	 int a145 = 11;
+        -:   22:	 int a52  = 32;
+        -:   23:	 int a43 = 1;
+        -:   24:	 int a172 = 5;
+        -:   25:	 int a196 = 1;
+        -:   26:	 int a170 = 0;
+        -:   27:	 int a93 = 0;
+        -:   28:	 int a302  = 34;
+        -:   29:	 int a292  = 32;
+        -:   30:	 int a126 = 4;
+        -:   31:	 int a332  = 33;
+        -:   32:	 int a34 = 4;
+        -:   33:	 int a62 = 0;
+        -:   34:	 int a271  = 33;
+        -:   35:	 int a155  = 32;
+        -:   36:	 int a312  = 34;
+        -:   37:	 int a179  = 33;
+        -:   38:	 int a117 = 11;
+        -:   39:	 int a46  = 32;
+        -:   40:	 int a124 = 0;
+        -:   41:	 int a23  = 33;
+        -:   42:	 int a235  = 34;
+        -:   43:	 int a371  = 33;
+        -:   44:	 int a97 = 7;
+        -:   45:	 int a81  = 32;
+        -:   46:	 int a209  = 34;
+        -:   47:	 int a385  = 33;
+        -:   48:	 int a152  = 34;
+        -:   49:	 int a63 = 1;
+        -:   50:	 int a166  = 32;
+        -:   51:	 int a280  = 32;
+        -:   52:	 int a218 = 2;
+        -:   53:	 int a213  = 33;
+        -:   54:	 int a139 = 8;
+        -:   55:	 int a267  = 33;
+        -:   56:	 int a153  = 34;
+        -:   57:	 int a1  = 34;
+        -:   58:	 int a340  = 32;
+        -:   59:	 int a20 = 0;
+        -:   60:	 int a160  = 32;
+        -:   61:	 int a101  = 32;
+        -:   62:	 int a311  = 32;
+        -:   63:	 int a85 = 10;
+        -:   64:	 int a16 = 1;
+        -:   65:	 int a185  = 34;
+        -:   66:	 int a49 = 9;
+        -:   67:	 int a55 = 9;
+        -:   68:	 int a128 = 0;
+        -:   69:	 int a274 = 7;
+        -:   70:	 int a32 = 1;
+        -:   71:	 int a30 = 1;
+        -:   72:	 int a307  = 33;
+        -:   73:	 int a26  = 32;
+        -:   74:	 int a309  = 33;
+        -:   75:	 int a300 = 5;
+        -:   76:	 int a141 = 0;
+        -:   77:	 int a3 = 0;
+        -:   78:	 int cf = 1;
+        -:   79:	 int a110  = 32;
+        -:   80:	 int a298  = 32;
+        -:   81:	 int a64 = 1;
+        -:   82:	 int a366 = 9;
+        -:   83:	 int a132 = 7;
+        -:   84:	 int a136 = 1;
+        -:   85:	 int a177  = 32;
+        -:   86:	 int a94  = 33;
+        -:   87:	 int a88  = 32;
+        -:   88:	 int a326  = 33;
+        -:   89:	 int a389  = 32;
+        -:   90:	 int a388 = 7;
+        -:   91:	 int a147 = 0;
+        -:   92:	 int a306  = 33;
+        -:   93:	 int a159  = 33;
+        -:   94:	 int a276  = 34;
+        -:   95:	 int a375 = 5;
+        -:   96:	 int a82 = 1;
+        -:   97:	 int a188  = 33;
+        -:   98:	 int a39  = 34;
+        -:   99:	 int a393 = 5;
+        -:  100:	 int a71 = 0;
+        -:  101:	 int a119  = 32;
+        -:  102:	 int a25  = 32;
+        -:  103:	 int a322 = 10;
+        -:  104:	 int a189 = 0;
+        -:  105:	 int a143 = 9;
+        -:  106:	 int a158  = 33;
+        -:  107:	 int a86 = 6;
+        -:  108:	 int a225  = 34;
+        -:  109:	 int a287 = 11;
+        -:  110:	 int a386  = 34;
+        -:  111:	 int a134 = 5;
+        -:  112:	 int a396  = 34;
+        -:  113:	 int a98 = 8;
+        -:  114:	 int a140  = 33;
+        -:  115:	 int a127 = 9;
+        -:  116:	 int a212 = 9;
+        -:  117:	 int a190  = 32;
+        -:  118:	 int a4 = 1;
+        -:  119:	 int a9 = 0;
+        -:  120:	 int a237  = 32;
+        -:  121:	 int a138  = 33;
+        -:  122:	 int a19  = 34;
+        -:  123:	 int a80 = 1;
+        -:  124:	 int a108  = 32;
+        -:  125:	 int a230 = 13;
+        -:  126:	 int a203 = 5;
+        -:  127:	 int a239  = 34;
+        -:  128:	 int a329 = 9;
+        -:  129:	 int a335 = 7;
+        -:  130:	 int a12  = 32;
+        -:  131:	 int a297  = 32;
+        -:  132:	 int a150 = 1;
+        -:  133:	 int a0 = 1;
+        -:  134:	 int a156 = 0;
+        -:  135:	 int a381 = 0;
+        -:  136:	 int a394  = 32;
+        -:  137:	 int a68 = 4;
+        -:  138:	 int a135  = 33;
+        -:  139:	 int a369  = 34;
+        -:  140:	 int a349  = 33;
+        -:  141:	 int a344  = 33;
+        -:  142:	 int a206  = 34;
+        -:  143:	 int a99 = 0;
+        -:  144:	 int a69 = 10;
+        -:  145:	 int a109  = 33;
+        -:  146:	 int a67 = 0;
+        -:  147:	 int a47 = 0;
+        -:  148:	 int a174  = 33;
+        -:  149:	 int a48 = 1;
+        -:  150:	 int a104 = 1;
+        -:  151:	 int a29 = 11;
+        -:  152:	 int a289  = 33;
+        -:  153:	 int a258 = 5;
+        -:  154:	 int a133  = 33;
+        -:  155:	 int a6  = 32;
+        -:  156:	 int a244  = 33;
+        -:  157:	 int a131 = 1;
+        -:  158:	 int a10  = 34;
+        -:  159:	 int a56 = 7;
+        -:  160:	 int a112 = 1;
+        -:  161:	 int a100  = 34;
+        -:  162:
+        -:  163:
+function errorCheck called 5922 returned 100% blocks executed 19%
+     5922:  164:	int errorCheck() {
+    5922*:  165:	    if((((((a46==34) && (a83==34)) && (a55==12)) && (a158==33)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  166:	    cf = (0);
+    #####:  167:	    { fprintf(stderr, "REACHED_error_0\n"); fflush(stderr); abort(); } //return -1; //error_0: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  168:	    }
+    5922*:  169:	    if((((((a166==32) && (a172==3)) && (a152==34)) && (a3!=1)) && (a86==6))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  170:	    cf = (0);
+    #####:  171:	    { fprintf(stderr, "REACHED_error_1\n"); fflush(stderr); abort(); } //return -1; //error_1: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  172:	    }
+    5922*:  173:	    if((((((a195==1) && (a108==32)) && (a28==33)) && (a158==32)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  174:	    cf = (0);
+    #####:  175:	    { fprintf(stderr, "REACHED_error_2\n"); fflush(stderr); abort(); } //return -1; //error_2: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  176:	    }
+    5922*:  177:	    if((((((a19==33) && (a185==32)) && (a28==33)) && (a3==1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  178:	    cf = (0);
+    #####:  179:	    { fprintf(stderr, "REACHED_error_3\n"); fflush(stderr); abort(); } //return -1; //error_3: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  180:	    }
+    5922*:  181:	    if((((((a68==4) && (a126==4)) && (a82!=1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 5922
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  182:	    cf = (0);
+    #####:  183:	    { fprintf(stderr, "REACHED_error_4\n"); fflush(stderr); abort(); } //return -1; //error_4: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  184:	    }
+    5922*:  185:	    if((((((a85==7) && (a153==32)) && (a109==33)) && (a23==33)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  186:	    cf = (0);
+    #####:  187:	    { fprintf(stderr, "REACHED_error_5\n"); fflush(stderr); abort(); } //return -1; //error_5: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  188:	    }
+    5922*:  189:	    if((((((a160==32) && (a132==3)) && (a124==1)) && (a158==34)) && (a86==4))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  190:	    cf = (0);
+    #####:  191:	    { fprintf(stderr, "REACHED_error_6\n"); fflush(stderr); abort(); } //return -1; //error_6: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  192:	    }
+    5922*:  193:	    if((((((a69==11) && (a127==11)) && (a174==34)) && (a62==1)) && (a86==8))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  194:	    cf = (0);
+    #####:  195:	    { fprintf(stderr, "REACHED_error_7\n"); fflush(stderr); abort(); } //return -1; //error_7: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  196:	    }
+    5922*:  197:	    if((((((a29==12) && (a172==5)) && (a28==34)) && (a3==1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  198:	    cf = (0);
+    #####:  199:	    { fprintf(stderr, "REACHED_error_8\n"); fflush(stderr); abort(); } //return -1; //error_8: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  200:	    }
+    5922*:  201:	    if((((((a34==3) && (a19==34)) && (a195==3)) && (a112==1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  202:	    cf = (0);
+    #####:  203:	    { fprintf(stderr, "REACHED_error_9\n"); fflush(stderr); abort(); } //return -1; //error_9: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  204:	    }
+    5922*:  205:	    if((((((a141!=1) && (a126==0)) && (a82!=1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  206:	    cf = (0);
+    #####:  207:	    { fprintf(stderr, "REACHED_error_10\n"); fflush(stderr); abort(); } //return -1; //error_10: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  208:	    }
+    5922*:  209:	    if((((((a143==7) && (a166==32)) && (a152==32)) && (a23==34)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  210:	    cf = (0);
+    #####:  211:	    { fprintf(stderr, "REACHED_error_11\n"); fflush(stderr); abort(); } //return -1; //error_11: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  212:	    }
+    5922*:  213:	    if((((((a138==33) && (a16!=1)) && (a152==33)) && (a3!=1)) && (a86==6))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  214:	    cf = (0);
+    #####:  215:	    { fprintf(stderr, "REACHED_error_12\n"); fflush(stderr); abort(); } //return -1; //error_12: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  216:	    }
+     5922:  217:	    if((((((a67!=1) && (a52==32)) && (a82==1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5922 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5768 (fallthrough)
+branch  7 taken 154
+branch  8 taken 0 (fallthrough)
+branch  9 taken 5768
+    #####:  218:	    cf = (0);
+    #####:  219:	    { fprintf(stderr, "REACHED_error_13\n"); fflush(stderr); abort(); } //return -1; //error_13: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  220:	    }
+    5922*:  221:	    if((((((a85==8) && (a153==32)) && (a109==33)) && (a23==33)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  222:	    cf = (0);
+    #####:  223:	    { fprintf(stderr, "REACHED_error_14\n"); fflush(stderr); abort(); } //return -1; //error_14: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  224:	    }
+    5922*:  225:	    if((((((a12==34) && (a155==33)) && (a195==2)) && (a112==1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  226:	    cf = (0);
+    #####:  227:	    { fprintf(stderr, "REACHED_error_15\n"); fflush(stderr); abort(); } //return -1; //error_15: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  228:	    }
+    5922*:  229:	    if((((((a29==11) && (a110==33)) && (a152==32)) && (a3!=1)) && (a86==6))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  230:	    cf = (0);
+    #####:  231:	    { fprintf(stderr, "REACHED_error_16\n"); fflush(stderr); abort(); } //return -1; //error_16: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  232:	    }
+    5922*:  233:	    if((((((a93!=1) && (a177==32)) && (a55==10)) && (a158==33)) && (a86==4))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 5922
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  234:	    cf = (0);
+    #####:  235:	    { fprintf(stderr, "REACHED_error_17\n"); fflush(stderr); abort(); } //return -1; //error_17: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  236:	    }
+    5922*:  237:	    if((((((a117==12) && (a110==34)) && (a152==32)) && (a3!=1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  238:	    cf = (0);
+    #####:  239:	    { fprintf(stderr, "REACHED_error_18\n"); fflush(stderr); abort(); } //return -1; //error_18: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  240:	    }
+    5922*:  241:	    if((((((a119==32) && (a185==34)) && (a28==33)) && (a3==1)) && (a86==6))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 5922
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  242:	    cf = (0);
+    #####:  243:	    { fprintf(stderr, "REACHED_error_19\n"); fflush(stderr); abort(); } //return -1; //error_19: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  244:	    }
+    5922*:  245:	    if((((((a138==33) && (a81==34)) && (a55==11)) && (a158==33)) && (a86==4))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  246:	    cf = (0);
+    #####:  247:	    { fprintf(stderr, "REACHED_error_20\n"); fflush(stderr); abort(); } //return -1; //error_20: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  248:	    }
+    5922*:  249:	    if((((((a139==6) && (a155==32)) && (a195==2)) && (a112==1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  250:	    cf = (0);
+    #####:  251:	    { fprintf(stderr, "REACHED_error_21\n"); fflush(stderr); abort(); } //return -1; //error_21: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  252:	    }
+    5922*:  253:	    if((((((a34==0) && (a19==34)) && (a195==3)) && (a112==1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  254:	    cf = (0);
+    #####:  255:	    { fprintf(stderr, "REACHED_error_22\n"); fflush(stderr); abort(); } //return -1; //error_22: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  256:	    }
+    5922*:  257:	    if((((((a19==32) && (a104!=1)) && (a109==32)) && (a23==33)) && (a86==5))){
+branch  0 taken 176 (fallthrough)
+branch  1 taken 5746
+branch  2 taken 0 (fallthrough)
+branch  3 taken 176
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  258:	    cf = (0);
+    #####:  259:	    { fprintf(stderr, "REACHED_error_23\n"); fflush(stderr); abort(); } //return -1; //error_23: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  260:	    }
+    5922*:  261:	    if((((((a117==13) && (a110==34)) && (a152==32)) && (a3!=1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  262:	    cf = (0);
+    #####:  263:	    { fprintf(stderr, "REACHED_error_24\n"); fflush(stderr); abort(); } //return -1; //error_24: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  264:	    }
+    5922*:  265:	    if((((((a97==7) && (a52==34)) && (a82==1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  266:	    cf = (0);
+    #####:  267:	    { fprintf(stderr, "REACHED_error_25\n"); fflush(stderr); abort(); } //return -1; //error_25: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  268:	    }
+    5922*:  269:	    if((((((a106==34) && (a177==34)) && (a55==10)) && (a158==33)) && (a86==4))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  270:	    cf = (0);
+    #####:  271:	    { fprintf(stderr, "REACHED_error_26\n"); fflush(stderr); abort(); } //return -1; //error_26: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  272:	    }
+    5922*:  273:	    if((((((a109==34) && (a127==8)) && (a174==34)) && (a62==1)) && (a86==8))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  274:	    cf = (0);
+    #####:  275:	    { fprintf(stderr, "REACHED_error_27\n"); fflush(stderr); abort(); } //return -1; //error_27: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  276:	    }
+    5922*:  277:	    if((((((a141==1) && (a126==0)) && (a82!=1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  278:	    cf = (0);
+    #####:  279:	    { fprintf(stderr, "REACHED_error_28\n"); fflush(stderr); abort(); } //return -1; //error_28: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  280:	    }
+    5922*:  281:	    if((((((a155==34) && (a147!=1)) && (a152==33)) && (a23==34)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  282:	    cf = (0);
+    #####:  283:	    { fprintf(stderr, "REACHED_error_29\n"); fflush(stderr); abort(); } //return -1; //error_29: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  284:	    }
+    5922*:  285:	    if((((((a140==34) && (a32!=1)) && (a28==32)) && (a3==1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  286:	    cf = (0);
+    #####:  287:	    { fprintf(stderr, "REACHED_error_30\n"); fflush(stderr); abort(); } //return -1; //error_30: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  288:	    }
+    5922*:  289:	    if((((((a190==33) && (a69==13)) && (a124!=1)) && (a158==34)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  290:	    cf = (0);
+    #####:  291:	    { fprintf(stderr, "REACHED_error_31\n"); fflush(stderr); abort(); } //return -1; //error_31: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  292:	    }
+    5922*:  293:	    if((((((a25==33) && (a145==8)) && (a174==32)) && (a62==1)) && (a86==8))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  294:	    cf = (0);
+    #####:  295:	    { fprintf(stderr, "REACHED_error_32\n"); fflush(stderr); abort(); } //return -1; //error_32: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  296:	    }
+    5922*:  297:	    if((((((a85==7) && (a143==7)) && (a131==1)) && (a112!=1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  298:	    cf = (0);
+    #####:  299:	    { fprintf(stderr, "REACHED_error_33\n"); fflush(stderr); abort(); } //return -1; //error_33: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  300:	    }
+    5922*:  301:	    if((((((a56==6) && (a108==34)) && (a28==33)) && (a158==32)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  302:	    cf = (0);
+    #####:  303:	    { fprintf(stderr, "REACHED_error_34\n"); fflush(stderr); abort(); } //return -1; //error_34: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  304:	    }
+    5922*:  305:	    if((((((a98==9) && (a64==1)) && (a131!=1)) && (a112!=1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  306:	    cf = (0);
+    #####:  307:	    { fprintf(stderr, "REACHED_error_35\n"); fflush(stderr); abort(); } //return -1; //error_35: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  308:	    }
+    5922*:  309:	    if((((((a133==32) && (a159==33)) && (a152==34)) && (a23==34)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  310:	    cf = (0);
+    #####:  311:	    { fprintf(stderr, "REACHED_error_36\n"); fflush(stderr); abort(); } //return -1; //error_36: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  312:	    }
+    5922*:  313:	    if((((((a195==0) && (a108==32)) && (a28==33)) && (a158==32)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  314:	    cf = (0);
+    #####:  315:	    { fprintf(stderr, "REACHED_error_37\n"); fflush(stderr); abort(); } //return -1; //error_37: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  316:	    }
+    5922*:  317:	    if((((((a12==33) && (a155==33)) && (a195==2)) && (a112==1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  318:	    cf = (0);
+    #####:  319:	    { fprintf(stderr, "REACHED_error_38\n"); fflush(stderr); abort(); } //return -1; //error_38: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  320:	    }
+    5922*:  321:	    if((((((a39==34) && (a19==33)) && (a195==3)) && (a112==1)) && (a86==7))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  322:	    cf = (0);
+    #####:  323:	    { fprintf(stderr, "REACHED_error_39\n"); fflush(stderr); abort(); } //return -1; //error_39: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  324:	    }
+    5922*:  325:	    if((((((a141==1) && (a132==5)) && (a124==1)) && (a158==34)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  326:	    cf = (0);
+    #####:  327:	    { fprintf(stderr, "REACHED_error_40\n"); fflush(stderr); abort(); } //return -1; //error_40: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  328:	    }
+    5922*:  329:	    if((((((a34==3) && (a143==8)) && (a131==1)) && (a112!=1)) && (a86==7))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  330:	    cf = (0);
+    #####:  331:	    { fprintf(stderr, "REACHED_error_41\n"); fflush(stderr); abort(); } //return -1; //error_41: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  332:	    }
+    5922*:  333:	    if((((((a143==9) && (a166==32)) && (a152==32)) && (a23==34)) && (a86==5))){
+branch  0 taken 5752 (fallthrough)
+branch  1 taken 170
+branch  2 taken 5752 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 5752
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  334:	    cf = (0);
+    #####:  335:	    { fprintf(stderr, "REACHED_error_42\n"); fflush(stderr); abort(); } //return -1; //error_42: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  336:	    }
+    5922*:  337:	    if((((((a135==32) && (a101==34)) && (a52==34)) && (a23==32)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  338:	    cf = (0);
+    #####:  339:	    { fprintf(stderr, "REACHED_error_43\n"); fflush(stderr); abort(); } //return -1; //error_43: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  340:	    }
+    5922*:  341:	    if((((((a29==8) && (a172==5)) && (a28==34)) && (a3==1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  342:	    cf = (0);
+    #####:  343:	    { fprintf(stderr, "REACHED_error_44\n"); fflush(stderr); abort(); } //return -1; //error_44: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  344:	    }
+    5922*:  345:	    if((((((a88==32) && (a147==1)) && (a152==33)) && (a23==34)) && (a86==5))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  346:	    cf = (0);
+    #####:  347:	    { fprintf(stderr, "REACHED_error_45\n"); fflush(stderr); abort(); } //return -1; //error_45: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  348:	    }
+    5922*:  349:	    if((((((a138==32) && (a16!=1)) && (a152==33)) && (a3!=1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  350:	    cf = (0);
+    #####:  351:	    { fprintf(stderr, "REACHED_error_46\n"); fflush(stderr); abort(); } //return -1; //error_46: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  352:	    }
+    5922*:  353:	    if((((((a188==34) && (a172==1)) && (a152==34)) && (a3!=1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  354:	    cf = (0);
+    #####:  355:	    { fprintf(stderr, "REACHED_error_47\n"); fflush(stderr); abort(); } //return -1; //error_47: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  356:	    }
+    5922*:  357:	    if((((((a179==34) && (a100==33)) && (a55==9)) && (a158==33)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  358:	    cf = (0);
+    #####:  359:	    { fprintf(stderr, "REACHED_error_48\n"); fflush(stderr); abort(); } //return -1; //error_48: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  360:	    }
+    5922*:  361:	    if((((((a19==33) && (a172==4)) && (a152==34)) && (a3!=1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  362:	    cf = (0);
+    #####:  363:	    { fprintf(stderr, "REACHED_error_49\n"); fflush(stderr); abort(); } //return -1; //error_49: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  364:	    }
+    5922*:  365:	    if((((((a133==34) && (a126==2)) && (a82!=1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  366:	    cf = (0);
+    #####:  367:	    { fprintf(stderr, "REACHED_error_50\n"); fflush(stderr); abort(); } //return -1; //error_50: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  368:	    }
+    5922*:  369:	    if((((((a3==1) && (a159==32)) && (a152==34)) && (a23==34)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  370:	    cf = (0);
+    #####:  371:	    { fprintf(stderr, "REACHED_error_51\n"); fflush(stderr); abort(); } //return -1; //error_51: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  372:	    }
+    5922*:  373:	    if((((((a134==3) && (a166==34)) && (a152==32)) && (a23==34)) && (a86==5))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  374:	    cf = (0);
+    #####:  375:	    { fprintf(stderr, "REACHED_error_52\n"); fflush(stderr); abort(); } //return -1; //error_52: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  376:	    }
+    5922*:  377:	    if((((((a141!=1) && (a132==5)) && (a124==1)) && (a158==34)) && (a86==4))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 154 (fallthrough)
+branch  3 taken 5768
+branch  4 taken 0 (fallthrough)
+branch  5 taken 154
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  378:	    cf = (0);
+    #####:  379:	    { fprintf(stderr, "REACHED_error_53\n"); fflush(stderr); abort(); } //return -1; //error_53: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  380:	    }
+    5922*:  381:	    if((((((a119==33) && (a185==34)) && (a28==33)) && (a3==1)) && (a86==6))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  382:	    cf = (0);
+    #####:  383:	    { fprintf(stderr, "REACHED_error_54\n"); fflush(stderr); abort(); } //return -1; //error_54: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  384:	    }
+    5922*:  385:	    if((((((a141!=1) && (a190==32)) && (a52==33)) && (a23==32)) && (a86==5))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 5922
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  386:	    cf = (0);
+    #####:  387:	    { fprintf(stderr, "REACHED_error_55\n"); fflush(stderr); abort(); } //return -1; //error_55: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  388:	    }
+    5922*:  389:	    if((((((a6==32) && (a132==6)) && (a124==1)) && (a158==34)) && (a86==4))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  390:	    cf = (0);
+    #####:  391:	    { fprintf(stderr, "REACHED_error_56\n"); fflush(stderr); abort(); } //return -1; //error_56: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  392:	    }
+    5922*:  393:	    if((((((a133==32) && (a126==2)) && (a82!=1)) && (a62!=1)) && (a86==8))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  394:	    cf = (0);
+    #####:  395:	    { fprintf(stderr, "REACHED_error_57\n"); fflush(stderr); abort(); } //return -1; //error_57: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  396:	    }
+    5922*:  397:	    if((((((a46==33) && (a83==34)) && (a55==12)) && (a158==33)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  398:	    cf = (0);
+    #####:  399:	    { fprintf(stderr, "REACHED_error_58\n"); fflush(stderr); abort(); } //return -1; //error_58: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  400:	    }
+    5922*:  401:	    if((((((a26==34) && (a52==32)) && (a55==13)) && (a158==33)) && (a86==4))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5922
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  402:	    cf = (0);
+    #####:  403:	    { fprintf(stderr, "REACHED_error_59\n"); fflush(stderr); abort(); } //return -1; //error_59: assert(0);
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  404:	    }
+     5922:  405:	}
+function calculate_outputm2 called 47 returned 100% blocks executed 96%
+       47:  406: void calculate_outputm2(int input) {
+       47:  407:    if((((a48==1) && (!(a366==11) && (a206==34))) && ((a280==32) && (((a48==1) && ((cf==1) && (input == 4))) || (a196!=1))))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 47 (fallthrough)
+branch  7 taken 0
+branch  8 taken 47 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 0
+branch 12 taken 47 (fallthrough)
+branch 13 taken 0
+branch 14 taken 0 (fallthrough)
+branch 15 taken 47
+    #####:  408:    	 cf = (0);
+    #####:  409:    	a99 = (0);
+    #####:  410:    	a19 = 32 ;
+    #####:  411:    	a104 = (0);
+    #####:  412:    	a63 = (1);
+    #####:  413:    	a109 = 32 ;
+    #####:  414:    	a189 = (0);
+    #####:  415:    	a289 = 33 ;
+    #####:  416:    	a378 = (11);
+    #####:  417:    	a23 = 33 ;
+    #####:  418:    	a86 = (5);
+        -:  419:    	   
+        -:  420:    } 
+       47:  421:    if((((a340==32) && ((a237==32) && (((a150==1) && ((input == 5) && (cf==1))) && (a322==10)))) && (!(a287==8) && (a4==1)))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 1 (fallthrough)
+branch  7 taken 46
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  422:    	 cf = (0);
+        1:  423:    	a375 = (5);
+        1:  424:    	a307 = 33 ;
+        1:  425:    	a369 = 34 ;
+        1:  426:    	a309 = 33 ;
+        1:  427:    	a312 = 34 ;
+        1:  428:    	  printf(""); //printf("%d\n", 26);  
+        -:  429:    } 
+       47:  430:    if(((((a306==33) && ((cf==1) && (input == 1))) || (a209==33)) && ((((a0==1) && (a378==11)) && !(a322==11)) && (a170!=1)))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 46 (fallthrough)
+branch  3 taken 1
+branch  4 taken 45 (fallthrough)
+branch  5 taken 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 46
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  431:    	 cf = (0);
+        1:  432:    	a329 = (9);
+        1:  433:    	a396 = 34 ;
+        1:  434:    	a394 = 32 ;
+        1:  435:    	a298 = 32 ;
+        1:  436:    	  printf(""); //printf("%d\n", 25);  
+        -:  437:    } 
+      47*:  438:    if((((a371==32) || (((input == 3) && (cf==1)) && !(a378==12))) && ((((a326==33) && !(a385==32)) && !(a363==32)) || (a287==7)))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 46
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  439:    	 cf = (0);
+        1:  440:    	a94 = 33 ;
+        1:  441:    	a43 = (1);
+        1:  442:    	a71 = (0);
+        1:  443:    	a209 = 34 ;
+        1:  444:    	a99 = (0);
+        1:  445:    	a19 = 32 ;
+        1:  446:    	a195 = (3);
+        1:  447:    	a112 = (1);
+        1:  448:    	a86 = (7);
+        1:  449:    	  printf(""); //printf("%d\n", 24);  
+        -:  450:    } 
+       47:  451:    if((!(a280==33) && ((a287==7) || ((a366==9) && (((a99==1) || ((a271==32) || ((input == 2) && (cf==1)))) || (a189==1)))))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 47 (fallthrough)
+branch  7 taken 0
+branch  8 taken 47 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 46
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 46
+        1:  452:    	 cf = (0);
+        1:  453:    	a292 = 32 ;
+        1:  454:    	a306 = 33 ;
+        1:  455:    	a363 = 33 ;
+        1:  456:    	a80 = (1);
+        1:  457:    	a332 = 33 ;
+        1:  458:    	  printf(""); //printf("%d\n", 24);  
+        -:  459:    } 
+       47:  460:    if(((((a371==32) || (a262==7)) && (a349==33)) && (!(a363==33) || ((a80!=1) || (!(a292==33) && ((cf==1) && (input == 6))))))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 47 (fallthrough)
+branch  7 taken 0
+branch  8 taken 47 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 0
+branch 12 taken 43 (fallthrough)
+branch 13 taken 4
+branch 14 taken 1 (fallthrough)
+branch 15 taken 42
+        1:  461:    	 cf = (0);
+        1:  462:    	a292 = 32 ;
+        1:  463:    	a297 = 32 ;
+        1:  464:    	a209 = 34 ;
+        1:  465:    	a329 = (9);
+        1:  466:    	a258 = (5);
+        1:  467:    	  printf(""); //printf("%d\n", 24);  
+        -:  468:    } 
+function calculate_outputm1 called 47 returned 100% blocks executed 85%
+       94:  469:} void calculate_outputm1(int input) {
+      47*:  470:    if((((!(a329==10) || !(a311==32)) && (a386==34)) && (((a393==5) && (!(a309==32) && ((a55==9) && (cf==1)))) || (a239==33)))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 47
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 47 (fallthrough)
+branch  7 taken 0
+branch  8 taken 47 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 47
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      47*:  471:    	if((((a363==33) && (!(a239==33) && ((a0!=1) || (((a100==34) && (cf==1)) || !(a213==33))))) && (!(a10==32) && (a381==0)))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 47 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 47
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 taken 47 (fallthrough)
+branch 13 taken 0
+branch 14 taken 47 (fallthrough)
+branch 15 taken 0
+      47*:  472:    		if(((!(a363==33) || ((a71!=1) && (((a267==32) || (a322==10)) && !(a309==32)))) && (((cf==1) && (a1==34)) || !(a307==33)))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 47 (fallthrough)
+branch  7 taken 0
+branch  8 taken 47 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 47
+branch 14 never executed (fallthrough)
+branch 15 never executed
+       47:  473:    			calculate_outputm2(input);
+call    0 returned 47
+        -:  474:    		} 
+        -:  475:    	} 
+        -:  476:    } 
+function calculate_outputm4 called 40 returned 100% blocks executed 82%
+       87:  477:} void calculate_outputm4(int input) {
+      40*:  478:    if(((((input == 2) && (cf==1)) || (a71==1)) && ((a366==9) && (((!(a287==8) && (a0==1)) || (a43!=1)) || !(a322==10))))){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 39
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 39
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  479:    	 cf = (0);
+        1:  480:    	a271 = 33 ;
+        1:  481:    	a274 = (7);
+        1:  482:    	a218 = (2);
+        1:  483:    	a20 = (0);
+        1:  484:    	a213 = 33 ;
+        1:  485:    	  printf(""); //printf("%d\n", 26);  
+        -:  486:    } 
+      40*:  487:    if((((a170!=1) && (((a292==32) || !(a381==0)) || (a99==1))) && ((((input == 6) && (cf==1)) && !(a289==34)) || (a289==34)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 40
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 1 (fallthrough)
+branch  9 taken 39
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 39
+        1:  488:    	 cf = (0);
+        1:  489:    	a311 = 32 ;
+        1:  490:    	a206 = 34 ;
+        1:  491:    	a99 = (0);
+        1:  492:    	a292 = 32 ;
+        1:  493:    	a189 = (0);
+        1:  494:    	  printf(""); //printf("%d\n", 24);  
+        -:  495:    } 
+      40*:  496:    if((((a150==1) && (!(a203==5) || ((a43!=1) || (a235==34)))) && ((((cf==1) && (input == 5)) && !(a322==8)) || (a344==32)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 40 (fallthrough)
+branch  3 taken 0
+branch  4 taken 40 (fallthrough)
+branch  5 taken 0
+branch  6 taken 40 (fallthrough)
+branch  7 taken 0
+branch  8 taken 38 (fallthrough)
+branch  9 taken 2
+branch 10 taken 0 (fallthrough)
+branch 11 taken 38
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 taken 0 (fallthrough)
+branch 15 taken 40
+    #####:  497:    	 cf = (0);
+    #####:  498:    	a100 = 33 ;
+    #####:  499:    	a158 = 33 ;
+    #####:  500:    	a363 = 33 ;
+    #####:  501:    	a312 = 34 ;
+    #####:  502:    	a340 = 32 ;
+    #####:  503:    	a179 = 34 ;
+    #####:  504:    	a311 = 32 ;
+    #####:  505:    	a55 = (9);
+    #####:  506:    	a86 = (4);
+        -:  507:    	   
+        -:  508:    } 
+       40:  509:    if((((a396==33) || (((((cf==1) && (input == 1)) && (a394==32)) || !(a371==33)) || (a196!=1))) && ((a196==1) && (a300==5)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 38 (fallthrough)
+branch  3 taken 2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 37
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+branch  8 taken 39 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 39
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  510:    	 cf = (0);
+        1:  511:    	a94 = 33 ;
+        1:  512:    	a388 = (7);
+        1:  513:    	a150 = (1);
+        1:  514:    	a262 = (7);
+        1:  515:    	a19 = 32 ;
+        1:  516:    	a195 = (3);
+        1:  517:    	a112 = (1);
+        1:  518:    	a86 = (7);
+        1:  519:    	a63 = (1);
+        1:  520:    	  printf(""); //printf("%d\n", 24);  
+        -:  521:    } 
+      40*:  522:    if((((((a99!=1) && (a385==33)) || (a48!=1)) && (a280==32)) && (((a136==1) && ((cf==1) && (input == 3))) && !(a206==32)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 40
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 40 (fallthrough)
+branch  7 taken 0
+branch  8 taken 40 (fallthrough)
+branch  9 taken 0
+branch 10 taken 37 (fallthrough)
+branch 11 taken 3
+branch 12 taken 1 (fallthrough)
+branch 13 taken 36
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  523:    	 cf = (0);
+        1:  524:    	a0 = (1);
+        1:  525:    	a366 = (9);
+        1:  526:    	a94 = 33 ;
+        1:  527:    	a19 = 32 ;
+        1:  528:    	a195 = (3);
+        1:  529:    	a112 = (1);
+        1:  530:    	a258 = (5);
+        1:  531:    	a212 = (9);
+        1:  532:    	a86 = (7);
+        1:  533:    	a312 = 34 ;
+        1:  534:    	  printf(""); //printf("%d\n", 26);  
+        -:  535:    } 
+      40*:  536:    if(((((a63!=1) || (((a287==11) && ((cf==1) && (input == 4))) || !(a349==33))) || (a302==32)) && (!(a280==33) || (a30!=1)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 40 (fallthrough)
+branch  3 taken 0
+branch  4 taken 36 (fallthrough)
+branch  5 taken 4
+branch  6 taken 36 (fallthrough)
+branch  7 taken 0
+branch  8 taken 40 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 40
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  537:    	 cf = (0);
+    #####:  538:    	a158 = 33 ;
+    #####:  539:    	a177 = 34 ;
+    #####:  540:    	a106 = 34 ;
+    #####:  541:    	a230 = (13);
+    #####:  542:    	a156 = (0);
+    #####:  543:    	a55 = (10);
+    #####:  544:    	a225 = 34 ;
+    #####:  545:    	a322 = (10);
+    #####:  546:    	a393 = (5);
+    #####:  547:    	a86 = (4);
+        -:  548:    	   
+        -:  549:    } 
+function calculate_outputm3 called 40 returned 100% blocks executed 92%
+       80:  550:} void calculate_outputm3(int input) {
+      40*:  551:    if((((a170==1) || (!(a244==32) && !(a312==33))) && ((a276==33) || (((a30!=1) || ((a109==32) && (cf==1))) || (a63!=1))))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 40 (fallthrough)
+branch  3 taken 0
+branch  4 taken 40 (fallthrough)
+branch  5 taken 0
+branch  6 taken 40 (fallthrough)
+branch  7 taken 0
+branch  8 taken 40 (fallthrough)
+branch  9 taken 0
+branch 10 taken 40 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 40
+branch 14 never executed (fallthrough)
+branch 15 never executed
+       40:  552:    	if(((!(a297==34) && ((a209==32) || (((a104==1) && (cf==1)) && (a258==5)))) && (((a30!=1) || !(a213==34)) && !(a311==33)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 40 (fallthrough)
+branch  3 taken 0
+branch  4 taken 40 (fallthrough)
+branch  5 taken 0
+branch  6 taken 40 (fallthrough)
+branch  7 taken 0
+branch  8 taken 40 (fallthrough)
+branch  9 taken 0
+branch 10 taken 40 (fallthrough)
+branch 11 taken 0
+branch 12 taken 40 (fallthrough)
+branch 13 taken 0
+branch 14 taken 40 (fallthrough)
+branch 15 taken 0
+      40*:  553:    		if(((((a335==7) && (a312==34)) || (a196!=1)) && (!(a369==34) || (!(a396==34) || ((a300==9) || ((a49==9) && (cf==1))))))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 40
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 40 (fallthrough)
+branch  7 taken 0
+branch  8 taken 40 (fallthrough)
+branch  9 taken 0
+branch 10 taken 40 (fallthrough)
+branch 11 taken 0
+branch 12 taken 40 (fallthrough)
+branch 13 taken 0
+branch 14 taken 40 (fallthrough)
+branch 15 taken 0
+       40:  554:    			calculate_outputm4(input);
+call    0 returned 40
+        -:  555:    		} 
+        -:  556:    	} 
+        -:  557:    } 
+function calculate_outputm6 called 5629 returned 100% blocks executed 95%
+     5669:  558:} void calculate_outputm6(int input) {
+     5629:  559:    if(((!(a322==10) || (!(a213==33) || (!(a393==5) || (a20!=1)))) && ((a71==1) || ((a170!=1) && ((cf==1) && (input == 1)))))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5629 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5629 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5629 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 0
+branch 12 taken 5629 (fallthrough)
+branch 13 taken 0
+branch 14 taken 112 (fallthrough)
+branch 15 taken 5517
+      112:  560:    	 cf = (0);
+      112:  561:    	a63 = (1);
+      112:  562:    	a386 = 34 ;
+      112:  563:    	a235 = 34 ;
+      112:  564:    	a396 = 34 ;
+      112:  565:    	a300 = (5);
+      112:  566:    	a19 = 32 ;
+      112:  567:    	a94 = 33 ;
+      112:  568:    	a195 = (3);
+      112:  569:    	a112 = (1);
+      112:  570:    	a86 = (7);
+      112:  571:    	  printf(""); //printf("%d\n", 24);  
+        -:  572:    } 
+     5629:  573:    if(((!(a335==7) || (!(a386==32) && (a20!=1))) && (!(a280==32) || ((a388==7) && ((a329==7) || ((cf==1) && (input == 5))))))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5629 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5629 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5629 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 0
+branch 12 taken 5517 (fallthrough)
+branch 13 taken 112
+branch 14 taken 105 (fallthrough)
+branch 15 taken 5412
+      105:  574:    	 cf = (0);
+      105:  575:    	a366 = (9);
+      105:  576:    	a174 = 33 ;
+      105:  577:    	a152 = 33 ;
+      105:  578:    	a292 = 32 ;
+      105:  579:    	a132 = (5);
+      105:  580:    	a62 = (1);
+      105:  581:    	a86 = (8);
+      105:  582:    	a375 = (5);
+      105:  583:    	a218 = (2);
+      105:  584:    	  printf(""); //printf("%d\n", 24);  
+        -:  585:    } 
+    5629*:  586:    if(((((((cf==1) && (input == 4)) && (a262==7)) || (a218==0)) && (a189!=1)) && ((a258==5) && (!(a258==1) || !(a302==34))))){
+branch  0 taken 5412 (fallthrough)
+branch  1 taken 217
+branch  2 taken 115 (fallthrough)
+branch  3 taken 5297
+branch  4 taken 0 (fallthrough)
+branch  5 taken 115
+branch  6 taken 0 (fallthrough)
+branch  7 taken 5514
+branch  8 taken 115 (fallthrough)
+branch  9 taken 0
+branch 10 taken 115 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 115
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      115:  587:    	 cf = (0);
+      115:  588:    	a132 = (4);
+      115:  589:    	a143 = (10);
+      115:  590:    	a206 = 34 ;
+      115:  591:    	a80 = (1);
+      115:  592:    	a344 = 33 ;
+      115:  593:    	a131 = (1);
+      115:  594:    	a112 = (0);
+      115:  595:    	a86 = (7);
+      115:  596:    	a340 = 32 ;
+      115:  597:    	a322 = (10);
+      115:  598:    	  printf(""); //printf("%d\n", 25);  
+        -:  599:    } 
+    5629*:  600:    if(((!(a307==34) && ((a326==33) && ((a366==7) || ((input == 3) && (cf==1))))) && (((a4==1) && !(a292==34)) || !(a393==5)))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5629 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5629 (fallthrough)
+branch  5 taken 0
+branch  6 taken 108 (fallthrough)
+branch  7 taken 5521
+branch  8 taken 108 (fallthrough)
+branch  9 taken 0
+branch 10 taken 108 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 108
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      108:  601:    	 cf = (0);
+      108:  602:    	a30 = (1);
+      108:  603:    	a136 = (1);
+      108:  604:    	a158 = 33 ;
+      108:  605:    	a100 = 34 ;
+      108:  606:    	a196 = (1);
+      108:  607:    	a206 = 34 ;
+      108:  608:    	a239 = 34 ;
+      108:  609:    	a1 = 34 ;
+      108:  610:    	a55 = (9);
+      108:  611:    	a86 = (4);
+      108:  612:    	  printf(""); //printf("%d\n", 25);  
+        -:  613:    } 
+     5629:  614:    if((((a0==1) && (((cf==1) && (input == 2)) && !(a396==32))) && ((a30!=1) || ((a322==10) && (!(a274==7) || (a225==34)))))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5189 (fallthrough)
+branch  3 taken 440
+branch  4 taken 100 (fallthrough)
+branch  5 taken 5089
+branch  6 taken 100 (fallthrough)
+branch  7 taken 0
+branch  8 taken 100 (fallthrough)
+branch  9 taken 0
+branch 10 taken 100 (fallthrough)
+branch 11 taken 0
+branch 12 taken 100 (fallthrough)
+branch 13 taken 0
+branch 14 taken 100 (fallthrough)
+branch 15 taken 0
+      100:  615:    	 cf = (0);
+      100:  616:    	a309 = 33 ;
+      100:  617:    	a155 = 32 ;
+      100:  618:    	a63 = (1);
+      100:  619:    	a139 = (9);
+      100:  620:    	a203 = (5);
+      100:  621:    	a300 = (5);
+      100:  622:    	a10 = 34 ;
+      100:  623:    	a195 = (2);
+      100:  624:    	a112 = (1);
+      100:  625:    	a86 = (7);
+      100:  626:    	  printf(""); //printf("%d\n", 26);  
+        -:  627:    } 
+    5629*:  628:    if((((a306==33) || (a212==8)) && (!(a292==34) && ((a170!=1) && (((a150==1) && ((input == 6) && (cf==1))) || !(a307==33)))))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5629
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 taken 5629 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5629 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 97 (fallthrough)
+branch 11 taken 5532
+branch 12 taken 0 (fallthrough)
+branch 13 taken 97
+branch 14 taken 0 (fallthrough)
+branch 15 taken 5532
+       97:  629:    	 cf = (0);
+       97:  630:    	a386 = 34 ;
+       97:  631:    	a218 = (2);
+       97:  632:    	a309 = 33 ;
+       97:  633:    	a23 = 33 ;
+       97:  634:    	a49 = (9);
+       97:  635:    	a104 = (1);
+       97:  636:    	a109 = 32 ;
+       97:  637:    	a30 = (1);
+       97:  638:    	a326 = 33 ;
+       97:  639:    	a86 = (5);
+       97:  640:    	  printf(""); //printf("%d\n", 24);  
+        -:  641:    } 
+function calculate_outputm5 called 5629 returned 100% blocks executed 81%
+    11258:  642:} void calculate_outputm5(int input) {
+    5629*:  643:    if((((((a209==34) && (a0==1)) || (a48!=1)) || !(a302==34)) && (!(a332==34) && ((a386==34) && ((cf==1) && (a152==34)))))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5629
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 0
+branch 12 taken 5629 (fallthrough)
+branch 13 taken 0
+branch 14 taken 5629 (fallthrough)
+branch 15 taken 0
+    5629*:  644:    	if(((((a196==1) && (((a172==5) && (cf==1)) || (a289==34))) && !(a311==33)) && (((a63==1) && (a274==7)) || (a43!=1)))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5629 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 5629
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 5629
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    5629*:  645:    		if((((((a128!=1) && (cf==1)) || (a189==1)) && (a156!=1)) && ((a309==32) || ((a280==32) && (!(a307==32) && (a80==1)))))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5629
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 5629 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 0
+branch 12 taken 5629 (fallthrough)
+branch 13 taken 0
+branch 14 taken 5629 (fallthrough)
+branch 15 taken 0
+     5629:  646:    			calculate_outputm6(input);
+call    0 returned 5629
+        -:  647:    		} 
+        -:  648:    	} 
+        -:  649:    } 
+function calculate_outputm8 called 49 returned 100% blocks executed 82%
+     5678:  650:} void calculate_outputm8(int input) {
+      49*:  651:    if(((((a302==34) || (a203==2)) && !(a225==32)) && ((a225==34) && ((!(a280==32) || ((cf==1) && (input == 2))) && (a394==32))))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 49
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 taken 49 (fallthrough)
+branch  5 taken 0
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 49 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 48
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  652:    	 cf = (0);
+        1:  653:    	a20 = (0);
+        1:  654:    	a94 = 33 ;
+        1:  655:    	a19 = 32 ;
+        1:  656:    	a389 = 32 ;
+        1:  657:    	a274 = (7);
+        1:  658:    	a195 = (3);
+        1:  659:    	a203 = (5);
+        1:  660:    	a48 = (1);
+        1:  661:    	  printf(""); //printf("%d\n", 24);  
+        -:  662:    } 
+      49*:  663:    if((((a20==1) || (((a30==1) || !(a297==32)) && (a213==33))) && ((a48!=1) || (((input == 3) && (cf==1)) && (a212==9))))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 49
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 48
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  664:    	 cf = (0);
+        1:  665:    	a94 = 33 ;
+        1:  666:    	a48 = (1);
+        1:  667:    	a274 = (7);
+        1:  668:    	a63 = (1);
+        1:  669:    	a237 = 32 ;
+        1:  670:    	a385 = 33 ;
+        1:  671:    	a19 = 32 ;
+        1:  672:    	a195 = (3);
+        1:  673:    	  printf(""); //printf("%d\n", 26);  
+        -:  674:    } 
+      49*:  675:    if(((((!(a203==5) || (a235==34)) || (a212==11)) || !(a298==32)) && (!(a230==10) && (((cf==1) && (input == 5)) && (a63==1))))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 49
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 2
+branch 12 taken 0 (fallthrough)
+branch 13 taken 47
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  676:    	 cf = (0);
+    #####:  677:    	a235 = 34 ;
+    #####:  678:    	a143 = (9);
+    #####:  679:    	a311 = 32 ;
+    #####:  680:    	a262 = (7);
+    #####:  681:    	a393 = (5);
+    #####:  682:    	a152 = 32 ;
+    #####:  683:    	a23 = 34 ;
+    #####:  684:    	a292 = 32 ;
+    #####:  685:    	a166 = 32 ;
+    #####:  686:    	a86 = (5);
+        -:  687:    	   
+        -:  688:    } 
+      49*:  689:    if(((!(a244==32) && (a396==34)) && ((((((cf==1) && (input == 4)) && (a47!=1)) || (a244==32)) && !(a309==32)) || (a237==34)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 47
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 0 (fallthrough)
+branch 11 taken 49
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 taken 0 (fallthrough)
+branch 15 taken 49
+    #####:  690:    	 cf = (0);
+    #####:  691:    	a258 = (5);
+    #####:  692:    	a140 = 34 ;
+    #####:  693:    	a32 = (0);
+    #####:  694:    	a10 = 34 ;
+    #####:  695:    	a28 = 32 ;
+    #####:  696:    	a3 = (1);
+    #####:  697:    	a86 = (6);
+    #####:  698:    	a189 = (0);
+    #####:  699:    	a267 = 33 ;
+    #####:  700:    	a381 = (0);
+        -:  701:    	   
+        -:  702:    } 
+      49*:  703:    if(((((a332==33) && ((a340==32) && (a378==11))) || !(a300==5)) && (((a329==7) || ((cf==1) && (input == 6))) || !(a203==5)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 49
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 2
+branch 12 taken 46 (fallthrough)
+branch 13 taken 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 48
+        1:  704:    	 cf = (0);
+        1:  705:    	a10 = 34 ;
+        1:  706:    	a329 = (9);
+        1:  707:    	a239 = 34 ;
+        1:  708:    	a369 = 34 ;
+        1:  709:    	a386 = 34 ;
+        1:  710:    	  printf(""); //printf("%d\n", 25);  
+        -:  711:    } 
+       49:  712:    if((((((((cf==1) && (input == 1)) || (a386==33)) || !(a312==34)) || (a30!=1)) && (a267==33)) && (!(a396==33) && (a340==32)))){
+branch  0 taken 46 (fallthrough)
+branch  1 taken 3
+branch  2 taken 45 (fallthrough)
+branch  3 taken 1
+branch  4 taken 48 (fallthrough)
+branch  5 taken 0
+branch  6 taken 48 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 48
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  713:    	 cf = (0);
+        1:  714:    	a94 = 33 ;
+        1:  715:    	a213 = 33 ;
+        1:  716:    	a381 = (0);
+        1:  717:    	a19 = 32 ;
+        1:  718:    	a271 = 33 ;
+        1:  719:    	a209 = 34 ;
+        1:  720:    	a195 = (3);
+        1:  721:    	a235 = 34 ;
+        1:  722:    	  printf(""); //printf("%d\n", 25);  
+        -:  723:    } 
+function calculate_outputm9 called 53 returned 100% blocks executed 85%
+      102:  724:} void calculate_outputm9(int input) {
+       53:  725:    if(((((a43==1) && (((a189!=1) && ((input == 1) && (cf==1))) || (a311==34))) && !(a267==32)) && ((a306==33) && !(a371==32)))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 53 (fallthrough)
+branch  3 taken 0
+branch  4 taken 1 (fallthrough)
+branch  5 taken 52
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 52
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  726:    	 cf = (0);
+        1:  727:    	a297 = 32 ;
+        1:  728:    	a389 = 32 ;
+        1:  729:    	a10 = 34 ;
+        1:  730:    	a99 = (0);
+        1:  731:    	a239 = 34 ;
+        1:  732:    	  printf(""); //printf("%d\n", 24);  
+        -:  733:    } 
+      53*:  734:    if((((a366==8) || (((a150==1) && ((a271==33) || (a47==1))) || !(a378==11))) && (!(a385==33) || ((input == 2) && (cf==1))))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 53 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 53
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 53 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 52
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  735:    	 cf = (0);
+        1:  736:    	a47 = (0);
+        1:  737:    	a99 = (0);
+        1:  738:    	a280 = 32 ;
+        1:  739:    	a312 = 34 ;
+        1:  740:    	  printf(""); //printf("%d\n", 24);  
+        -:  741:    } 
+      53*:  742:    if(((((a170!=1) && (a0==1)) || !(a378==11)) && ((a289==32) || ((!(a235==32) && ((input == 6) && (cf==1))) && (a375==5))))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 53
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 53 (fallthrough)
+branch  7 taken 0
+branch  8 taken 53 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 52
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  743:    	 cf = (0);
+        1:  744:    	a306 = 33 ;
+        1:  745:    	a292 = 32 ;
+        1:  746:    	a99 = (0);
+        1:  747:    	a212 = (9);
+        1:  748:    	a394 = 32 ;
+        1:  749:    	  printf(""); //printf("%d\n", 26);  
+        -:  750:    } 
+       53:  751:    if(((((((input == 5) && (cf==1)) && !(a258==2)) || (a43!=1)) && (a344==33)) && ((a30!=1) || ((a311==32) && !(a311==33))))){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 52
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 52
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  752:    	 cf = (0);
+        1:  753:    	a344 = 33 ;
+        1:  754:    	a375 = (5);
+        1:  755:    	a311 = 32 ;
+        1:  756:    	a280 = 32 ;
+        1:  757:    	a292 = 32 ;
+        1:  758:    	  printf(""); //printf("%d\n", 25);  
+        -:  759:    } 
+      53*:  760:    if(((((a189!=1) && ((input == 3) && (cf==1))) || (a332==32)) && ((a274==9) || ((!(a225==33) && (a312==34)) || (a230==9))))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 52
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 52
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  761:    	 cf = (0);
+        1:  762:    	a311 = 32 ;
+        1:  763:    	a300 = (5);
+        1:  764:    	a80 = (1);
+        1:  765:    	a262 = (7);
+        1:  766:    	  printf(""); //printf("%d\n", 26);  
+        -:  767:    } 
+      53*:  768:    if((((!(a371==33) || ((((cf==1) && (input == 4)) && (a196==1)) || !(a393==5))) || (a332==32)) && (!(a280==33) || (a388==9)))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 48 (fallthrough)
+branch  3 taken 5
+branch  4 taken 0 (fallthrough)
+branch  5 taken 48
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 53 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 53
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  769:    	 cf = (0);
+    #####:  770:    	a43 = (1);
+    #####:  771:    	a23 = 34 ;
+    #####:  772:    	a366 = (9);
+    #####:  773:    	a155 = 34 ;
+    #####:  774:    	a147 = (0);
+    #####:  775:    	a152 = 33 ;
+    #####:  776:    	a86 = (5);
+    #####:  777:    	a276 = 34 ;
+    #####:  778:    	a344 = 33 ;
+    #####:  779:    	a150 = (1);
+        -:  780:    	   
+        -:  781:    } 
+function calculate_outputm7 called 102 returned 100% blocks executed 82%
+      155:  782:} void calculate_outputm7(int input) {
+     102*:  783:    if((((a394==32) || (a262==6)) && (((a4==1) && ((a322==7) || (((cf==1) && (a195==2)) || !(a289==33)))) && (a329==9)))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 102
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 taken 102 (fallthrough)
+branch  5 taken 0
+branch  6 taken 102 (fallthrough)
+branch  7 taken 0
+branch  8 taken 102 (fallthrough)
+branch  9 taken 0
+branch 10 taken 53 (fallthrough)
+branch 11 taken 49
+branch 12 taken 0 (fallthrough)
+branch 13 taken 53
+branch 14 taken 49 (fallthrough)
+branch 15 taken 0
+      49*:  784:    	if(((((a218==4) || (!(a218==2) || !(a306==34))) && (a276==34)) && (((a386==32) || ((a155==32) && (cf==1))) || !(a329==9)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 49 (fallthrough)
+branch  5 taken 0
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 49 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 49
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      49*:  785:    		if(((((((cf==1) && (a139==9)) || !(a212==9)) || !(a297==32)) || !(a366==9)) && (((a80==1) && !(a206==32)) && !(a393==1)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 49
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 49 (fallthrough)
+branch 11 taken 0
+branch 12 taken 49 (fallthrough)
+branch 13 taken 0
+branch 14 taken 49 (fallthrough)
+branch 15 taken 0
+       49:  786:    			calculate_outputm8(input);
+call    0 returned 49
+        -:  787:    		} 
+        -:  788:    	} 
+        -:  789:    } 
+     102*:  790:    if((((a329==10) || ((((a195==3) && (cf==1)) && (a63==1)) && (a4==1))) && ((!(a329==9) || (a189!=1)) || !(a297==32)))){
+branch  0 taken 102 (fallthrough)
+branch  1 taken 0
+branch  2 taken 56 (fallthrough)
+branch  3 taken 46
+branch  4 taken 53 (fallthrough)
+branch  5 taken 3
+branch  6 taken 53 (fallthrough)
+branch  7 taken 0
+branch  8 taken 53 (fallthrough)
+branch  9 taken 0
+branch 10 taken 53 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 53
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      53*:  791:    	if((((((a196!=1) || (!(a262==7) || !(a385==34))) || (a20==1)) || (a71==1)) && (!(a363==34) && ((a19==32) && (cf==1))))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 53 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 53
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 53 (fallthrough)
+branch 11 taken 0
+branch 12 taken 53 (fallthrough)
+branch 13 taken 0
+branch 14 taken 53 (fallthrough)
+branch 15 taken 0
+      53*:  792:    		if(((!(a309==34) && (!(a375==5) || (((cf==1) && (a94==33)) || (a48!=1)))) && ((!(a381==1) && !(a262==9)) && !(a322==9)))){
+branch  0 taken 53 (fallthrough)
+branch  1 taken 0
+branch  2 taken 53 (fallthrough)
+branch  3 taken 0
+branch  4 taken 53 (fallthrough)
+branch  5 taken 0
+branch  6 taken 0 (fallthrough)
+branch  7 taken 53
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 53 (fallthrough)
+branch 11 taken 0
+branch 12 taken 53 (fallthrough)
+branch 13 taken 0
+branch 14 taken 53 (fallthrough)
+branch 15 taken 0
+       53:  793:    			calculate_outputm9(input);
+call    0 returned 53
+        -:  794:    		} 
+        -:  795:    	} 
+        -:  796:    } 
+function calculate_outputm11 called 55 returned 100% blocks executed 84%
+      157:  797:} void calculate_outputm11(int input) {
+      55*:  798:    if((((a388==7) || !(a335==7)) && ((((!(a386==34) || ((input == 3) && (cf==1))) || (a196!=1)) || (a150!=1)) && !(a274==11)))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 55
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 taken 55 (fallthrough)
+branch  5 taken 0
+branch  6 taken 1 (fallthrough)
+branch  7 taken 54
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+branch 10 taken 54 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 54
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  799:    	 cf = (0);
+        1:  800:    	a340 = 32 ;
+        1:  801:    	a4 = (1);
+        1:  802:    	a225 = 34 ;
+        1:  803:    	a206 = 34 ;
+        1:  804:    	a189 = (0);
+        1:  805:    	  printf(""); //printf("%d\n", 25);  
+        -:  806:    } 
+      55*:  807:    if((((a363==33) && ((((a99==1) || ((cf==1) && (input == 6))) || (a366==10)) || !(a388==7))) && ((a80==1) || (a225==33)))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 55 (fallthrough)
+branch  3 taken 0
+branch  4 taken 54 (fallthrough)
+branch  5 taken 1
+branch  6 taken 53 (fallthrough)
+branch  7 taken 1
+branch  8 taken 54 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 54
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  808:    	 cf = (0);
+        1:  809:    	a322 = (10);
+        1:  810:    	a19 = 32 ;
+        1:  811:    	a94 = 33 ;
+        1:  812:    	a203 = (5);
+        1:  813:    	a363 = 33 ;
+        1:  814:    	a189 = (0);
+        1:  815:    	a196 = (1);
+        1:  816:    	a195 = (3);
+        1:  817:    	a112 = (1);
+        1:  818:    	  printf(""); //printf("%d\n", 24);  
+        -:  819:    } 
+      55*:  820:    if((((!(a276==32) && ((a385==33) && (a258==5))) || (a99==1)) && ((((cf==1) && (input == 5)) && (a47!=1)) || !(a312==34)))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 55 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 55
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 53 (fallthrough)
+branch  9 taken 2
+branch 10 taken 1 (fallthrough)
+branch 11 taken 52
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 54
+        1:  821:    	 cf = (0);
+        1:  822:    	a386 = 34 ;
+        1:  823:    	a170 = (0);
+        1:  824:    	a262 = (7);
+        1:  825:    	a385 = 33 ;
+        1:  826:    	a196 = (1);
+        1:  827:    	  printf(""); //printf("%d\n", 25);  
+        -:  828:    } 
+      55*:  829:    if((((((a99!=1) && !(a292==33)) && (a237==32)) || !(a369==34)) && ((a312==32) || ((a369==32) || ((cf==1) && (input == 4)))))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 55 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 55
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 55 (fallthrough)
+branch  9 taken 0
+branch 10 taken 55 (fallthrough)
+branch 11 taken 0
+branch 12 taken 52 (fallthrough)
+branch 13 taken 3
+branch 14 taken 0 (fallthrough)
+branch 15 taken 52
+    #####:  830:    	 cf = (0);
+    #####:  831:    	a225 = 34 ;
+    #####:  832:    	a85 = (8);
+    #####:  833:    	a153 = 32 ;
+    #####:  834:    	a309 = 33 ;
+    #####:  835:    	a371 = 33 ;
+    #####:  836:    	a47 = (0);
+    #####:  837:    	a109 = 33 ;
+    #####:  838:    	a23 = 33 ;
+    #####:  839:    	a86 = (5);
+    #####:  840:    	a287 = (11);
+        -:  841:    	   
+        -:  842:    } 
+      55*:  843:    if(((((a289==34) || (!(a371==32) || (a9==1))) || (a237==33)) && ((((cf==1) && (input == 2)) && (a20!=1)) || (a385==34)))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 55
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 52 (fallthrough)
+branch  9 taken 3
+branch 10 taken 1 (fallthrough)
+branch 11 taken 51
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 54
+        1:  844:    	 cf = (0);
+        1:  845:    	a276 = 34 ;
+        1:  846:    	a212 = (9);
+        1:  847:    	a271 = 33 ;
+        1:  848:    	a71 = (0);
+        1:  849:    	a170 = (0);
+        1:  850:    	  printf(""); //printf("%d\n", 25);  
+        -:  851:    } 
+      55*:  852:    if(((((((input == 1) && (cf==1)) || (a271==34)) && (a203==5)) && (a218==2)) && (((a366==9) || !(a298==32)) || (a9==1)))){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 54
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 54
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  853:    	 cf = (0);
+        1:  854:    	a287 = (11);
+        1:  855:    	a156 = (0);
+        1:  856:    	a340 = 32 ;
+        1:  857:    	a244 = 33 ;
+        1:  858:    	  printf(""); //printf("%d\n", 22);  
+        -:  859:    } 
+function calculate_outputm10 called 55 returned 100% blocks executed 81%
+      110:  860:} void calculate_outputm10(int input) {
+      55*:  861:    if((((a393==5) && ((a43!=1) || ((!(a276==33) && ((cf==1) && (a131==1))) || (a63!=1)))) && ((a378==11) && !(a369==32)))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 55 (fallthrough)
+branch  3 taken 0
+branch  4 taken 55 (fallthrough)
+branch  5 taken 0
+branch  6 taken 55 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 55
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 taken 55 (fallthrough)
+branch 13 taken 0
+branch 14 taken 55 (fallthrough)
+branch 15 taken 0
+      55*:  862:    	if((((((a71!=1) && (a71!=1)) || !(a300==5)) || (a209==33)) && (((a369==33) || ((a143==10) && (cf==1))) || (a280==34)))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 55
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 55 (fallthrough)
+branch  9 taken 0
+branch 10 taken 55 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 55
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      55*:  863:    		if(((!(a329==11) && ((a244==33) && ((a371==33) || !(a307==33)))) && (!(a335==5) && (((a132==4) && (cf==1)) && !(a309==32))))){
+branch  0 taken 55 (fallthrough)
+branch  1 taken 0
+branch  2 taken 55 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 55
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 taken 55 (fallthrough)
+branch  9 taken 0
+branch 10 taken 55 (fallthrough)
+branch 11 taken 0
+branch 12 taken 55 (fallthrough)
+branch 13 taken 0
+branch 14 taken 55 (fallthrough)
+branch 15 taken 0
+       55:  864:    			calculate_outputm11(input);
+call    0 returned 55
+        -:  865:    		} 
+        -:  866:    	} 
+        -:  867:    } 
+function calculate_outputm13 called 49 returned 100% blocks executed 71%
+      104:  868:} void calculate_outputm13(int input) {
+      49*:  869:    if(((((a30==1) && ((input == 1) && (cf==1))) || !(a326==33)) && (((!(a212==9) || (a203==5)) && (a99!=1)) || (a136!=1)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 48
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 48
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  870:    	 cf = (0);
+        1:  871:    	a326 = 33 ;
+        1:  872:    	a206 = 34 ;
+        1:  873:    	a94 = 33 ;
+        1:  874:    	a48 = (1);
+        1:  875:    	a213 = 33 ;
+        1:  876:    	a19 = 32 ;
+        1:  877:    	a195 = (3);
+        1:  878:    	a112 = (1);
+        1:  879:    	a86 = (7);
+        1:  880:    	  printf(""); //printf("%d\n", 26);  
+        -:  881:    } 
+      49*:  882:    if((((((input == 4) && (cf==1)) && (a136==1)) || !(a385==33)) && (!(a393==1) && ((a0==1) && ((a386==34) || (a189==1)))))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 49
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 0 (fallthrough)
+branch  7 taken 49
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  883:    	 cf = (0);
+    #####:  884:    	a63 = (1);
+    #####:  885:    	a158 = 33 ;
+    #####:  886:    	a83 = 34 ;
+    #####:  887:    	a276 = 34 ;
+    #####:  888:    	a170 = (0);
+    #####:  889:    	a47 = (0);
+    #####:  890:    	a46 = 34 ;
+    #####:  891:    	a189 = (0);
+    #####:  892:    	a55 = (12);
+    #####:  893:    	a86 = (4);
+        -:  894:    	   
+        -:  895:    } 
+      49*:  896:    if((((!(a300==7) && ((a262==8) || ((input == 5) && (cf==1)))) && (a212==9)) && ((!(a388==5) || !(a363==33)) && (a385==33)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 49
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  897:    	 cf = (0);
+    #####:  898:    	a94 = 33 ;
+    #####:  899:    	a302 = 34 ;
+    #####:  900:    	a393 = (5);
+    #####:  901:    	a30 = (1);
+    #####:  902:    	a230 = (13);
+    #####:  903:    	a386 = 34 ;
+    #####:  904:    	a19 = 32 ;
+    #####:  905:    	a195 = (3);
+    #####:  906:    	a112 = (1);
+    #####:  907:    	a86 = (7);
+    #####:  908:    	  printf(""); //printf("%d\n", 24);  
+        -:  909:    } 
+      49*:  910:    if((((((cf==1) && (input == 6)) && (a189!=1)) && !(a244==34)) && (!(a262==7) || ((!(a297==34) && !(a340==33)) || !(a326==33))))){
+branch  0 taken 48 (fallthrough)
+branch  1 taken 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 47
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        1:  911:    	 cf = (0);
+        1:  912:    	a218 = (2);
+        1:  913:    	a393 = (5);
+        1:  914:    	a94 = 33 ;
+        1:  915:    	a19 = 32 ;
+        1:  916:    	a195 = (3);
+        1:  917:    	a332 = 33 ;
+        1:  918:    	a312 = 34 ;
+        1:  919:    	a196 = (1);
+        1:  920:    	a112 = (1);
+        1:  921:    	a86 = (7);
+        1:  922:    	  printf(""); //printf("%d\n", 25);  
+        -:  923:    } 
+       49:  924:    if(((!(a271==33) || ((a71==1) || (((a389==34) || (a300==5)) && !(a393==4)))) && (((cf==1) && (input == 2)) || (a239==32)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 49 (fallthrough)
+branch  5 taken 0
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 47 (fallthrough)
+branch 11 taken 2
+branch 12 taken 46 (fallthrough)
+branch 13 taken 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 48
+        1:  925:    	 cf = (0);
+        1:  926:    	a332 = 33 ;
+        1:  927:    	a19 = 32 ;
+        1:  928:    	a289 = 33 ;
+        1:  929:    	a150 = (1);
+        1:  930:    	a48 = (1);
+        1:  931:    	a80 = (1);
+        1:  932:    	a94 = 33 ;
+        1:  933:    	a195 = (3);
+        1:  934:    	a112 = (1);
+        1:  935:    	a86 = (7);
+        1:  936:    	  printf(""); //printf("%d\n", 26);  
+        -:  937:    } 
+      49*:  938:    if(((((a396==34) && (a289==33)) || !(a297==32)) && (!(a267==33) || (!(a292==34) && ((a136!=1) || ((cf==1) && (input == 3))))))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 49
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 49 (fallthrough)
+branch 11 taken 0
+branch 12 taken 46 (fallthrough)
+branch 13 taken 3
+branch 14 taken 1 (fallthrough)
+branch 15 taken 45
+        1:  939:    	 cf = (0);
+        1:  940:    	a19 = 32 ;
+        1:  941:    	a30 = (1);
+        1:  942:    	a94 = 33 ;
+        1:  943:    	a309 = 33 ;
+        1:  944:    	a189 = (0);
+        1:  945:    	a10 = 34 ;
+        1:  946:    	a396 = 34 ;
+        1:  947:    	a195 = (3);
+        1:  948:    	a112 = (1);
+        1:  949:    	a86 = (7);
+        1:  950:    	  printf(""); //printf("%d\n", 24);  
+        -:  951:    } 
+function calculate_outputm12 called 49 returned 100% blocks executed 73%
+       98:  952:} void calculate_outputm12(int input) {
+      49*:  953:    if(((((a237==32) && !(a244==34)) || !(a212==9)) && (((((cf==1) && (a174==33)) && !(a386==33)) || !(a394==32)) || !(a276==34)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 49
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 49
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      49*:  954:    	if((((a262==7) && ((a389==32) && ((a150==1) && ((cf==1) && (a152==33))))) && (((a375==5) || !(a332==33)) || !(a239==34)))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 49 (fallthrough)
+branch  5 taken 0
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 49
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+      49*:  955:    		if(((((a132==5) && (cf==1)) && !(a396==33)) && ((a71==1) || ((((a385==34) || !(a393==2)) || !(a378==11)) || (a47==1))))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 49 (fallthrough)
+branch  5 taken 0
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 49
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+       49:  956:    			calculate_outputm13(input);
+call    0 returned 49
+        -:  957:    		} 
+        -:  958:    	} 
+        -:  959:    } 
+       49:  960:}
+function calculate_output called 5922 returned 100% blocks executed 93%
+     5922:  961: void calculate_output(int input) {
+     5922:  962:        cf = (1);
+        -:  963:
+    5922*:  964:    if(((((a150!=1) || !(a340==33)) || (a322==9)) && ((!(a213==33) || (((cf==1) && (a86==4)) || (a4!=1))) && !(a237==34)))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 5922 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5922 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5875 (fallthrough)
+branch 11 taken 47
+branch 12 taken 0 (fallthrough)
+branch 13 taken 5875
+branch 14 taken 47 (fallthrough)
+branch 15 taken 0
+      47*:  965:    	if((((a375==7) || (((a340==32) && ((cf==1) && (a158==33))) || (a9==1))) && (((a63==1) || (a375==6)) && (a4==1)))){
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47 (fallthrough)
+branch  5 taken 0
+branch  6 taken 0 (fallthrough)
+branch  7 taken 47
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 0 (fallthrough)
+branch 11 taken 47
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 taken 47 (fallthrough)
+branch 15 taken 0
+       47:  966:    		calculate_outputm1(input);
+call    0 returned 47
+        -:  967:    	} 
+        -:  968:    } 
+     5922:  969:    if(((!(a322==9) && (!(a309==33) || ((a43==1) && (a156!=1)))) && ((!(a302==33) && ((a86==5) && (cf==1))) || !(a332==33)))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5922 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5922 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5922 (fallthrough)
+branch  9 taken 0
+branch 10 taken 40 (fallthrough)
+branch 11 taken 5882
+branch 12 taken 0 (fallthrough)
+branch 13 taken 40
+branch 14 taken 0 (fallthrough)
+branch 15 taken 5882
+      40*:  970:    	if(((((((cf==1) && (a23==33)) || (a170==1)) && (a47!=1)) && (a213==33)) && ((!(a363==34) && !(a306==32)) && (a218==2)))){
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 40
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 40 (fallthrough)
+branch  7 taken 0
+branch  8 taken 40 (fallthrough)
+branch  9 taken 0
+branch 10 taken 40 (fallthrough)
+branch 11 taken 0
+branch 12 taken 40 (fallthrough)
+branch 13 taken 0
+branch 14 taken 40 (fallthrough)
+branch 15 taken 0
+       40:  971:    		calculate_outputm3(input);
+call    0 returned 40
+        -:  972:    	} 
+        -:  973:    } 
+     5922:  974:    if((((a289==32) || ((a47!=1) && !(a10==33))) && ((a381==0) && ((((cf==1) && (a86==6)) && !(a271==32)) && (a371==33))))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5922 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5922 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5913 (fallthrough)
+branch  9 taken 9
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 284
+branch 12 taken 5629 (fallthrough)
+branch 13 taken 0
+branch 14 taken 5629 (fallthrough)
+branch 15 taken 0
+    5629*:  975:    	if((!(a230==10) && ((a47==1) || ((a156==1) || (((a47!=1) && ((a363==32) || ((cf==1) && (a3!=1)))) || (a156==1)))))){
+branch  0 taken 5629 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5629 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5629 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5629 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5629 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5629 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 5629
+branch 14 never executed (fallthrough)
+branch 15 never executed
+     5629:  976:    		calculate_outputm5(input);
+call    0 returned 5629
+        -:  977:    	} 
+        -:  978:    } 
+    5922*:  979:    if(((((!(a267==33) || !(a393==4)) || (a156==1)) && !(a344==34)) && (((a292==32) && ((cf==1) && (a86==7))) && (a386==34)))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5922
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 5922 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5922 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5276 (fallthrough)
+branch 11 taken 646
+branch 12 taken 157 (fallthrough)
+branch 13 taken 5119
+branch 14 taken 157 (fallthrough)
+branch 15 taken 0
+      157:  980:    	if((((a0!=1) || (((a393==5) && (a9!=1)) && !(a206==32))) && ((a274==9) || (((cf==1) && (a112==1)) && !(a280==33))))){
+branch  0 taken 157 (fallthrough)
+branch  1 taken 0
+branch  2 taken 157 (fallthrough)
+branch  3 taken 0
+branch  4 taken 157 (fallthrough)
+branch  5 taken 0
+branch  6 taken 157 (fallthrough)
+branch  7 taken 0
+branch  8 taken 157 (fallthrough)
+branch  9 taken 0
+branch 10 taken 157 (fallthrough)
+branch 11 taken 0
+branch 12 taken 102 (fallthrough)
+branch 13 taken 55
+branch 14 taken 102 (fallthrough)
+branch 15 taken 0
+      102:  981:    		calculate_outputm7(input);
+call    0 returned 102
+        -:  982:    	} 
+     157*:  983:    	if(((((a150==1) && !(a363==34)) || (a297==34)) && ((((a335==7) && ((cf==1) && (a112!=1))) && (a276==34)) && !(a396==32)))){
+branch  0 taken 157 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 157
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 taken 157 (fallthrough)
+branch  7 taken 0
+branch  8 taken 148 (fallthrough)
+branch  9 taken 9
+branch 10 taken 55 (fallthrough)
+branch 11 taken 93
+branch 12 taken 55 (fallthrough)
+branch 13 taken 0
+branch 14 taken 55 (fallthrough)
+branch 15 taken 0
+       55:  984:    		calculate_outputm10(input);
+call    0 returned 55
+        -:  985:    	} 
+        -:  986:    } 
+     5922:  987:    if((((a298==32) && (!(a297==32) || ((a292==33) || (!(a306==32) && !(a366==7))))) && (((a86==8) && (cf==1)) && (a349==33)))){
+branch  0 taken 5922 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5922 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5922 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5922 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5922 (fallthrough)
+branch  9 taken 0
+branch 10 taken 154 (fallthrough)
+branch 11 taken 5768
+branch 12 taken 49 (fallthrough)
+branch 13 taken 105
+branch 14 taken 49 (fallthrough)
+branch 15 taken 0
+       49:  988:    	if(((!(a235==33) && (((cf==1) && (a62==1)) && !(a289==34))) && ((a332==32) || ((a235==33) || (!(a344==32) && (a335==7)))))){
+branch  0 taken 49 (fallthrough)
+branch  1 taken 0
+branch  2 taken 49 (fallthrough)
+branch  3 taken 0
+branch  4 taken 49 (fallthrough)
+branch  5 taken 0
+branch  6 taken 49 (fallthrough)
+branch  7 taken 0
+branch  8 taken 49 (fallthrough)
+branch  9 taken 0
+branch 10 taken 49 (fallthrough)
+branch 11 taken 0
+branch 12 taken 49 (fallthrough)
+branch 13 taken 0
+branch 14 taken 49 (fallthrough)
+branch 15 taken 0
+       49:  989:    		calculate_outputm12(input);
+call    0 returned 49
+        -:  990:    	} 
+        -:  991:    } 
+     5922:  992:    errorCheck();
+call    0 returned 5922
+        -:  993:
+     5922:  994:    if((cf==1)) 
+        -:  995:    	{
+        -:  996:    	//fprintf(stderr, "Invalid input: %d\n", input);
+        -:  997:    	} 
+     5922:  998:}
+        -:  999:
+        -: 1000:int input,output;
+function main called 2961 returned 100% blocks executed 80%
+     2961: 1001:int main()
+        -: 1002:{
+     2961: 1003:kappa = 0;
+        -: 1004:    // main i/o-loop
+        -: 1005:
+        -: 1006:   int symb;
+     8883: 1007:   for (int FLAG=0;FLAG<BOUND;FLAG++)
+branch  0 taken 5922
+branch  1 taken 2961 (fallthrough)
+        -: 1008:    {
+    5922*: 1009:    if (fread(&symb, sizeof(int), 1, stdin) != 1) { return 0; }
+call    0 returned 5922
+branch  1 taken 0 (fallthrough)
+branch  2 taken 5922
+        -: 1010:        // operate eca engine
+     5922: 1011:        calculate_output(symb);
+call    0 returned 5922
+        -: 1012:    }
+        -: 1013:}

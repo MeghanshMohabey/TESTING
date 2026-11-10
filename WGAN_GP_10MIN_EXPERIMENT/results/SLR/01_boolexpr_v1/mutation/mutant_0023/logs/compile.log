@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/01_boolexpr_v1/mutation/mutant_0023/01_boolexpr_v1.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/01_boolexpr_v1/mutation/mutant_0023/01_boolexpr_v1.c:37:51: error: expected expression before ‘]’ token
+   37 |             case 1: if (sp < MAX_BOUND) stack[sp-+] = 1; break; /* push TRUE */
+      |                                                   ^

@@ -1,0 +1,80 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/SLR/36_syllogism_v1.c
+        -:    0:Graph:./program-36_syllogism_v1.gcno
+        -:    0:Data:./program-36_syllogism_v1.gcda
+        -:    0:Runs:4736
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 36  Family: syllogism  Variant: 1 (Classical Figures A)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 4736 returned 100% blocks executed 56%
+     4736:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     4736:   16:    FILE *f = stdin;
+     4736:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4736
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     4736:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 4736
+    4736*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4736
+call    2 never executed
+     4736:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:typedef struct { const char *name; int valid_if_premises_true; } Syllogism;
+        -:   27:
+        -:   28:/* Domain: Classical Figures A */
+        -:   29:static const Syllogism PATTERNS[] = {
+        -:   30:    {"Barbara", 1},
+        -:   31:    {"Celarent", 1},
+        -:   32:    {"Darii", 1},
+        -:   33:    {"Ferio", 1},
+        -:   34:    {"InvalidForm1", 0}
+        -:   35:};
+        -:   36:#define NUM_PATTERNS ((int)(sizeof(PATTERNS)/sizeof(PATTERNS[0])))
+        -:   37:
+function main called 4736 returned 100% blocks executed 89%
+     4736:   38:int main(int argc, char **argv) {
+        -:   39:    unsigned char buf[MAX_BOUND];
+     4736:   40:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 4736
+    4736*:   41:    if (n > MAX_BOUND) n = MAX_BOUND;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4736
+    4736*:   42:    int idx = n > 0 ? buf[0] % NUM_PATTERNS : 0;
+branch  0 taken 4736 (fallthrough)
+branch  1 taken 0
+        -:   43:
+     4736:   44:    int premises_true = 1;
+    47360:   45:    for (size_t i = 1; i < n; i++) { /* bounded: at most MAX_BOUND-1 premises checked */
+branch  0 taken 42624
+branch  1 taken 4736 (fallthrough)
+    42624:   46:        if ((buf[i] & 1) == 0) premises_true = 0;
+branch  0 taken 22236 (fallthrough)
+branch  1 taken 20388
+        -:   47:    }
+     4736:   48:    int valid = premises_true && PATTERNS[idx].valid_if_premises_true;
+branch  0 taken 5 (fallthrough)
+branch  1 taken 4731
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0
+     4736:   49:    printf("SLR_SYLLOGISM_V1 pattern=%s valid=%d\n", PATTERNS[idx].name, valid);
+call    0 returned 4736
+     4736:   50:    return 0;
+        -:   51:}

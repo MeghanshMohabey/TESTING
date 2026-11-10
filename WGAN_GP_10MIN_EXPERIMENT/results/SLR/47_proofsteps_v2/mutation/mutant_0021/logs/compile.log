@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/47_proofsteps_v2/mutation/mutant_0021/47_proofsteps_v2.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/47_proofsteps_v2/mutation/mutant_0021/47_proofsteps_v2.c:37:27: error: expected expression before ‘>’ token
+   37 |         int a = (buf[i] <=> 2) % 10;
+      |                           ^

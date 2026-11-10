@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/06_fwdchain_v1/mutation/mutant_0020/06_fwdchain_v1.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/06_fwdchain_v1/mutation/mutant_0020/06_fwdchain_v1.c:43:43: error: expected expression before ‘)’ token
+   43 |     for (size_t i = 0; i < n && i < 2; i+-) facts |= ((int)buf[i]) << (8 * (int)i);
+      |                                           ^

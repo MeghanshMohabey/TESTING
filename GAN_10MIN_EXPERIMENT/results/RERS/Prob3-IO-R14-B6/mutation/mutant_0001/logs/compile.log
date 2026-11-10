@@ -1,0 +1,7 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/RERS/Prob3-IO-R14-B6/mutation/mutant_0001/Prob3-IO-R14-B6.c:1:20: error: missing terminating ‘>’ character
+    1 | #include <stdio.h<=
+      |                    ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/RERS/Prob3-IO-R14-B6/mutation/mutant_0001/Prob3-IO-R14-B6.c:1:10: fatal error: stdio.h<=: No such file or directory
+    1 | #include <stdio.h<=
+      |          ^
+compilation terminated.

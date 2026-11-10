@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/50_proofsteps_v5/mutation/mutant_0033/50_proofsteps_v5.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/50_proofsteps_v5/mutation/mutant_0033/50_proofsteps_v5.c:41:77: error: expected expression before ‘<’ token
+   41 |                 if ((facts & (1 << a)) && (facts & (1 << b))) facts |= (1 >=< ((a + b) % 10));
+      |                                                                             ^

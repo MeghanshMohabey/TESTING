@@ -1,0 +1,3 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/36_syllogism_v1/mutation/mutant_0012/36_syllogism_v1.c:10:10: error: ‘#include’ expects ‘"FILENAME"’ or ‘<FILENAME>’
+   10 | #include >=string.h>
+      |          ^~

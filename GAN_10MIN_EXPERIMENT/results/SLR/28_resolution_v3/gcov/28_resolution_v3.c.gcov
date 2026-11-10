@@ -1,0 +1,118 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/SLR/28_resolution_v3.c
+        -:    0:Graph:./program-28_resolution_v3.gcno
+        -:    0:Data:./program-28_resolution_v3.gcda
+        -:    0:Runs:5285
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 28  Family: resolution  Variant: 3 (Logic Puzzle B)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 5285 returned 100% blocks executed 56%
+     5285:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     5285:   16:    FILE *f = stdin;
+     5285:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5285
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     5285:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 5285
+    5285*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5285
+call    2 never executed
+     5285:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:typedef struct { int lits[3]; int nlits; } RClause;
+        -:   27:
+        -:   28:/* Domain: Logic Puzzle B */
+        -:   29:static const RClause DB[] = {
+        -:   30:    {{-1, -2, 0}, 2},
+        -:   31:    {{1, 3, 0}, 2},
+        -:   32:    {{2, -3, 0}, 2}
+        -:   33:};
+        -:   34:#define DB_SIZE ((int)(sizeof(DB)/sizeof(DB[0])))
+        -:   35:
+function resolve_clauses called 52850 returned 100% blocks executed 100%
+    52850:   36:static int resolve_clauses(RClause a, RClause b, RClause *out) {
+   100269:   37:    for (int i = 0; i < a.nlits; i++)
+branch  0 taken 79129
+branch  1 taken 21140 (fallthrough)
+   190370:   38:        for (int j = 0; j < b.nlits; j++)
+branch  0 taken 142951
+branch  1 taken 47419 (fallthrough)
+   142951:   39:            if (a.lits[i] == -b.lits[j]) {
+branch  0 taken 31710 (fallthrough)
+branch  1 taken 111241
+    31710:   40:                int k = 0;
+    95130:   41:                for (int x = 0; x < a.nlits && k < 3; x++) if (x != i) out->lits[k++] = a.lits[x];
+branch  0 taken 31710 (fallthrough)
+branch  1 taken 31710
+branch  2 taken 63420 (fallthrough)
+branch  3 taken 31710
+branch  4 taken 63420
+branch  5 taken 0 (fallthrough)
+    95130:   42:                for (int y = 0; y < b.nlits && k < 3; y++) if (y != j) out->lits[k++] = b.lits[y];
+branch  0 taken 31710 (fallthrough)
+branch  1 taken 31710
+branch  2 taken 63420 (fallthrough)
+branch  3 taken 31710
+branch  4 taken 63420
+branch  5 taken 0 (fallthrough)
+    31710:   43:                out->nlits = k;
+    31710:   44:                return 1;
+        -:   45:            }
+    21140:   46:    return 0;
+        -:   47:}
+        -:   48:
+function main called 5285 returned 100% blocks executed 84%
+     5285:   49:int main(int argc, char **argv) {
+        -:   50:    unsigned char buf[2];
+     5285:   51:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 5285
+    5285*:   52:    int i = n > 0 ? buf[0] % DB_SIZE : 0;
+branch  0 taken 5285 (fallthrough)
+branch  1 taken 0
+    5285*:   53:    int j = n > 1 ? buf[1] % DB_SIZE : (DB_SIZE > 1 ? 1 : 0);
+branch  0 taken 5285 (fallthrough)
+branch  1 taken 0
+        -:   54:
+     5285:   55:    RClause cur = DB[i];
+     5285:   56:    int proved = (cur.nlits == 0);
+        -:   57:    int step;
+    58135:   58:    for (step = 0; step < MAX_BOUND && !proved; step++) { /* bounded resolution steps */
+branch  0 taken 52850 (fallthrough)
+branch  1 taken 5285
+branch  2 taken 52850
+branch  3 taken 0 (fallthrough)
+        -:   59:        RClause resolvent;
+    52850:   60:        if (resolve_clauses(cur, DB[j], &resolvent)) {
+call    0 returned 52850
+branch  1 taken 31710 (fallthrough)
+branch  2 taken 21140
+    31710:   61:            cur = resolvent;
+   31710*:   62:            if (cur.nlits == 0) proved = 1;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 31710
+        -:   63:        } else {
+    21140:   64:            j = (j + 1) % DB_SIZE;
+        -:   65:        }
+        -:   66:    }
+     5285:   67:    printf("SLR_RESOLUTION_V3 proved=%d steps_used=%d\n", proved, step);
+call    0 returned 5285
+     5285:   68:    return 0;
+        -:   69:}

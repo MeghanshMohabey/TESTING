@@ -1,0 +1,3 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/50_proofsteps_v5/mutation/mutant_0012/50_proofsteps_v5.c:10:10: error: ‘#include’ expects ‘"FILENAME"’ or ‘<FILENAME>’
+   10 | #include >=string.h>
+      |          ^~

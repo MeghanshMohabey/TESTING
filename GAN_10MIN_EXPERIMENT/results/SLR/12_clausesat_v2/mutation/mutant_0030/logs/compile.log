@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/12_clausesat_v2/mutation/mutant_0030/12_clausesat_v2.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/12_clausesat_v2/mutation/mutant_0030/12_clausesat_v2.c:45:65: error: expected expression before ‘<=’ token
+   45 |     for (int v2 = 1; v2 <= MAX_BOUND; v2++) assign[v2] = (bits ><= (v2 - 1)) & 1;
+      |                                                                 ^~

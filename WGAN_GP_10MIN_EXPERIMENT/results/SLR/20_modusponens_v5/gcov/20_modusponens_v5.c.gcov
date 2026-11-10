@@ -1,0 +1,72 @@
+        -:    0:Source:/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/programs/SLR/20_modusponens_v5.c
+        -:    0:Graph:./program-20_modusponens_v5.gcno
+        -:    0:Data:./program-20_modusponens_v5.gcda
+        -:    0:Runs:6656
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 20  Family: modusponens  Variant: 5 (Max Chain (len 10))
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 6656 returned 100% blocks executed 56%
+     6656:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     6656:   16:    FILE *f = stdin;
+     6656:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6656
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     6656:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 6656
+    6656*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6656
+call    2 never executed
+     6656:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:#define CHAIN_LEN 10 /* <= MAX_BOUND */
+        -:   27:
+function main called 6656 returned 100% blocks executed 89%
+     6656:   28:int main(int argc, char **argv) {
+        -:   29:    unsigned char buf[2];
+     6656:   30:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 6656
+    6656*:   31:    int p0 = n > 0 ? (buf[0] & 1) : 0;
+branch  0 taken 6656 (fallthrough)
+branch  1 taken 0
+    6656*:   32:    int block_mask = n > 1 ? buf[1] : 0;
+branch  0 taken 6656 (fallthrough)
+branch  1 taken 0
+        -:   33:
+        -:   34:    int truths[MAX_BOUND + 1];
+     6656:   35:    truths[0] = p0;
+        -:   36:    int i;
+    73216:   37:    for (i = 0; i < CHAIN_LEN && i < MAX_BOUND; i++) { /* bounded chain traversal */
+branch  0 taken 66560 (fallthrough)
+branch  1 taken 6656
+branch  2 taken 66560
+branch  3 taken 0 (fallthrough)
+    66560:   38:        int implication_holds = !((block_mask >> i) & 1);
+    66560:   39:        truths[i + 1] = (truths[i] && implication_holds) ? 1 : 0;
+branch  0 taken 6456 (fallthrough)
+branch  1 taken 60104
+branch  2 taken 3134 (fallthrough)
+branch  3 taken 3322
+        -:   40:    }
+     6656:   41:    printf("SLR_MODUSPONENS_V5 chain_len=%d final=%d\n", CHAIN_LEN, truths[i]);
+call    0 returned 6656
+     6656:   42:    return 0;
+        -:   43:}

@@ -1,0 +1,8 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/06_fwdchain_v1/mutation/mutant_0023/06_fwdchain_v1.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/06_fwdchain_v1/mutation/mutant_0023/06_fwdchain_v1.c:47:44: error: expected expression before ‘)’ token
+   47 |     for (iter = 0; iter < MAX_BOUND; iter-+) { /* bounded fixpoint iteration */
+      |                                            ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/06_fwdchain_v1/mutation/mutant_0023/06_fwdchain_v1.c:52:17: error: ‘changed’ undeclared (first use in this function)
+   52 |                 changed = 1;
+      |                 ^~~~~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/06_fwdchain_v1/mutation/mutant_0023/06_fwdchain_v1.c:52:17: note: each undeclared identifier is reported only once for each function it appears in

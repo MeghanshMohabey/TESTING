@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/05_boolexpr_v5/mutation/mutant_0028/05_boolexpr_v5.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/05_boolexpr_v5/mutation/mutant_0028/05_boolexpr_v5.c:39:84: error: expected expression before ‘]’ token
+   39 |                 if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp+-] = a & b; }
+      |                                                                                    ^

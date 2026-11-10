@@ -1,0 +1,8 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/30_resolution_v5/mutation/mutant_0054/30_resolution_v5.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/30_resolution_v5/mutation/mutant_0054/30_resolution_v5.c:58:55: error: expected expression before ‘)’ token
+   58 |     for (step = 0; step < MAX_BOUND && !proved; step+-) { /* bounded resolution steps */
+      |                                                       ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/30_resolution_v5/mutation/mutant_0054/30_resolution_v5.c:60:42: error: ‘resolvent’ undeclared (first use in this function)
+   60 |         if (resolve_clauses(cur, DB[j], &resolvent)) {
+      |                                          ^~~~~~~~~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/30_resolution_v5/mutation/mutant_0054/30_resolution_v5.c:60:42: note: each undeclared identifier is reported only once for each function it appears in

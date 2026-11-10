@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/31_gatesim_v1/mutation/mutant_0023/31_gatesim_v1.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/31_gatesim_v1/mutation/mutant_0023/31_gatesim_v1.c:35:28: error: expected expression before ‘<=’ token
+   35 |         int in2 = (buf[i] ><= 1) & 1;
+      |                            ^~

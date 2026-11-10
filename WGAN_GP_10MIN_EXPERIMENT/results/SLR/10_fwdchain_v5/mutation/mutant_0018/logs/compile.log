@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/10_fwdchain_v5/mutation/mutant_0018/10_fwdchain_v5.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/10_fwdchain_v5/mutation/mutant_0018/10_fwdchain_v5.c:43:69: error: expected expression before ‘>=’ token
+   43 |     for (size_t i = 0; i < n && i < 2; i++) facts |= ((int)buf[i]) <>= (8 * (int)i);
+      |                                                                     ^~

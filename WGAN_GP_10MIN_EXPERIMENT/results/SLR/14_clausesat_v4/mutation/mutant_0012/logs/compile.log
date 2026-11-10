@@ -1,0 +1,3 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/14_clausesat_v4/mutation/mutant_0012/14_clausesat_v4.c:10:10: error: ‘#include’ expects ‘"FILENAME"’ or ‘<FILENAME>’
+   10 | #include >=string.h>
+      |          ^~

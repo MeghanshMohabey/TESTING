@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/39_syllogism_v4/mutation/mutant_0019/39_syllogism_v4.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/39_syllogism_v4/mutation/mutant_0019/39_syllogism_v4.c:45:34: error: expected expression before ‘)’ token
+   45 |     for (size_t i = 1; i < n; i+-) { /* bounded: at most MAX_BOUND-1 premises checked */
+      |                                  ^
