@@ -1,3 +1,0 @@
-Timestamp,Command,Execution_Time_Sec,Max_RSS_KB,Avg_GPU_Memory_MB,Avg_GPU_Utilization_Pct
-2026-09-17 16:28:14,"Compile AFL++ binary",8.065416026,169900,73,1
-2026-09-17 16:28:22,"Compile GCOV binary",25.865122278,99472,73,0.73913
