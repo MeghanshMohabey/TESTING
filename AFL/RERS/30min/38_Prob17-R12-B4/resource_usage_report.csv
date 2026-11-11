@@ -1,0 +1,3 @@
+Timestamp,Command,Execution_Time_Sec,Max_RSS_KB,Avg_GPU_Memory_MB,Avg_GPU_Utilization_Pct
+2026-09-18 08:40:59,"Compile AFL++ binary",1.133204602,102744,36,9
+2026-09-18 08:41:05,"Compile AFL++ binary",.455503376,103128,38,12
