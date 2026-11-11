@@ -1,0 +1,12 @@
+testcase_id,content
+id:000000,time:0,execs:0,orig:seed.txt,"Defa"
+id:000001,src:000000,time:59,execs:21,op:quick,pos:0,+cov,"aefa"
+id:000002,src:000000,time:91,execs:36,op:flip1,pos:0,"Tefa"
+id:000003,src:000000,time:110,execs:44,op:flip1,pos:0,"Lefa"
+id:000004,src:000000,time:128,execs:52,op:flip1,pos:0,+cov,"@efa"
+id:000005,src:000000,time:155,execs:65,op:flip2,pos:0,"\efa"
+id:000006,src:000000,time:175,execs:78,op:flip4,pos:0,"<efa"
+id:000007,src:000000,time:189,execs:92,op:flip8,pos:0,+cov,"»efa"
+id:000008,src:000000,time:205,execs:107,op:arith8,pos:0,val:-6,">efa"
+id:000009,src:000000,time:265,execs:137,op:arith8,pos:0,val:+20,"Xefa"
+id:000010,src:000000,time:358,execs:173,op:int8,pos:0,val:-1,"ÿefa"

@@ -1,0 +1,18 @@
+Timestamp,Command,Execution_Time_Sec,Max_RSS_KB,Avg_GPU_Memory_MB,Avg_GPU_Utilization_Pct
+2026-09-03 13:23:43,"timeout 600 afl-fuzz -i in -o out -- ./01_boolexpr_v3_afl",.115292461,7424,258,4
+2026-09-03 13:23:52,"timeout 600 afl-fuzz -i in -o out -- ls./01_boolexpr_v3_afl",.111933632,7552,258,7
+2026-09-03 13:25:50,"timeout 600 afl-fuzz -i in -o out -- ./03_boolexpr_v3_afl",.113592131,7424,258,0
+2026-09-03 13:33:16,"timeout 600 afl-fuzz -i in -o out -- ./03_boolexpr_v3_afl",.112998056,7680,258,6
+2026-09-03 13:34:38,"timeout 600 afl-fuzz -i in -o out -- ./03_boolexpr_v3_bin",.113703425,7424,234,3
+2026-09-03 13:34:43,"timeout 600 afl-fuzz -i in -o out -- ./03_boolexpr_v3_afl",.112428859,7552,234,0
+2026-09-03 13:35:51,"timeout 600 afl-fuzz -i in -o out -- ./03_boolexpr_v3_afl",600.043410304,30976,232.004,5.14652
+2026-09-05 13:16:07,"Compile AFL++ binary",.612339558,100992,318,1
+2026-09-05 13:16:07,"Compile GCOV binary",.262827043,32000,318,2
+2026-09-05 13:17:39,"Compile AFL++ binary",.611958050,101504,318,5
+2026-09-05 13:17:40,"Compile GCOV binary",.479004840,32356,318,8
+2026-09-05 13:17:43,"Recompile GCOV binary",.249002323,32512,318,1
+2026-09-05 13:17:43,"GCOV Queue Processing",.295372865,3584,318,0
+2026-09-05 13:18:49,"Compile AFL++ binary",.376808388,101504,319,12
+2026-09-05 13:18:50,"Compile GCOV binary",.188403966,32372,319,3
+2026-09-05 13:28:52,"Recompile GCOV binary",.179141748,32512,296,4
+2026-09-05 13:28:53,"GCOV Queue Processing",.298210576,3456,296,7

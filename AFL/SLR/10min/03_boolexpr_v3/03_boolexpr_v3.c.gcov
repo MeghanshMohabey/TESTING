@@ -1,0 +1,87 @@
+        -:    0:Source:03_boolexpr_v3.c
+        -:    0:Graph:03_boolexpr_v3.gcno
+        -:    0:Data:03_boolexpr_v3.gcda
+        -:    0:Runs:40
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 03  Family: boolexpr  Variant: 3 (NOR Variant)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 40 returned 100% blocks executed 86%
+       40:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       40:   16:    FILE *f = stdin;
+       40:   17:    if (argc > 1) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       40:   18:        f = fopen(argv[1], "rb");
+call    0 returned 100%
+       40:   19:        if (!f) return 0;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+        -:   20:    }
+        -:   21:    size_t n = fread(buf, 1, cap, f);
+       40:   22:    if (f != stdin) fclose(f);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+        -:   23:    return n;
+        -:   24:}
+        -:   25:
+function main called 40 returned 100% blocks executed 100%
+       40:   26:int main(int argc, char **argv) {
+        -:   27:    unsigned char buf[MAX_BOUND];
+       40:   28:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 100%
+       40:   29:    if (n > MAX_BOUND) n = MAX_BOUND; /* enforce bound: at most MAX_BOUND tokens */
+        -:   30:
+        -:   31:    int stack[MAX_BOUND];
+        -:   32:    int sp = 0;
+      391:   33:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 90%
+branch  1 taken 10% (fallthrough)
+      351:   34:        unsigned char t = buf[i] % 5;
+      351:   35:        switch (t) {
+branch  0 taken 28%
+branch  1 taken 28%
+branch  2 taken 18%
+branch  3 taken 11%
+branch  4 taken 15%
+       97:   36:            case 0: if (sp < MAX_BOUND) stack[sp++] = 0; break; /* push FALSE */
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       99:   37:            case 1: if (sp < MAX_BOUND) stack[sp++] = 1; break; /* push TRUE */
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       63:   38:            case 2: /* AND */
+       63:   39:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a & b; }
+branch  0 taken 59% (fallthrough)
+branch  1 taken 41%
+        -:   40:                break;
+       39:   41:            case 3: /* XOR */
+       39:   42:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a ^ b; }
+branch  0 taken 36% (fallthrough)
+branch  1 taken 64%
+        -:   43:                break;
+       53:   44:            case 4: /* NOR */
+       53:   45:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = !(a | b); }
+branch  0 taken 53% (fallthrough)
+branch  1 taken 47%
+        -:   46:                break;
+        -:   47:            default: if (sp >= 1) stack[sp-1] = !stack[sp-1]; break; /* NOT top */
+        -:   48:        }
+        -:   49:    }
+       40:   50:    int result = (sp > 0) ? stack[sp-1] : 0;
+branch  0 taken 95% (fallthrough)
+branch  1 taken 5%
+        -:   51:    printf("SLR_BOOLEXPR_V3 result=%d stack_depth=%d tokens=%zu\n", result, sp, n);
+        -:   52:    return 0;
+        -:   53:}

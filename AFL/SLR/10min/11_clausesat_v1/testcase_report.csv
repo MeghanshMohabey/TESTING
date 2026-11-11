@@ -1,0 +1,12 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,4,"Defa"
+2,id:000001,src:000000,time:52,execs:21,op:quick,pos:0,+cov,4,"´efa"
+3,id:000002,src:000000,time:111,execs:36,op:flip1,pos:0,+cov,4,"Tefa"
+4,id:000003,src:000000,time:145,execs:44,op:flip1,pos:0,+cov,4,"Lefa"
+5,id:000004,src:000000,time:172,execs:52,op:flip1,pos:0,+cov,4,"@efa"
+6,id:000005,src:000000,time:197,execs:60,op:flip1,pos:0,+cov,4,"Fefa"
+7,id:000006,src:000000,time:222,execs:68,op:flip1,pos:0,+cov,4,"Eefa"
+8,id:000007,src:000000,time:288,execs:88,op:flip4,pos:0,+cov,4,"Kefa"
+9,id:000008,src:000000,time:386,execs:121,op:arith8,pos:0,val:+15,+cov,4,"Sefa"
+10,id:000009,src:000000,time:795,execs:256,op:havoc,rep:3,2,"aa"
+11,id:000010,src:000000,time:942,execs:299,op:havoc,rep:4,3,"TDT"

@@ -1,0 +1,94 @@
+        -:    0:Source:02_boolexpr_v2.c
+        -:    0:Graph:02_boolexpr_cov-02_boolexpr_v2.gcno
+        -:    0:Data:02_boolexpr_cov-02_boolexpr_v2.gcda
+        -:    0:Runs:39
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 02  Family: boolexpr  Variant: 2 (NAND Variant)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 39 returned 100% blocks executed 56%
+       39:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       39:   16:    FILE *f = stdin;
+       39:   17:    if (argc > 1) {
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+       39:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 100%
+      39*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+       39:   23:    return n;
+        -:   24:}
+        -:   25:
+function main called 39 returned 100% blocks executed 87%
+       39:   26:int main(int argc, char **argv) {
+        -:   27:    unsigned char buf[MAX_BOUND];
+       39:   28:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 100%
+      39*:   29:    if (n > MAX_BOUND) n = MAX_BOUND; /* enforce bound: at most MAX_BOUND tokens */
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   30:
+        -:   31:    int stack[MAX_BOUND];
+       39:   32:    int sp = 0;
+      308:   33:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 87%
+branch  1 taken 13% (fallthrough)
+      269:   34:        unsigned char t = buf[i] % 5;
+      269:   35:        switch (t) {
+branch  0 taken 24%
+branch  1 taken 33%
+branch  2 taken 13%
+branch  3 taken 14%
+branch  4 taken 16%
+branch  5 taken 0%
+       64:   36:            case 0: if (sp < MAX_BOUND) stack[sp++] = 0; break; /* push FALSE */
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       89:   37:            case 1: if (sp < MAX_BOUND) stack[sp++] = 1; break; /* push TRUE */
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       35:   38:            case 2: /* AND */
+       35:   39:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a & b; }
+branch  0 taken 34% (fallthrough)
+branch  1 taken 66%
+       35:   40:                break;
+       37:   41:            case 3: /* OR */
+       37:   42:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a | b; }
+branch  0 taken 32% (fallthrough)
+branch  1 taken 68%
+       37:   43:                break;
+       44:   44:            case 4: /* NAND */
+       44:   45:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = !(a & b); }
+branch  0 taken 45% (fallthrough)
+branch  1 taken 55%
+       44:   46:                break;
+    #####:   47:            default: if (sp >= 1) stack[sp-1] = !stack[sp-1]; break; /* NOT top */
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   48:        }
+        -:   49:    }
+       39:   50:    int result = (sp > 0) ? stack[sp-1] : 0;
+branch  0 taken 87% (fallthrough)
+branch  1 taken 13%
+       39:   51:    printf("SLR_BOOLEXPR_V2 result=%d stack_depth=%d tokens=%zu\n", result, sp, n);
+call    0 returned 100%
+       39:   52:    return 0;
+        -:   53:}

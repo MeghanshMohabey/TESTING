@@ -1,0 +1,104 @@
+Mutant_ID,Operator,Status
+1,!= -> ==,Survived
+2,\+ -> -,Survived
+3,\+ -> -,Survived
+4,\+ -> -,Killed (Compilation Error)
+5,\+ -> -,Killed (Compilation Error)
+6,\+ -> -,Killed (Compilation Error)
+7,\+ -> -,Killed (Compilation Error)
+8,\+ -> -,Killed (Compilation Error)
+9,\+ -> -,Killed (Compilation Error)
+10,\+ -> -,Killed (Compilation Error)
+11,\+ -> -,Killed (Compilation Error)
+12,\+ -> -,Killed (Compilation Error)
+13,\+ -> -,Killed (Compilation Error)
+14,\+ -> -,Killed (Compilation Error)
+15,\+ -> -,Killed (Compilation Error)
+16,- -> +,Survived
+17,- -> +,Survived
+18,- -> +,Survived
+19,- -> +,Survived
+20,- -> +,Survived
+21,- -> +,Survived
+22,- -> +,Survived
+23,- -> +,Survived
+24,- -> +,Survived
+25,- -> +,Survived
+26,- -> +,Survived
+27,- -> +,Survived
+28,- -> +,Survived
+29,- -> +,Survived
+30,- -> +,Survived
+31,- -> +,Survived
+32,- -> +,Survived
+33,- -> +,Survived
+34,- -> +,Survived
+35,\* -> /,Killed (Compilation Error)
+36,\* -> /,Survived
+37,\* -> /,Survived
+38,\* -> /,Survived
+39,\* -> /,Survived
+40,\* -> /,Survived
+41,\* -> /,Killed (Compilation Error)
+42,\* -> /,Survived
+43,\* -> /,Killed (Compilation Error)
+44,\* -> /,Killed (Compilation Error)
+45,\* -> /,Killed (Compilation Error)
+46,\* -> /,Killed (Compilation Error)
+47,\* -> /,Killed (Compilation Error)
+48,\* -> /,Killed (Compilation Error)
+49,\* -> /,Killed (Compilation Error)
+50,\* -> /,Survived
+51,\* -> /,Killed (Compilation Error)
+52,\* -> /,Survived
+53,\* -> /,Survived
+54,\* -> /,Survived
+55,\* -> /,Survived
+56,\* -> /,Survived
+57,\* -> /,Survived
+58,\* -> /,Survived
+59,\* -> /,Survived
+60,\* -> /,Survived
+61,\* -> /,Survived
+62,\* -> /,Survived
+63,\* -> /,Killed (Compilation Error)
+64,/ -> *,Killed (Compilation Error)
+65,/ -> *,Survived
+66,/ -> *,Survived
+67,/ -> *,Killed (Compilation Error)
+68,/ -> *,Killed (Compilation Error)
+69,/ -> *,Killed (Compilation Error)
+70,/ -> *,Killed (Compilation Error)
+71,/ -> *,Killed (Compilation Error)
+72,/ -> *,Killed (Compilation Error)
+73,/ -> *,Survived
+74,/ -> *,Killed (Compilation Error)
+75,/ -> *,Survived
+76,/ -> *,Killed (Compilation Error)
+77,/ -> *,Survived
+78,/ -> *,Killed (Compilation Error)
+79,/ -> *,Survived
+80,/ -> *,Killed (Compilation Error)
+81,/ -> *,Survived
+82,/ -> *,Killed (Compilation Error)
+83,/ -> *,Killed (Compilation Error)
+84,< -> >=,Killed (Compilation Error)
+85,< -> >=,Killed (Compilation Error)
+86,< -> >=,Killed (Compilation Error)
+87,< -> >=,Survived
+88,< -> >=,Survived
+89,< -> >=,Survived
+90,> -> <=,Killed (Compilation Error)
+91,> -> <=,Killed (Compilation Error)
+92,> -> <=,Killed (Compilation Error)
+93,> -> <=,Survived
+94,> -> <=,Survived
+95,> -> <=,Killed (Compilation Error)
+96,> -> <=,Killed (Compilation Error)
+97,> -> <=,Killed (Compilation Error)
+98,> -> <=,Killed (Compilation Error)
+99,> -> <=,Survived
+100,>= -> <,Survived
+101,>= -> <,Killed
+102,>= -> <,Killed
+103,>= -> <,Survived

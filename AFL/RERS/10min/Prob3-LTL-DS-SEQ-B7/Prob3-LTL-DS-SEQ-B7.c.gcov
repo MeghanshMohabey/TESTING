@@ -1,0 +1,3602 @@
+        -:    0:Source:Prob3-LTL-DS-SEQ-B7.c
+        -:    0:Graph:Prob3-LTL-DS-SEQ-B7.gcno
+        -:    0:Data:Prob3-LTL-DS-SEQ-B7.gcda
+        -:    0:Runs:150
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:#include<stdio.h>
+        -:    5:#include <stdio.h> 
+        -:    6:#include <assert.h>
+        -:    7:#include <math.h>
+        -:    8:#include <stdlib.h>
+        -:    9:
+        -:   10:#define BOUND 7
+        -:   11:int kappa;
+        -:   12:	// inputs
+        -:   13:	int inputs[] = {3,2,1,10,8,9,4,6,7,5};
+        -:   14:
+        -:   15:	void calculate_output(int);
+        -:   16:	void calculate_outputm1(int);
+        -:   17:	void calculate_outputm2(int);
+        -:   18:	void calculate_outputm3(int);
+        -:   19:	void calculate_outputm4(int);
+        -:   20:	void calculate_outputm5(int);
+        -:   21:	void calculate_outputm6(int);
+        -:   22:	void calculate_outputm7(int);
+        -:   23:	void calculate_outputm8(int);
+        -:   24:	void calculate_outputm9(int);
+        -:   25:	void calculate_outputm10(int);
+        -:   26:	void calculate_outputm11(int);
+        -:   27:	void calculate_outputm12(int);
+        -:   28:	void calculate_outputm13(int);
+        -:   29:	void calculate_outputm14(int);
+        -:   30:	void calculate_outputm15(int);
+        -:   31:	void calculate_outputm16(int);
+        -:   32:	void calculate_outputm17(int);
+        -:   33:	void calculate_outputm18(int);
+        -:   34:	void calculate_outputm19(int);
+        -:   35:	void calculate_outputm20(int);
+        -:   36:	void calculate_outputm21(int);
+        -:   37:	void calculate_outputm22(int);
+        -:   38:	void calculate_outputm23(int);
+        -:   39:	void calculate_outputm24(int);
+        -:   40:	void calculate_outputm25(int);
+        -:   41:	void calculate_outputm26(int);
+        -:   42:	void calculate_outputm27(int);
+        -:   43:	void calculate_outputm28(int);
+        -:   44:	void calculate_outputm29(int);
+        -:   45:	void calculate_outputm30(int);
+        -:   46:	void calculate_outputm31(int);
+        -:   47:	void calculate_outputm32(int);
+        -:   48:	void calculate_outputm33(int);
+        -:   49:	void calculate_outputm34(int);
+        -:   50:	void calculate_outputm35(int);
+        -:   51:	void calculate_outputm36(int);
+        -:   52:	void calculate_outputm37(int);
+        -:   53:	void calculate_outputm38(int);
+        -:   54:	void calculate_outputm39(int);
+        -:   55:	void calculate_outputm40(int);
+        -:   56:	void calculate_outputm41(int);
+        -:   57:	void calculate_outputm42(int);
+        -:   58:
+        -:   59:	 int a1048965926 = 7;
+        -:   60:	 int cf = 1;
+        -:   61:	 int a820990427[] = {10,11,12,13,14,15};
+        -:   62:	 int a1206862425[] = {16,17,18,19,20,21};
+        -:   63:	 int a1273907566[] = {22,23,24,25,26,27};
+        -:   64:	 int *a1809567311 = a1273907566;
+        -:   65:	 int a676174963[] = {71,72,73,74,75,76};
+        -:   66:	 int a1589275165[] = {77,78,79,80,81,82};
+        -:   67:	 int a1191120730[] = {83,84,85,86,87,88};
+        -:   68:	 int *a619005855 = a1589275165;
+        -:   69:	 int a506763364 = 16;
+        -:   70:	 int a1808156761 = 5;
+        -:   71:	 int a1556364350[] = {2,3,4,5,6,7,8,9};
+        -:   72:	 int a1439084427 = 165;
+        -:   73:	 int a1507654619[] = {1,2,3,4,5,6};
+        -:   74:	 int a2075223920[] = {7,8,9,10,11,12};
+        -:   75:	 int a599412095[] = {13,14,15,16,17,18};
+        -:   76:	 int *a1072353396 = a599412095;
+        -:   77:	 int a126716242[] = {8,9,10,11,12,13,14,15};
+        -:   78:	 int a2133225755 = -109;
+        -:   79:	 int a678777281[] = {1,2,3,4,5,6,7,8};
+        -:   80:	 int a912946383 = 5;
+        -:   81:	 int a980758244 = 11;
+        -:   82:	 int a1909276735[] = {28,29,30,31,32,33};
+        -:   83:	 int a1955130270[] = {34,35,36,37,38,39};
+        -:   84:	 int a840058547[] = {40,41,42,43,44,45};
+        -:   85:	 int *a791592808 = a840058547;
+        -:   86:	 int a1843696882 = 194;
+        -:   87:	 int a1892011536[] = {5,6,7,8,9,10,11,12};
+        -:   88:	 int a1142497764 = 29;
+        -:   89:	 int a537274255 = 5;
+        -:   90:	 int a730478169[] = {7,8,9,10,11,12};
+        -:   91:	 int a1742434703[] = {13,14,15,16,17,18};
+        -:   92:	 int a119817307[] = {19,20,21,22,23,24};
+        -:   93:	 int *a1036060995 = a119817307;
+        -:   94:	 int a1803718659[] = {3,4,5,6,7,8,9,10};
+        -:   95:	 int a1736018243  = 34;
+        -:   96:	 int a1858896056  = 34;
+        -:   97:	 int a1637829912 = 12;
+        -:   98:
+function calculate_outputm17 called 26 returned 100% blocks executed 100%
+       26:   99: void calculate_outputm17(int input) {
+       26:  100:    if((((8 == a1036060995[1]) && (a1858896056 == 33 && ((((33 < a1142497764) && (139 >= a1142497764)) && (input == inputs[4] && ((32 == a791592808[4]) &&  cf==1 ))) && a912946383 == a678777281[0]))) && (a1808156761 == a1803718659[0] && (a1048965926 == 5 && a1439084427 <=  48)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 38% (fallthrough)
+branch  9 taken 62%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       10:  101:    	cf = 0;
+       10:  102:    	a1736018243 = 33 ;
+       10:  103:    	a912946383 = a678777281[(a1048965926 + -1)]; 
+       10:  104:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  105:    } 
+       26:  106:}
+function calculate_outputm18 called 0 returned 0% blocks executed 0%
+    #####:  107: void calculate_outputm18(int input) {
+    #####:  108:    if(((a1858896056 == 33 && a1048965926 == 5) && ((a1808156761 == a1803718659[0] && (((a912946383 == a678777281[0] && (input == inputs[2] && ( cf==1  && ((139 < a1142497764) && (265 >= a1142497764))))) && (32 == a791592808[4])) && a1439084427 <=  48)) && (8 == a1036060995[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  109:    	cf = 0;
+    #####:  110:    	if(((a980758244 == a126716242[2] || ((!(a1048965926 == 5) || a1808156761 == 4) || ((195 < a1843696882) && (395 >= a1843696882)))) || !(32 == a791592808[4]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  111:    	a1736018243 = 33 ;
+    #####:  112:    	a912946383 = a678777281[(a1048965926 + -1)]; 
+        -:  113:    	}else {
+    #####:  114:    	a1142497764 = (((((((a1142497764 * a1439084427) % 14999) * 2) % 52) - -85) + 16119) - 16118);
+    #####:  115:    	}printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  116:    } if((((a1808156761 == a1803718659[0] && ((a912946383 == a678777281[0] && (input == inputs[9] && ( cf==1  && (32 == a791592808[4])))) && ((139 < a1142497764) && (265 >= a1142497764)))) && a1048965926 == 5) && ((a1858896056 == 33 && (8 == a1036060995[1])) && a1439084427 <=  48))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  117:    	cf = 0;
+    #####:  118:    	a912946383 = a678777281[((a1048965926 + a1048965926) + -7)];
+    #####:  119:    	a1809567311 = a820990427; 
+    #####:  120:    	 printf("");//printf("%d\n", 26); fflush(stdout); 
+        -:  121:    } 
+    #####:  122:}
+function calculate_outputm1 called 26 returned 100% blocks executed 68%
+       26:  123: void calculate_outputm1(int input) {
+       26:  124:    if(((( cf==1  && ((33 < a1142497764) && (139 >= a1142497764))) && a1439084427 <=  48) && ((8 == a1036060995[1]) && (a1808156761 == a1803718659[0] && (a1048965926 == 5 && a1858896056 == 33))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       26:  125:    	calculate_outputm17(input);
+call    0 returned 100%
+        -:  126:    } 
+      26*:  127:    if(((a1808156761 == a1803718659[0] && ( cf==1  && ((139 < a1142497764) && (265 >= a1142497764)))) && (((a1858896056 == 33 && (8 == a1036060995[1])) && a1439084427 <=  48) && a1048965926 == 5))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 62% (fallthrough)
+branch  3 taken 38%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  128:    	calculate_outputm18(input);
+call    0 never executed
+        -:  129:    } 
+       26:  130:}
+function calculate_outputm19 called 19 returned 100% blocks executed 100%
+       19:  131: void calculate_outputm19(int input) {
+       19:  132:    if(((a1439084427 <=  48 && (a1858896056 == 33 && (a1048965926 == 5 && (((32 == a791592808[4]) && (( cf==1  && a912946383 == a678777281[1]) && a1142497764 <=  33)) && input == inputs[8])))) && ((8 == a1036060995[1]) && a1808156761 == a1803718659[0]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 37% (fallthrough)
+branch 15 taken 63%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        7:  133:    	cf = 0;
+        7:  134:    	a1439084427 = ((((((((a1439084427 * a1142497764) % 14999) * 2) % 31) - -193) / 5) * 51) / 10);
+        7:  135:    	a980758244 = a126716242[(a1048965926 - -1)];
+        7:  136:    	a1808156761 = a1803718659[((a1048965926 + a1048965926) - 8)];
+        7:  137:    	a1036060995 = a119817307;
+        7:  138:    	a1858896056 = 34 ;
+        7:  139:    	a912946383 = a678777281[0];
+        7:  140:    	a791592808 = a840058547;
+        7:  141:    	a1048965926 = 7; 
+        7:  142:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        -:  143:    } 
+       19:  144:}
+function calculate_outputm2 called 19 returned 100% blocks executed 100%
+       19:  145: void calculate_outputm2(int input) {
+       19:  146:    if(((a1808156761 == a1803718659[0] && (8 == a1036060995[1])) && (a1858896056 == 33 && (a1439084427 <=  48 && (a1048965926 == 5 && (a1142497764 <=  33 &&  cf==1 )))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       19:  147:    	calculate_outputm19(input);
+call    0 returned 100%
+        -:  148:    } 
+       19:  149:}
+function calculate_outputm20 called 23 returned 100% blocks executed 100%
+       23:  150: void calculate_outputm20(int input) {
+       23:  151:    if(((a1858896056 == 33 && (8 == a1036060995[1])) && (a1048965926 == 5 && ((a1808156761 == a1803718659[0] && ((((a912946383 == a678777281[2] &&  cf==1 ) && a506763364 == 12) && input == inputs[2]) && (32 == a791592808[4]))) && a1439084427 <=  48)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 13% (fallthrough)
+branch 15 taken 87%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        3:  152:    	cf = 0;
+        3:  153:    	a1858896056 = 34 ;
+        3:  154:    	a1637829912 = a1892011536[(a1048965926 - -1)];
+        3:  155:    	a1036060995 = a119817307;
+        3:  156:    	a1439084427 = ((((((a1439084427 % 31) + 193) * 5) - -2817) % 31) - -176);
+        3:  157:    	a912946383 = a678777281[(a506763364 - 11)];
+        3:  158:    	a1808156761 = a1803718659[(a1048965926 + -3)];
+        3:  159:    	a791592808 = a840058547;
+        3:  160:    	a1048965926 = 7; 
+        3:  161:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        -:  162:    } 
+       23:  163:}
+function calculate_outputm21 called 83 returned 100% blocks executed 100%
+       83:  164: void calculate_outputm21(int input) {
+       83:  165:    if((((((8 == a1036060995[1]) && a1808156761 == a1803718659[0]) && a1048965926 == 5) && a1858896056 == 33) && (a1439084427 <=  48 && ((32 == a791592808[4]) && (a912946383 == a678777281[2] && (a506763364 == 15 && ( cf==1  && input == inputs[2]))))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 11% (fallthrough)
+branch 19 taken 89%
+        9:  166:    	cf = 0;
+        9:  167:    	a912946383 = a678777281[a1048965926];
+        9:  168:    	a1809567311 = a1273907566; 
+        9:  169:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+       83:  170:    } if((((a912946383 == a678777281[2] && (input == inputs[4] && (((32 == a791592808[4]) &&  cf==1 ) && a506763364 == 15))) && a1439084427 <=  48) && (((a1858896056 == 33 && (8 == a1036060995[1])) && a1808156761 == a1803718659[0]) && a1048965926 == 5))) {
+branch  0 taken 89% (fallthrough)
+branch  1 taken 11%
+branch  2 taken 9% (fallthrough)
+branch  3 taken 91%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        7:  171:    	cf = 0;
+        7:  172:    	a791592808 = a840058547;
+        7:  173:    	a1637829912 = a1892011536[((a506763364 * a1048965926) - 69)];
+        7:  174:    	a1858896056 = 34 ;
+        7:  175:    	a912946383 = a678777281[(a506763364 - 14)];
+        7:  176:    	a1036060995 = a119817307;
+        7:  177:    	a1439084427 = ((((((a1439084427 % 31) + 193) + -3340) * 5) % 31) + 221);
+        7:  178:    	a1808156761 = a1803718659[((a506763364 * a1048965926) - 73)];
+        7:  179:    	a1048965926 = ((a506763364 * a506763364) - 218); 
+        7:  180:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+       83:  181:    } if(((a1808156761 == a1803718659[0] && ((8 == a1036060995[1]) && (a1439084427 <=  48 && a1858896056 == 33))) && (a1048965926 == 5 && (a912946383 == a678777281[2] && ((((32 == a791592808[4]) &&  cf==1 ) && a506763364 == 15) && input == inputs[5]))))) {
+branch  0 taken 92% (fallthrough)
+branch  1 taken 8%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 88% (fallthrough)
+branch 11 taken 12%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 60% (fallthrough)
+branch 19 taken 40%
+       40:  182:    	cf = 0;
+       40:  183:    	a1439084427 = (((((a1439084427 % 31) - -193) - -1) - 27546) + 27545);
+       40:  184:    	a791592808 = a840058547;
+       40:  185:    	a1858896056 = 34 ;
+       40:  186:    	a1036060995 = a119817307;
+       40:  187:    	a980758244 = a126716242[(a1048965926 + 1)];
+       40:  188:    	a1808156761 = a1803718659[(a1048965926 - 3)];
+       40:  189:    	a912946383 = a678777281[((a506763364 - a506763364) - -6)];
+       40:  190:    	a1048965926 = 7; 
+       40:  191:    	 printf("");//printf("%d\n", 16); fflush(stdout); 
+        -:  192:    } 
+       83:  193:}
+function calculate_outputm22 called 0 returned 0% blocks executed 0%
+    #####:  194: void calculate_outputm22(int input) {
+    #####:  195:    if(((a1808156761 == a1803718659[0] && (8 == a1036060995[1])) && ((((a912946383 == a678777281[2] && (input == inputs[5] && (a506763364 == 16 && ( cf==1  && (32 == a791592808[4]))))) && a1048965926 == 5) && a1439084427 <=  48) && a1858896056 == 33))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  196:    	cf = 0;
+    #####:  197:    	a912946383 = a678777281[a1048965926];
+    #####:  198:    	a1809567311 = a1273907566; 
+    #####:  199:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+    #####:  200:    } if(((((((32 == a791592808[4]) && (input == inputs[3] &&  cf==1 )) && a912946383 == a678777281[2]) && a506763364 == 16) && a1808156761 == a1803718659[0]) && (a1439084427 <=  48 && (((8 == a1036060995[1]) && a1048965926 == 5) && a1858896056 == 33)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  201:    	cf = 0;
+    #####:  202:    	a912946383 = a678777281[((a506763364 - a506763364) + 1)];
+    #####:  203:    	a1808156761 = a1803718659[(a1048965926 - 3)];
+    #####:  204:    	a1439084427 = ((((a1439084427 - 0) % 31) + 192) * 1);
+    #####:  205:    	a1858896056 = 34 ;
+    #####:  206:    	a1637829912 = a1892011536[((a1048965926 - a1048965926) + 6)];
+    #####:  207:    	a1048965926 = (a506763364 - 9);
+    #####:  208:    	a1036060995 = a119817307;
+    #####:  209:    	a791592808 = a840058547; 
+    #####:  210:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+        -:  211:    } 
+    #####:  212:}
+function calculate_outputm3 called 106 returned 100% blocks executed 76%
+      106:  213: void calculate_outputm3(int input) {
+      106:  214:    if(((((a1808156761 == a1803718659[0] && (a1858896056 == 33 && a1439084427 <=  48)) && a1048965926 == 5) && (8 == a1036060995[1])) && ( cf==1  && a506763364 == 12))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 22% (fallthrough)
+branch 13 taken 78%
+       23:  215:    	calculate_outputm20(input);
+call    0 returned 100%
+        -:  216:    } 
+      106:  217:    if(((a1048965926 == 5 && (a1439084427 <=  48 && (8 == a1036060995[1]))) && (a1858896056 == 33 && ((a506763364 == 15 &&  cf==1 ) && a1808156761 == a1803718659[0])))) {
+branch  0 taken 97% (fallthrough)
+branch  1 taken 3%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 81% (fallthrough)
+branch  9 taken 19%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       83:  218:    	calculate_outputm21(input);
+call    0 returned 100%
+        -:  219:    } 
+     106*:  220:    if(((a1808156761 == a1803718659[0] && ((a506763364 == 16 &&  cf==1 ) && a1048965926 == 5)) && (a1858896056 == 33 && (a1439084427 <=  48 && (8 == a1036060995[1]))))) {
+branch  0 taken 53% (fallthrough)
+branch  1 taken 47%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  221:    	calculate_outputm22(input);
+call    0 never executed
+        -:  222:    } 
+      106:  223:}
+function calculate_outputm23 called 35 returned 100% blocks executed 92%
+       35:  224: void calculate_outputm23(int input) {
+       35:  225:    if(((a1858896056 == 33 && ((input == inputs[8] && ((32 == a791592808[4]) && (( cf==1  && a912946383 == a678777281[3]) && (12 == a1809567311[2])))) && a1808156761 == a1803718659[0])) && (a1048965926 == 5 && ((8 == a1036060995[1]) && a1439084427 <=  48)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 6% (fallthrough)
+branch  3 taken 94%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        2:  226:    	cf = 0;
+       2*:  227:    	if((((8 == a1036060995[1]) && (a1048965926 == 7 && !(1 == a1072353396[0]))) && a1736018243 == 35)) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  228:    	a1736018243 = 33 ;
+    #####:  229:    	a912946383 = a678777281[((a1048965926 + a1048965926) - 6)]; 
+        -:  230:    	}else {
+        2:  231:    	a912946383 = a678777281[((a1048965926 * a1048965926) + -25)];
+        2:  232:    	a1142497764 = ((((((a1439084427 * a1439084427) % 14999) / 5) * 5) % 52) + 86);
+        2:  233:    	}printf("");//printf("%d\n", 25); fflush(stdout); 
+       35:  234:    } if(((((a1858896056 == 33 && ((12 == a1809567311[2]) && (input == inputs[5] && ((32 == a791592808[4]) && (a912946383 == a678777281[3] &&  cf==1 ))))) && a1808156761 == a1803718659[0]) && a1439084427 <=  48) && (a1048965926 == 5 && (8 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 26% (fallthrough)
+branch  5 taken 74%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        9:  235:    	cf = 0;
+        9:  236:    	a791592808 = a840058547;
+        9:  237:    	a912946383 = a678777281[((a1048965926 + a1048965926) + -6)];
+        9:  238:    	a1439084427 = ((((a1439084427 + 13166) % 31) + 193) + -1);
+        9:  239:    	a1858896056 = 34 ;
+        9:  240:    	a1048965926 = 7;
+        9:  241:    	a1036060995 = a119817307;
+        9:  242:    	a1808156761 = a1803718659[2];
+        9:  243:    	a1072353396 = a2075223920; 
+        9:  244:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+       35:  245:    } if(((a1858896056 == 33 && a1808156761 == a1803718659[0]) && ((a1048965926 == 5 && (((32 == a791592808[4]) && ((12 == a1809567311[2]) && ((input == inputs[3] &&  cf==1 ) && a912946383 == a678777281[3]))) && a1439084427 <=  48)) && (8 == a1036060995[1])))) {
+branch  0 taken 74% (fallthrough)
+branch  1 taken 26%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 27% (fallthrough)
+branch 11 taken 73%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        7:  246:    	cf = 0;
+        7:  247:    	a1858896056 = 32 ;
+        7:  248:    	a1048965926 = 6;
+        7:  249:    	a1036060995 = a1742434703;
+        7:  250:    	a791592808 = a1955130270;
+        7:  251:    	a1843696882 = ((((((a1439084427 * a1439084427) % 14999) * 2) + 0) % 99) + 294);
+        7:  252:    	a1439084427 = (((((a1439084427 / 5) * 5) + 0) % 56) - -105);
+        7:  253:    	a1808156761 = a1803718659[(a1048965926 + -5)];
+        7:  254:    	a2133225755 = (((((a1843696882 * a1843696882) % 14999) / 5) / 5) - -15698); 
+        7:  255:    	 printf("");//printf("%d\n", 19); fflush(stdout); 
+        -:  256:    } 
+       35:  257:}
+function calculate_outputm4 called 35 returned 100% blocks executed 100%
+       35:  258: void calculate_outputm4(int input) {
+       35:  259:    if(((a1048965926 == 5 && (a1439084427 <=  48 && (((12 == a1809567311[2]) &&  cf==1 ) && a1808156761 == a1803718659[0]))) && ((8 == a1036060995[1]) && a1858896056 == 33))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       35:  260:    	calculate_outputm23(input);
+call    0 returned 100%
+        -:  261:    } 
+       35:  262:}
+function calculate_outputm24 called 26 returned 100% blocks executed 100%
+       26:  263: void calculate_outputm24(int input) {
+       26:  264:    if((((a1048965926 == 5 && (a1858896056 == 33 && a1439084427 <=  48)) && a1808156761 == a1803718659[0]) && ((((32 == a791592808[4]) && (a912946383 == a678777281[4] && ( cf==1  && input == inputs[4]))) && a1736018243 == 33) && (8 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 46% (fallthrough)
+branch 15 taken 54%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+       12:  265:    	cf = 0;
+        -:  266:    	 
+       12:  267:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  268:    } 
+       26:  269:}
+function calculate_outputm5 called 26 returned 100% blocks executed 100%
+       26:  270: void calculate_outputm5(int input) {
+       26:  271:    if(((a1808156761 == a1803718659[0] && ((a1736018243 == 33 &&  cf==1 ) && a1439084427 <=  48)) && ((a1048965926 == 5 && a1858896056 == 33) && (8 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       26:  272:    	calculate_outputm24(input);
+call    0 returned 100%
+        -:  273:    } 
+       26:  274:}
+function calculate_outputm25 called 24 returned 100% blocks executed 100%
+       24:  275: void calculate_outputm25(int input) {
+       24:  276:    if(((a1439084427 <=  48 && a1048965926 == 5) && (a1858896056 == 33 && ((8 == a1036060995[1]) && (a1808156761 == a1803718659[0] && (((( cf==1  && (32 == a791592808[4])) && (23 == a1809567311[1])) && input == inputs[5]) && a912946383 == a678777281[5])))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 33% (fallthrough)
+branch 17 taken 67%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        8:  277:    	cf = 0;
+        -:  278:    	 
+        8:  279:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+       24:  280:    } if((((a1808156761 == a1803718659[0] && (a1048965926 == 5 && ((((a912946383 == a678777281[5] &&  cf==1 ) && input == inputs[3]) && (23 == a1809567311[1])) && (32 == a791592808[4])))) && a1439084427 <=  48) && (a1858896056 == 33 && (8 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 67% (fallthrough)
+branch  7 taken 33%
+branch  8 taken 6% (fallthrough)
+branch  9 taken 94%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        1:  281:    	cf = 0;
+        1:  282:    	a912946383 = a678777281[1];
+        1:  283:    	a791592808 = a840058547;
+        1:  284:    	a1036060995 = a119817307;
+        1:  285:    	a1439084427 = ((((a1439084427 / 5) / 5) % 31) - -193);
+        1:  286:    	a1637829912 = a1892011536[(a1048965926 - -1)];
+        1:  287:    	a1858896056 = 34 ;
+        1:  288:    	a1808156761 = a1803718659[(a1048965926 - 3)];
+        1:  289:    	a1048965926 = 7; 
+        1:  290:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+        -:  291:    } 
+       24:  292:}
+function calculate_outputm6 called 24 returned 100% blocks executed 100%
+       24:  293: void calculate_outputm6(int input) {
+       24:  294:    if(((a1048965926 == 5 && (((8 == a1036060995[1]) && (a1808156761 == a1803718659[0] && ((23 == a1809567311[1]) &&  cf==1 ))) && a1858896056 == 33)) && a1439084427 <=  48)) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       24:  295:    	calculate_outputm25(input);
+call    0 returned 100%
+        -:  296:    } 
+       24:  297:}
+function calculate_outputm26 called 0 returned 0% blocks executed 0%
+    #####:  298: void calculate_outputm26(int input) {
+    #####:  299:    if((((a1858896056 == 33 && a1439084427 <=  48) && a1808156761 == a1803718659[0]) && (((input == inputs[0] && (a1736018243 == 36 && (( cf==1  && (32 == a791592808[4])) && a912946383 == a678777281[6]))) && (8 == a1036060995[1])) && a1048965926 == 5))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  300:    	cf = 0;
+    #####:  301:    	a791592808 = a1955130270;
+    #####:  302:    	a1036060995 = a119817307;
+    #####:  303:    	a1048965926 = 5;
+    #####:  304:    	a1858896056 = 36 ;
+    #####:  305:    	a1843696882 = ((((14 - -375) - -2) + -9526) - -9493);
+    #####:  306:    	a1808156761 = a1803718659[3];
+    #####:  307:    	a2133225755 = (((((((a1439084427 * a1843696882) % 14999) % 14983) - -15016) - -1) / 5) + 415);
+    #####:  308:    	a1439084427 = ((((a1439084427 % 15024) + -14975) + -1) + -1); 
+    #####:  309:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+    #####:  310:    } if((((a1048965926 == 5 && a1858896056 == 33) && a1808156761 == a1803718659[0]) && ((8 == a1036060995[1]) && ((input == inputs[1] && ((((32 == a791592808[4]) &&  cf==1 ) && a912946383 == a678777281[6]) && a1736018243 == 36)) && a1439084427 <=  48)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  311:    	cf = 0;
+    #####:  312:    	if(((a537274255 == 4 && a1048965926 == 12) || (8 == a1036060995[1]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    #####:  313:    	a791592808 = a840058547;
+    #####:  314:    	a912946383 = a678777281[(a1048965926 + -1)];
+    #####:  315:    	a1072353396 = a599412095; 
+        -:  316:    	}else {
+    #####:  317:    	a1808156761 = a1803718659[1];
+    #####:  318:    	a1036060995 = a1742434703;
+    #####:  319:    	a980758244 = a126716242[(a1048965926 - 4)];
+    #####:  320:    	a791592808 = a840058547;
+    #####:  321:    	a1439084427 = ((((a1439084427 / 5) * 5) % 14887) - -15111);
+    #####:  322:    	a1858896056 = 36 ;
+    #####:  323:    	a1048965926 = 11;
+    #####:  324:    	}printf("");//printf("%d\n", 18); fflush(stdout); 
+    #####:  325:    } if(((a1808156761 == a1803718659[0] && a1858896056 == 33) && (a1048965926 == 5 && (a1439084427 <=  48 && ((8 == a1036060995[1]) && (((( cf==1  && a912946383 == a678777281[6]) && a1736018243 == 36) && (32 == a791592808[4])) && input == inputs[2])))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  326:    	cf = 0;
+    #####:  327:    	if((a912946383 == 5 || 224 < a1439084427)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+        -:  328:    	 
+        -:  329:    	}else {
+    #####:  330:    	a1858896056 = 33 ;
+    #####:  331:    	a791592808 = a840058547;
+    #####:  332:    	a1808156761 = a1803718659[1];
+    #####:  333:    	a1439084427 = ((((a1439084427 % 15024) + -14975) + -1) + -1);
+    #####:  334:    	a912946383 = a678777281[1];
+    #####:  335:    	a1036060995 = a730478169;
+    #####:  336:    	a1637829912 = a1892011536[(a1048965926 - -1)];
+    #####:  337:    	a1048965926 = 9;
+    #####:  338:    	}printf("");//printf("%d\n", 24); fflush(stdout); 
+    #####:  339:    } if((((a1048965926 == 5 && (a1858896056 == 33 && (a1736018243 == 36 && ((input == inputs[3] && ( cf==1  && a912946383 == a678777281[6])) && (32 == a791592808[4]))))) && a1439084427 <=  48) && (a1808156761 == a1803718659[0] && (8 == a1036060995[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  340:    	cf = 0;
+    #####:  341:    	a1142497764 = ((((((a1439084427 * a1439084427) % 14999) % 14867) + 15132) / 5) + 12895);
+    #####:  342:    	a912946383 = a678777281[((a1048965926 / a1048965926) + 4)];
+    #####:  343:    	a1858896056 = 33 ;
+    #####:  344:    	a1808156761 = a1803718659[3];
+    #####:  345:    	a1048965926 = 6;
+    #####:  346:    	a1036060995 = a730478169;
+    #####:  347:    	a791592808 = a840058547;
+    #####:  348:    	a1439084427 = (((a1439084427 / 5) - 14161) / 5); 
+    #####:  349:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+    #####:  350:    } if((((a1808156761 == a1803718659[0] && a1439084427 <=  48) && (8 == a1036060995[1])) && ((a1048965926 == 5 && (((32 == a791592808[4]) && ((a1736018243 == 36 &&  cf==1 ) && input == inputs[4])) && a912946383 == a678777281[6])) && a1858896056 == 33))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  351:    	cf = 0;
+    #####:  352:    	a1808156761 = a1803718659[5];
+    #####:  353:    	a791592808 = a840058547;
+    #####:  354:    	a1036060995 = a1742434703;
+    #####:  355:    	a912946383 = a678777281[a1048965926];
+    #####:  356:    	a1142497764 = (((((((a1439084427 * a1439084427) % 14999) % 14867) + 15132) - -1) / 5) + 23623);
+    #####:  357:    	a1048965926 = 5;
+    #####:  358:    	a1858896056 = 32 ;
+    #####:  359:    	a1439084427 = (((((a1439084427 / 5) / 5) * 5) % 56) - -104); 
+    #####:  360:    	 printf("");//printf("%d\n", 16); fflush(stdout); 
+    #####:  361:    } if((((a1858896056 == 33 && (a1048965926 == 5 && a1808156761 == a1803718659[0])) && a1439084427 <=  48) && ((input == inputs[5] && (a1736018243 == 36 && (((32 == a791592808[4]) &&  cf==1 ) && a912946383 == a678777281[6]))) && (8 == a1036060995[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  362:    	cf = 0;
+    #####:  363:    	if(((a1808156761 == a1803718659[5] || ((-67 < a2133225755) && (33 >= a2133225755))) && !(a1048965926 == 7))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  364:    	a1808156761 = a1803718659[7];
+    #####:  365:    	a1036060995 = a730478169;
+    #####:  366:    	a791592808 = a840058547;
+    #####:  367:    	a1439084427 = (((((a1439084427 % 56) - -105) / 5) * 10) / 2);
+    #####:  368:    	a912946383 = a678777281[1];
+    #####:  369:    	a1858896056 = 33 ;
+    #####:  370:    	a1637829912 = a1892011536[a1048965926];
+    #####:  371:    	a1048965926 = 12; 
+        -:  372:    	}else {
+    #####:  373:    	a1637829912 = a1892011536[(a1048965926 + -4)];
+    #####:  374:    	a1808156761 = a1803718659[7];
+    #####:  375:    	a1439084427 = ((((a1439084427 % 56) + 105) - -1) + -2);
+    #####:  376:    	a912946383 = a678777281[3];
+    #####:  377:    	a791592808 = a840058547;
+    #####:  378:    	a1036060995 = a1742434703;
+    #####:  379:    	a1858896056 = 36 ;
+    #####:  380:    	a1048965926 = 6;
+    #####:  381:    	}printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  382:    } if((a1808156761 == a1803718659[0] && (a1048965926 == 5 && ((a1439084427 <=  48 && ((8 == a1036060995[1]) && (((32 == a791592808[4]) && ((a912946383 == a678777281[6] &&  cf==1 ) && input == inputs[6])) && a1736018243 == 36))) && a1858896056 == 33)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  383:    	cf = 0;
+    #####:  384:    	if((a912946383 == 2 || (((74 == a619005855[3]) || (32 == a791592808[4])) && !(17 == a1036060995[4])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  385:    	a1736018243 = 33 ;
+    #####:  386:    	a912946383 = a678777281[((a1048965926 / a1048965926) + 3)]; 
+        -:  387:    	}else {
+    #####:  388:    	a912946383 = a678777281[(a1048965926 + -5)];
+    #####:  389:    	a1142497764 = (((((((a1439084427 * a1439084427) % 14999) * 2) % 52) - -86) - 24666) - -24667);
+    #####:  390:    	}printf("");//printf("%d\n", 26); fflush(stdout); 
+    #####:  391:    } if(((a1808156761 == a1803718659[0] && (a1858896056 == 33 && ((input == inputs[7] && (a1736018243 == 36 && (((32 == a791592808[4]) &&  cf==1 ) && a912946383 == a678777281[6]))) && (8 == a1036060995[1])))) && (a1048965926 == 5 && a1439084427 <=  48))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  392:    	cf = 0;
+    #####:  393:    	if((35 == a791592808[1])) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  394:    	a1637829912 = a1892011536[((a1048965926 / a1048965926) + 2)];
+    #####:  395:    	a791592808 = a840058547;
+    #####:  396:    	a912946383 = a678777281[1];
+    #####:  397:    	a1439084427 = (((((a1439084427 - 0) + 18596) + -9259) % 56) + 105);
+    #####:  398:    	a1858896056 = 33 ;
+    #####:  399:    	a1036060995 = a1742434703;
+    #####:  400:    	a1808156761 = a1803718659[3];
+    #####:  401:    	a1048965926 = 6; 
+        -:  402:    	}else {
+    #####:  403:    	a506763364 = (a1048965926 + 7);
+    #####:  404:    	a912946383 = a678777281[(a1048965926 - 3)];
+    #####:  405:    	}printf("");//printf("%d\n", 19); fflush(stdout); 
+    #####:  406:    } if(((((a1736018243 == 36 && ((32 == a791592808[4]) && (a912946383 == a678777281[6] &&  cf==1 ))) && input == inputs[8]) && a1858896056 == 33) && (((8 == a1036060995[1]) && (a1048965926 == 5 && a1808156761 == a1803718659[0])) && a1439084427 <=  48))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  407:    	cf = 0;
+    #####:  408:    	a1858896056 = 35 ;
+    #####:  409:    	a980758244 = a126716242[(a1048965926 - -1)];
+    #####:  410:    	a1439084427 = (((((a1439084427 % 14887) - -15111) / 5) / 5) - -12565);
+    #####:  411:    	a791592808 = a840058547;
+    #####:  412:    	a1036060995 = a1742434703;
+    #####:  413:    	a912946383 = a678777281[0];
+    #####:  414:    	a1808156761 = a1803718659[0];
+    #####:  415:    	a1048965926 = 9; 
+    #####:  416:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+    #####:  417:    } if((((a1808156761 == a1803718659[0] && (input == inputs[9] && (a912946383 == a678777281[6] && (((32 == a791592808[4]) &&  cf==1 ) && a1736018243 == 36)))) && a1858896056 == 33) && (a1048965926 == 5 && (a1439084427 <=  48 && (8 == a1036060995[1]))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  418:    	cf = 0;
+    #####:  419:    	if(((a1142497764 <=  33 || (a1843696882 <=  195 ||  cf!=1 )) || !(78 == a619005855[1]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+        -:  420:    	 
+        -:  421:    	}else {
+    #####:  422:    	a537274255 = a1556364350[((a1048965926 * a1048965926) + -21)];
+    #####:  423:    	a912946383 = a678777281[((a1048965926 - a1048965926) + 7)];
+    #####:  424:    	}printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  425:    } 
+    #####:  426:}
+function calculate_outputm7 called 0 returned 0% blocks executed 0%
+    #####:  427: void calculate_outputm7(int input) {
+    #####:  428:    if(((a1439084427 <=  48 && ((a1808156761 == a1803718659[0] && a1048965926 == 5) && a1858896056 == 33)) && ((a1736018243 == 36 &&  cf==1 ) && (8 == a1036060995[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  429:    	calculate_outputm26(input);
+call    0 never executed
+        -:  430:    } 
+    #####:  431:}
+function calculate_outputm27 called 39 returned 100% blocks executed 100%
+       39:  432: void calculate_outputm27(int input) {
+       39:  433:    if(((a1439084427 <=  48 && (8 == a1036060995[1])) && (a1858896056 == 33 && (((a537274255 == a1556364350[4] && ((((32 == a791592808[4]) &&  cf==1 ) && a912946383 == a678777281[7]) && input == inputs[0])) && a1048965926 == 5) && a1808156761 == a1803718659[0])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 13% (fallthrough)
+branch 15 taken 87%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        5:  434:    	cf = 0;
+        5:  435:    	a1808156761 = a1803718659[(a1048965926 - 3)];
+        5:  436:    	a791592808 = a840058547;
+        5:  437:    	a912946383 = a678777281[a1048965926];
+        5:  438:    	a1858896056 = 34 ;
+        5:  439:    	a1142497764 = ((((((a1439084427 * a1439084427) % 14999) % 52) + 86) + 2) + -1);
+        5:  440:    	a1036060995 = a119817307;
+        5:  441:    	a1048965926 = 7;
+        5:  442:    	a1439084427 = ((((a1439084427 * 1) % 31) - -193) + 1); 
+        5:  443:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+       39:  444:    } if(((a1808156761 == a1803718659[0] && ((8 == a1036060995[1]) && (a1858896056 == 33 && a1048965926 == 5))) && (a1439084427 <=  48 && ((input == inputs[7] && (( cf==1  && a912946383 == a678777281[7]) && a537274255 == a1556364350[4])) && (32 == a791592808[4]))))) {
+branch  0 taken 87% (fallthrough)
+branch  1 taken 13%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 38% (fallthrough)
+branch 11 taken 62%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+       13:  445:    	cf = 0;
+       13:  446:    	a912946383 = a678777281[((a1048965926 - a1048965926) - -2)];
+       13:  447:    	a506763364 = ((a1048965926 / a1048965926) + 11); 
+       13:  448:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+       39:  449:    } if((((a1439084427 <=  48 && ((8 == a1036060995[1]) && a1048965926 == 5)) && a1858896056 == 33) && (a1808156761 == a1803718659[0] && (a912946383 == a678777281[7] && (input == inputs[3] && ((32 == a791592808[4]) && ( cf==1  && a537274255 == a1556364350[4]))))))) {
+branch  0 taken 87% (fallthrough)
+branch  1 taken 13%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 62% (fallthrough)
+branch 11 taken 38%
+branch 12 taken 38% (fallthrough)
+branch 13 taken 62%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+        8:  450:    	cf = 0;
+        8:  451:    	a791592808 = a840058547;
+        8:  452:    	a912946383 = a678777281[1];
+        8:  453:    	a1858896056 = 34 ;
+        8:  454:    	a1036060995 = a119817307;
+        8:  455:    	a1439084427 = ((((a1439084427 % 31) - -193) + -1) - -1);
+        8:  456:    	a1637829912 = a1892011536[(a1048965926 - 2)];
+        8:  457:    	a1808156761 = a1803718659[(a1048965926 + -3)];
+        8:  458:    	a1048965926 = 7; 
+        8:  459:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  460:    } 
+       39:  461:}
+function calculate_outputm8 called 39 returned 100% blocks executed 100%
+       39:  462: void calculate_outputm8(int input) {
+       39:  463:    if(((a537274255 == a1556364350[4] &&  cf==1 ) && (((((8 == a1036060995[1]) && a1858896056 == 33) && a1439084427 <=  48) && a1048965926 == 5) && a1808156761 == a1803718659[0]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       39:  464:    	calculate_outputm27(input);
+call    0 returned 100%
+        -:  465:    } 
+       39:  466:}
+function calculate_outputm28 called 0 returned 0% blocks executed 0%
+    #####:  467: void calculate_outputm28(int input) {
+    #####:  468:    if((((((48 < a1439084427) && (161 >= a1439084427)) && a1858896056 == 32) && (17 == a1036060995[4])) && (a1808156761 == a1803718659[1] && (((35 == a791592808[1]) && ((( cf==1  && a1843696882 <=  195) && input == inputs[0]) && (78 == a619005855[1]))) && a1048965926 == 6)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  469:    	cf = 0;
+    #####:  470:    	a1808156761 = a1803718659[4];
+    #####:  471:    	a791592808 = a840058547;
+    #####:  472:    	a1439084427 = (((a1439084427 + -29052) + -535) + 18041);
+    #####:  473:    	a912946383 = a678777281[(a1048965926 + -2)];
+    #####:  474:    	a1048965926 = 11;
+    #####:  475:    	a1036060995 = a1742434703;
+    #####:  476:    	a1858896056 = 33 ;
+    #####:  477:    	a1072353396 = a2075223920; 
+    #####:  478:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  479:    } if((((a1048965926 == 6 && (((48 < a1439084427) && (161 >= a1439084427)) && (17 == a1036060995[4]))) && a1858896056 == 32) && (a1808156761 == a1803718659[1] && ((input == inputs[1] && (( cf==1  && (78 == a619005855[1])) && (35 == a791592808[1]))) && a1843696882 <=  195)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  480:    	cf = 0;
+    #####:  481:    	a912946383 = a678777281[(a1048965926 - 6)];
+    #####:  482:    	a1036060995 = a119817307;
+    #####:  483:    	a1142497764 = ((((((a1439084427 * a1439084427) + 3924) + -4984) - -4526) % 62) - -162);
+    #####:  484:    	a1808156761 = a1803718659[7];
+    #####:  485:    	a1048965926 = 6;
+    #####:  486:    	a1858896056 = 32 ;
+    #####:  487:    	a791592808 = a1909276735;
+    #####:  488:    	a1439084427 = ((((a1439084427 - -12394) * 10) / 9) - -2552); 
+    #####:  489:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+    #####:  490:    } if((((17 == a1036060995[4]) && (((input == inputs[2] && (((35 == a791592808[1]) &&  cf==1 ) && (78 == a619005855[1]))) && a1843696882 <=  195) && ((48 < a1439084427) && (161 >= a1439084427)))) && (a1858896056 == 32 && (a1048965926 == 6 && a1808156761 == a1803718659[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  491:    	cf = 0;
+    #####:  492:    	a912946383 = a678777281[3];
+    #####:  493:    	a1439084427 = (((a1439084427 - -27474) + -11088) * 1);
+    #####:  494:    	a1637829912 = a1892011536[(a1048965926 + -4)];
+    #####:  495:    	a1808156761 = a1803718659[1];
+    #####:  496:    	a791592808 = a840058547;
+    #####:  497:    	a1036060995 = a1742434703;
+    #####:  498:    	a1858896056 = 36 ;
+    #####:  499:    	a1048965926 = 6; 
+    #####:  500:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  501:    } if(((((48 < a1439084427) && (161 >= a1439084427)) && (a1858896056 == 32 && ((input == inputs[3] && (( cf==1  && (78 == a619005855[1])) && a1843696882 <=  195)) && (35 == a791592808[1])))) && (((17 == a1036060995[4]) && a1808156761 == a1803718659[1]) && a1048965926 == 6))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  502:    	cf = 0;
+    #####:  503:    	if((a1843696882 <=  195 && a980758244 == 11)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  504:    	a791592808 = a1909276735;
+    #####:  505:    	a1439084427 = ((((a1439084427 * 10) / 2) - -7268) - -9966);
+    #####:  506:    	a506763364 = (a1048965926 + 10);
+    #####:  507:    	a1858896056 = 35 ;
+    #####:  508:    	a1808156761 = a1803718659[6];
+    #####:  509:    	a1036060995 = a119817307;
+    #####:  510:    	a912946383 = a678777281[(a506763364 + -14)];
+    #####:  511:    	a1048965926 = 10; 
+        -:  512:    	}else {
+    #####:  513:    	a1808156761 = a1803718659[4];
+    #####:  514:    	a1439084427 = (((((a1439084427 * 46) / 10) * 10) / 9) - -17506);
+    #####:  515:    	a791592808 = a1909276735;
+    #####:  516:    	a912946383 = a678777281[((a1048965926 + a1048965926) + -7)];
+    #####:  517:    	a1858896056 = 36 ;
+    #####:  518:    	a1048965926 = 9;
+    #####:  519:    	a1036060995 = a119817307;
+    #####:  520:    	a1809567311 = a1273907566;
+    #####:  521:    	}printf("");//printf("%d\n", 24); fflush(stdout); 
+    #####:  522:    } if(((((17 == a1036060995[4]) && ((((35 == a791592808[1]) && ( cf==1  && a1843696882 <=  195)) && input == inputs[4]) && (78 == a619005855[1]))) && a1858896056 == 32) && (((48 < a1439084427) && (161 >= a1439084427)) && (a1048965926 == 6 && a1808156761 == a1803718659[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  523:    	cf = 0;
+    #####:  524:    	a1808156761 = a1803718659[1];
+    #####:  525:    	a1858896056 = 36 ;
+    #####:  526:    	a1036060995 = a1742434703;
+    #####:  527:    	a1439084427 = (((a1439084427 + 24062) * 1) - 33318);
+    #####:  528:    	a912946383 = a678777281[0];
+    #####:  529:    	a980758244 = a126716242[((a1048965926 - a1048965926) - -6)];
+    #####:  530:    	a791592808 = a840058547;
+    #####:  531:    	a1048965926 = 8; 
+    #####:  532:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+    #####:  533:    } if(((((a1808156761 == a1803718659[1] && ((17 == a1036060995[4]) && ((48 < a1439084427) && (161 >= a1439084427)))) && a1858896056 == 32) && a1048965926 == 6) && (((78 == a619005855[1]) && ((input == inputs[5] &&  cf==1 ) && (35 == a791592808[1]))) && a1843696882 <=  195))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  534:    	cf = 0;
+    #####:  535:    	if(a1858896056 == 33) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  536:    	a980758244 = a126716242[((a1048965926 - a1048965926) + 6)];
+    #####:  537:    	a912946383 = a678777281[0];
+    #####:  538:    	a1808156761 = a1803718659[0];
+    #####:  539:    	a1439084427 = (((((a1439084427 - 17083) - -12047) - -26785) % 56) - -58);
+    #####:  540:    	a1858896056 = 35 ;
+    #####:  541:    	a1036060995 = a730478169;
+    #####:  542:    	a791592808 = a840058547;
+    #####:  543:    	a1048965926 = 6; 
+        -:  544:    	}else {
+    #####:  545:    	a791592808 = a840058547;
+    #####:  546:    	a980758244 = a126716242[(a1048965926 + -5)];
+    #####:  547:    	a1858896056 = 32 ;
+    #####:  548:    	a912946383 = a678777281[6];
+    #####:  549:    	a1808156761 = a1803718659[0];
+    #####:  550:    	a1439084427 = ((((a1439084427 * 10) / 2) + -29298) - -37303);
+    #####:  551:    	a1036060995 = a1742434703;
+    #####:  552:    	a1048965926 = 8;
+    #####:  553:    	}printf("");//printf("%d\n", 23); fflush(stdout); 
+    #####:  554:    } if((((a1858896056 == 32 && (17 == a1036060995[4])) && a1048965926 == 6) && (a1808156761 == a1803718659[1] && ((((a1843696882 <=  195 && ((35 == a791592808[1]) &&  cf==1 )) && (78 == a619005855[1])) && input == inputs[6]) && ((48 < a1439084427) && (161 >= a1439084427)))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  555:    	cf = 0;
+    #####:  556:    	a912946383 = a678777281[((a1048965926 / a1048965926) - -4)];
+    #####:  557:    	a1808156761 = a1803718659[1];
+    #####:  558:    	a1858896056 = 33 ;
+    #####:  559:    	a791592808 = a840058547;
+    #####:  560:    	a1036060995 = a730478169;
+    #####:  561:    	a1142497764 = (((((((a1843696882 * a1439084427) % 14999) - -536) % 14867) + 15132) / 5) - -3163);
+    #####:  562:    	a1439084427 = ((((a1439084427 * 46) / 10) - -9548) + 4238);
+    #####:  563:    	a1048965926 = 8; 
+    #####:  564:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  565:    } if((((a1048965926 == 6 && (a1843696882 <=  195 && ((((35 == a791592808[1]) &&  cf==1 ) && (78 == a619005855[1])) && input == inputs[7]))) && ((48 < a1439084427) && (161 >= a1439084427))) && ((a1808156761 == a1803718659[1] && (17 == a1036060995[4])) && a1858896056 == 32))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  566:    	cf = 0;
+    #####:  567:    	a1036060995 = a119817307;
+    #####:  568:    	a1439084427 = (((((a1439084427 + -24441) * 1) - 2208) % 56) - -111);
+    #####:  569:    	a1736018243 = 36 ;
+    #####:  570:    	a912946383 = a678777281[a1048965926];
+    #####:  571:    	a1858896056 = 34 ;
+    #####:  572:    	a791592808 = a1909276735;
+    #####:  573:    	a1808156761 = a1803718659[5];
+    #####:  574:    	a1048965926 = 6; 
+    #####:  575:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+    #####:  576:    } if(((a1858896056 == 32 && ((17 == a1036060995[4]) && (((48 < a1439084427) && (161 >= a1439084427)) && (a1048965926 == 6 && a1808156761 == a1803718659[1])))) && (((35 == a791592808[1]) && ((78 == a619005855[1]) && ( cf==1  && a1843696882 <=  195))) && input == inputs[8]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  577:    	cf = 0;
+    #####:  578:    	a1036060995 = a1742434703;
+    #####:  579:    	a791592808 = a1909276735;
+    #####:  580:    	a1439084427 = (((((a1439084427 % 31) - -192) * 5) % 31) + 165);
+    #####:  581:    	a1808156761 = a1803718659[1];
+    #####:  582:    	a912946383 = a678777281[(a1048965926 + -2)];
+    #####:  583:    	a1858896056 = 32 ;
+    #####:  584:    	a1736018243 = 33 ;
+    #####:  585:    	a1048965926 = 8; 
+    #####:  586:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+    #####:  587:    } if((((((17 == a1036060995[4]) && a1858896056 == 32) && ((48 < a1439084427) && (161 >= a1439084427))) && a1048965926 == 6) && ((a1843696882 <=  195 && (input == inputs[9] && ((35 == a791592808[1]) && ((78 == a619005855[1]) &&  cf==1 )))) && a1808156761 == a1803718659[1]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  588:    	cf = 0;
+    #####:  589:    	if(((a980758244 == a126716242[3] && a537274255 == a1556364350[1]) || !(a1637829912 == a1892011536[4]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    #####:  590:    	a912946383 = a678777281[2];
+    #####:  591:    	a1036060995 = a1742434703;
+    #####:  592:    	a506763364 = (a1048965926 + 10);
+    #####:  593:    	a1858896056 = 32 ;
+    #####:  594:    	a791592808 = a1909276735;
+    #####:  595:    	a1439084427 = ((((a1439084427 + 7340) % 31) - -163) - 1);
+    #####:  596:    	a1808156761 = a1803718659[1];
+    #####:  597:    	a1048965926 = 9; 
+        -:  598:    	}else {
+    #####:  599:    	a1439084427 = ((((a1439084427 % 31) - -179) + -11062) + 11054);
+    #####:  600:    	a791592808 = a1909276735;
+    #####:  601:    	a1858896056 = 34 ;
+    #####:  602:    	a912946383 = a678777281[a1048965926];
+    #####:  603:    	a1736018243 = 36 ;
+    #####:  604:    	a1808156761 = a1803718659[6];
+    #####:  605:    	a1036060995 = a119817307;
+    #####:  606:    	a1048965926 = 12;
+    #####:  607:    	}printf("");//printf("%d\n", 16); fflush(stdout); 
+        -:  608:    } 
+    #####:  609:}
+function calculate_outputm9 called 0 returned 0% blocks executed 0%
+    #####:  610: void calculate_outputm9(int input) {
+    #####:  611:    if((((a1048965926 == 6 && ((78 == a619005855[1]) &&  cf==1 )) && (17 == a1036060995[4])) && (((48 < a1439084427) && (161 >= a1439084427)) && (a1858896056 == 32 && a1808156761 == a1803718659[1])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  612:    	calculate_outputm28(input);
+call    0 never executed
+        -:  613:    } 
+    #####:  614:}
+function calculate_outputm29 called 12 returned 100% blocks executed 100%
+       12:  615: void calculate_outputm29(int input) {
+       12:  616:    if(((((48 < a1439084427) && (161 >= a1439084427)) && (((195 < a1843696882) && (395 >= a1843696882)) && (input == inputs[8] && (33 < a2133225755 && ( cf==1  && (35 == a791592808[1])))))) && (a1808156761 == a1803718659[1] && (a1048965926 == 6 && (a1858896056 == 32 && (17 == a1036060995[4])))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 25% (fallthrough)
+branch  9 taken 75%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+branch 22 taken 100% (fallthrough)
+branch 23 taken 0%
+        3:  617:    	cf = 0;
+        3:  618:    	a1637829912 = a1892011536[a1048965926];
+        3:  619:    	a1439084427 = ((((((a1439084427 * a2133225755) % 14999) / 5) + -463) % 31) - -193);
+        3:  620:    	a1858896056 = 34 ;
+        3:  621:    	a1808156761 = a1803718659[(a1048965926 - 4)];
+        3:  622:    	a912946383 = a678777281[1];
+        3:  623:    	a1036060995 = a119817307;
+        3:  624:    	a791592808 = a840058547;
+        3:  625:    	a1048965926 = 7; 
+        3:  626:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+        -:  627:    } 
+       12:  628:}
+function calculate_outputm10 called 12 returned 100% blocks executed 100%
+       12:  629: void calculate_outputm10(int input) {
+       12:  630:    if(((a1858896056 == 32 && (a1048965926 == 6 && ((17 == a1036060995[4]) && a1808156761 == a1803718659[1]))) && (((48 < a1439084427) && (161 >= a1439084427)) && (33 < a2133225755 &&  cf==1 )))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       12:  631:    	calculate_outputm29(input);
+call    0 returned 100%
+        -:  632:    } 
+       12:  633:}
+function calculate_outputm30 called 8 returned 100% blocks executed 100%
+        8:  634: void calculate_outputm30(int input) {
+        8:  635:    if((((a1808156761 == a1803718659[2] && (((input == inputs[4] && ((43 == a791592808[3]) &&  cf==1 )) && a912946383 == a678777281[0]) && a980758244 == a126716242[6])) && a1858896056 == 34) && (((20 == a1036060995[1]) && ((161 < a1439084427) && (224 >= a1439084427))) && a1048965926 == 7))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 25% (fallthrough)
+branch  3 taken 75%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        2:  636:    	cf = 0;
+        2:  637:    	a912946383 = a678777281[2];
+        2:  638:    	a1808156761 = a1803718659[(a1048965926 - 7)];
+        2:  639:    	a1858896056 = 33 ;
+        2:  640:    	a1439084427 = (((a1439084427 * -5) - 20031) - 3036);
+        2:  641:    	a506763364 = (a1048965926 - -8);
+        2:  642:    	a1036060995 = a730478169;
+        2:  643:    	a791592808 = a1909276735;
+        2:  644:    	a1048965926 = ((a506763364 + a506763364) + -25); 
+        2:  645:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+        -:  646:    } 
+        8:  647:}
+function calculate_outputm11 called 8 returned 100% blocks executed 100%
+        8:  648: void calculate_outputm11(int input) {
+        8:  649:    if(((a1858896056 == 34 && ((161 < a1439084427) && (224 >= a1439084427))) && (((20 == a1036060995[1]) && ((a980758244 == a126716242[6] &&  cf==1 ) && a1808156761 == a1803718659[2])) && a1048965926 == 7))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+        8:  650:    	calculate_outputm30(input);
+call    0 returned 100%
+        -:  651:    } 
+        8:  652:}
+function calculate_outputm31 called 20 returned 100% blocks executed 100%
+       20:  653: void calculate_outputm31(int input) {
+       20:  654:    if(((((43 == a791592808[3]) && ((a1637829912 == a1892011536[3] && (input == inputs[9] &&  cf==1 )) && a912946383 == a678777281[1])) && (20 == a1036060995[1])) && ((a1808156761 == a1803718659[2] && (a1048965926 == 7 && a1858896056 == 34)) && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 5% (fallthrough)
+branch  5 taken 95%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        1:  655:    	cf = 0;
+        1:  656:    	a1637829912 = a1892011536[((a1048965926 * a1048965926) - 43)]; 
+        1:  657:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+       20:  658:    } if((((20 == a1036060995[1]) && ((((161 < a1439084427) && (224 >= a1439084427)) && a1858896056 == 34) && a1048965926 == 7)) && (a1808156761 == a1803718659[2] && ((((a1637829912 == a1892011536[3] &&  cf==1 ) && (43 == a791592808[3])) && input == inputs[8]) && a912946383 == a678777281[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 95% (fallthrough)
+branch 13 taken 5%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 16% (fallthrough)
+branch 19 taken 84%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        3:  659:    	cf = 0;
+        3:  660:    	a1637829912 = a1892011536[(a1048965926 + -1)]; 
+        3:  661:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        -:  662:    } 
+       20:  663:}
+function calculate_outputm32 called 9 returned 100% blocks executed 100%
+        9:  664: void calculate_outputm32(int input) {
+        9:  665:    if(((((161 < a1439084427) && (224 >= a1439084427)) && (((20 == a1036060995[1]) && (a912946383 == a678777281[1] && (input == inputs[1] && (( cf==1  && a1637829912 == a1892011536[5]) && (43 == a791592808[3]))))) && a1048965926 == 7)) && (a1858896056 == 34 && a1808156761 == a1803718659[2]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 11% (fallthrough)
+branch  9 taken 89%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        1:  666:    	cf = 0;
+        1:  667:    	a1637829912 = a1892011536[(a1048965926 - 1)]; 
+        1:  668:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        9:  669:    } if(((((43 == a791592808[3]) && (input == inputs[5] && (( cf==1  && a1637829912 == a1892011536[5]) && a912946383 == a678777281[1]))) && a1048965926 == 7) && (((161 < a1439084427) && (224 >= a1439084427)) && ((a1858896056 == 34 && a1808156761 == a1803718659[2]) && (20 == a1036060995[1]))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 11% (fallthrough)
+branch  3 taken 89%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        1:  670:    	cf = 0;
+        1:  671:    	a791592808 = a1909276735;
+        1:  672:    	a1858896056 = 33 ;
+        1:  673:    	a1439084427 = (((a1439084427 * 5) / -5) * 5);
+        1:  674:    	a912946383 = a678777281[(a1048965926 + -4)];
+        1:  675:    	a1808156761 = a1803718659[(a1048965926 - 7)];
+        1:  676:    	a1048965926 = 5;
+        1:  677:    	a1036060995 = a730478169;
+        1:  678:    	a1809567311 = a820990427; 
+        1:  679:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  680:    } 
+        9:  681:}
+function calculate_outputm33 called 37 returned 100% blocks executed 100%
+       37:  682: void calculate_outputm33(int input) {
+       37:  683:    if(((((161 < a1439084427) && (224 >= a1439084427)) && ((a1637829912 == a1892011536[6] && ((input == inputs[7] && ( cf==1  && (43 == a791592808[3]))) && a912946383 == a678777281[1])) && (20 == a1036060995[1]))) && (a1808156761 == a1803718659[2] && (a1858896056 == 34 && a1048965926 == 7)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 27% (fallthrough)
+branch  7 taken 73%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       10:  684:    	cf = 0;
+        -:  685:    	 
+       10:  686:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  687:    } 
+       37:  688:}
+function calculate_outputm12 called 66 returned 100% blocks executed 100%
+       66:  689: void calculate_outputm12(int input) {
+       66:  690:    if(((((a1808156761 == a1803718659[2] && ( cf==1  && a1637829912 == a1892011536[3])) && a1048965926 == 7) && ((161 < a1439084427) && (224 >= a1439084427))) && (a1858896056 == 34 && (20 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 30% (fallthrough)
+branch  5 taken 70%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       20:  691:    	calculate_outputm31(input);
+call    0 returned 100%
+        -:  692:    } 
+       66:  693:    if(((((a1637829912 == a1892011536[5] &&  cf==1 ) && a1858896056 == 34) && (20 == a1036060995[1])) && ((a1808156761 == a1803718659[2] && ((161 < a1439084427) && (224 >= a1439084427))) && a1048965926 == 7))) {
+branch  0 taken 14% (fallthrough)
+branch  1 taken 86%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+        9:  694:    	calculate_outputm32(input);
+call    0 returned 100%
+        -:  695:    } 
+       66:  696:    if((((((161 < a1439084427) && (224 >= a1439084427)) && a1808156761 == a1803718659[2]) && a1858896056 == 34) && ((20 == a1036060995[1]) && (a1048965926 == 7 && ( cf==1  && a1637829912 == a1892011536[6]))))) {
+branch  0 taken 98% (fallthrough)
+branch  1 taken 2%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 92% (fallthrough)
+branch 13 taken 8%
+branch 14 taken 62% (fallthrough)
+branch 15 taken 38%
+       37:  697:    	calculate_outputm33(input);
+call    0 returned 100%
+        -:  698:    } 
+       66:  699:}
+function calculate_outputm34 called 73 returned 100% blocks executed 100%
+       73:  700: void calculate_outputm34(int input) {
+       73:  701:    if(((((161 < a1439084427) && (224 >= a1439084427)) && a1808156761 == a1803718659[2]) && (((a1048965926 == 7 && (((43 == a791592808[3]) && (input == inputs[2] && ( cf==1  && a912946383 == a678777281[3]))) && a1637829912 == a1892011536[1])) && a1858896056 == 34) && (20 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 19% (fallthrough)
+branch 11 taken 81%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       14:  702:    	cf = 0;
+       14:  703:    	a1142497764 = ((((((a1439084427 * a1439084427) % 14999) - -9390) / 5) % 52) - -73);
+       14:  704:    	a1808156761 = a1803718659[(a1048965926 - 7)];
+       14:  705:    	a1036060995 = a730478169;
+       14:  706:    	a912946383 = a678777281[(a1048965926 - 7)];
+       14:  707:    	a1858896056 = 33 ;
+       14:  708:    	a1048965926 = 5;
+       14:  709:    	a791592808 = a1909276735;
+       14:  710:    	a1439084427 = (((((a1439084427 * a1142497764) % 14999) - 16730) + 21621) - 24147); 
+       14:  711:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+       73:  712:    } if(((((((a912946383 == a678777281[3] && ((43 == a791592808[3]) && (input == inputs[0] &&  cf==1 ))) && a1637829912 == a1892011536[1]) && a1808156761 == a1803718659[2]) && ((161 < a1439084427) && (224 >= a1439084427))) && a1858896056 == 34) && (a1048965926 == 7 && (20 == a1036060995[1])))) {
+branch  0 taken 81% (fallthrough)
+branch  1 taken 19%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 69% (fallthrough)
+branch  5 taken 31%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       41:  713:    	cf = 0;
+       41:  714:    	a1637829912 = a1892011536[((a1048965926 * a1048965926) + -47)]; 
+       41:  715:    	 printf("");//printf("%d\n", 26); fflush(stdout); 
+        -:  716:    } 
+       73:  717:}
+function calculate_outputm35 called 79 returned 100% blocks executed 100%
+       79:  718: void calculate_outputm35(int input) {
+       79:  719:    if((((a1048965926 == 7 && ((20 == a1036060995[1]) && a1808156761 == a1803718659[2])) && a1858896056 == 34) && (((161 < a1439084427) && (224 >= a1439084427)) && ((43 == a791592808[3]) && (a1637829912 == a1892011536[2] && ((a912946383 == a678777281[3] &&  cf==1 ) && input == inputs[6])))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 23% (fallthrough)
+branch 21 taken 77%
+       18:  720:    	cf = 0;
+       18:  721:    	a912946383 = a678777281[(a1048965926 + -1)];
+       18:  722:    	a980758244 = a126716242[(a1048965926 + -6)]; 
+       18:  723:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+       79:  724:    } if((((((161 < a1439084427) && (224 >= a1439084427)) && a1808156761 == a1803718659[2]) && a1858896056 == 34) && ((((a912946383 == a678777281[3] && (input == inputs[9] && ( cf==1  && (43 == a791592808[3])))) && a1637829912 == a1892011536[2]) && a1048965926 == 7) && (20 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 77% (fallthrough)
+branch  9 taken 23%
+branch 10 taken 28% (fallthrough)
+branch 11 taken 72%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       17:  725:    	cf = 0;
+       17:  726:    	a1036060995 = a730478169;
+       17:  727:    	a1048965926 = 5;
+       17:  728:    	a791592808 = a1909276735;
+       17:  729:    	a1808156761 = a1803718659[(a1048965926 + -5)];
+       17:  730:    	a1439084427 = ((((a1439084427 * 5) * 5) - -286) - 14830);
+       17:  731:    	a1858896056 = 33 ;
+       17:  732:    	a1809567311 = a820990427; 
+       17:  733:    	 printf("");//printf("%d\n", 19); fflush(stdout); 
+        -:  734:    } 
+       79:  735:}
+function calculate_outputm13 called 152 returned 100% blocks executed 100%
+      152:  736: void calculate_outputm13(int input) {
+      152:  737:    if(((a1858896056 == 34 && (((161 < a1439084427) && (224 >= a1439084427)) && ( cf==1  && a1637829912 == a1892011536[1]))) && (a1048965926 == 7 && ((20 == a1036060995[1]) && a1808156761 == a1803718659[2])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 48% (fallthrough)
+branch  9 taken 52%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       73:  738:    	calculate_outputm34(input);
+call    0 returned 100%
+        -:  739:    } 
+      152:  740:    if((((a1048965926 == 7 && a1808156761 == a1803718659[2]) && (20 == a1036060995[1])) && ((a1858896056 == 34 && (a1637829912 == a1892011536[2] &&  cf==1 )) && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 taken 91% (fallthrough)
+branch  1 taken 9%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 87% (fallthrough)
+branch  9 taken 13%
+branch 10 taken 66% (fallthrough)
+branch 11 taken 34%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       79:  741:    	calculate_outputm35(input);
+call    0 returned 100%
+        -:  742:    } 
+      152:  743:}
+function calculate_outputm36 called 10 returned 100% blocks executed 100%
+       10:  744: void calculate_outputm36(int input) {
+       10:  745:    if(((a1858896056 == 34 && (((161 < a1439084427) && (224 >= a1439084427)) && a1048965926 == 7)) && ((20 == a1036060995[1]) && (a1808156761 == a1803718659[2] && (input == inputs[6] && ((43 == a791592808[3]) && ((10 == a1072353396[3]) && (a912946383 == a678777281[4] &&  cf==1 )))))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 10% (fallthrough)
+branch 13 taken 90%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        1:  746:    	cf = 0;
+        1:  747:    	a980758244 = a126716242[(a1048965926 + -6)];
+        1:  748:    	a912946383 = a678777281[((a1048965926 / a1048965926) + 5)]; 
+        1:  749:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+       10:  750:    } if(((a1048965926 == 7 && ((20 == a1036060995[1]) && a1858896056 == 34)) && ((((161 < a1439084427) && (224 >= a1439084427)) && (((((43 == a791592808[3]) &&  cf==1 ) && input == inputs[9]) && a912946383 == a678777281[4]) && (10 == a1072353396[3]))) && a1808156761 == a1803718659[2]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 90% (fallthrough)
+branch 13 taken 10%
+branch 14 taken 22% (fallthrough)
+branch 15 taken 78%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        2:  751:    	cf = 0;
+        2:  752:    	a1439084427 = (((a1439084427 / 5) * -5) - 764);
+        2:  753:    	a1808156761 = a1803718659[((a1048965926 / a1048965926) + -1)];
+        2:  754:    	a1036060995 = a730478169;
+        2:  755:    	a912946383 = a678777281[(a1048965926 - 4)];
+        2:  756:    	a1858896056 = 33 ;
+        2:  757:    	a1809567311 = a820990427;
+        2:  758:    	a791592808 = a1909276735;
+        2:  759:    	a1048965926 = 5; 
+        2:  760:    	 printf("");//printf("%d\n", 19); fflush(stdout); 
+        -:  761:    } 
+       10:  762:}
+function calculate_outputm37 called 294 returned 100% blocks executed 100%
+      294:  763: void calculate_outputm37(int input) {
+      294:  764:    if(((((((17 == a1072353396[4]) && ((a912946383 == a678777281[4] &&  cf==1 ) && (43 == a791592808[3]))) && input == inputs[6]) && a1858896056 == 34) && a1808156761 == a1803718659[2]) && (((161 < a1439084427) && (224 >= a1439084427)) && (a1048965926 == 7 && (20 == a1036060995[1]))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 20% (fallthrough)
+branch  9 taken 80%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       60:  765:    	cf = 0;
+       60:  766:    	a912946383 = a678777281[((a1048965926 / a1048965926) + 2)];
+       60:  767:    	a1637829912 = a1892011536[(a1048965926 + -6)]; 
+       60:  768:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+      294:  769:    } if(((((((( cf==1  && (43 == a791592808[3])) && (17 == a1072353396[4])) && input == inputs[7]) && a912946383 == a678777281[4]) && (20 == a1036060995[1])) && ((161 < a1439084427) && (224 >= a1439084427))) && (a1808156761 == a1803718659[2] && (a1858896056 == 34 && a1048965926 == 7)))) {
+branch  0 taken 80% (fallthrough)
+branch  1 taken 20%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 23% (fallthrough)
+branch  7 taken 77%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       53:  770:    	cf = 0;
+       53:  771:    	a506763364 = (a1048965926 - -8);
+       53:  772:    	a1808156761 = a1803718659[(a506763364 - 15)];
+       53:  773:    	a1858896056 = 33 ;
+       53:  774:    	a791592808 = a1909276735;
+       53:  775:    	a1439084427 = (((a1439084427 * 5) - 23777) + -339);
+       53:  776:    	a912946383 = a678777281[((a506763364 + a506763364) + -28)];
+       53:  777:    	a1036060995 = a730478169;
+       53:  778:    	a1048965926 = (a506763364 + -10); 
+       53:  779:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+      294:  780:    } if((((20 == a1036060995[1]) && (((161 < a1439084427) && (224 >= a1439084427)) && (a912946383 == a678777281[4] && (((17 == a1072353396[4]) && ( cf==1  && (43 == a791592808[3]))) && input == inputs[8])))) && (a1808156761 == a1803718659[2] && (a1858896056 == 34 && a1048965926 == 7)))) {
+branch  0 taken 82% (fallthrough)
+branch  1 taken 18%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 75% (fallthrough)
+branch  7 taken 25%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 17% (fallthrough)
+branch 15 taken 83%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       30:  781:    	cf = 0;
+       30:  782:    	a912946383 = a678777281[7];
+       30:  783:    	a1036060995 = a730478169;
+       30:  784:    	a1439084427 = (((a1439084427 * -5) + -20270) / 5);
+       30:  785:    	a537274255 = a1556364350[(a1048965926 + -3)];
+       30:  786:    	a1808156761 = a1803718659[((a1048965926 / a1048965926) - 1)];
+       30:  787:    	a791592808 = a1909276735;
+       30:  788:    	a1858896056 = 33 ;
+       30:  789:    	a1048965926 = 5; 
+       30:  790:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+        -:  791:    } 
+      294:  792:}
+function calculate_outputm14 called 304 returned 100% blocks executed 100%
+      304:  793: void calculate_outputm14(int input) {
+      304:  794:    if(((a1858896056 == 34 && ( cf==1  && (10 == a1072353396[3]))) && (((a1808156761 == a1803718659[2] && (20 == a1036060995[1])) && ((161 < a1439084427) && (224 >= a1439084427))) && a1048965926 == 7))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 3% (fallthrough)
+branch  5 taken 97%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       10:  795:    	calculate_outputm36(input);
+call    0 returned 100%
+        -:  796:    } 
+      304:  797:    if((((20 == a1036060995[1]) && (a1048965926 == 7 && ( cf==1  && (17 == a1072353396[4])))) && ((a1858896056 == 34 && a1808156761 == a1803718659[2]) && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 1%
+branch  6 taken 98% (fallthrough)
+branch  7 taken 2%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+      294:  798:    	calculate_outputm37(input);
+call    0 returned 100%
+        -:  799:    } 
+      304:  800:}
+function calculate_outputm38 called 15 returned 100% blocks executed 100%
+       15:  801: void calculate_outputm38(int input) {
+       15:  802:    if((a1808156761 == a1803718659[2] && (((161 < a1439084427) && (224 >= a1439084427)) && (((20 == a1036060995[1]) && ((input == inputs[2] && (a912946383 == a678777281[5] && (( cf==1  && ((33 < a1142497764) && (139 >= a1142497764))) && (43 == a791592808[3])))) && a1048965926 == 7)) && a1858896056 == 34)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 7% (fallthrough)
+branch  9 taken 93%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+branch 22 taken 100% (fallthrough)
+branch 23 taken 0%
+        1:  803:    	cf = 0;
+        1:  804:    	a912946383 = a678777281[(a1048965926 - 6)];
+        1:  805:    	a1637829912 = a1892011536[(a1048965926 + -1)]; 
+        1:  806:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  807:    } 
+       15:  808:}
+function calculate_outputm39 called 0 returned 0% blocks executed 0%
+    #####:  809: void calculate_outputm39(int input) {
+    #####:  810:    if(((a1858896056 == 34 && (a1808156761 == a1803718659[2] && ((20 == a1036060995[1]) && a1048965926 == 7))) && ((265 < a1142497764 && (a912946383 == a678777281[5] && (((43 == a791592808[3]) &&  cf==1 ) && input == inputs[0]))) && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  811:    	cf = 0;
+    #####:  812:    	a1808156761 = a1803718659[3];
+    #####:  813:    	a1036060995 = a1742434703;
+    #####:  814:    	a1439084427 = ((((a1439084427 % 31) + 182) + 7) + 3);
+    #####:  815:    	a1858896056 = 35 ;
+    #####:  816:    	a791592808 = a1909276735;
+    #####:  817:    	a912946383 = a678777281[(a1048965926 + -4)];
+    #####:  818:    	a1048965926 = 6;
+    #####:  819:    	a1809567311 = a820990427; 
+    #####:  820:    	 printf("");//printf("%d\n", 19); fflush(stdout); 
+    #####:  821:    } if((((a1048965926 == 7 && (((265 < a1142497764 && (( cf==1  && (43 == a791592808[3])) && a912946383 == a678777281[5])) && input == inputs[1]) && (20 == a1036060995[1]))) && ((161 < a1439084427) && (224 >= a1439084427))) && (a1808156761 == a1803718659[2] && a1858896056 == 34))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  822:    	cf = 0;
+        -:  823:    	 
+    #####:  824:    	 printf("");//printf("%d\n", 16); fflush(stdout); 
+    #####:  825:    } if(((((20 == a1036060995[1]) && (265 < a1142497764 && (a912946383 == a678777281[5] && ((input == inputs[2] &&  cf==1 ) && (43 == a791592808[3]))))) && ((161 < a1439084427) && (224 >= a1439084427))) && ((a1858896056 == 34 && a1808156761 == a1803718659[2]) && a1048965926 == 7))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  826:    	cf = 0;
+    #####:  827:    	if((a980758244 == a126716242[7] || (33 < a2133225755 ||  cf!=1 ))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    #####:  828:    	a1142497764 = ((((((a1142497764 * a1439084427) % 14999) - -5681) * 1) % 52) - -47); 
+        -:  829:    	}else {
+    #####:  830:    	a912946383 = a678777281[(a1048965926 - 6)];
+    #####:  831:    	a1637829912 = a1892011536[(a1048965926 + -4)];
+    #####:  832:    	}printf("");//printf("%d\n", 18); fflush(stdout); 
+    #####:  833:    } if(((((a1048965926 == 7 && (a912946383 == a678777281[5] && ((43 == a791592808[3]) && ((input == inputs[3] &&  cf==1 ) && 265 < a1142497764)))) && (20 == a1036060995[1])) && a1808156761 == a1803718659[2]) && (a1858896056 == 34 && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  834:    	cf = 0;
+    #####:  835:    	if((!(78 == a619005855[1]) || ((!(a537274255 == a1556364350[4]) && (17 == a1036060995[4])) && a506763364 == 13))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  836:    	a506763364 = ((a1048965926 - a1048965926) + 12);
+    #####:  837:    	a1808156761 = a1803718659[6];
+    #####:  838:    	a1858896056 = 34 ;
+    #####:  839:    	a791592808 = a1909276735;
+    #####:  840:    	a912946383 = a678777281[((a506763364 - a506763364) - -2)];
+    #####:  841:    	a1439084427 = ((((a1439084427 * 5) % 31) + 179) * 1);
+    #####:  842:    	a1036060995 = a119817307;
+    #####:  843:    	a1048965926 = 11; 
+        -:  844:    	}else {
+    #####:  845:    	a912946383 = a678777281[(a1048965926 - 3)];
+    #####:  846:    	a1072353396 = a599412095;
+    #####:  847:    	}printf("");//printf("%d\n", 18); fflush(stdout); 
+    #####:  848:    } if(((((((161 < a1439084427) && (224 >= a1439084427)) && (a1858896056 == 34 && a1048965926 == 7)) && a1808156761 == a1803718659[2]) && (20 == a1036060995[1])) && ((43 == a791592808[3]) && ((a912946383 == a678777281[5] && ( cf==1  && 265 < a1142497764)) && input == inputs[4])))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  849:    	cf = 0;
+    #####:  850:    	if((a506763364 == 15 && (!(a537274255 == 9) && 265 < a1142497764))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    #####:  851:    	a1808156761 = a1803718659[5];
+    #####:  852:    	a1858896056 = 36 ;
+    #####:  853:    	a1036060995 = a1742434703;
+    #####:  854:    	a791592808 = a1909276735;
+    #####:  855:    	a506763364 = ((a1048965926 - a1048965926) + 15);
+    #####:  856:    	a1439084427 = ((((((a1439084427 % 31) + 190) * 5) - 21523) % 31) - -216);
+    #####:  857:    	a912946383 = a678777281[((a506763364 * a506763364) + -223)];
+    #####:  858:    	a1048965926 = 10; 
+        -:  859:    	}else {
+    #####:  860:    	a1637829912 = a1892011536[(a1048965926 - 4)];
+    #####:  861:    	a912946383 = a678777281[(a1048965926 - 6)];
+    #####:  862:    	}printf("");//printf("%d\n", 16); fflush(stdout); 
+    #####:  863:    } if((a1808156761 == a1803718659[2] && (((a1048965926 == 7 && ((input == inputs[5] && ((a912946383 == a678777281[5] && ( cf==1  && (43 == a791592808[3]))) && 265 < a1142497764)) && ((161 < a1439084427) && (224 >= a1439084427)))) && (20 == a1036060995[1])) && a1858896056 == 34))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  864:    	cf = 0;
+    #####:  865:    	if(((((265 < a1142497764 && !(a1808156761 == 3)) || a912946383 == a678777281[7]) || 33 < a2133225755) && a1808156761 == 5)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    #####:  866:    	a980758244 = a126716242[(a1048965926 - 6)];
+    #####:  867:    	a912946383 = a678777281[((a1048965926 * a1048965926) - 43)]; 
+        -:  868:    	}else {
+    #####:  869:    	a1036060995 = a1742434703;
+    #####:  870:    	a912946383 = a678777281[(a1048965926 - a1048965926)];
+    #####:  871:    	a1808156761 = a1803718659[6];
+    #####:  872:    	a1858896056 = 34 ;
+    #####:  873:    	a1048965926 = 7;
+    #####:  874:    	a1142497764 = (((((((a1142497764 * a1439084427) % 14999) % 62) - -180) + -3) / 5) + 141);
+    #####:  875:    	a791592808 = a1909276735;
+    #####:  876:    	a1439084427 = ((((((a1439084427 % 31) + 185) - -1) * 5) % 31) - -182);
+    #####:  877:    	}printf("");//printf("%d\n", 26); fflush(stdout); 
+    #####:  878:    } if(((a1808156761 == a1803718659[2] && ((((161 < a1439084427) && (224 >= a1439084427)) && (20 == a1036060995[1])) && a1858896056 == 34)) && ((((a912946383 == a678777281[5] && ( cf==1  && input == inputs[6])) && 265 < a1142497764) && (43 == a791592808[3])) && a1048965926 == 7))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  879:    	cf = 0;
+        -:  880:    	 
+    #####:  881:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  882:    } if(((((20 == a1036060995[1]) && a1858896056 == 34) && ((161 < a1439084427) && (224 >= a1439084427))) && (a1808156761 == a1803718659[2] && (((265 < a1142497764 && (( cf==1  && input == inputs[7]) && a912946383 == a678777281[5])) && (43 == a791592808[3])) && a1048965926 == 7)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  883:    	cf = 0;
+    #####:  884:    	a791592808 = a1909276735;
+    #####:  885:    	a1036060995 = a119817307;
+    #####:  886:    	a912946383 = a678777281[2];
+    #####:  887:    	a506763364 = ((a1048965926 - a1048965926) + 16);
+    #####:  888:    	a1858896056 = 36 ;
+    #####:  889:    	a1439084427 = (((a1439084427 * 5) - -27904) * 1);
+    #####:  890:    	a1808156761 = a1803718659[1];
+    #####:  891:    	a1048965926 = 11; 
+    #####:  892:    	 printf("");//printf("%d\n", 26); fflush(stdout); 
+    #####:  893:    } if(((a1858896056 == 34 && (((265 < a1142497764 && ((input == inputs[8] && ( cf==1  && a912946383 == a678777281[5])) && (43 == a791592808[3]))) && a1048965926 == 7) && (20 == a1036060995[1]))) && (a1808156761 == a1803718659[2] && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  894:    	cf = 0;
+    #####:  895:    	if(((43 == a791592808[3]) && ((139 < a1142497764) && (265 >= a1142497764)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    #####:  896:    	a2133225755 = ((((((((a1439084427 * a1439084427) % 14999) - 21604) * 10) / -9) + -30714) * -1) / 10);
+    #####:  897:    	a1808156761 = a1803718659[6];
+    #####:  898:    	a1048965926 = 5;
+    #####:  899:    	a791592808 = a1955130270;
+    #####:  900:    	a1858896056 = 33 ;
+    #####:  901:    	a1843696882 = ((((((((a1142497764 * a1142497764) % 14999) % 99) + 207) - 4) / 5) * 49) / 10);
+    #####:  902:    	a1036060995 = a730478169;
+    #####:  903:    	a1439084427 = (((a1439084427 / -5) * 5) + -505); 
+        -:  904:    	}else {
+    #####:  905:    	a1439084427 = (((a1439084427 - -8510) - 34052) - -25433);
+    #####:  906:    	a1808156761 = a1803718659[3];
+    #####:  907:    	a791592808 = a1909276735;
+    #####:  908:    	a1858896056 = 34 ;
+    #####:  909:    	a912946383 = a678777281[((a1048965926 + a1048965926) + -11)];
+    #####:  910:    	a1048965926 = 7;
+    #####:  911:    	a1036060995 = a1742434703;
+    #####:  912:    	a1809567311 = a820990427;
+    #####:  913:    	}printf("");//printf("%d\n", 25); fflush(stdout); 
+    #####:  914:    } if(((((input == inputs[9] && ((43 == a791592808[3]) && (265 < a1142497764 && (a912946383 == a678777281[5] &&  cf==1 )))) && (20 == a1036060995[1])) && ((161 < a1439084427) && (224 >= a1439084427))) && ((a1048965926 == 7 && a1858896056 == 34) && a1808156761 == a1803718659[2]))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  915:    	cf = 0;
+    #####:  916:    	a1858896056 = 34 ;
+    #####:  917:    	a1036060995 = a119817307;
+    #####:  918:    	a791592808 = a1955130270;
+    #####:  919:    	a1843696882 = (((((a1439084427 * a1142497764) % 14999) + -21495) + -8369) - 2);
+    #####:  920:    	a1439084427 = ((((((a1439084427 % 31) - -173) - -6) * 5) % 31) + 180);
+    #####:  921:    	a1048965926 = 9;
+    #####:  922:    	a1808156761 = a1803718659[5];
+    #####:  923:    	a619005855 = a1589275165; 
+    #####:  924:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  925:    } 
+    #####:  926:}
+function calculate_outputm15 called 15 returned 100% blocks executed 65%
+       15:  927: void calculate_outputm15(int input) {
+       15:  928:    if(((((20 == a1036060995[1]) && (((33 < a1142497764) && (139 >= a1142497764)) &&  cf==1 )) && a1808156761 == a1803718659[2]) && ((a1048965926 == 7 && ((161 < a1439084427) && (224 >= a1439084427))) && a1858896056 == 34))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+       15:  929:    	calculate_outputm38(input);
+call    0 returned 100%
+        -:  930:    } 
+      15*:  931:    if((( cf==1  && 265 < a1142497764) && (((a1808156761 == a1803718659[2] && ((20 == a1036060995[1]) && a1858896056 == 34)) && a1048965926 == 7) && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 taken 93% (fallthrough)
+branch  1 taken 7%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  932:    	calculate_outputm39(input);
+call    0 never executed
+        -:  933:    } 
+       15:  934:}
+function calculate_outputm40 called 19 returned 100% blocks executed 100%
+       19:  935: void calculate_outputm40(int input) {
+       19:  936:    if(((a1858896056 == 34 && (a1808156761 == a1803718659[2] && (20 == a1036060995[1]))) && ((((161 < a1439084427) && (224 >= a1439084427)) && ((43 == a791592808[3]) && (a980758244 == a126716242[0] && (( cf==1  && input == inputs[2]) && a912946383 == a678777281[6])))) && a1048965926 == 7))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 5% (fallthrough)
+branch 17 taken 95%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        1:  937:    	cf = 0;
+        1:  938:    	a912946383 = a678777281[(a1048965926 + -7)];
+        1:  939:    	a1048965926 = 5;
+        1:  940:    	a791592808 = a1909276735;
+        1:  941:    	a1036060995 = a730478169;
+        1:  942:    	a1142497764 = (((((((a1439084427 * a1439084427) % 14999) - -11946) * 1) * 1) % 52) + 37);
+        1:  943:    	a1858896056 = 33 ;
+        1:  944:    	a1808156761 = a1803718659[(a1048965926 - 5)];
+        1:  945:    	a1439084427 = (((a1439084427 * -5) + -2718) / 5); 
+        1:  946:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+       19:  947:    } if(((a1858896056 == 34 && ((((a912946383 == a678777281[6] &&  cf==1 ) && input == inputs[9]) && a980758244 == a126716242[0]) && (43 == a791592808[3]))) && ((((20 == a1036060995[1]) && a1048965926 == 7) && a1808156761 == a1803718659[2]) && ((161 < a1439084427) && (224 >= a1439084427))))) {
+branch  0 taken 95% (fallthrough)
+branch  1 taken 5%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 33% (fallthrough)
+branch  7 taken 67%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        6:  948:    	cf = 0;
+        6:  949:    	a912946383 = a678777281[(a1048965926 + -4)];
+        6:  950:    	a1036060995 = a730478169;
+        6:  951:    	a1808156761 = a1803718659[(a1048965926 - 7)];
+        6:  952:    	a1858896056 = 33 ;
+        6:  953:    	a1439084427 = (((a1439084427 + -26131) - 2008) + -1313);
+        6:  954:    	a1048965926 = 5;
+        6:  955:    	a791592808 = a1909276735;
+        6:  956:    	a1809567311 = a820990427; 
+        6:  957:    	 printf("");//printf("%d\n", 26); fflush(stdout); 
+        -:  958:    } 
+       19:  959:}
+function calculate_outputm41 called 42 returned 100% blocks executed 100%
+       42:  960: void calculate_outputm41(int input) {
+       42:  961:    if((((a1808156761 == a1803718659[2] && (a1858896056 == 34 && ((input == inputs[1] && (( cf==1  && a912946383 == a678777281[6]) && a980758244 == a126716242[1])) && (43 == a791592808[3])))) && ((161 < a1439084427) && (224 >= a1439084427))) && (a1048965926 == 7 && (20 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 21% (fallthrough)
+branch  5 taken 79%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        9:  962:    	cf = 0;
+        -:  963:    	 
+        9:  964:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+       42:  965:    } if(((((20 == a1036060995[1]) && (a1808156761 == a1803718659[2] && ((161 < a1439084427) && (224 >= a1439084427)))) && a1048965926 == 7) && (a1858896056 == 34 && (((a912946383 == a678777281[6] && ( cf==1  && input == inputs[6])) && a980758244 == a126716242[1]) && (43 == a791592808[3]))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 79% (fallthrough)
+branch 15 taken 21%
+branch 16 taken 18% (fallthrough)
+branch 17 taken 82%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        6:  966:    	cf = 0;
+        6:  967:    	a912946383 = a678777281[(a1048965926 / a1048965926)];
+        6:  968:    	a1637829912 = a1892011536[(a1048965926 + -2)]; 
+        6:  969:    	 printf("");//printf("%d\n", 23); fflush(stdout); 
+       42:  970:    } if((((((43 == a791592808[3]) && (a980758244 == a126716242[1] && ( cf==1  && input == inputs[7]))) && a912946383 == a678777281[6]) && ((161 < a1439084427) && (224 >= a1439084427))) && (((20 == a1036060995[1]) && (a1808156761 == a1803718659[2] && a1858896056 == 34)) && a1048965926 == 7))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 64% (fallthrough)
+branch  5 taken 36%
+branch  6 taken 15% (fallthrough)
+branch  7 taken 85%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        4:  971:    	cf = 0;
+        4:  972:    	a912946383 = a678777281[(a1048965926 + -6)];
+        4:  973:    	a1637829912 = a1892011536[((a1048965926 / a1048965926) + 5)]; 
+        4:  974:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:  975:    } 
+       42:  976:}
+function calculate_outputm42 called 48 returned 100% blocks executed 98%
+       48:  977: void calculate_outputm42(int input) {
+       48:  978:    if(((a1858896056 == 34 && (a1048965926 == 7 && a1808156761 == a1803718659[2])) && (((161 < a1439084427) && (224 >= a1439084427)) && ((((43 == a791592808[3]) && (input == inputs[9] && (a980758244 == a126716242[6] &&  cf==1 ))) && a912946383 == a678777281[6]) && (20 == a1036060995[1]))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 25% (fallthrough)
+branch 13 taken 75%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       12:  979:    	cf = 0;
+       12:  980:    	if(((!(a1736018243 == 33) && a1048965926 == 8) || !(a912946383 == a678777281[0]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+       12:  981:    	a980758244 = a126716242[((a1048965926 + a1048965926) - 14)]; 
+        -:  982:    	}else {
+    #####:  983:    	a1808156761 = a1803718659[(a1048965926 - 7)];
+    #####:  984:    	a1036060995 = a730478169;
+    #####:  985:    	a912946383 = a678777281[((a1048965926 + a1048965926) - 14)];
+    #####:  986:    	a791592808 = a1909276735;
+    #####:  987:    	a1858896056 = 33 ;
+    #####:  988:    	a1048965926 = 5;
+    #####:  989:    	a1142497764 = (((((((a1439084427 * a1439084427) % 14999) % 62) + 193) - 10) * 9) / 10);
+    #####:  990:    	a1439084427 = ((((a1439084427 / -5) + -8991) * 10) / 9);
+       12:  991:    	}printf("");//printf("%d\n", 18); fflush(stdout); 
+       48:  992:    } if(((a1808156761 == a1803718659[2] && (20 == a1036060995[1])) && ((((161 < a1439084427) && (224 >= a1439084427)) && ((((((43 == a791592808[3]) &&  cf==1 ) && a912946383 == a678777281[6]) && a980758244 == a126716242[6]) && input == inputs[7]) && a1048965926 == 7)) && a1858896056 == 34))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 75% (fallthrough)
+branch 11 taken 25%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 25% (fallthrough)
+branch 17 taken 75%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+        9:  993:    	cf = 0;
+        9:  994:    	a1808156761 = a1803718659[(a1048965926 + -7)];
+        9:  995:    	a1036060995 = a730478169;
+        9:  996:    	a912946383 = a678777281[2];
+        9:  997:    	a506763364 = (a1048965926 + 8);
+        9:  998:    	a1439084427 = ((((a1439084427 - 23913) * 10) / 9) / 5);
+        9:  999:    	a1858896056 = 33 ;
+        9: 1000:    	a791592808 = a1909276735;
+        9: 1001:    	a1048965926 = 5; 
+        9: 1002:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+       48: 1003:    } if(((((20 == a1036060995[1]) && (a1808156761 == a1803718659[2] && (((43 == a791592808[3]) && ((input == inputs[4] &&  cf==1 ) && a980758244 == a126716242[6])) && a912946383 == a678777281[6]))) && a1048965926 == 7) && (((161 < a1439084427) && (224 >= a1439084427)) && a1858896056 == 34))) {
+branch  0 taken 81% (fallthrough)
+branch  1 taken 19%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 33% (fallthrough)
+branch  7 taken 67%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+branch 18 taken 100% (fallthrough)
+branch 19 taken 0%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0%
+       13: 1004:    	cf = 0;
+       13: 1005:    	a912946383 = a678777281[(a1048965926 + -6)];
+       13: 1006:    	a1808156761 = a1803718659[(a1048965926 + -7)];
+       13: 1007:    	a1858896056 = 33 ;
+       13: 1008:    	a1142497764 = (((((a1439084427 * a1439084427) % 14999) - -9577) - 33532) * 1);
+       13: 1009:    	a1439084427 = (((10 - 3897) / 5) + -13178);
+       13: 1010:    	a791592808 = a1909276735;
+       13: 1011:    	a1036060995 = a730478169;
+       13: 1012:    	a1048965926 = 5; 
+       13: 1013:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -: 1014:    } 
+       48: 1015:}
+function calculate_outputm16 called 109 returned 100% blocks executed 100%
+      109: 1016: void calculate_outputm16(int input) {
+      109: 1017:    if(((a1808156761 == a1803718659[2] && (((161 < a1439084427) && (224 >= a1439084427)) && (( cf==1  && a980758244 == a126716242[0]) && a1858896056 == 34))) && (a1048965926 == 7 && (20 == a1036060995[1])))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 17% (fallthrough)
+branch  9 taken 83%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       19: 1018:    	calculate_outputm40(input);
+call    0 returned 100%
+        -: 1019:    } 
+      109: 1020:    if(((a1808156761 == a1803718659[2] && a1858896056 == 34) && (a1048965926 == 7 && (((161 < a1439084427) && (224 >= a1439084427)) && ((a980758244 == a126716242[1] &&  cf==1 ) && (20 == a1036060995[1])))))) {
+branch  0 taken 94% (fallthrough)
+branch  1 taken 6%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 41% (fallthrough)
+branch 11 taken 59%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       42: 1021:    	calculate_outputm41(input);
+call    0 returned 100%
+        -: 1022:    } 
+      109: 1023:    if(((a1858896056 == 34 && ((( cf==1  && a980758244 == a126716242[6]) && (20 == a1036060995[1])) && ((161 < a1439084427) && (224 >= a1439084427)))) && (a1048965926 == 7 && a1808156761 == a1803718659[2]))) {
+branch  0 taken 94% (fallthrough)
+branch  1 taken 6%
+branch  2 taken 81% (fallthrough)
+branch  3 taken 19%
+branch  4 taken 58% (fallthrough)
+branch  5 taken 42%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       48: 1024:    	calculate_outputm42(input);
+call    0 returned 100%
+        -: 1025:    } 
+      109: 1026:}
+        -: 1027:
+function calculate_output called 941 returned 100% blocks executed 96%
+      941: 1028: void calculate_output(int input) {
+      941: 1029:        cf = 1;
+        -: 1030:
+      941: 1031:    if(((a1048965926 == 5 && (8 == a1036060995[1])) && (a1808156761 == a1803718659[0] && ((a1858896056 == 33 && ( cf==1  && (32 == a791592808[4]))) && a1439084427 <=  48)))) {
+branch  0 taken 29% (fallthrough)
+branch  1 taken 71%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+      275: 1032:    	if((((8 == a1036060995[1]) && ((a1048965926 == 5 && a1858896056 == 33) && a1808156761 == a1803718659[0])) && (a1439084427 <=  48 && (a912946383 == a678777281[0] &&  cf==1 )))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 9% (fallthrough)
+branch 11 taken 91%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       26: 1033:    		calculate_outputm1(input);
+call    0 returned 100%
+        -: 1034:    	} 
+      275: 1035:    	if(((a1858896056 == 33 && a1808156761 == a1803718659[0]) && (a1048965926 == 5 && (((8 == a1036060995[1]) && (a912946383 == a678777281[1] &&  cf==1 )) && a1439084427 <=  48)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 7% (fallthrough)
+branch  9 taken 93%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       19: 1036:    		calculate_outputm2(input);
+call    0 returned 100%
+        -: 1037:    	} 
+      275: 1038:    	if((((a1808156761 == a1803718659[0] && a1439084427 <=  48) && a1858896056 == 33) && (a1048965926 == 5 && (( cf==1  && a912946383 == a678777281[2]) && (8 == a1036060995[1]))))) {
+branch  0 taken 97% (fallthrough)
+branch  1 taken 3%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 96% (fallthrough)
+branch  9 taken 4%
+branch 10 taken 41% (fallthrough)
+branch 11 taken 59%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+      106: 1039:    		calculate_outputm3(input);
+call    0 returned 100%
+        -: 1040:    	} 
+      275: 1041:    	if(((a1048965926 == 5 && ((8 == a1036060995[1]) && a1439084427 <=  48)) && ((( cf==1  && a912946383 == a678777281[3]) && a1808156761 == a1803718659[0]) && a1858896056 == 33))) {
+branch  0 taken 79% (fallthrough)
+branch  1 taken 21%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 91% (fallthrough)
+branch  7 taken 9%
+branch  8 taken 18% (fallthrough)
+branch  9 taken 82%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       35: 1042:    		calculate_outputm4(input);
+call    0 returned 100%
+        -: 1043:    	} 
+      275: 1044:    	if(((a1808156761 == a1803718659[0] && (a1048965926 == 5 && a1439084427 <=  48)) && ((( cf==1  && a912946383 == a678777281[4]) && (8 == a1036060995[1])) && a1858896056 == 33))) {
+branch  0 taken 73% (fallthrough)
+branch  1 taken 27%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 90% (fallthrough)
+branch  7 taken 10%
+branch  8 taken 14% (fallthrough)
+branch  9 taken 86%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       26: 1045:    		calculate_outputm5(input);
+call    0 returned 100%
+        -: 1046:    	} 
+      275: 1047:    	if(((((8 == a1036060995[1]) && (a1048965926 == 5 && (a912946383 == a678777281[5] &&  cf==1 ))) && a1808156761 == a1803718659[0]) && (a1858896056 == 33 && a1439084427 <=  48))) {
+branch  0 taken 73% (fallthrough)
+branch  1 taken 27%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 16% (fallthrough)
+branch  5 taken 84%
+branch  6 taken 73% (fallthrough)
+branch  7 taken 27%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       24: 1048:    		calculate_outputm6(input);
+call    0 returned 100%
+        -: 1049:    	} 
+     275*: 1050:    	if((((8 == a1036060995[1]) && ((a1858896056 == 33 && a1808156761 == a1803718659[0]) && a1439084427 <=  48)) && (( cf==1  && a912946383 == a678777281[6]) && a1048965926 == 5))) {
+branch  0 taken 73% (fallthrough)
+branch  1 taken 27%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 80% (fallthrough)
+branch  9 taken 20%
+branch 10 taken 0% (fallthrough)
+branch 11 taken 100%
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####: 1051:    		calculate_outputm7(input);
+call    0 never executed
+        -: 1052:    	} 
+      275: 1053:    	if(((( cf==1  && a912946383 == a678777281[7]) && a1048965926 == 5) && (a1439084427 <=  48 && ((a1858896056 == 33 && (8 == a1036060995[1])) && a1808156761 == a1803718659[0])))) {
+branch  0 taken 58% (fallthrough)
+branch  1 taken 42%
+branch  2 taken 24% (fallthrough)
+branch  3 taken 76%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+       39: 1054:    		calculate_outputm8(input);
+call    0 returned 100%
+        -: 1055:    	} 
+        -: 1056:    } 
+      941: 1057:    if((a1858896056 == 32 && (a1048965926 == 6 && (((a1808156761 == a1803718659[1] && ( cf==1  && (35 == a791592808[1]))) && (17 == a1036060995[4])) && ((48 < a1439084427) && (161 >= a1439084427)))))) {
+branch  0 taken 2% (fallthrough)
+branch  1 taken 98%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 63% (fallthrough)
+branch  7 taken 37%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+      12*: 1058:    	if((((17 == a1036060995[4]) && (((48 < a1439084427) && (161 >= a1439084427)) && (a1843696882 <=  195 &&  cf==1 ))) && ((a1048965926 == 6 && a1858896056 == 32) && a1808156761 == a1803718659[1]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 0% (fallthrough)
+branch  7 taken 100%
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####: 1059:    		calculate_outputm9(input);
+call    0 never executed
+        -: 1060:    	} 
+       12: 1061:    	if((((a1048965926 == 6 && (17 == a1036060995[4])) && ((48 < a1439084427) && (161 >= a1439084427))) && (((((195 < a1843696882) && (395 >= a1843696882)) &&  cf==1 ) && a1808156761 == a1803718659[1]) && a1858896056 == 32))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+branch 16 taken 100% (fallthrough)
+branch 17 taken 0%
+       12: 1062:    		calculate_outputm10(input);
+call    0 returned 100%
+        -: 1063:    	} 
+        -: 1064:    } 
+      941: 1065:    if(((a1858896056 == 34 && (((a1808156761 == a1803718659[2] && (20 == a1036060995[1])) && ((161 < a1439084427) && (224 >= a1439084427))) && a1048965926 == 7)) && ((43 == a791592808[3]) &&  cf==1 ))) {
+branch  0 taken 78% (fallthrough)
+branch  1 taken 22%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 89% (fallthrough)
+branch 15 taken 11%
+      654: 1066:    	if((((20 == a1036060995[1]) && ((161 < a1439084427) && (224 >= a1439084427))) && (a1858896056 == 34 && (((a912946383 == a678777281[0] &&  cf==1 ) && a1808156761 == a1803718659[2]) && a1048965926 == 7)))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 1% (fallthrough)
+branch  9 taken 99%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+        8: 1067:    		calculate_outputm11(input);
+call    0 returned 100%
+        -: 1068:    	} 
+      654: 1069:    	if(((((161 < a1439084427) && (224 >= a1439084427)) && (a912946383 == a678777281[1] &&  cf==1 )) && (a1808156761 == a1803718659[2] && ((20 == a1036060995[1]) && (a1858896056 == 34 && a1048965926 == 7))))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 1%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 10% (fallthrough)
+branch  5 taken 90%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       66: 1070:    		calculate_outputm12(input);
+call    0 returned 100%
+        -: 1071:    	} 
+      654: 1072:    	if((((20 == a1036060995[1]) && (a1808156761 == a1803718659[2] && (a1858896056 == 34 && (a1048965926 == 7 && ((161 < a1439084427) && (224 >= a1439084427)))))) && ( cf==1  && a912946383 == a678777281[3]))) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 1%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 98% (fallthrough)
+branch 13 taken 2%
+branch 14 taken 24% (fallthrough)
+branch 15 taken 76%
+      152: 1073:    		calculate_outputm13(input);
+call    0 returned 100%
+        -: 1074:    	} 
+      654: 1075:    	if(((((161 < a1439084427) && (224 >= a1439084427)) && ((a912946383 == a678777281[4] &&  cf==1 ) && a1858896056 == 34)) && (((20 == a1036060995[1]) && a1808156761 == a1803718659[2]) && a1048965926 == 7))) {
+branch  0 taken 95% (fallthrough)
+branch  1 taken 5%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 49% (fallthrough)
+branch  5 taken 51%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+      304: 1076:    		calculate_outputm14(input);
+call    0 returned 100%
+        -: 1077:    	} 
+      654: 1078:    	if(((a1048965926 == 7 && ((20 == a1036060995[1]) && (a1808156761 == a1803718659[2] && ((161 < a1439084427) && (224 >= a1439084427))))) && (a1858896056 == 34 && (a912946383 == a678777281[5] &&  cf==1 )))) {
+branch  0 taken 82% (fallthrough)
+branch  1 taken 18%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 3% (fallthrough)
+branch 13 taken 97%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+       15: 1079:    		calculate_outputm15(input);
+call    0 returned 100%
+        -: 1080:    	} 
+      654: 1081:    	if((((20 == a1036060995[1]) && ( cf==1  && a912946383 == a678777281[6])) && (a1808156761 == a1803718659[2] && (a1858896056 == 34 && (a1048965926 == 7 && ((161 < a1439084427) && (224 >= a1439084427))))))) {
+branch  0 taken 82% (fallthrough)
+branch  1 taken 18%
+branch  2 taken 75% (fallthrough)
+branch  3 taken 25%
+branch  4 taken 27% (fallthrough)
+branch  5 taken 73%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0%
+branch 10 taken 100% (fallthrough)
+branch 11 taken 0%
+branch 12 taken 100% (fallthrough)
+branch 13 taken 0%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0%
+      109: 1082:    		calculate_outputm16(input);
+call    0 returned 100%
+        -: 1083:    	} 
+        -: 1084:    } 
+        -: 1085:
+        -: 1086:
+      941: 1087:    if( cf==1 ) 
+        -: 1088:    {
+        -: 1089:    	//fprintf("");//printf(stderr, "Invalid input: %d\n", input); 
+        -: 1090:} 
+      941: 1091:}
+        -: 1092:
+        -: 1093:int input,output;
+function main called 150 returned 100% blocks executed 100%
+      150: 1094:int main()
+        -: 1095:{
+      150: 1096:kappa = 0;
+        -: 1097:    // main i/o-loop
+        -: 1098:
+        -: 1099:   int symb;
+     1091: 1100:   for (int FLAG=0;FLAG<BOUND;FLAG++)
+branch  0 taken 90%
+branch  1 taken 10% (fallthrough)
+        -: 1101:    {
+     1014: 1102:    if (fread(&symb, sizeof(int), 1, stdin) != 1) { return 0; }             
+call    0 returned 100%
+branch  1 taken 1% (fallthrough)
+branch  2 taken 99%
+        -: 1103:        // operate eca engine
+      974: 1104:        if((symb != 3) && (symb != 2) && (symb != 1) && (symb != 10) && (symb != 8) && (symb != 9) && (symb != 4) && (symb != 6) && (symb != 7) && (symb != 5))
+branch  0 taken 88% (fallthrough)
+branch  1 taken 12%
+branch  2 taken 83% (fallthrough)
+branch  3 taken 17%
+branch  4 taken 95% (fallthrough)
+branch  5 taken 5%
+branch  6 taken 91% (fallthrough)
+branch  7 taken 9%
+branch  8 taken 87% (fallthrough)
+branch  9 taken 13%
+branch 10 taken 83% (fallthrough)
+branch 11 taken 17%
+branch 12 taken 80% (fallthrough)
+branch 13 taken 20%
+branch 14 taken 61% (fallthrough)
+branch 15 taken 39%
+branch 16 taken 40% (fallthrough)
+branch 17 taken 60%
+branch 18 taken 38% (fallthrough)
+branch 19 taken 62%
+       33: 1105:          return -2;
+      941: 1106:        calculate_output(symb);
+call    0 returned 100%
+        -: 1107:    }
+        -: 1108:}

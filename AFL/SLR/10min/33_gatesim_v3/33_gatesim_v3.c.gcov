@@ -1,0 +1,77 @@
+        -:    0:Source:33_gatesim_v3.c
+        -:    0:Graph:33_gatesim_v3.gcno
+        -:    0:Data:33_gatesim_v3.gcda
+        -:    0:Runs:38
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 33  Family: gatesim  Variant: 3 (Inverter-Heavy Set)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 38 returned 100% blocks executed 89%
+       38:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       38:   16:    FILE *f = stdin;
+       38:   17:    if (argc > 1) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       38:   18:        f = fopen(argv[1], "rb");
+call    0 returned 100%
+      38*:   19:        if (!f) return 0;
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   20:    }
+       38:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 100%
+       38:   22:    if (f != stdin) fclose(f);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+       38:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:/* Gate set: Inverter-Heavy Set */
+function main called 38 returned 100% blocks executed 89%
+       38:   27:int main(int argc, char **argv) {
+        -:   28:    unsigned char buf[MAX_BOUND];
+       38:   29:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 100%
+      38*:   30:    if (n > MAX_BOUND) n = MAX_BOUND; /* at most MAX_BOUND gates applied */
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   31:
+      38*:   32:    int signal = n > 0 ? (buf[0] & 1) : 0;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+      352:   33:    for (size_t i = 1; i < n; i++) {
+branch  0 taken 89%
+branch  1 taken 11% (fallthrough)
+      314:   34:        int g = buf[i] % 6;
+      314:   35:        int in2 = (buf[i] >> 1) & 1;
+      314:   36:        switch (g) {
+branch  0 taken 19%
+branch  1 taken 18%
+branch  2 taken 23%
+branch  3 taken 13%
+branch  4 taken 8%
+branch  5 taken 19%
+branch  6 taken 0%
+       61:   37:            case 0: signal = !signal; break; /* NOT */
+       55:   38:            case 1: signal = !(signal & in2); break; /* NAND */
+       73:   39:            case 2: signal = !(signal | in2); break; /* NOR */
+       42:   40:            case 3: signal = !signal; break; /* NOT */
+       24:   41:            case 4: signal = signal & in2; break; /* AND */
+       59:   42:            case 5: signal = signal | in2; break; /* OR */
+        -:   43:        }
+        -:   44:    }
+       38:   45:    printf("SLR_GATESIM_V3 final_signal=%d gates_applied=%zu\n", signal, n > 0 ? n - 1 : 0);
+call    0 returned 100%
+       38:   46:    return 0;
+        -:   47:}

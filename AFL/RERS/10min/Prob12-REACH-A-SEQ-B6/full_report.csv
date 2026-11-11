@@ -1,0 +1,2 @@
+Name of the Program,Type of Benchmarks,Time frame(in second),Line Coverage,Branch coverage,Mutation Score,Statement Coverage,Test Cases
+"Prob12-REACH-A-SEQ-B6","RERS","598","55.69","79.37","99.97","55.69","242"

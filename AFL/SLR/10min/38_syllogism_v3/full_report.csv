@@ -1,0 +1,2 @@
+Name of the Program,Type of Benchmarks,Time frame(in second),Line Coverage,Branch coverage,Mutation Score,Statement Coverage,Test Cases
+"38_syllogism_v3","SLR","598","100.00","100.00","73.91","100.00","12"

@@ -1,0 +1,7 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,4,"Defa"
+2,id:000001,src:000000,time:60,execs:21,op:quick,pos:0,+cov,4,">efa"
+3,id:000002,src:000000,time:109,execs:34,op:flip1,pos:0,+cov,4,"efa"
+4,id:000003,src:000000,time:144,execs:42,op:flip1,pos:0,+cov,4,"defa"
+5,id:000004,src:000000,time:176,execs:50,op:flip1,pos:0,+cov,4,"Tefa"
+6,id:000005,src:000000,time:264,execs:73,op:flip4,pos:0,+cov,4,"Zefa"

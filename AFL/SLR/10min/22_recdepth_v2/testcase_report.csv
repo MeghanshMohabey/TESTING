@@ -1,0 +1,23 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,8,"Default "
+2,id:000001,src:000000,time:70,execs:22,op:quick,pos:1,8,"D7fault "
+3,id:000002,src:000000,time:149,execs:32,op:quick,pos:4,+cov,8,"DefaVlt "
+4,id:000003,src:000000,time:199,execs:40,op:quick,pos:5,8,"Defau…t "
+5,id:000004,src:000000,time:349,execs:90,op:flip2,pos:4,8,"Defatìt "
+6,id:000005,src:000000,time:394,execs:105,op:flip2,pos:5,8,"Defaumô "
+7,id:000006,src:000000,time:1575,execs:461,op:int32,pos:4,val:-128,8,"Defa€ÿÿÿ"
+8,id:000007,src:000000,time:1731,execs:512,op:int32,pos:4,val:be:+2139095040,8,"Defa€"
+9,id:000008,src:000000,time:1765,execs:522,op:havoc,rep:2,4,"ØØØØ"
+10,id:000009,src:000000,time:1849,execs:549,op:havoc,rep:2,13,"DefDefatÿÿ "
+11,id:000010,src:000000,time:1913,execs:568,op:havoc,rep:1,+cov,32,"Deşşşşşşşşşşşşşşşşşşşşşşşşşşşşşş"
+12,id:000011,src:000000,time:1973,execs:590,op:havoc,rep:2,32,"Defòòòòòòòòòòòòòòòòòòòòòòòòòòòòa"
+13,id:000012,src:000000,time:2001,execs:599,op:havoc,rep:2,8,"şşşşşşşş"
+14,id:000013,src:000000,time:2147,execs:642,op:havoc,rep:2,28,"DeUaulşşşşşşşşşşşşşşşşşşşfau"
+15,id:000014,src:000000,time:2200,execs:655,op:havoc,rep:1,+cov,16,"DefauÙÙÙÙÙÙÙÙÙÙÙ"
+16,id:000015,src:000000,time:2475,execs:724,op:havoc,rep:1,15,"Defaefaumô ult "
+17,id:000016,src:000000,time:2581,execs:751,op:havoc,rep:1,16,"Deşşşşşşşşfault "
+18,id:000017,src:000000,time:2915,execs:842,op:havoc,rep:2,28,"De2"
+19,id:000018,src:000000,time:3241,execs:942,op:havoc,rep:2,23,"DeæauDeşşşşşşşşfaultlt "
+20,id:000019,src:000000,time:3662,execs:1063,op:havoc,rep:1,20,"DefaÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓ"
+21,id:000020,src:000000,time:5521,execs:1646,op:havoc,rep:2,31,"DDeæauDeşşşşşşşşfaultlt lt "
+22,id:000021,src:000000,time:24901,execs:7411,op:havoc,rep:2,27,"Defwwwt ÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙl"
