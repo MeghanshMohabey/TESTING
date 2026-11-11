@@ -1,2 +1,0 @@
-Name of the Program,Type of Benchmarks,Time frame(in second),Line Coverage,Branch coverage,Mutation Score,Statement Coverage,Test Cases
-"Prob2-LTL-A-SEQ-B10","RERS","1798","100.00","100.00","99.81","100.00","176"
