@@ -1,0 +1,31 @@
+Mutant_ID,Operator,Status
+1,== -> !=,Survived
+2,== -> !=,Survived
+3,!= -> ==,Survived
+4,\|\| -> &&,Survived
+5,\+ -> -,Killed (Compilation Error)
+6,\+ -> -,Killed (Compilation Error)
+7,\+ -> -,Survived
+8,\+ -> -,Survived
+9,\+ -> -,Survived
+10,\* -> /,Killed (Compilation Error)
+11,\* -> /,Killed (Compilation Error)
+12,\* -> /,Killed (Compilation Error)
+13,\* -> /,Killed (Compilation Error)
+14,\* -> /,Killed (Compilation Error)
+15,\* -> /,Killed (Compilation Error)
+16,\* -> /,Killed (Compilation Error)
+17,\* -> /,Killed (Compilation Error)
+18,\* -> /,Killed (Compilation Error)
+19,\* -> /,Killed (Compilation Error)
+20,< -> >=,Killed (Compilation Error)
+21,< -> >=,Killed (Compilation Error)
+22,< -> >=,Killed (Compilation Error)
+23,> -> <=,Killed (Compilation Error)
+24,> -> <=,Killed (Compilation Error)
+25,> -> <=,Killed (Compilation Error)
+26,> -> <=,Survived
+27,> -> <=,Killed (Compilation Error)
+28,> -> <=,Killed (Compilation Error)
+29,>= -> <,Survived
+30,>= -> <,Survived

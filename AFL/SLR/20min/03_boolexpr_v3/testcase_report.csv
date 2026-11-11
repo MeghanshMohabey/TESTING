@@ -1,0 +1,36 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,12,"Default seed"
+2,id:000001,src:000000,time:229,execs:21,op:quick,pos:0,+cov,12,";efault seed"
+3,id:000002,src:000000,time:294,execs:29,op:quick,pos:1,12,"DKfault seed"
+4,id:000003,src:000000,time:355,execs:37,op:quick,pos:2,12,"Deyault seed"
+5,id:000004,src:000000,time:427,execs:46,op:quick,pos:4,12,"DefaÚlt seed"
+6,id:000005,src:000000,time:500,execs:55,op:quick,pos:6,12,"DefaulÊ seed"
+7,id:000006,src:000000,time:563,execs:63,op:quick,pos:7,+cov,12,"Default{seed"
+8,id:000007,src:000000,time:1322,execs:122,op:flip1,pos:7,+cov,12,"Default""seed"
+9,id:000008,src:000000,time:1488,execs:138,op:flip2,pos:0,12,"Eåfault seed"
+10,id:000009,src:000000,time:1646,execs:153,op:flip2,pos:1,12,"Ddæault seed"
+11,id:000010,src:000000,time:2942,execs:249,op:flip16,pos:2,12,"De™žult seed"
+12,id:000011,src:000000,time:3103,execs:264,op:flip32,pos:6,12,"Defaul‹ßŒšed"
+13,id:000012,src:000000,time:3162,execs:272,op:flip32,pos:7,+cov,12,"DefaultßŒššd"
+14,id:000013,src:000000,time:10913,execs:821,op:int32,pos:0,val:-128,12,"€ÿÿÿult seed"
+15,id:000014,src:000000,time:11085,execs:837,op:int32,pos:0,val:be:+32,12," ult seed"
+16,id:000015,src:000000,time:11676,execs:882,op:int32,pos:1,val:be:-128,12,"Dÿÿÿ€lt seed"
+17,id:000016,src:000000,time:15198,execs:1131,op:havoc,rep:16,12,"ÿ‹‹‹Ìefau{t{"
+18,id:000017,src:000000,time:15360,execs:1146,op:havoc,rep:11,12,"Def€..1"
+19,id:000018,src:000000,time:15444,execs:1156,op:havoc,rep:13,+cov,2,"žž"
+20,id:000019,src:000000,time:15505,execs:1164,op:havoc,rep:4,7,"Dejeedd"
+21,id:000020,src:000000,time:15568,execs:1172,op:havoc,rep:5,4,"seed"
+22,id:000021,src:000000,time:15639,execs:1181,op:havoc,rep:13,12,"DDDDDDDÿDDD"
+23,id:000022,src:000000,time:15702,execs:1189,op:havoc,rep:14,3,"@w"
+24,id:000023,src:000000,time:15763,execs:1197,op:havoc,rep:11,12,"uct ^eààfÿul"
+25,id:000024,src:000000,time:15860,execs:1207,op:havoc,rep:13,12,"ææææææ.æ"
+26,id:000025,src:000000,time:16863,execs:1284,op:havoc,rep:5,12,"fffnfDffffau"
+27,id:000026,src:000000,time:18037,execs:1373,op:havoc,rep:11,12,"e											"
+28,id:000027,src:000000,time:18657,execs:1422,op:havoc,rep:8,12,"_ef_efa:efa"
+29,id:000028,src:000000,time:18805,execs:1436,op:havoc,rep:10,12,"Dlttttttttt{"
+30,id:000029,src:000000,time:19112,execs:1461,op:havoc,rep:8,12,"befyDÿÿÿ€lt "
+31,id:000030,src:000000,time:19327,execs:1479,op:havoc,rep:11,8,"				"
+32,id:000031,src:000000,time:25723,execs:1899,op:havoc,rep:11,12,"â"
+33,id:000032,src:000000,time:45333,execs:3248,op:havoc,rep:12,12,"‚£ÿÿÿÿ££££ÿ"
+34,id:000033,src:000000,time:68639,execs:4960,op:havoc,rep:16,12,"DeÄÄcccccÄ"
+35,id:000034,src:000000,time:251698,execs:18475,op:havoc,rep:15,12,"ÿ@@@ØØ"

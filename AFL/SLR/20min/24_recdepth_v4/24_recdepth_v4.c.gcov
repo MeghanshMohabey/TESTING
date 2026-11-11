@@ -1,0 +1,80 @@
+        -:    0:Source:24_recdepth_v4.c
+        -:    0:Graph:24_recdepth_v4.gcno
+        -:    0:Data:24_recdepth_v4.gcda
+        -:    0:Runs:20
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 24  Family: recdepth  Variant: 4 (NAND Tree)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 20 returned 100% blocks executed 89%
+       20:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       20:   16:    FILE *f = stdin;
+       20:   17:    if (argc > 1) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       20:   18:        f = fopen(argv[1], "rb");
+call    0 returned 100%
+      20*:   19:        if (!f) return 0;
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   20:    }
+       20:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 100%
+       20:   22:    if (f != stdin) fclose(f);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+       20:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:/* Mode: NAND Tree */
+function evaluate called 441 returned 100% blocks executed 100%
+      441:   27:static int evaluate(const unsigned char *buf, size_t n, size_t *pos, int depth) {
+      441:   28:    if (depth >= MAX_BOUND || *pos >= n) return 0; /* base case: recursion bound reached */
+branch  0 taken 83% (fallthrough)
+branch  1 taken 17%
+branch  2 taken 15% (fallthrough)
+branch  3 taken 85%
+      313:   29:    unsigned char b = buf[(*pos)++];
+      313:   30:    unsigned char kind = b % 3;
+      313:   31:    if (kind == 0) {
+branch  0 taken 18% (fallthrough)
+branch  1 taken 82%
+       55:   32:        return b & 1; /* leaf literal */
+      258:   33:    } else if (kind == 1) {
+branch  0 taken 37% (fallthrough)
+branch  1 taken 63%
+       95:   34:        int a = evaluate(buf, n, pos, depth + 1);
+call    0 returned 100%
+       95:   35:        return !a; /* NOT */
+        -:   36:    } else {
+      163:   37:        int a = evaluate(buf, n, pos, depth + 1);
+call    0 returned 100%
+      163:   38:        int c = evaluate(buf, n, pos, depth + 1);
+call    0 returned 100%
+      163:   39:        return !(a & c);
+        -:   40:    }
+        -:   41:}
+        -:   42:
+function main called 20 returned 100% blocks executed 100%
+       20:   43:int main(int argc, char **argv) {
+        -:   44:    unsigned char buf[32];
+       20:   45:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 100%
+       20:   46:    size_t pos = 0;
+       20:   47:    int result = evaluate(buf, n, &pos, 0); /* recursion never exceeds MAX_BOUND levels */
+call    0 returned 100%
+       20:   48:    printf("SLR_RECDEPTH_V4 result=%d consumed=%zu\n", result, pos);
+call    0 returned 100%
+       20:   49:    return 0;
+        -:   50:}

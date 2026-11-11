@@ -1,0 +1,94 @@
+        -:    0:Source:01_boolexpr_v1.c
+        -:    0:Graph:01_boolexpr_v1.gcno
+        -:    0:Data:01_boolexpr_v1.gcda
+        -:    0:Runs:32
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 01  Family: boolexpr  Variant: 1 (Core Ops)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 32 returned 100% blocks executed 89%
+       32:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       32:   16:    FILE *f = stdin;
+       32:   17:    if (argc > 1) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       32:   18:        f = fopen(argv[1], "rb");
+call    0 returned 100%
+      32*:   19:        if (!f) return 0;
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   20:    }
+       32:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 100%
+       32:   22:    if (f != stdin) fclose(f);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+       32:   23:    return n;
+        -:   24:}
+        -:   25:
+function main called 32 returned 100% blocks executed 87%
+       32:   26:int main(int argc, char **argv) {
+        -:   27:    unsigned char buf[MAX_BOUND];
+       32:   28:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 100%
+      32*:   29:    if (n > MAX_BOUND) n = MAX_BOUND; /* enforce bound: at most MAX_BOUND tokens */
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   30:
+        -:   31:    int stack[MAX_BOUND];
+       32:   32:    int sp = 0;
+      322:   33:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 90%
+branch  1 taken 10% (fallthrough)
+      290:   34:        unsigned char t = buf[i] % 5;
+      290:   35:        switch (t) {
+branch  0 taken 19%
+branch  1 taken 23%
+branch  2 taken 23%
+branch  3 taken 23%
+branch  4 taken 12%
+branch  5 taken 0%
+       54:   36:            case 0: if (sp < MAX_BOUND) stack[sp++] = 0; break; /* push FALSE */
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       66:   37:            case 1: if (sp < MAX_BOUND) stack[sp++] = 1; break; /* push TRUE */
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       68:   38:            case 2: /* AND */
+       68:   39:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a & b; }
+branch  0 taken 26% (fallthrough)
+branch  1 taken 74%
+       68:   40:                break;
+       66:   41:            case 3: /* OR */
+       66:   42:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a | b; }
+branch  0 taken 18% (fallthrough)
+branch  1 taken 82%
+       66:   43:                break;
+       36:   44:            case 4: /* XOR */
+       36:   45:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a ^ b; }
+branch  0 taken 28% (fallthrough)
+branch  1 taken 72%
+       36:   46:                break;
+    #####:   47:            default: if (sp >= 1) stack[sp-1] = !stack[sp-1]; break; /* NOT top */
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   48:        }
+        -:   49:    }
+       32:   50:    int result = (sp > 0) ? stack[sp-1] : 0;
+branch  0 taken 94% (fallthrough)
+branch  1 taken 6%
+       32:   51:    printf("SLR_BOOLEXPR_V1 result=%d stack_depth=%d tokens=%zu\n", result, sp, n);
+call    0 returned 100%
+       32:   52:    return 0;
+        -:   53:}
