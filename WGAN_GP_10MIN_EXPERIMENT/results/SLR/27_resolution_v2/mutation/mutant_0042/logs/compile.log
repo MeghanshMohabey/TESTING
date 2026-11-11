@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/27_resolution_v2/mutation/mutant_0042/27_resolution_v2.c: In function ‘resolve_clauses’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/27_resolution_v2/mutation/mutant_0042/27_resolution_v2.c:42:85: error: expected expression before ‘]’ token
+   42 |                 for (int y = 0; y < b.nlits && k < 3; y++) if (y != j) out->lits[k-+] = b.lits[y];
+      |                                                                                     ^

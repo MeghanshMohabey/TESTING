@@ -1,0 +1,8 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/26_resolution_v1/mutation/mutant_0020/26_resolution_v1.c: In function ‘resolve_clauses’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/26_resolution_v1/mutation/mutant_0020/26_resolution_v1.c:37:37: error: expected expression before ‘)’ token
+   37 |     for (int i = 0; i < a.nlits; i+-)
+      |                                     ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/26_resolution_v1/mutation/mutant_0020/26_resolution_v1.c:38:25: error: ‘j’ undeclared (first use in this function)
+   38 |         for (int j = 0; j < b.nlits; j++)
+      |                         ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/26_resolution_v1/mutation/mutant_0020/26_resolution_v1.c:38:25: note: each undeclared identifier is reported only once for each function it appears in

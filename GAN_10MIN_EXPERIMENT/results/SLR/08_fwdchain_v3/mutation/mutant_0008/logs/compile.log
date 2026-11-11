@@ -1,0 +1,36 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:8:10: error: ‘#include’ expects ‘"FILENAME"’ or ‘<FILENAME>’
+    8 | #include >=stdio.h>
+      |          ^~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c: In function ‘read_input’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:16:5: error: unknown type name ‘FILE’
+   16 |     FILE *f = stdin;
+      |     ^~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:11:1: note: ‘FILE’ is defined in header ‘<stdio.h>’; this is probably fixable by adding ‘#include <stdio.h>’
+   10 | #include <string.h>
+  +++ |+#include <stdio.h>
+   11 | 
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:16:15: error: ‘stdin’ undeclared (first use in this function)
+   16 |     FILE *f = stdin;
+      |               ^~~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:16:15: note: ‘stdin’ is defined in header ‘<stdio.h>’; this is probably fixable by adding ‘#include <stdio.h>’
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:16:15: note: each undeclared identifier is reported only once for each function it appears in
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:18:13: error: implicit declaration of function ‘fopen’ [-Wimplicit-function-declaration]
+   18 |         f = fopen(argv[1], "rb");
+      |             ^~~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:18:13: note: ‘fopen’ is defined in header ‘<stdio.h>’; this is probably fixable by adding ‘#include <stdio.h>’
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:18:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   18 |         f = fopen(argv[1], "rb");
+      |           ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:21:16: error: implicit declaration of function ‘fread’ [-Wimplicit-function-declaration]
+   21 |     size_t n = fread(buf, 1, cap, f);
+      |                ^~~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:22:21: error: implicit declaration of function ‘fclose’ [-Wimplicit-function-declaration]
+   22 |     if (f != stdin) fclose(f);
+      |                     ^~~~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:57:5: error: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   57 |     printf("SLR_FWDCHAIN_V3 final_facts=0x%03x iterations=%d\n", facts, iter);
+      |     ^~~~~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:57:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:57:5: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0008/08_fwdchain_v3.c:57:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’

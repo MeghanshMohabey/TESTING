@@ -1,0 +1,8 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/32_gatesim_v2/mutation/mutant_0021/32_gatesim_v2.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/32_gatesim_v2/mutation/mutant_0021/32_gatesim_v2.c:33:34: error: expected expression before ‘)’ token
+   33 |     for (size_t i = 1; i < n; i+-) {
+      |                                  ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/32_gatesim_v2/mutation/mutant_0021/32_gatesim_v2.c:36:17: error: ‘g’ undeclared (first use in this function)
+   36 |         switch (g) {
+      |                 ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/32_gatesim_v2/mutation/mutant_0021/32_gatesim_v2.c:36:17: note: each undeclared identifier is reported only once for each function it appears in

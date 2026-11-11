@@ -1,0 +1,7 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/48_proofsteps_v3/mutation/mutant_0016/48_proofsteps_v3.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/48_proofsteps_v3/mutation/mutant_0016/48_proofsteps_v3.c:27:22: error: expected expression before ‘>=’ token
+   27 | #define GOAL_BIT (1 <>= 9) /* fact 9 is the proof goal */
+      |                      ^~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/48_proofsteps_v3/mutation/mutant_0016/48_proofsteps_v3.c:54:33: note: in expansion of macro ‘GOAL_BIT’
+   54 |     int goal_reached = (facts & GOAL_BIT) ? 1 : 0;
+      |                                 ^~~~~~~~

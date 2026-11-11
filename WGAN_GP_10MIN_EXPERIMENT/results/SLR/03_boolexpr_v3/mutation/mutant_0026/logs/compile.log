@@ -1,0 +1,8 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/03_boolexpr_v3/mutation/mutant_0026/03_boolexpr_v3.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/03_boolexpr_v3/mutation/mutant_0026/03_boolexpr_v3.c:39:26: error: expected expression before ‘=’ token
+   39 |                 if (sp <== 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a & b; }
+      |                          ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/03_boolexpr_v3/mutation/mutant_0026/03_boolexpr_v3.c:39:93: error: ‘b’ undeclared (first use in this function)
+   39 |                 if (sp <== 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a & b; }
+      |                                                                                             ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/03_boolexpr_v3/mutation/mutant_0026/03_boolexpr_v3.c:39:93: note: each undeclared identifier is reported only once for each function it appears in

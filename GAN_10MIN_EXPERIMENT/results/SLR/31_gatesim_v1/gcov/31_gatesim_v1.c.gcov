@@ -1,0 +1,77 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/SLR/31_gatesim_v1.c
+        -:    0:Graph:./program-31_gatesim_v1.gcno
+        -:    0:Data:./program-31_gatesim_v1.gcda
+        -:    0:Runs:5278
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 31  Family: gatesim  Variant: 1 (Standard 6-Gate Set)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 5278 returned 100% blocks executed 56%
+     5278:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     5278:   16:    FILE *f = stdin;
+     5278:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5278
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     5278:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 5278
+    5278*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5278
+call    2 never executed
+     5278:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:/* Gate set: Standard 6-Gate Set */
+function main called 5278 returned 100% blocks executed 89%
+     5278:   27:int main(int argc, char **argv) {
+        -:   28:    unsigned char buf[MAX_BOUND];
+     5278:   29:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 5278
+    5278*:   30:    if (n > MAX_BOUND) n = MAX_BOUND; /* at most MAX_BOUND gates applied */
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5278
+        -:   31:
+    5278*:   32:    int signal = n > 0 ? (buf[0] & 1) : 0;
+branch  0 taken 5278 (fallthrough)
+branch  1 taken 0
+    52780:   33:    for (size_t i = 1; i < n; i++) {
+branch  0 taken 47502
+branch  1 taken 5278 (fallthrough)
+    47502:   34:        int g = buf[i] % 6;
+    47502:   35:        int in2 = (buf[i] >> 1) & 1;
+    47502:   36:        switch (g) {
+branch  0 taken 16002
+branch  1 taken 10225
+branch  2 taken 7305
+branch  3 taken 11883
+branch  4 taken 1145
+branch  5 taken 942
+branch  6 taken 0
+    16002:   37:            case 0: signal = signal & in2; break; /* AND */
+    10225:   38:            case 1: signal = signal | in2; break; /* OR */
+     7305:   39:            case 2: signal = !signal; break; /* NOT */
+    11883:   40:            case 3: signal = signal ^ in2; break; /* XOR */
+     1145:   41:            case 4: signal = !(signal & in2); break; /* NAND */
+      942:   42:            case 5: signal = !(signal | in2); break; /* NOR */
+        -:   43:        }
+        -:   44:    }
+     5278:   45:    printf("SLR_GATESIM_V1 final_signal=%d gates_applied=%zu\n", signal, n > 0 ? n - 1 : 0);
+call    0 returned 5278
+     5278:   46:    return 0;
+        -:   47:}

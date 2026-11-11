@@ -1,0 +1,102 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/SLR/11_clausesat_v1.c
+        -:    0:Graph:./program-11_clausesat_v1.gcno
+        -:    0:Data:./program-11_clausesat_v1.gcda
+        -:    0:Runs:5449
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 11  Family: clausesat  Variant: 1 (Scheduling Rules)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 5449 returned 100% blocks executed 56%
+     5449:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     5449:   16:    FILE *f = stdin;
+     5449:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5449
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     5449:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 5449
+    5449*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5449
+call    2 never executed
+     5449:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:typedef struct { int lits[3]; } Clause; /* 0 = unused slot; negative = negated var */
+        -:   27:
+        -:   28:/* Domain: Scheduling Rules */
+        -:   29:static const Clause CLAUSES[] = {
+        -:   30:    {{1, -2, 0}},
+        -:   31:    {{2, 3, 0}},
+        -:   32:    {{-3, 4, 0}},
+        -:   33:    {{4, -5, 6}},
+        -:   34:    {{-1, 5, 0}},
+        -:   35:    {{6, -4, 0}}
+        -:   36:};
+        -:   37:#define NUM_CLAUSES ((int)(sizeof(CLAUSES)/sizeof(CLAUSES[0])))
+        -:   38:
+function main called 5449 returned 100% blocks executed 100%
+     5449:   39:int main(int argc, char **argv) {
+        -:   40:    unsigned char buf[4];
+     5449:   41:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 5449
+     5449:   42:    unsigned int bits = 0;
+    27245:   43:    for (size_t i = 0; i < n && i < 4; i++) bits |= ((unsigned int)buf[i]) << (8 * (int)i);
+branch  0 taken 21796 (fallthrough)
+branch  1 taken 5449
+branch  2 taken 21796
+branch  3 taken 0 (fallthrough)
+        -:   44:
+        -:   45:    int assign[MAX_BOUND + 1];
+    59939:   46:    for (int v2 = 1; v2 <= MAX_BOUND; v2++) assign[v2] = (bits >> (v2 - 1)) & 1;
+branch  0 taken 54490
+branch  1 taken 5449 (fallthrough)
+        -:   47:
+     5449:   48:    int all_sat = 1, first_unsat = -1;
+    38143:   49:    for (int c = 0; c < NUM_CLAUSES && c < MAX_BOUND; c++) { /* bounded: <= MAX_BOUND clauses */
+branch  0 taken 32694 (fallthrough)
+branch  1 taken 5449
+branch  2 taken 32694
+branch  3 taken 0 (fallthrough)
+    32694:   50:        int sat = 0;
+    59497:   51:        for (int k = 0; k < 3; k++) {
+branch  0 taken 54714
+branch  1 taken 4783 (fallthrough)
+    54714:   52:            int lit = CLAUSES[c].lits[k];
+    54714:   53:            if (lit == 0) continue;
+branch  0 taken 4783 (fallthrough)
+branch  1 taken 49931
+    49931:   54:            int var = lit > 0 ? lit : -lit;
+    49931:   55:            int val = assign[var];
+    49931:   56:            if (lit < 0) val = !val;
+branch  0 taken 20091 (fallthrough)
+branch  1 taken 29840
+    49931:   57:            if (val) { sat = 1; break; }
+branch  0 taken 27911 (fallthrough)
+branch  1 taken 22020
+        -:   58:        }
+    32694:   59:        if (!sat) { all_sat = 0; if (first_unsat < 0) first_unsat = c; }
+branch  0 taken 4783 (fallthrough)
+branch  1 taken 27911
+branch  2 taken 3760 (fallthrough)
+branch  3 taken 1023
+        -:   60:    }
+     5449:   61:    printf("SLR_CLAUSESAT_V1 all_satisfied=%d first_unsat_clause=%d\n", all_sat, first_unsat);
+call    0 returned 5449
+     5449:   62:    return 0;
+        -:   63:}

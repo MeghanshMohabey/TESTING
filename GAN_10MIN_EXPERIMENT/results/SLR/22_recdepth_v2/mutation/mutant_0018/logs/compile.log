@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/22_recdepth_v2/mutation/mutant_0018/22_recdepth_v2.c: In function ‘evaluate’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/22_recdepth_v2/mutation/mutant_0018/22_recdepth_v2.c:28:38: error: expected expression before ‘=’ token
+   28 |     if (depth >= MAX_BOUND || *pos <== n) return 0; /* base case: recursion bound reached */
+      |                                      ^

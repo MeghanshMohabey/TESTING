@@ -1,0 +1,5 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/programs/RERS/Prob16-R12-B4.c: In function ‘calculate_output’:
+/mnt/d/GAN_10MIN_EXPERIMENT/programs/RERS/Prob16-R12-B4.c:1492:20: error: implicit declaration of function ‘calculate_output2’; did you mean ‘calculate_output’? [-Wimplicit-function-declaration]
+ 1492 |             return calculate_output2(input);
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    calculate_output

@@ -1,0 +1,8 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/19_modusponens_v4/mutation/mutant_0022/19_modusponens_v4.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/19_modusponens_v4/mutation/mutant_0022/19_modusponens_v4.c:37:52: error: expected expression before ‘)’ token
+   37 |     for (i = 0; i < CHAIN_LEN && i < MAX_BOUND; i-+) { /* bounded chain traversal */
+      |                                                    ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/19_modusponens_v4/mutation/mutant_0022/19_modusponens_v4.c:39:39: error: ‘implication_holds’ undeclared (first use in this function)
+   39 |         truths[i + 1] = (truths[i] && implication_holds) ? 1 : 0;
+      |                                       ^~~~~~~~~~~~~~~~~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/19_modusponens_v4/mutation/mutant_0022/19_modusponens_v4.c:39:39: note: each undeclared identifier is reported only once for each function it appears in

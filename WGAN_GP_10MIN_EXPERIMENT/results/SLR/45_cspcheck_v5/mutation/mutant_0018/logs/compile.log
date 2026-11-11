@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/45_cspcheck_v5/mutation/mutant_0018/45_cspcheck_v5.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/45_cspcheck_v5/mutation/mutant_0018/45_cspcheck_v5.c:43:49: error: expected expression before ‘>=’ token
+   43 |     bits |= (n > 1 ? (unsigned int)buf[1] : 0) <>= 8;
+      |                                                 ^~

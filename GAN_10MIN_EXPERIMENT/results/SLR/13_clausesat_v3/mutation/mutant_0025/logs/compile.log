@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/13_clausesat_v3/mutation/mutant_0025/13_clausesat_v3.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/13_clausesat_v3/mutation/mutant_0025/13_clausesat_v3.c:42:43: error: expected expression before ‘)’ token
+   42 |     for (size_t i = 0; i < n && i < 4; i+-) bits |= ((unsigned int)buf[i]) << (8 * (int)i);
+      |                                           ^

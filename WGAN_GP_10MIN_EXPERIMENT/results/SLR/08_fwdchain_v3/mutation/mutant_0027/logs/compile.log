@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0027/08_fwdchain_v3.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/08_fwdchain_v3/mutation/mutant_0027/08_fwdchain_v3.c:49:60: error: expected expression before ‘)’ token
+   49 |         for (int r = 0; r < NUM_RULES && r < MAX_BOUND; r-+) {
+      |                                                            ^

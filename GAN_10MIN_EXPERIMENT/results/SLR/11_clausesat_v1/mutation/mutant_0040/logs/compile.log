@@ -1,0 +1,8 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0040/11_clausesat_v1.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0040/11_clausesat_v1.c:49:58: error: expected expression before ‘)’ token
+   49 |     for (int c = 0; c < NUM_CLAUSES && c < MAX_BOUND; c-+) { /* bounded: <= MAX_BOUND clauses */
+      |                                                          ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0040/11_clausesat_v1.c:57:24: error: ‘sat’ undeclared (first use in this function)
+   57 |             if (val) { sat = 1; break; }
+      |                        ^~~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0040/11_clausesat_v1.c:57:24: note: each undeclared identifier is reported only once for each function it appears in

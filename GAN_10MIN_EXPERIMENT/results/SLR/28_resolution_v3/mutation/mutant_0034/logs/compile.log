@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/28_resolution_v3/mutation/mutant_0034/28_resolution_v3.c: In function ‘resolve_clauses’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/28_resolution_v3/mutation/mutant_0034/28_resolution_v3.c:41:76: error: expected expression before ‘>’ token
+   41 |                 for (int x = 0; x < a.nlits && k < 3; x++) if (x != i) out+>lits[k++] = a.lits[x];
+      |                                                                            ^

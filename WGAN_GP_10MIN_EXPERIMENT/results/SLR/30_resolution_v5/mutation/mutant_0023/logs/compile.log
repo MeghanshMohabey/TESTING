@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/30_resolution_v5/mutation/mutant_0023/30_resolution_v5.c: In function ‘resolve_clauses’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/30_resolution_v5/mutation/mutant_0023/30_resolution_v5.c:38:41: error: expected expression before ‘)’ token
+   38 |         for (int j = 0; j < b.nlits; j+-)
+      |                                         ^

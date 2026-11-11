@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/27_resolution_v2/mutation/mutant_0047/27_resolution_v2.c: In function ‘resolve_clauses’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/27_resolution_v2/mutation/mutant_0047/27_resolution_v2.c:43:21: error: expected expression before ‘>’ token
+   43 |                 out+>nlits = k;
+      |                     ^

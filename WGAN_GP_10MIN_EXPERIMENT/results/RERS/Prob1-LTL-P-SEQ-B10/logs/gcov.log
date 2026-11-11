@@ -1,0 +1,8 @@
+File '/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/programs/RERS/Prob1-LTL-P-SEQ-B10.c'
+Lines executed:24.17% of 240
+Branches executed:31.87% of 364
+Taken at least once:21.43% of 364
+Calls executed:25.00% of 24
+Creating 'Prob1-LTL-P-SEQ-B10.c.gcov'
+
+Lines executed:24.17% of 240

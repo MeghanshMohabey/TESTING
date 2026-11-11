@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/03_boolexpr_v3/mutation/mutant_0050/03_boolexpr_v3.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/03_boolexpr_v3/mutation/mutant_0050/03_boolexpr_v3.c:47:31: error: expected expression before ‘=’ token
+   47 |             default: if (sp <== 1) stack[sp-1] = !stack[sp-1]; break; /* NOT top */
+      |                               ^

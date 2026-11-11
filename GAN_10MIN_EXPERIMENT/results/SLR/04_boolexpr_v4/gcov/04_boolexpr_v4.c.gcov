@@ -1,0 +1,94 @@
+        -:    0:Source:/mnt/d/GAN_10MIN_EXPERIMENT/programs/SLR/04_boolexpr_v4.c
+        -:    0:Graph:./program-04_boolexpr_v4.gcno
+        -:    0:Data:./program-04_boolexpr_v4.gcda
+        -:    0:Runs:4658
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 04  Family: boolexpr  Variant: 4 (Implication Variant)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 4658 returned 100% blocks executed 56%
+     4658:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+     4658:   16:    FILE *f = stdin;
+     4658:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4658
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+     4658:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 4658
+    4658*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4658
+call    2 never executed
+     4658:   23:    return n;
+        -:   24:}
+        -:   25:
+function main called 4658 returned 100% blocks executed 84%
+     4658:   26:int main(int argc, char **argv) {
+        -:   27:    unsigned char buf[MAX_BOUND];
+     4658:   28:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 4658
+    4658*:   29:    if (n > MAX_BOUND) n = MAX_BOUND; /* enforce bound: at most MAX_BOUND tokens */
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4658
+        -:   30:
+        -:   31:    int stack[MAX_BOUND];
+     4658:   32:    int sp = 0;
+    51238:   33:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 46580
+branch  1 taken 4658 (fallthrough)
+    46580:   34:        unsigned char t = buf[i] % 5;
+    46580:   35:        switch (t) {
+branch  0 taken 30090
+branch  1 taken 10226
+branch  2 taken 2375
+branch  3 taken 1181
+branch  4 taken 2708
+branch  5 taken 0
+    30090:   36:            case 0: if (sp < MAX_BOUND) stack[sp++] = 0; break; /* push FALSE */
+branch  0 taken 30090 (fallthrough)
+branch  1 taken 0
+    10226:   37:            case 1: if (sp < MAX_BOUND) stack[sp++] = 1; break; /* push TRUE */
+branch  0 taken 10226 (fallthrough)
+branch  1 taken 0
+     2375:   38:            case 2: /* OR */
+     2375:   39:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a | b; }
+branch  0 taken 1575 (fallthrough)
+branch  1 taken 800
+     2375:   40:                break;
+     1181:   41:            case 3: /* XOR */
+     1181:   42:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a ^ b; }
+branch  0 taken 688 (fallthrough)
+branch  1 taken 493
+     1181:   43:                break;
+     2708:   44:            case 4: /* IMPLIES */
+     2708:   45:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = (!a) | b; }
+branch  0 taken 1792 (fallthrough)
+branch  1 taken 916
+     2708:   46:                break;
+    #####:   47:            default: if (sp >= 1) stack[sp-1] = !stack[sp-1]; break; /* NOT top */
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   48:        }
+        -:   49:    }
+    4658*:   50:    int result = (sp > 0) ? stack[sp-1] : 0;
+branch  0 taken 4658 (fallthrough)
+branch  1 taken 0
+     4658:   51:    printf("SLR_BOOLEXPR_V4 result=%d stack_depth=%d tokens=%zu\n", result, sp, n);
+call    0 returned 4658
+     4658:   52:    return 0;
+        -:   53:}

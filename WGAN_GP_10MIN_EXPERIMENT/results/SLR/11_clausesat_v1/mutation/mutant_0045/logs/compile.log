@@ -1,0 +1,8 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0045/11_clausesat_v1.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0045/11_clausesat_v1.c:51:35: error: expected expression before ‘)’ token
+   51 |         for (int k = 0; k < 3; k+-) {
+      |                                   ^
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0045/11_clausesat_v1.c:53:17: error: ‘lit’ undeclared (first use in this function)
+   53 |             if (lit == 0) continue;
+      |                 ^~~
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/11_clausesat_v1/mutation/mutant_0045/11_clausesat_v1.c:53:17: note: each undeclared identifier is reported only once for each function it appears in

@@ -1,0 +1,8 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/43_cspcheck_v3/mutation/mutant_0027/43_cspcheck_v3.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/43_cspcheck_v3/mutation/mutant_0027/43_cspcheck_v3.c:48:62: error: expected expression before ‘)’ token
+   48 |     for (int c = 0; c < NUM_CONSTRAINTS && c < MAX_BOUND; c-+) { /* bounded constraint check */
+      |                                                              ^
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/43_cspcheck_v3/mutation/mutant_0027/43_cspcheck_v3.c:50:49: error: ‘eq’ undeclared (first use in this function)
+   50 |         int ok = CONSTRAINTS[c].require_equal ? eq : !eq;
+      |                                                 ^~
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/43_cspcheck_v3/mutation/mutant_0027/43_cspcheck_v3.c:50:49: note: each undeclared identifier is reported only once for each function it appears in

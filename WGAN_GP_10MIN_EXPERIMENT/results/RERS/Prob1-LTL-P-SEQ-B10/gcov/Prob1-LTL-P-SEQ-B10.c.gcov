@@ -1,0 +1,768 @@
+        -:    0:Source:/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/programs/RERS/Prob1-LTL-P-SEQ-B10.c
+        -:    0:Graph:./program-Prob1-LTL-P-SEQ-B10.gcno
+        -:    0:Data:./program-Prob1-LTL-P-SEQ-B10.gcda
+        -:    0:Runs:6656
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:#include<stdio.h>
+        -:    5:#include <stdio.h> 
+        -:    6:#include <assert.h>
+        -:    7:#include <math.h>
+        -:    8:#include <stdlib.h>
+        -:    9:
+        -:   10:#define BOUND 10
+        -:   11:int kappa;
+        -:   12:	// inputs
+        -:   13:	int inputs[] = {5,9,6,10,3,4,7,1,2,8};
+        -:   14:
+        -:   15:	void calculate_output(int);
+        -:   16:	void calculate_outputm1(int);
+        -:   17:	void calculate_outputm2(int);
+        -:   18:	void calculate_outputm3(int);
+        -:   19:	void calculate_outputm4(int);
+        -:   20:	void calculate_outputm5(int);
+        -:   21:	void calculate_outputm6(int);
+        -:   22:	void calculate_outputm7(int);
+        -:   23:	void calculate_outputm8(int);
+        -:   24:	void calculate_outputm9(int);
+        -:   25:	void calculate_outputm10(int);
+        -:   26:	void calculate_outputm11(int);
+        -:   27:	void calculate_outputm12(int);
+        -:   28:	void calculate_outputm13(int);
+        -:   29:	void calculate_outputm14(int);
+        -:   30:	void calculate_outputm15(int);
+        -:   31:	void calculate_outputm16(int);
+        -:   32:	void calculate_outputm17(int);
+        -:   33:	void calculate_outputm18(int);
+        -:   34:	void calculate_outputm19(int);
+        -:   35:	void calculate_outputm20(int);
+        -:   36:	void calculate_outputm21(int);
+        -:   37:	void calculate_outputm22(int);
+        -:   38:
+        -:   39:	 int cf = 1;
+        -:   40:	 int a926177810 = 10;
+        -:   41:	 int a906169841 = 11;
+        -:   42:	 int a354505667  = 35;
+        -:   43:	 int a899980218  = 35;
+        -:   44:	 int a1542761177 = 2;
+        -:   45:
+function calculate_outputm1 called 0 returned 0% blocks executed 0%
+    #####:   46: void calculate_outputm1(int input) {
+    #####:   47:    if(((a354505667 == 33 && ((input == 2) &&  cf==1 )) && a1542761177 == 1)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   48:    	cf = 0;
+    #####:   49:    	a354505667 = 34 ;
+    #####:   50:    	a1542761177 = 6; 
+    #####:   51:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+        -:   52:    } 
+    #####:   53:}
+function calculate_outputm2 called 0 returned 0% blocks executed 0%
+    #####:   54: void calculate_outputm2(int input) {
+    #####:   55:    if(((input == 3) && ((a1542761177 == 2 &&  cf==1 ) && a354505667 == 33))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   56:    	cf = 0;
+    #####:   57:    	a354505667 = 34 ;
+    #####:   58:    	a1542761177 = 1; 
+    #####:   59:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+        -:   60:    } 
+    #####:   61:}
+function calculate_outputm3 called 0 returned 0% blocks executed 0%
+    #####:   62: void calculate_outputm3(int input) {
+    #####:   63:    if(((((input == 7) &&  cf==1 ) && a354505667 == 33) && a1542761177 == 3)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   64:    	cf = 0;
+    #####:   65:    	a354505667 = 36 ;
+    #####:   66:    	a926177810 = 12; 
+    #####:   67:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        -:   68:    } 
+    #####:   69:}
+function calculate_outputm4 called 0 returned 0% blocks executed 0%
+    #####:   70: void calculate_outputm4(int input) {
+    #####:   71:    if(((( cf==1  && (input == 7)) && a354505667 == 33) && a1542761177 == 4)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   72:    	cf = 0;
+    #####:   73:    	a354505667 = 34 ; 
+    #####:   74:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:   75:    } 
+    #####:   76:}
+function calculate_outputm5 called 10 returned 100% blocks executed 33%
+       10:   77: void calculate_outputm5(int input) {
+      10*:   78:    if((((input == 2) && ( cf==1  && a354505667 == 33)) && a1542761177 == 5)) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   79:    	cf = 0;
+    #####:   80:    	a1542761177 = 2; 
+    #####:   81:    	 printf("");//printf("%d\n", 25); fflush(stdout); 
+        -:   82:    } 
+       10:   83:}
+function calculate_outputm6 called 0 returned 0% blocks executed 0%
+    #####:   84: void calculate_outputm6(int input) {
+    #####:   85:    if((a1542761177 == 8 && (( cf==1  && (input == 9)) && a354505667 == 33))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   86:    	cf = 0;
+    #####:   87:    	a354505667 = 36 ;
+    #####:   88:    	a926177810 = 15; 
+    #####:   89:    	 printf("");//printf("%d\n", 21); fflush(stdout); 
+        -:   90:    } 
+    #####:   91:}
+function calculate_outputm7 called 6 returned 100% blocks executed 91%
+        6:   92: void calculate_outputm7(int input) {
+        6:   93:    if((a354505667 == 32 && (a899980218 == 32 && ( cf==1  && (input == 4))))) {
+branch  0 taken 6 (fallthrough)
+branch  1 taken 0
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0
+branch  6 taken 0 (fallthrough)
+branch  7 taken 6
+    #####:   94:    	cf = 0;
+    #####:   95:    	a354505667 = 35 ;
+    #####:   96:    	a906169841 = 9; 
+    #####:   97:    	 printf("");//printf("%d\n", 16); fflush(stdout); 
+        6:   98:    } if((a899980218 == 32 && (( cf==1  && (input == 5)) && a354505667 == 32))) {
+branch  0 taken 6 (fallthrough)
+branch  1 taken 0
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2 (fallthrough)
+branch  5 taken 4
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0
+        2:   99:    	cf = 0;
+        2:  100:    	a899980218 = 34 ; 
+        2:  101:    	 printf("");//printf("%d\n", 20); fflush(stdout); 
+        -:  102:    } 
+        6:  103:}
+function calculate_outputm8 called 1 returned 100% blocks executed 50%
+        1:  104: void calculate_outputm8(int input) {
+       1*:  105:    if((a354505667 == 32 && ((input == 2) && ( cf==1  && a899980218 == 34)))) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  106:    	cf = 0;
+    #####:  107:    	a354505667 = 33 ;
+    #####:  108:    	a1542761177 = 1; 
+    #####:  109:    	 printf("");//printf("%d\n", 15); fflush(stdout); 
+        -:  110:    } 
+        1:  111:}
+function calculate_outputm9 called 0 returned 0% blocks executed 0%
+    #####:  112: void calculate_outputm9(int input) {
+    #####:  113:    if(((input == 6) && (a899980218 == 35 && ( cf==1  && a354505667 == 32)))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  114:    	cf = 0;
+    #####:  115:    	a354505667 = 33 ;
+    #####:  116:    	a1542761177 = 8; 
+    #####:  117:    	 printf("");//printf("%d\n", 19); fflush(stdout); 
+        -:  118:    } 
+    #####:  119:}
+function calculate_outputm10 called 0 returned 0% blocks executed 0%
+    #####:  120: void calculate_outputm10(int input) {
+    #####:  121:    if(((a1542761177 == 1 && ( cf==1  && (input == 5))) && a354505667 == 34)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  122:    	cf = 0;
+    #####:  123:    	a354505667 = 33 ;
+    #####:  124:    	a1542761177 = 3; 
+    #####:  125:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        -:  126:    } 
+    #####:  127:}
+function calculate_outputm11 called 0 returned 0% blocks executed 0%
+    #####:  128: void calculate_outputm11(int input) {
+    #####:  129:    if(((( cf==1  && (input == 2)) && a354505667 == 34) && a1542761177 == 2)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  130:    	cf = 0;
+    #####:  131:    	a354505667 = 35 ;
+    #####:  132:    	a906169841 = 15; 
+    #####:  133:    	 printf("");//printf("%d\n", 19); fflush(stdout); 
+        -:  134:    } 
+    #####:  135:}
+function calculate_outputm12 called 0 returned 0% blocks executed 0%
+    #####:  136: void calculate_outputm12(int input) {
+    #####:  137:    if((a354505667 == 34 && (a1542761177 == 4 && ( cf==1  && (input == 3))))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  138:    	cf = 0;
+    #####:  139:    	a1542761177 = 2; 
+    #####:  140:    	 printf("");//printf("%d\n", 16); fflush(stdout); 
+        -:  141:    } 
+    #####:  142:}
+function calculate_outputm13 called 0 returned 0% blocks executed 0%
+    #####:  143: void calculate_outputm13(int input) {
+    #####:  144:    if(((((input == 9) &&  cf==1 ) && a1542761177 == 6) && a354505667 == 34)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  145:    	cf = 0;
+    #####:  146:    	a354505667 = 36 ;
+    #####:  147:    	a926177810 = 11; 
+    #####:  148:    	 printf("");//printf("%d\n", 20); fflush(stdout); 
+        -:  149:    } 
+    #####:  150:}
+function calculate_outputm14 called 0 returned 0% blocks executed 0%
+    #####:  151: void calculate_outputm14(int input) {
+    #####:  152:    if(((((input == 1) &&  cf==1 ) && a906169841 == 9) && a354505667 == 35)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  153:    	cf = 0;
+    #####:  154:    	a354505667 = 36 ;
+    #####:  155:    	a926177810 = 12; 
+    #####:  156:    	 printf("");//printf("%d\n", 15); fflush(stdout); 
+    #####:  157:    } if((a906169841 == 9 && (( cf==1  && (input == 5)) && a354505667 == 35))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  158:    	cf = 0;
+    #####:  159:    	a354505667 = 32 ;
+    #####:  160:    	a899980218 = 32 ; 
+    #####:  161:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+    #####:  162:    } if(((a354505667 == 35 && ((input == 8) &&  cf==1 )) && a906169841 == 9)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  163:    	cf = 0;
+    #####:  164:    	a354505667 = 36 ;
+    #####:  165:    	a926177810 = 13; 
+    #####:  166:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+        -:  167:    } 
+    #####:  168:}
+function calculate_outputm15 called 495 returned 100% blocks executed 100%
+      495:  169: void calculate_outputm15(int input) {
+      495:  170:    if((a354505667 == 35 && ((input == 3) && (a906169841 == 11 &&  cf==1 )))) {
+branch  0 taken 495 (fallthrough)
+branch  1 taken 0
+branch  2 taken 46 (fallthrough)
+branch  3 taken 449
+branch  4 taken 46 (fallthrough)
+branch  5 taken 0
+branch  6 taken 46 (fallthrough)
+branch  7 taken 0
+       46:  171:    	cf = 0;
+       46:  172:    	a354505667 = 32 ;
+       46:  173:    	a899980218 = 32 ; 
+       46:  174:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+      495:  175:    } if((a906169841 == 11 && (((input == 5) &&  cf==1 ) && a354505667 == 35))) {
+branch  0 taken 495 (fallthrough)
+branch  1 taken 0
+branch  2 taken 54 (fallthrough)
+branch  3 taken 441
+branch  4 taken 54 (fallthrough)
+branch  5 taken 0
+branch  6 taken 54 (fallthrough)
+branch  7 taken 0
+       54:  176:    	cf = 0;
+       54:  177:    	a354505667 = 33 ;
+       54:  178:    	a1542761177 = 5; 
+       54:  179:    	 printf("");//printf("%d\n", 21); fflush(stdout); 
+        -:  180:    } 
+      495:  181:}
+function calculate_outputm16 called 0 returned 0% blocks executed 0%
+    #####:  182: void calculate_outputm16(int input) {
+    #####:  183:    if(((input == 8) && (a906169841 == 14 && (a354505667 == 35 &&  cf==1 )))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  184:    	cf = 0;
+    #####:  185:    	a354505667 = 34 ;
+    #####:  186:    	a1542761177 = 2; 
+    #####:  187:    	 printf("");//printf("%d\n", 24); fflush(stdout); 
+        -:  188:    } 
+    #####:  189:}
+function calculate_outputm17 called 0 returned 0% blocks executed 0%
+    #####:  190: void calculate_outputm17(int input) {
+    #####:  191:    if((((a906169841 == 15 &&  cf==1 ) && a354505667 == 35) && (input == 3))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  192:    	cf = 0;
+    #####:  193:    	a354505667 = 32 ;
+    #####:  194:    	a899980218 = 35 ; 
+    #####:  195:    	 printf("");//printf("%d\n", 20); fflush(stdout); 
+        -:  196:    } 
+    #####:  197:}
+function calculate_outputm18 called 0 returned 0% blocks executed 0%
+    #####:  198: void calculate_outputm18(int input) {
+    #####:  199:    if((a354505667 == 36 && (a926177810 == 11 && ((input == 5) &&  cf==1 )))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  200:    	cf = 0;
+    #####:  201:    	a354505667 = 33 ;
+    #####:  202:    	a1542761177 = 4; 
+    #####:  203:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+        -:  204:    } 
+    #####:  205:}
+function calculate_outputm19 called 0 returned 0% blocks executed 0%
+    #####:  206: void calculate_outputm19(int input) {
+    #####:  207:    if(((a926177810 == 12 && (a354505667 == 36 &&  cf==1 )) && (input == 5))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  208:    	cf = 0;
+    #####:  209:    	a354505667 = 35 ;
+    #####:  210:    	a906169841 = 9; 
+    #####:  211:    	 printf("");//printf("%d\n", 26); fflush(stdout); 
+    #####:  212:    } if((((input == 7) && (a926177810 == 12 &&  cf==1 )) && a354505667 == 36)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  213:    	cf = 0;
+        -:  214:    	 
+    #####:  215:    	 printf("");//printf("%d\n", 18); fflush(stdout); 
+        -:  216:    } 
+    #####:  217:}
+function calculate_outputm20 called 0 returned 0% blocks executed 0%
+    #####:  218: void calculate_outputm20(int input) {
+    #####:  219:    if((a926177810 == 13 && (a354505667 == 36 && ((input == 2) &&  cf==1 )))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  220:    	cf = 0;
+    #####:  221:    	a354505667 = 35 ;
+    #####:  222:    	a906169841 = 9; 
+    #####:  223:    	 printf("");//printf("%d\n", 26); fflush(stdout); 
+    #####:  224:    } if(((a354505667 == 36 && (a926177810 == 13 &&  cf==1 )) && (input == 5))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  225:    	cf = 0;
+        -:  226:    	 
+    #####:  227:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+    #####:  228:    } if(((a354505667 == 36 && ((input == 10) &&  cf==1 )) && a926177810 == 13)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  229:    	cf = 0;
+    #####:  230:    	a354505667 = 32 ;
+    #####:  231:    	a899980218 = 32 ; 
+    #####:  232:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+        -:  233:    } 
+    #####:  234:}
+function calculate_outputm21 called 0 returned 0% blocks executed 0%
+    #####:  235: void calculate_outputm21(int input) {
+    #####:  236:    if(((( cf==1  && a354505667 == 36) && a926177810 == 15) && (input == 8))) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  237:    	cf = 0;
+    #####:  238:    	a926177810 = 16; 
+    #####:  239:    	 printf("");//printf("%d\n", 22); fflush(stdout); 
+        -:  240:    } 
+    #####:  241:}
+function calculate_outputm22 called 0 returned 0% blocks executed 0%
+    #####:  242: void calculate_outputm22(int input) {
+    #####:  243:    if(((( cf==1  && (input == 3)) && a926177810 == 16) && a354505667 == 36)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  244:    	cf = 0;
+    #####:  245:    	a354505667 = 35 ;
+    #####:  246:    	a906169841 = 14; 
+    #####:  247:    	 printf("");//printf("%d\n", 17); fflush(stdout); 
+        -:  248:    } 
+    #####:  249:}
+        -:  250:
+function calculate_output called 512 returned 100% blocks executed 42%
+      512:  251: void calculate_output(int input) {
+      512:  252:        cf = 1;
+        -:  253:
+      512:  254:    if((a354505667 == 33 &&  cf==1 )) {
+branch  0 taken 10 (fallthrough)
+branch  1 taken 502
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0
+      10*:  255:    	if((a1542761177 == 1 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  256:    		calculate_outputm1(input);
+call    0 never executed
+        -:  257:    	} 
+      10*:  258:    	if((a1542761177 == 2 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  259:    		calculate_outputm2(input);
+call    0 never executed
+        -:  260:    	} 
+       10:  261:    	if(( cf==1  && a1542761177 == 3)) {
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 10
+    #####:  262:    		calculate_outputm3(input);
+call    0 never executed
+        -:  263:    	} 
+      10*:  264:    	if((a1542761177 == 4 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  265:    		calculate_outputm4(input);
+call    0 never executed
+        -:  266:    	} 
+       10:  267:    	if(( cf==1  && a1542761177 == 5)) {
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0
+       10:  268:    		calculate_outputm5(input);
+call    0 returned 10
+        -:  269:    	} 
+      10*:  270:    	if((a1542761177 == 8 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  271:    		calculate_outputm6(input);
+call    0 never executed
+        -:  272:    	} 
+        -:  273:    } 
+      512:  274:    if(( cf==1  && a354505667 == 32)) {
+branch  0 taken 512 (fallthrough)
+branch  1 taken 0
+branch  2 taken 7 (fallthrough)
+branch  3 taken 505
+        7:  275:    	if((a899980218 == 32 &&  cf==1 )) {
+branch  0 taken 6 (fallthrough)
+branch  1 taken 1
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0
+        6:  276:    		calculate_outputm7(input);
+call    0 returned 6
+        -:  277:    	} 
+        7:  278:    	if((a899980218 == 34 &&  cf==1 )) {
+branch  0 taken 3 (fallthrough)
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:  279:    		calculate_outputm8(input);
+call    0 returned 1
+        -:  280:    	} 
+        7:  281:    	if(( cf==1  && a899980218 == 35)) {
+branch  0 taken 5 (fallthrough)
+branch  1 taken 2
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5
+    #####:  282:    		calculate_outputm9(input);
+call    0 never executed
+        -:  283:    	} 
+        -:  284:    } 
+     512*:  285:    if((a354505667 == 34 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 512
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  286:    	if((a1542761177 == 1 &&  cf==1 )) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  287:    		calculate_outputm10(input);
+call    0 never executed
+        -:  288:    	} 
+    #####:  289:    	if(( cf==1  && a1542761177 == 2)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  290:    		calculate_outputm11(input);
+call    0 never executed
+        -:  291:    	} 
+    #####:  292:    	if((a1542761177 == 4 &&  cf==1 )) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  293:    		calculate_outputm12(input);
+call    0 never executed
+        -:  294:    	} 
+    #####:  295:    	if((a1542761177 == 6 &&  cf==1 )) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  296:    		calculate_outputm13(input);
+call    0 never executed
+        -:  297:    	} 
+        -:  298:    } 
+      512:  299:    if((a354505667 == 35 &&  cf==1 )) {
+branch  0 taken 495 (fallthrough)
+branch  1 taken 17
+branch  2 taken 495 (fallthrough)
+branch  3 taken 0
+     495*:  300:    	if((a906169841 == 9 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 495
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  301:    		calculate_outputm14(input);
+call    0 never executed
+        -:  302:    	} 
+      495:  303:    	if((a906169841 == 11 &&  cf==1 )) {
+branch  0 taken 495 (fallthrough)
+branch  1 taken 0
+branch  2 taken 495 (fallthrough)
+branch  3 taken 0
+      495:  304:    		calculate_outputm15(input);
+call    0 returned 495
+        -:  305:    	} 
+     495*:  306:    	if((a906169841 == 14 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 495
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  307:    		calculate_outputm16(input);
+call    0 never executed
+        -:  308:    	} 
+     495*:  309:    	if((a906169841 == 15 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 495
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  310:    		calculate_outputm17(input);
+call    0 never executed
+        -:  311:    	} 
+        -:  312:    } 
+     512*:  313:    if((a354505667 == 36 &&  cf==1 )) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 512
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  314:    	if(( cf==1  && a926177810 == 11)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  315:    		calculate_outputm18(input);
+call    0 never executed
+        -:  316:    	} 
+    #####:  317:    	if((a926177810 == 12 &&  cf==1 )) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  318:    		calculate_outputm19(input);
+call    0 never executed
+        -:  319:    	} 
+    #####:  320:    	if(( cf==1  && a926177810 == 13)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  321:    		calculate_outputm20(input);
+call    0 never executed
+        -:  322:    	} 
+    #####:  323:    	if(( cf==1  && a926177810 == 15)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  324:    		calculate_outputm21(input);
+call    0 never executed
+        -:  325:    	} 
+    #####:  326:    	if(( cf==1  && a926177810 == 16)) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  327:    		calculate_outputm22(input);
+call    0 never executed
+        -:  328:    	} 
+        -:  329:    } 
+        -:  330:
+        -:  331:
+      512:  332:  if( cf==1 ) 
+        -:  333:    {
+        -:  334:    	//fprintf("");//printf(stderr, "Invalid input: %d\n", input); 
+        -:  335:} 
+      512:  336:}
+        -:  337:
+        -:  338:int input,output;
+function main called 6656 returned 100% blocks executed 90%
+     6656:  339:int main()
+        -:  340:{
+     6656:  341:kappa = 0;
+        -:  342:    // main i/o-loop
+        -:  343:
+        -:  344:   int symb;
+     7168:  345:   for (int FLAG=0;FLAG<BOUND;FLAG++)
+branch  0 taken 7168
+branch  1 taken 0 (fallthrough)
+        -:  346:    {
+   13824*:  347:    if (fread(&symb, sizeof(int), 1, stdin) != 1) { return 0; }             // operate eca engine
+call    0 returned 7168
+branch  1 taken 0 (fallthrough)
+branch  2 taken 7168
+     7168:  348:        if((symb != 5) && (symb != 9) && (symb != 6) && (symb != 10) && (symb != 3) && (symb != 4) && (symb != 7) && (symb != 1) && (symb != 2) && (symb != 8))
+branch  0 taken 7111 (fallthrough)
+branch  1 taken 57
+branch  2 taken 7048 (fallthrough)
+branch  3 taken 63
+branch  4 taken 7003 (fallthrough)
+branch  5 taken 45
+branch  6 taken 6945 (fallthrough)
+branch  7 taken 58
+branch  8 taken 6896 (fallthrough)
+branch  9 taken 49
+branch 10 taken 6855 (fallthrough)
+branch 11 taken 41
+branch 12 taken 6810 (fallthrough)
+branch 13 taken 45
+branch 14 taken 6759 (fallthrough)
+branch 15 taken 51
+branch 16 taken 6708 (fallthrough)
+branch 17 taken 51
+branch 18 taken 6656 (fallthrough)
+branch 19 taken 52
+     6656:  349:          return -2;
+      512:  350:        calculate_output(symb);
+call    0 returned 512
+        -:  351:    }
+        -:  352:}

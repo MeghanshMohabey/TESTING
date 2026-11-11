@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/50_proofsteps_v5/mutation/mutant_0024/50_proofsteps_v5.c: In function ‘main’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/50_proofsteps_v5/mutation/mutant_0024/50_proofsteps_v5.c:38:26: error: expected expression before ‘<=’ token
+   38 |         int b = (buf[i] ><= 5) % 8;
+      |                          ^~

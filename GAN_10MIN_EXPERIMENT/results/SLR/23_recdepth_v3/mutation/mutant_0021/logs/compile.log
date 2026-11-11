@@ -1,0 +1,4 @@
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/23_recdepth_v3/mutation/mutant_0021/23_recdepth_v3.c: In function ‘evaluate’:
+/mnt/d/GAN_10MIN_EXPERIMENT/results/SLR/23_recdepth_v3/mutation/mutant_0021/23_recdepth_v3.c:29:35: error: expected expression before ‘]’ token
+   29 |     unsigned char b = buf[(*pos)+-];
+      |                                   ^

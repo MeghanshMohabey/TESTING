@@ -1,0 +1,4 @@
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/14_clausesat_v4/mutation/mutant_0030/14_clausesat_v4.c: In function ‘main’:
+/mnt/d/GAN/WGAN_GP_10MIN_EXPERIMENT/results/SLR/14_clausesat_v4/mutation/mutant_0030/14_clausesat_v4.c:45:27: error: expected expression before ‘=’ token
+   45 |     for (int v2 = 1; v2 >== MAX_BOUND; v2++) assign[v2] = (bits >> (v2 - 1)) & 1;
+      |                           ^
