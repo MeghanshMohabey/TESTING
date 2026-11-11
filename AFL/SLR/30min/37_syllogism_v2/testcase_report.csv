@@ -1,0 +1,11 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,12,"Default faul"
+2,id:000001,src:000000,time:265,execs:18,op:(null),pos:0,+cov,1,"a"
+3,id:000002,src:000000,time:395,execs:28,op:quick,pos:4,12,"Defa¬lt faul"
+4,id:000003,src:000000,time:918,execs:67,op:flip32,pos:4,12,"DefaŠ“‹ßfaul"
+5,id:000004,src:000000,time:2941,execs:213,op:havoc,rep:5,4,"XlDl"
+6,id:000005,src:000000,time:2995,execs:219,op:havoc,rep:7,12,"Defz¬„a"
+7,id:000006,src:000000,time:3129,execs:230,op:havoc,rep:7,6,"DköP"
+8,id:000007,src:000000,time:3218,execs:237,op:havoc,rep:4,+cov,12,"köRlt fa‹ll"
+9,id:000008,src:000000,time:3672,execs:270,op:havoc,rep:6,12,"Deÿÿÿumfaa~l"
+10,id:000009,src:000000,time:4080,execs:300,op:havoc,rep:8,3,"÷l"

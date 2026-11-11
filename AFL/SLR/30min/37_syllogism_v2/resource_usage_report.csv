@@ -1,0 +1,6 @@
+Timestamp,Command,Execution_Time_Sec,Max_RSS_KB,Avg_GPU_Memory_MB,Avg_GPU_Utilization_Pct
+2026-09-10 08:54:18,"Compile AFL++ binary",1.086143184,105344,514,8
+2026-09-10 08:54:19,"Compile GCOV binary",.770329000,27520,521,2
+2026-09-10 08:54:21,"AFL++ Fuzzing Session (30m)",1800.119849626,31084,484.995,2.93053
+2026-09-10 09:24:21,"Recompile GCOV binary",.735161304,27264,485,8
+2026-09-10 09:24:22,"GCOV Queue Processing",1.228181581,7552,485,6

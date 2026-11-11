@@ -1,0 +1,92 @@
+        -:    0:Source:49_proofsteps_v4.c
+        -:    0:Graph:49_proofsteps_v4.gcno
+        -:    0:Data:49_proofsteps_v4.gcda
+        -:    0:Runs:39
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 49  Family: proofsteps  Variant: 4 (Natural Deduction D)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 39 returned 100% blocks executed 89%
+       39:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       39:   16:    FILE *f = stdin;
+       39:   17:    if (argc > 1) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       39:   18:        f = fopen(argv[1], "rb");
+call    0 returned 100%
+      39*:   19:        if (!f) return 0;
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   20:    }
+       39:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 100%
+       39:   22:    if (f != stdin) fclose(f);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+       39:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:/* Domain: Natural Deduction D */
+        -:   27:#define GOAL_BIT (1 << 9) /* fact 9 is the proof goal */
+        -:   28:
+function main called 39 returned 100% blocks executed 96%
+       39:   29:int main(int argc, char **argv) {
+        -:   30:    unsigned char buf[MAX_BOUND];
+       39:   31:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 100%
+      39*:   32:    if (n > MAX_BOUND) n = MAX_BOUND; /* at most MAX_BOUND proof steps applied */
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   33:
+       39:   34:    int facts = 1; /* fact 0 given as axiom */
+      402:   35:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 90%
+branch  1 taken 10% (fallthrough)
+      363:   36:        int op = buf[i] % 4;
+      363:   37:        int a = (buf[i] >> 2) % 10;
+      363:   38:        int b = (buf[i] >> 5) % 8;
+      363:   39:        switch (op) {
+branch  0 taken 35%
+branch  1 taken 28%
+branch  2 taken 19%
+branch  3 taken 18%
+      126:   40:            case 0: /* AND-intro: facts a,b known -> derive fact (a+b) mod 10 */
+      126:   41:                if ((facts & (1 << a)) && (facts & (1 << b))) facts |= (1 << ((a + b) % 10));
+branch  0 taken 35% (fallthrough)
+branch  1 taken 65%
+branch  2 taken 61% (fallthrough)
+branch  3 taken 39%
+      126:   42:                break;
+      103:   43:            case 1: /* OR-intro: fact a known -> derive fact b */
+      103:   44:                if (facts & (1 << a)) facts |= (1 << b);
+branch  0 taken 24% (fallthrough)
+branch  1 taken 76%
+      103:   45:                break;
+       70:   46:            case 2: /* Modus-ponens-style: fact a known -> derive fact (a+1) mod 10 */
+       70:   47:                if (facts & (1 << a)) facts |= (1 << ((a + 1) % 10));
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+       70:   48:                break;
+       64:   49:            default: /* NOT-elim-style: fact a known -> derive fact (9-a) */
+       64:   50:                if (facts & (1 << a)) facts |= (1 << (9 - a));
+branch  0 taken 38% (fallthrough)
+branch  1 taken 62%
+       64:   51:                break;
+        -:   52:        }
+        -:   53:    }
+       39:   54:    int goal_reached = (facts & GOAL_BIT) ? 1 : 0;
+       39:   55:    printf("SLR_PROOFSTEPS_V4 facts=0x%03x goal_reached=%d\n", facts, goal_reached);
+call    0 returned 100%
+       39:   56:    return 0;
+        -:   57:}
