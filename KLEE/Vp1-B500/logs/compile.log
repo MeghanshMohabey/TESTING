@@ -1,0 +1,14 @@
+Vp1-B500/Vp1-B500.c:401:2: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+        }
+        ^
+Vp1-B500/Vp1-B500.c:2426:11: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if((cf==1)) 
+        ~~^~~
+Vp1-B500/Vp1-B500.c:2426:11: note: remove extraneous parentheses around the comparison to silence this warning
+    if((cf==1)) 
+       ~  ^  ~
+Vp1-B500/Vp1-B500.c:2426:11: note: use '=' to turn this equality comparison into an assignment
+    if((cf==1)) 
+          ^~
+          =
+2 warnings generated.

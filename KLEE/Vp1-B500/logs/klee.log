@@ -1,0 +1,26 @@
+KLEE: WARNING: Module and host target triples do not match: 'x86_64-unknown-linux-gnu' != 'x86_64-pc-linux-gnu'
+This may cause unexpected crashes or assertion violations.
+KLEE: output directory is "/mnt/d/KLEE tool/Vp1-B500/merged/klee-out"
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7e24cf600000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7e224f600000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7d224f600000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7d024f600000 size=128 GiB)
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(138686362550272) at Vp1-B500/Vp1-B500.c:1677 5
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
+KLEE: WARNING: killing 8538 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 8124 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 7731 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 7358 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 7002 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 6661 states (over memory cap: 2101MB)
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 1104865824
+KLEE: done: completed paths = 1011
+KLEE: done: partially completed paths = 177151
+KLEE: done: generated tests = 178162

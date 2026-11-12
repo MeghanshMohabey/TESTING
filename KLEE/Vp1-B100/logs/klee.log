@@ -1,0 +1,20 @@
+KLEE: WARNING: Module and host target triples do not match: 'x86_64-unknown-linux-gnu' != 'x86_64-pc-linux-gnu'
+This may cause unexpected crashes or assertion violations.
+KLEE: output directory is "/mnt/d/KLEE tool/Vp1-B100/merged/klee-out"
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x732bec600000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x73296c600000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x72296c600000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x72096c600000 size=128 GiB)
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(126622285955072) at Vp1-B100/Vp1-B100.c:1677 5
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
+KLEE: WARNING: killing 6621 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 6297 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5987 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5691 states (over memory cap: 2101MB)
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+KLEE: ctrl-c detected, requesting interpreter to halt.

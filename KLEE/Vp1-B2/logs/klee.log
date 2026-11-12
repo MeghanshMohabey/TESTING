@@ -1,0 +1,17 @@
+KLEE: WARNING: Module and host target triples do not match: 'x86_64-unknown-linux-gnu' != 'x86_64-pc-linux-gnu'
+This may cause unexpected crashes or assertion violations.
+KLEE: output directory is "/mnt/d/KLEE tool/Vp1-B2/merged/klee-out"
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7d5c54600000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7d59d4600000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7c59d4600000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7c39d4600000 size=128 GiB)
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(137825305493504) at Vp1-B2/Vp1-B2.c:1677 5
+
+KLEE: done: total instructions = 15989
+KLEE: done: completed paths = 31
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 31

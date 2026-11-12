@@ -1,0 +1,15 @@
+File 'replay-source/Vp2-B10_replay.c'
+Lines executed:90.45% of 1309
+Branches executed:68.33% of 4124
+Taken at least once:39.55% of 4124
+Calls executed:85.29% of 34
+Creating 'Vp2-B10_replay.c.gcov'
+
+File 'replay-source/klee/klee.h'
+Lines executed:50.00% of 10
+Branches executed:40.00% of 20
+Taken at least once:25.00% of 20
+Calls executed:50.00% of 4
+Creating 'klee.h.gcov'
+
+Lines executed:90.14% of 1319
