@@ -1,0 +1,10 @@
+Mutation testing summary
+Mutant population          : 8244
+Mutants sampled            : 200
+Invalid (compile error)    : 0 (excluded)
+Equivalent (same object)   : 0 (excluded)
+Not run (time budget)      : 173
+Valid mutants evaluated    : 27
+Killed                     : 11
+Survived                   : 16
+Mutation Score = Killed / (Valid - Equivalent) = 40.74%
