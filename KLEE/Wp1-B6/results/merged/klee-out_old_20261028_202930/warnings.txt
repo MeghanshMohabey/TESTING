@@ -1,0 +1,2 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(136844022906880) at Wp1-B6/Wp1-B6.c:1677 5
