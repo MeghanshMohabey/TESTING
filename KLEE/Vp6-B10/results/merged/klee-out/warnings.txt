@@ -1,0 +1,3 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(139738124124160) at Vp6-B10/Vp6-B10.c:4493 5
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
