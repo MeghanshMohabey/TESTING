@@ -1,0 +1,12 @@
+{
+  "population": 8804,
+  "sampled": 200,
+  "valid": 30,
+  "killed": 16,
+  "survived": 14,
+  "equivalent": 0,
+  "invalid_excluded": 0,
+  "not_run": 170,
+  "tests": 35869,
+  "mutation_score": 53.333333333333336
+}
