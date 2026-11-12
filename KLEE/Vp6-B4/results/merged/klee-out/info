@@ -1,0 +1,23 @@
+/snap/klee/22/usr/local/bin/klee --output-dir=Vp6-B4/results/merged/klee-out Vp6-B4/results/preprocessing/Vp6-B4.bc
+PID: 822803
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2026-10-27 21:56:51
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2026-10-27 21:57:05
+Elapsed: 00:00:14
+KLEE: done: explored paths = 1549
+KLEE: done: avg. constructs per query = 38
+KLEE: done: total queries = 60
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 60
+KLEE: done: query cex = 60
+
+KLEE: done: total instructions = 746848
+KLEE: done: completed paths = 1549
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 1549
