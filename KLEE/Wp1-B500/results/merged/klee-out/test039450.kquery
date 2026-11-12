@@ -1,0 +1,46 @@
+array symb[4] : w32 -> w8 = symbolic
+array symb_1[4] : w32 -> w8 = symbolic
+array symb_10[4] : w32 -> w8 = symbolic
+array symb_2[4] : w32 -> w8 = symbolic
+array symb_3[4] : w32 -> w8 = symbolic
+array symb_4[4] : w32 -> w8 = symbolic
+array symb_5[4] : w32 -> w8 = symbolic
+array symb_6[4] : w32 -> w8 = symbolic
+array symb_7[4] : w32 -> w8 = symbolic
+array symb_8[4] : w32 -> w8 = symbolic
+array symb_9[4] : w32 -> w8 = symbolic
+(query [(Eq 3
+             (ReadLSB w32 0 symb))
+         (Eq false
+             (Eq 1
+                 N0:(ReadLSB w32 0 symb_1)))
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 3 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false (Eq 5 N0))
+         (Eq false (Eq 6 N0))
+         (Eq 2
+             (ReadLSB w32 0 symb_2))
+         (Eq 1
+             (ReadLSB w32 0 symb_3))
+         (Eq 4
+             (ReadLSB w32 0 symb_4))
+         (Eq 1
+             (ReadLSB w32 0 symb_5))
+         (Eq 3
+             (ReadLSB w32 0 symb_6))
+         (Eq 4
+             (ReadLSB w32 0 symb_7))
+         (Eq false
+             (Eq 3
+                 N1:(ReadLSB w32 0 symb_8)))
+         (Eq false (Eq 6 N1))
+         (Eq false (Eq 5 N1))
+         (Eq false (Eq 4 N1))
+         (Eq false (Eq 1 N1))
+         (Eq false (Eq 2 N1))
+         (Eq 5
+             (ReadLSB w32 0 symb_9))
+         (Eq 6
+             (ReadLSB w32 0 symb_10))]
+        false)
