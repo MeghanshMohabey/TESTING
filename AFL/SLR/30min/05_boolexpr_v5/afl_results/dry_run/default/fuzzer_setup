@@ -1,0 +1,6 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/afl_results/05_boolexpr_v5_afl
+AFL_CUSTOM_INFO_PROGRAM_ARGV=
+AFL_CUSTOM_INFO_OUT=/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/afl_results/dry_run/default
+# command line:
+'afl-fuzz' '-i' '/mnt/d/AFL TASK ++/Test_Cases/SLR/program_5' '-o' '/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/afl_results/dry_run' '-V' '5' '-G' '10' '-m' 'none' '-a' 'binary' '--' '/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/afl_results/05_boolexpr_v5_afl'

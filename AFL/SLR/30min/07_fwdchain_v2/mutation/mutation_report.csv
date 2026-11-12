@@ -1,0 +1,12 @@
+test_case_index,file_name,mutation_type
+0,"id:000000,time:0,execs:0,orig:seed.bin",initial_seed
+1,"id:000001,src:000000,time:34,execs:8,op:(null),pos:0,+cov",(null)
+2,"id:000002,src:000000,time:51,execs:13,op:(null),pos:0",(null)
+3,"id:000003,src:000000,time:90,execs:24,op:quick,pos:0,+cov",quick
+4,"id:000004,src:000000,time:121,execs:35,op:flip1,pos:0",flip1
+5,"id:000005,src:000000,time:135,execs:40,op:flip1,pos:0",flip1
+6,"id:000006,src:000000,time:149,execs:46,op:flip1,pos:0",flip1
+7,"id:000007,src:000000,time:172,execs:58,op:flip2,pos:0,+cov",flip2
+8,"id:000008,src:000000,time:205,execs:73,op:flip8,pos:0",flip8
+9,"id:000009,src:000000,time:239,execs:85,op:arith8,pos:0,val:-6",arith8
+10,"id:000010,src:000000,time:311,execs:117,op:arith8,pos:0,val:+23",arith8

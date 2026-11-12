@@ -1,0 +1,10 @@
+test_case_id,file_name,size_bytes,execution_time_ms,exit_code
+0,"id:000000,time:0,execs:0,orig:seed.bin",4,24.600832,0
+1,"id:000001,src:000000,time:35,execs:8,op:(null),pos:0,+cov",1,24.459008,0
+2,"id:000002,src:000000,time:51,execs:13,op:(null),pos:0,+cov",4,24.827648,0
+3,"id:000003,src:000000,time:88,execs:24,op:quick,pos:0",4,25.050880,0
+4,"id:000004,src:000000,time:119,execs:38,op:flip1,pos:0",4,25.423872,0
+5,"id:000005,src:000000,time:141,execs:48,op:flip2,pos:0,+cov",4,25.741312,0
+6,"id:000006,src:000000,time:161,execs:58,op:flip4,pos:0",4,27.578112,0
+7,"id:000007,src:000000,time:171,execs:63,op:flip4,pos:0",4,25.704960,0
+8,"id:000008,src:000000,time:192,execs:73,op:flip8,pos:0",4,27.106304,0

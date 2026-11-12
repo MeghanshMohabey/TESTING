@@ -1,0 +1,18 @@
+AFL++ Mutation Strategy Report
+Program: 01_boolexpr_v1
+
+Mutation strategies observed during the 30-minute AFL++ run:
+
+Bit flips: 0/0, 0/0, 0/0
+Byte flips: 0/0, 0/0, 0/0
+Arithmetics: 0/0, 0/0, 0/0
+Known integers: 0/0, 0/0, 0/0
+Dictionary: 0/0, 0/0, 0/0, 0/0
+Havoc/Splice: 17/622k, 0/0
+
+Total executions: 622904
+Corpus count: 24
+Corpus findings: 23
+Saved crashes: 0
+Saved hangs: 0
+Timeouts: 19

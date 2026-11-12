@@ -1,0 +1,10 @@
+dataset,program,test_case_id,file_name,size_bytes,input_hex,is_crash,source
+SLR,program_6,0,"id:000000,time:0,execs:0,orig:seed.bin",4,00010203,0,initial_seed
+SLR,program_6,1,"id:000001,src:000000,time:35,execs:8,op:(null),pos:0,+cov",1,61,0,(null)
+SLR,program_6,2,"id:000002,src:000000,time:51,execs:13,op:(null),pos:0,+cov",4,01000203,0,(null)
+SLR,program_6,3,"id:000003,src:000000,time:88,execs:24,op:quick,pos:0",4,25010203,0,quick
+SLR,program_6,4,"id:000004,src:000000,time:119,execs:38,op:flip1,pos:0",4,04010203,0,flip1
+SLR,program_6,5,"id:000005,src:000000,time:141,execs:48,op:flip2,pos:0,+cov",4,18010203,0,flip2
+SLR,program_6,6,"id:000006,src:000000,time:161,execs:58,op:flip4,pos:0",4,78010203,0,flip4
+SLR,program_6,7,"id:000007,src:000000,time:171,execs:63,op:flip4,pos:0",4,3c010203,0,flip4
+SLR,program_6,8,"id:000008,src:000000,time:192,execs:73,op:flip8,pos:0",4,ff010203,0,flip8

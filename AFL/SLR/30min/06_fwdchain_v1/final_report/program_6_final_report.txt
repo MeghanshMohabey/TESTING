@@ -1,0 +1,114 @@
+======================================================================
+SLR PROGRAM 6 — FINAL AFL++ EXPERIMENT REPORT
+======================================================================
+
+1. PROGRAM INFORMATION
+----------------------------------------------------------------------
+Dataset              : SLR
+Program              : 06_fwdchain_v1.c
+Program Type         : Forward Chaining
+Source               : 01_C_Source_Files/06_fwdchain_v1.c
+Reference Binary     : 04_Compiled_Binaries/06_fwdchain_v1
+Dedicated Seed       : Test_Cases/SLR/program_6/seed.bin
+Original Seed Size   : 10 bytes
+Program Input Buffer : 2 bytes
+
+2. AFL++ CONFIGURATION
+----------------------------------------------------------------------
+AFL++ Version        : 5.02a
+Fuzzing Duration     : 1800 seconds (30 minutes)
+Bound                : 10 (-G 10)
+Memory Limit         : none (-m none)
+Input Mode           : binary (-a binary)
+Seed Policy          : Dedicated seed folder only
+AFL++ Command        : afl-fuzz -i <dedicated_seed> -o <result> -G 10 -m none -a binary -V 1800 -- <program>
+
+3. AFL++ FUZZING RESULTS
+----------------------------------------------------------------------
+Runtime              : 1800 seconds
+Cycles Completed     : 534
+Cycles Without Finds : 533
+Corpus Count         : 9
+Favored Corpus       : 5
+Corpus Found         : 8
+Max Depth            : 2
+Executions           : 588519
+Executions/sec       : 326.95
+Bitmap Coverage      : 76.60%
+Edges Found          : 36/47
+Stability            : 100.00%
+Saved Crashes        : 0
+Saved Hangs          : 0
+Total Timeouts       : 14
+Own Finds            : 8
+Pending Cases        : 0
+Peak RSS             : 0 MB
+
+4. GCOV COVERAGE — SEPARATE NON-AFL BUILD
+----------------------------------------------------------------------
+Build                : gcc -O0 -g --coverage
+Lines Executed       : 100.00% (22/22)
+Branches Executed    : 100.00% (22/22)
+Branches Taken       : 72.73% (16/22)
+Calls Executed       : 100.00% (5/5)
+Note                 : GCOV coverage is reported separately from AFL++ bitmap coverage.
+
+5. RESPONSE TIME
+----------------------------------------------------------------------
+Test Cases           : 9
+Total Execution Time : 230.492928 ms
+Average              : 25.610325 ms
+Minimum              : 24.459008 ms
+Maximum              : 27.578112 ms
+Non-zero Exits       : 0
+
+6. MUTATION CLASSIFICATION
+----------------------------------------------------------------------
+Total queue cases   : 9
+Initial seed        : 1 (11.11%)
+(null)              : 2 (22.22%)
+quick               : 1 (11.11%)
+flip1               : 1 (11.11%)
+flip2               : 1 (11.11%)
+flip4               : 2 (22.22%)
+flip8               : 1 (11.11%)
+Havoc               : 0 (0.00%)
+Classification based on AFL++ queue filename metadata.
+
+7. RESOURCE MONITORING
+----------------------------------------------------------------------
+CPU Samples          : 1458
+CPU Average          : 4.55%
+CPU Minimum          : 0.80%
+CPU Maximum          : 15.40%
+GPU Samples          : 1593
+GPU Util Average     : 2.90%
+GPU Util Minimum     : 0.00%
+GPU Util Maximum     : 13.00%
+GPU Temp Average     : 39.98 C
+GPU Temp Minimum     : 39.00 C
+GPU Temp Maximum     : 40.00 C
+GPU Power Average    : 3.94 W
+GPU Power Minimum    : 3.85 W
+GPU Power Maximum    : 4.07 W
+Note                 : CPU/GPU values are statistics from continuous monitoring samples collected during the controlled run.
+
+8. ARTIFACTS
+----------------------------------------------------------------------
+AFL Results          : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/afl_results
+GCOV Results         : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/gcov
+Response Times       : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/performance/gcov_execution.csv
+Mutation Report      : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/mutation/mutation_report.txt
+Test Cases CSV       : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/test_cases.csv
+CPU Usage CSV        : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/system_usage/cpu_usage.csv
+GPU Usage CSV        : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/system_usage/gpu_usage.csv
+Final Report         : /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/final_report/program_6_final_report.txt
+
+9. CONCLUSION
+----------------------------------------------------------------------
+Program 6 fuzzing completed normally at the 1800-second time limit.
+No saved crashes or hangs were produced.
+Continuous CPU/GPU monitoring was collected during the controlled run.
+GCOV analysis was performed using a separate non-AFL instrumented build.
+VC/LC/SC are not reported because their definitions were not provided.
+======================================================================

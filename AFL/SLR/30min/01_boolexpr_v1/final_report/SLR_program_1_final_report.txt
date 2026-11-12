@@ -1,0 +1,267 @@
+============================================================
+SLR PROGRAM 1 - AFL++ EXPERIMENT FINAL REPORT
+============================================================
+
+Program:
+01_boolexpr_v1
+
+Dataset:
+SLR 50 AFL Package
+
+AFL++ Version:
+++5.02a
+
+------------------------------------------------------------
+1. AFL++ CONFIGURATION
+------------------------------------------------------------
+
+Input seed directory:
+/mnt/d/AFL TASK ++/Test_Cases/SLR/program_1
+
+Original seed:
+seed.bin
+
+Output directory:
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/afl_results
+
+AFL++ command:
+
+afl-fuzz \
+-i "/mnt/d/AFL TASK ++/Test_Cases/SLR/program_1" \
+-o "/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/afl_results" \
+-V 1800 \
+-G 10 \
+-m none \
+-a binary \
+-- ./04_Compiled_Binaries/01_boolexpr_v1
+
+Runtime:
+1800 seconds (30 minutes)
+
+Maximum generated input length:
+10 bytes
+
+------------------------------------------------------------
+2. AFL++ FUZZING RESULTS
+------------------------------------------------------------
+
+Total executions:
+622904
+
+Execution speed:
+346.06 exec/sec
+
+Cycles completed:
+233
+
+Corpus count:
+24
+
+Corpus favored:
+6
+
+Corpus findings:
+23
+
+Maximum depth:
+2
+
+Stability:
+100.00%
+
+Saved crashes:
+0
+
+Saved hangs:
+0
+
+Total timeouts:
+19
+
+Edges found:
+15
+
+Total edges:
+27
+
+Bitmap coverage:
+55.56%
+
+------------------------------------------------------------
+3. GENERATED TEST CASES
+------------------------------------------------------------
+
+AFL++ queue directory:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/afl_results/default/queue/
+
+Number of queue test cases:
+24
+
+Crashes directory:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/afl_results/default/crashes/
+
+Hangs directory:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/afl_results/default/hangs/
+
+------------------------------------------------------------
+4. GCOV COVERAGE
+------------------------------------------------------------
+
+GCOV report:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/gcov/gcov_report.txt
+
+Lines executed:
+90.00% of 30
+
+Branches executed:
+86.67% of 30
+
+Branches taken at least once:
+66.67% of 30
+
+Calls executed:
+60.00% of 5
+
+Note:
+GCOV coverage and AFL++ bitmap coverage are different
+coverage measurements and are reported separately.
+
+------------------------------------------------------------
+5. RESPONSE TIME
+------------------------------------------------------------
+
+Response-time test cases:
+24
+
+Total response time:
+508.674150 ms
+
+Average response time:
+21.194756 ms
+
+Minimum response time:
+18.774642 ms
+
+Maximum response time:
+30.382751 ms
+
+Measurement source:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/performance/response_time_summary.txt
+
+------------------------------------------------------------
+6. CPU INFORMATION
+------------------------------------------------------------
+
+CPU:
+AMD Ryzen 5 8645HS w/ Radeon 760M Graphics
+
+CPU count:
+12
+
+CPU cores:
+6
+
+Threads per core:
+2
+
+CPU information file:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/system_usage/cpu_info.txt
+
+Note:
+The CPU information is a system snapshot. It is not a
+30-minute average CPU utilization measurement because CPU
+utilization was not logged continuously during the fuzzing run.
+
+------------------------------------------------------------
+7. GPU INFORMATION
+------------------------------------------------------------
+
+GPU:
+NVIDIA GeForce RTX 3050
+
+GPU memory:
+6144 MiB
+
+GPU snapshot utilization:
+6%
+
+GPU power:
+3 W / 50 W
+
+GPU temperature:
+41 C
+
+Running GPU processes:
+None
+
+GPU information file:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/system_usage/gpu_info.txt
+
+Note:
+The GPU values are a post-run system snapshot and should
+not be interpreted as average GPU utilization during the
+30-minute AFL++ fuzzing session.
+
+------------------------------------------------------------
+8. MUTATION STRATEGY
+------------------------------------------------------------
+
+Mutation report:
+
+/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_1/mutation/mutation_report.txt
+
+Observed mutation strategies:
+
+Bit flips:
+0/0, 0/0, 0/0
+
+Byte flips:
+0/0, 0/0, 0/0
+
+Arithmetics:
+0/0, 0/0, 0/0
+
+Known integers:
+0/0, 0/0, 0/0
+
+Dictionary:
+0/0, 0/0, 0/0, 0/0
+
+Havoc/Splice:
+17/622k, 0/0
+
+The dominant observed mutation activity was havoc-based
+mutation.
+
+Note:
+This is an AFL++ mutation-strategy report. It is not a
+traditional mutation-testing score based on program mutants.
+
+------------------------------------------------------------
+9. OVERALL RESULT
+------------------------------------------------------------
+
+The SLR Program 1 (01_boolexpr_v1) was fuzzed independently
+for 30 minutes using its dedicated 10-byte seed input and
+AFL++ with binary input mode.
+
+AFL++ generated a corpus of 24 test cases and discovered
+23 additional corpus findings. No crashes or hangs were
+saved, although 19 execution timeouts were recorded.
+
+The final AFL++ bitmap coverage was 55.56%, while GCOV
+reported 90.00% line coverage and 86.67% branch coverage.
+
+The average measured response time across the 24 queue test
+cases was 21.194756 ms.
+
+============================================================
+END OF REPORT
+============================================================

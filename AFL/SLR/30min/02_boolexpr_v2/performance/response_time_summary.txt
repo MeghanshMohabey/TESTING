@@ -1,0 +1,5 @@
+Test cases: 27
+Total time: 565.908918 ms
+Average response time: 20.959590 ms
+Minimum response time: 18.153694 ms
+Maximum response time: 24.304052 ms

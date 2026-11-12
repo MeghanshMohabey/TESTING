@@ -1,0 +1,13 @@
+SLR PROGRAM 7 — MUTATION SUMMARY
+=================================
+Total retained queue cases: 11
+
+flip1: 3 (27.27%)
+(null): 2 (18.18%)
+arith8: 2 (18.18%)
+initial_seed: 1 (9.09%)
+quick: 1 (9.09%)
+flip2: 1 (9.09%)
+flip8: 1 (9.09%)
+
+Unknown: 0 (0.00%)

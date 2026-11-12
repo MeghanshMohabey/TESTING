@@ -1,0 +1,8 @@
+File '01_boolexpr_v1.c'
+Lines executed:90.00% of 30
+Branches executed:86.67% of 30
+Taken at least once:66.67% of 30
+Calls executed:60.00% of 5
+Creating '01_boolexpr_v1.c.gcov'
+
+Lines executed:90.00% of 30

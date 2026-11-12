@@ -1,0 +1,22 @@
+03_boolexpr_v3.c:source file is newer than notes file '03_boolexpr_v3_gcov-03_boolexpr_v3.gcno'
+(the message is displayed only once per source file)
+Function 'main'
+Lines executed:95.45% of 22
+Branches executed:91.67% of 24
+Taken at least once:75.00% of 24
+Calls executed:100.00% of 2
+
+Function 'read_input'
+Lines executed:75.00% of 8
+Branches executed:66.67% of 6
+Taken at least once:33.33% of 6
+Calls executed:33.33% of 3
+
+File '03_boolexpr_v3.c'
+Lines executed:90.00% of 30
+Branches executed:86.67% of 30
+Taken at least once:66.67% of 30
+Calls executed:60.00% of 5
+Creating '03_boolexpr_v3.c.gcov'
+
+Lines executed:90.00% of 30

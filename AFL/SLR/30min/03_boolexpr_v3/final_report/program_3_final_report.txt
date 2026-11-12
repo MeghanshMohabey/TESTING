@@ -1,0 +1,105 @@
+SLR PROGRAM 3 — AFL++ FUZZING EXPERIMENT FINAL REPORT
+======================================================
+
+Program
+-------
+Dataset                 : SLR
+Program                 : 03_boolexpr_v3
+Source                   : 03_boolexpr_v3.c
+AFL++ binary             : 03_boolexpr_v3_afl
+GCOV binary              : 03_boolexpr_v3_gcov
+Experiment duration      : 1800 seconds (30 minutes)
+AFL++ version            : 5.02a
+
+FUZZING CONFIGURATION
+---------------------
+Mutation bound           : -G 10
+Memory limit             : -m none
+Input mode               : -a binary
+Seed strategy            : Dedicated seed folder
+Seed size                : 10 bytes
+Seed content             : 00 01 02 03 04 05 06 07 08 09
+
+AFL++ RESULTS
+-------------
+Runtime                  : 1800 seconds
+Cycles completed         : 228
+Corpus / queue cases     : 26
+Favored cases            : 5
+Own finds                : 25
+New edges                : 4
+Maximum depth            : 3
+Total executions         : ~644,000
+Execution speed          : 347.2 exec/s
+Bitmap density           : 42.86% / 57.14%
+Count coverage           : 20.56 bits/tuple
+Stability                 : 100%
+Saved crashes            : 0
+Saved hangs              : 0
+Total AFL timeouts       : 34
+Runs timed out           : 0
+Pending items            : 0
+Havoc/splice executions  : 19 / 644K
+Experiment termination   : Normal time-limit completion
+Shell exit status        : 0
+
+GCOV RESULTS
+------------
+Coverage build           : gcc -O0 -g --coverage
+Queue cases executed     : 26
+Non-zero exits           : 0
+
+Line coverage            : 90.00% (27/30)
+Branch coverage          : 86.67% (26/30)
+Branches taken           : 66.67% (20/30)
+Call coverage            : 60.00% (3/5)
+
+RESPONSE-TIME RESULTS
+---------------------
+Test cases measured      : 26
+Total response time      : 270.662619 ms
+Average response time    : 10.410101 ms
+Minimum response time    : 9.724046 ms
+Maximum response time    : 12.783455 ms
+Non-zero exits           : 0
+
+RESOURCE MONITORING
+-------------------
+CPU samples              : 1459
+CPU average              : 5.14%
+CPU minimum              : 1.60%
+CPU maximum              : 14.80%
+
+GPU samples              : 1598
+GPU utilization average  : 2.90%
+GPU utilization minimum  : 0%
+GPU utilization maximum  : 7%
+GPU temperature average  : 42.04 C
+GPU temperature minimum  : 41 C
+GPU temperature maximum  : 44 C
+GPU power average        : 4.01 W
+GPU power minimum        : 3.89 W
+GPU power maximum        : 9.76 W
+
+MUTATION ANALYSIS
+-----------------
+Total queue cases        : 26
+Original seed            : 1
+Early metadata (null)    : 6
+Havoc-generated cases    : 19
+
+Note:
+The '(null)' entries are AFL++ queue metadata from the early
+generation stage and are not treated as a named mutation operator.
+
+OUTPUT FILES
+------------
+AFL++ results             : afl_results/
+GCOV output               : gcov/gcov_output.txt
+GCOV annotated source     : gcov/03_boolexpr_v3.c.gcov
+Response-time CSV         : performance/response_times.csv
+Mutation report           : mutation/mutation_report.txt
+Test-case CSV             : test_cases.csv
+Final report              : final_report/program_3_final_report.txt
+
+Generated                 : 2026-09-04 10:10:17

@@ -1,0 +1,235 @@
+SLR PROGRAM 7 — FINAL AFL++ EXPERIMENT REPORT
+============================================================
+
+1. PROGRAM INFORMATION
+------------------------------------------------------------
+Dataset                    : SLR
+Program                    : 07_fwdchain_v2.c
+Program Type               : Forward Chaining
+Source File                : 01_C_Source_Files/07_fwdchain_v2.c
+Original Seed Size         : 10 bytes
+Program Input Buffer       : 2 bytes
+AFL++ Version              : 5.02a
+
+2. AFL++ CONFIGURATION
+------------------------------------------------------------
+Fuzzing Duration            : 1800 seconds (30 minutes)
+Bound                       : 10 (-G 10)
+Memory Limit                : none (-m none)
+Input Mode                  : binary (-a binary)
+Seed Directory              : /mnt/d/AFL TASK ++/Test_Cases/SLR/program_7
+AFL Binary                  : afl_results/07_fwdchain_v2_afl
+
+3. CONTROLLED AFL++ RESULTS
+------------------------------------------------------------
+Runtime                     : 1800 seconds
+Cycles Completed            : 402
+Cycles Without Finds        : 401
+Time Without Finds          : 1799 seconds
+Fuzz Time                   : 1799 seconds
+
+Total Executions            : 496506
+Executions per Second       : 275.83
+Last Minute Exec/sec        : 282.22
+
+Corpus Count                : 11
+Favored Corpus              : 5
+Corpus Found                : 10
+Corpus Imported             : 0
+Maximum Depth               : 2
+Pending Cases               : 0
+
+Bitmap Coverage             : 74.42%
+Edges Found                 : 32 / 43
+Stability                   : 100.00%
+
+Saved Crashes               : 0
+Saved Hangs                 : 0
+Total Timeouts              : 0
+
+Execution Timeout           : 20 ms
+Peak RSS                    : 0 MB
+
+4. AFL++ BITMAP COVERAGE
+------------------------------------------------------------
+AFL++ Bitmap Coverage       : 74.42%
+AFL++ Edges Found           : 32 / 43
+
+Note:
+AFL++ bitmap coverage is reported separately from GCOV source
+coverage and must not be treated as the same metric.
+
+5. SEPARATE GCOV COVERAGE
+------------------------------------------------------------
+GCOV Build                  : gcc -O0 -g --coverage
+GCOV Lines                  : 90.91% (20 / 22)
+GCOV Branches               : 90.91% (20 / 22)
+Branches Taken              : 68.18% (15 / 22)
+GCOV Calls                  : 60.00% (3 / 5)
+
+GCOV Binary:
+gcov/07_fwdchain_v2_gcov
+
+GCOV Report:
+gcov/07_fwdchain_v2.c.gcov
+
+6. RESPONSE TIME ANALYSIS
+------------------------------------------------------------
+Test Cases                  : 11
+Total Execution Time        : 99.485428 ms
+Average Execution Time      : 9.044130 ms
+Minimum Execution Time      : 8.497057 ms
+Maximum Execution Time      : 11.107484 ms
+Non-zero Exits              : 0
+Successful Exits            : 11
+
+Performance CSV:
+performance/gcov_execution.csv
+
+7. MUTATION ANALYSIS
+------------------------------------------------------------
+Total Retained Queue Cases  : 11
+
+initial_seed                : 1 (9.09%)
+(null)                      : 2 (18.18%)
+quick                       : 1 (9.09%)
+flip1                       : 3 (27.27%)
+flip2                       : 1 (9.09%)
+flip8                       : 1 (9.09%)
+arith8                      : 2 (18.18%)
+havoc                       : 0 (0.00%)
+unknown                     : 0 (0.00%)
+
+Note:
+Mutation percentages describe the retained AFL++ queue test cases
+and do not represent the total number of internal mutation
+executions performed by AFL++.
+
+Mutation CSV:
+mutation/mutation_report.csv
+
+Mutation Summary:
+mutation/mutation_summary.txt
+
+8. GENERATED TEST CASES
+------------------------------------------------------------
+Retained AFL++ Queue Cases : 11
+Saved Crashes              : 0
+Saved Hangs                : 0
+
+Test Case CSV:
+test_cases.csv
+
+All 11 retained queue cases were executed against the separate
+GCOV binary. All returned exit code 0.
+
+9. RESOURCE MONITORING
+------------------------------------------------------------
+CPU Monitoring Samples     : 1562
+CPU Average Utilization    : 7.06%
+CPU Minimum Utilization    : 0.80%
+CPU Maximum Utilization    : 100.00%
+
+GPU Monitoring Samples     : 1693
+GPU Average Utilization    : 3.13%
+GPU Minimum Utilization    : 0.00%
+GPU Maximum Utilization    : 52.00%
+
+GPU Temperature Average    : 39.24 C
+GPU Temperature Minimum    : 38 C
+GPU Temperature Maximum    : 40 C
+
+GPU Power Average          : 5.64 W
+GPU Power Minimum          : 3.81 W
+GPU Power Maximum          : 7.54 W
+
+CPU:
+AMD Ryzen 5 8645HS
+12 logical CPUs
+6 cores
+2 threads per core
+
+GPU:
+NVIDIA GeForce RTX 3050 Laptop GPU
+6144 MiB
+
+CPU CSV:
+system_usage/cpu_usage.csv
+
+GPU CSV:
+system_usage/gpu_usage.csv
+
+Resource monitoring was performed continuously during the
+controlled AFL++ run. The monitoring logs extended approximately
+one minute beyond AFL++ termination; therefore the reported
+resource statistics are continuous monitoring statistics and are
+not claimed as exact synchronized 1800-second averages.
+
+10. EXPERIMENT ARTIFACTS
+------------------------------------------------------------
+AFL++ Results:
+afl_results/
+
+Controlled AFL++ Statistics:
+afl_results/default/fuzzer_stats
+
+AFL++ Plot Data:
+afl_results/default/plot_data
+
+AFL++ Resume Data:
+afl_results/default/fastresume.bin
+
+Queue:
+afl_results/default/queue/
+
+Separate GCOV:
+gcov/
+
+Performance:
+performance/gcov_execution.csv
+
+Mutation:
+mutation/
+
+System Usage:
+system_usage/
+
+Test Case CSV:
+test_cases.csv
+
+11. EXPERIMENT CONCLUSION
+------------------------------------------------------------
+SLR Program 7 (07_fwdchain_v2.c) completed the controlled AFL++
+fuzzing experiment for the full 1800-second duration.
+
+The run completed normally with:
+- 496506 AFL++ executions
+- 275.83 executions per second
+- 74.42% AFL++ bitmap coverage
+- 32 of 43 discovered edges
+- 100% stability
+- 11 retained queue test cases
+- 0 saved crashes
+- 0 saved hangs
+- 0 total timeouts
+
+The separate GCOV analysis achieved:
+- 90.91% line coverage
+- 90.91% branch coverage
+- 68.18% branches taken
+- 60.00% call coverage
+
+All 11 retained AFL++ queue test cases executed successfully
+against the separate GCOV binary with zero non-zero exits.
+
+AFL++ bitmap coverage and GCOV coverage are reported separately
+because they measure coverage using different instrumentation
+mechanisms.
+
+VC, LC, and SC are not reported because their definitions or
+measurement methodology were not provided for this experiment.
+No values were invented for these metrics.
+
+============================================================
+END OF SLR PROGRAM 7 FINAL REPORT
+============================================================

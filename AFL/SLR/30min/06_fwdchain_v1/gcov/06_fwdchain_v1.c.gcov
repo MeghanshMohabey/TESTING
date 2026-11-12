@@ -1,0 +1,92 @@
+        -:    0:Source:/home/himanshu/afl_cat/Datasets/Unzipped/SLR_50_AFL_Package/slr_pkg/01_C_Source_Files/06_fwdchain_v1.c
+        -:    0:Graph:/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/gcov/06_fwdchain_v1_gcov-06_fwdchain_v1.gcno
+        -:    0:Data:/mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_6/gcov/06_fwdchain_v1_gcov-06_fwdchain_v1.gcda
+        -:    0:Runs:9
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 06  Family: fwdchain  Variant: 1 (Weather Reasoning)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 9 returned 100% blocks executed 89%
+        9:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+        9:   16:    FILE *f = stdin;
+        9:   17:    if (argc > 1) {
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:   18:        f = fopen(argv[1], "rb");
+call    0 returned 9
+       9*:   19:        if (!f) return 0;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 9
+        -:   20:    }
+        9:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 9
+        9:   22:    if (f != stdin) fclose(f);
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+call    2 returned 9
+        9:   23:    return n;
+        -:   24:}
+        -:   25:
+        -:   26:typedef struct { int req; int concl; } Rule;
+        -:   27:
+        -:   28:/* Domain: Weather Reasoning */
+        -:   29:static const Rule RULES[] = {
+        -:   30:    {0x001, 0x002},
+        -:   31:    {0x002, 0x004},
+        -:   32:    {0x005, 0x008},
+        -:   33:    {0x004, 0x010},
+        -:   34:    {0x018, 0x020},
+        -:   35:    {0x021, 0x040}
+        -:   36:};
+        -:   37:#define NUM_RULES ((int)(sizeof(RULES)/sizeof(RULES[0])))
+        -:   38:
+function main called 9 returned 100% blocks executed 100%
+        9:   39:int main(int argc, char **argv) {
+        -:   40:    unsigned char buf[2];
+        9:   41:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 9
+        9:   42:    int facts = 0;
+       26:   43:    for (size_t i = 0; i < n && i < 2; i++) facts |= ((int)buf[i]) << (8 * (int)i);
+branch  0 taken 17 (fallthrough)
+branch  1 taken 9
+branch  2 taken 17
+branch  3 taken 0 (fallthrough)
+        9:   44:    facts &= 0x3FF; /* only the lowest 10 fact bits are meaningful */
+        -:   45:
+        -:   46:    int iter;
+       14:   47:    for (iter = 0; iter < MAX_BOUND; iter++) { /* bounded fixpoint iteration */
+branch  0 taken 14
+branch  1 taken 0 (fallthrough)
+       14:   48:        int changed = 0;
+       98:   49:        for (int r = 0; r < NUM_RULES && r < MAX_BOUND; r++) {
+branch  0 taken 84 (fallthrough)
+branch  1 taken 14
+branch  2 taken 84
+branch  3 taken 0 (fallthrough)
+       84:   50:            if ((facts & RULES[r].req) == RULES[r].req && !(facts & RULES[r].concl)) {
+branch  0 taken 49 (fallthrough)
+branch  1 taken 35
+branch  2 taken 16 (fallthrough)
+branch  3 taken 33
+       16:   51:                facts |= RULES[r].concl;
+       16:   52:                changed = 1;
+        -:   53:            }
+        -:   54:        }
+       14:   55:        if (!changed) break;
+branch  0 taken 9 (fallthrough)
+branch  1 taken 5
+        -:   56:    }
+        9:   57:    printf("SLR_FWDCHAIN_V1 final_facts=0x%03x iterations=%d\n", facts, iter);
+call    0 returned 9
+        9:   58:    return 0;
+        -:   59:}

@@ -1,0 +1,23 @@
+SLR PROGRAM 4 — AFL++ MUTATION REPORT
+============================================================
+
+Total queue cases : 27
+
+Mutation / Queue Classification
+------------------------------------------------------------
+havoc               :  20 ( 74.07%)
+(null)              :   6 ( 22.22%)
+initial_seed        :   1 (  3.70%)
+
+Notes
+------------------------------------------------------------
+initial_seed = original AFL++ input seed.
+havoc = queue entries explicitly marked with op:havoc.
+(null) = AFL++ queue entries whose filename reports op:(null); no named mutation operator is exposed.
+unknown = entries that do not match any recognized AFL++ queue metadata pattern.
+
+Examples
+------------------------------------------------------------
+havoc: id:000007,src:000000,time:118,execs:45,op:havoc,rep:1
+(null): id:000001,src:000000,time:23,execs:8,op:(null),pos:0,+cov
+initial_seed: id:000000,time:0,execs:0,orig:seed.bin

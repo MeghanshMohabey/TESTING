@@ -1,0 +1,95 @@
+        -:    0:Source:03_boolexpr_v3.c
+        -:    0:Graph:03_boolexpr_v3_gcov-03_boolexpr_v3.gcno
+        -:    0:Data:03_boolexpr_v3_gcov-03_boolexpr_v3.gcda
+        -:    0:Runs:26
+        -:    0:Source is newer than graph
+        -:    1:/* Auto-generated Scalable Logical Reasoning (SLR) program for AFL/AFL++.
+        -:    2: * ID: 03  Family: boolexpr  Variant: 3 (NOR Variant)
+        -:    3: *
+        -:    4: * Bound guarantee: every loop and every recursive call in this program
+        -:    5: * is hard-capped at MAX_BOUND (10) iterations/levels, so the program
+        -:    6: * always terminates in bounded time -- safe as a persistent AFL target.
+        -:    7: */
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#define MAX_BOUND 10
+        -:   13:
+        -:   14:/* Reads up to `cap` bytes from stdin, or from a file given as argv[1]. */
+function read_input called 26 returned 100% blocks executed 56%
+       26:   15:static size_t read_input(unsigned char *buf, size_t cap, int argc, char **argv) {
+       26:   16:    FILE *f = stdin;
+       26:   17:    if (argc > 1) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 26
+    #####:   18:        f = fopen(argv[1], "rb");
+call    0 never executed
+    #####:   19:        if (!f) return 0;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   20:    }
+       26:   21:    size_t n = fread(buf, 1, cap, f);
+call    0 returned 26
+      26*:   22:    if (f != stdin) fclose(f);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 26
+call    2 never executed
+       26:   23:    return n;
+        -:   24:}
+        -:   25:
+function main called 26 returned 100% blocks executed 87%
+       26:   26:int main(int argc, char **argv) {
+        -:   27:    unsigned char buf[MAX_BOUND];
+       26:   28:    size_t n = read_input(buf, sizeof(buf), argc, argv);
+call    0 returned 26
+      26*:   29:    if (n > MAX_BOUND) n = MAX_BOUND; /* enforce bound: at most MAX_BOUND tokens */
+branch  0 taken 0 (fallthrough)
+branch  1 taken 26
+        -:   30:
+        -:   31:    int stack[MAX_BOUND];
+       26:   32:    int sp = 0;
+      261:   33:    for (size_t i = 0; i < n; i++) {
+branch  0 taken 235
+branch  1 taken 26 (fallthrough)
+      235:   34:        unsigned char t = buf[i] % 5;
+      235:   35:        switch (t) {
+branch  0 taken 59
+branch  1 taken 44
+branch  2 taken 42
+branch  3 taken 43
+branch  4 taken 47
+branch  5 taken 0
+       59:   36:            case 0: if (sp < MAX_BOUND) stack[sp++] = 0; break; /* push FALSE */
+branch  0 taken 59 (fallthrough)
+branch  1 taken 0
+       44:   37:            case 1: if (sp < MAX_BOUND) stack[sp++] = 1; break; /* push TRUE */
+branch  0 taken 44 (fallthrough)
+branch  1 taken 0
+       42:   38:            case 2: /* AND */
+       42:   39:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a & b; }
+branch  0 taken 20 (fallthrough)
+branch  1 taken 22
+       42:   40:                break;
+       43:   41:            case 3: /* XOR */
+       43:   42:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = a ^ b; }
+branch  0 taken 14 (fallthrough)
+branch  1 taken 29
+       43:   43:                break;
+       47:   44:            case 4: /* NOR */
+       47:   45:                if (sp >= 2) { int b = stack[--sp]; int a = stack[--sp]; stack[sp++] = !(a | b); }
+branch  0 taken 18 (fallthrough)
+branch  1 taken 29
+       47:   46:                break;
+    #####:   47:            default: if (sp >= 1) stack[sp-1] = !stack[sp-1]; break; /* NOT top */
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   48:        }
+        -:   49:    }
+       26:   50:    int result = (sp > 0) ? stack[sp-1] : 0;
+branch  0 taken 22 (fallthrough)
+branch  1 taken 4
+       26:   51:    printf("SLR_BOOLEXPR_V3 result=%d stack_depth=%d tokens=%zu\n", result, sp, n);
+call    0 returned 26
+       26:   52:    return 0;
+        -:   53:}

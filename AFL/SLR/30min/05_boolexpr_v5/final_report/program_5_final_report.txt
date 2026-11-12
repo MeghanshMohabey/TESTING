@@ -1,0 +1,224 @@
+SLR PROGRAM 5 — FINAL AFL++ FUZZING REPORT
+============================================================
+
+1. PROGRAM IDENTIFICATION
+------------------------------------------------------------
+Dataset             : SLR
+Program             : Program 5
+Source               : 05_boolexpr_v5.c
+Variant              : Boolean Expression V5 (XNOR)
+AFL++ Version        : 5.02a
+Fuzzing Duration     : 1800 seconds
+Bound                : 10
+AFL++ Bound Option   : -G 10
+Memory Option        : -m none
+Input Mode           : -a binary
+
+Source Path:
+ /home/himanshu/afl_cat/Datasets/Unzipped/SLR_50_AFL_Package/slr_pkg/01_C_Source_Files/05_boolexpr_v5.c
+
+Seed Path:
+ /mnt/d/AFL TASK ++/Test_Cases/SLR/program_5/seed.bin
+
+Seed Size            : 10 bytes
+Seed Hex             : 00010203040506070809
+
+
+2. AFL++ CONTROLLED FUZZING RESULTS
+------------------------------------------------------------
+Run Time             : 1800 seconds
+Cycles Completed     : 222
+Cycles Without Finds : 221
+Corpus Count         : 27
+Corpus Favored       : 5
+Corpus Found         : 26
+Maximum Depth        : 3
+
+Executions           : 647504
+Executions/sec       : 359.72
+
+Bitmap Coverage      : 57.14%
+Edges Found          : 16 / 28
+Stability            : 100.00%
+
+Saved Crashes        : 0
+Saved Hangs          : 0
+Total Timeouts       : 28
+
+Favored Test Cases   : 5
+New Edges             : 4
+Own Finds             : 26
+Pending Test Cases    : 0
+
+Run completed normally at the 1800-second time limit.
+AFL++ exit status: 0
+
+
+3. AFL++ EXECUTION DETAILS
+------------------------------------------------------------
+Target Binary:
+ 05_boolexpr_v5_afl
+
+Instrumentation:
+ LLVM-PCGUARD
+ Instrumented locations: 22
+ Instrumentation collisions: 0
+
+Havoc/Splice Executions : 20 / 647000 approximately
+Splice Executions        : 0
+Variable Bytes           : 0
+Auto Dictionary Entries  : 0
+
+Slowest Execution       : 0 ms
+Peak RSS                 : 0 MB
+
+CPU Snapshot at End     : 25%
+
+
+4. GCOV COVERAGE
+------------------------------------------------------------
+GCOV was performed using a separate non-AFL instrumented build.
+
+Compilation:
+ gcc -O0 -g --coverage 05_boolexpr_v5.c
+
+Test Cases Executed      : 27
+Non-zero Exits           : 0
+
+Lines Executed           : 90.00% (27 / 30)
+Branches Executed        : 86.67% (26 / 30)
+Branches Taken           : 66.67% (20 / 30)
+Calls Executed           : 60.00% (3 / 5)
+
+
+5. RESPONSE TIME
+------------------------------------------------------------
+Measured Test Cases      : 27
+Non-zero Exits           : 0
+
+Total Response Time      : 216.086385 ms
+Average Response Time    : 8.003199 ms
+Minimum Response Time    : 6.860911 ms
+Maximum Response Time    : 10.229344 ms
+
+
+6. MUTATION ANALYSIS
+------------------------------------------------------------
+Total Queue Test Cases   : 27
+
+initial_seed             : 1 (3.70%)
+(null)                   : 6 (22.22%)
+havoc                    : 20 (74.07%)
+
+Total                   : 27 (100.00%)
+
+
+7. CONTINUOUS RESOURCE MONITORING
+------------------------------------------------------------
+CPU Monitoring:
+ Samples                 : 1462
+ Average CPU Usage       : 5.33%
+ Minimum CPU Usage       : 1.60%
+ Maximum CPU Usage       : 19.60%
+
+CPU:
+ AMD Ryzen 5 8645HS w/ Radeon 760M Graphics
+ 12 logical CPUs
+ 6 cores
+ 2 threads per core
+
+GPU Monitoring:
+ Samples                 : 1589
+ Average GPU Utilization : 2.87%
+ Minimum GPU Utilization : 0.00%
+ Maximum GPU Utilization : 16.00%
+
+GPU Temperature:
+ Average                  : 41.83 C
+ Minimum                  : 41 C
+ Maximum                  : 43 C
+
+GPU Power:
+ Average                  : 4.00 W
+ Minimum                  : 3.86 W
+ Maximum                  : 9.71 W
+
+GPU:
+ NVIDIA GeForce RTX 3050 6GB Laptop GPU
+ VRAM                    : 6144 MiB
+
+
+8. TEST CASE INFORMATION
+------------------------------------------------------------
+Total AFL++ Queue Cases : 27
+Saved Crash Cases       : 0
+Saved Hang Cases        : 0
+
+All 27 AFL++ queue test cases were executed against the
+separate GCOV binary.
+
+Test Case CSV:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/test_cases.csv
+
+
+9. ARTIFACTS
+------------------------------------------------------------
+AFL++ Results:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/afl_results/
+
+GCOV:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/gcov/
+
+Performance:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/performance/
+
+Mutation:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/mutation/
+
+System Usage:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/system_usage/
+
+Test Cases CSV:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/test_cases.csv
+
+Final Report:
+ /mnt/d/afl task/AFL_EXPERIMENT_RESULTS/SLR/program_5/final_report/program_5_final_report.txt
+
+
+10. FINAL OBSERVATIONS
+------------------------------------------------------------
+Program 5 completed the controlled AFL++ fuzzing campaign
+normally at the 1800-second time limit.
+
+AFL++ discovered 27 queue test cases with 26 findings and
+no saved crashes or hangs. The final bitmap coverage was
+57.14%, with 16 of 28 reported edges reached and stability
+of 100%.
+
+The separate GCOV analysis achieved 90.00% line coverage,
+86.67% branch execution coverage, 66.67% branches taken at
+least once, and 60.00% call coverage.
+
+All 27 generated queue cases completed successfully against
+the separate GCOV binary with zero non-zero exits.
+
+Response-time measurement produced an average execution time
+of 8.003199 ms per queue test case.
+
+Mutation analysis showed that 74.07% of retained queue cases
+were associated with havoc mutations, 22.22% with the
+deterministic/(null) stage, and 3.70% represented the
+initial seed.
+
+Continuous CPU and GPU monitoring was collected during the
+controlled 1800-second fuzzing run. CPU usage averaged 5.33%,
+while GPU utilization averaged 2.87%.
+
+VC/LC/SC are not reported because their definitions were not
+specified for this experiment.
+
+The AFL++ bitmap coverage and GCOV coverage are reported
+separately and should not be treated as the same metric.
+============================================================
+END OF REPORT
+============================================================

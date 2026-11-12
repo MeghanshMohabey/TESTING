@@ -1,0 +1,39 @@
+SLR PROGRAM 3 — AFL++ MUTATION REPORT
+==================================================
+
+Total queue test cases : 26
+
+Mutation operator distribution:
+--------------------------------------------------
+(null)                         6
+havoc                          19
+initial_seed                   1
+
+Queue files:
+--------------------------------------------------
+001 | operator=initial_seed    | rep=-     | file=id:000000,time:0,execs:0,orig:seed.bin
+002 | operator=(null)          | rep=-     | file=id:000001,src:000000,time:28,execs:8,op:(null),pos:0,+cov
+003 | operator=(null)          | rep=-     | file=id:000002,src:000000,time:46,execs:14,op:(null),pos:0
+004 | operator=(null)          | rep=-     | file=id:000003,src:000000,time:58,execs:19,op:(null),pos:0,+cov
+005 | operator=(null)          | rep=-     | file=id:000004,src:000000,time:73,execs:24,op:(null),pos:0,+cov
+006 | operator=(null)          | rep=-     | file=id:000005,src:000000,time:85,execs:29,op:(null),pos:0
+007 | operator=(null)          | rep=-     | file=id:000006,src:000000,time:101,execs:36,op:(null),pos:0
+008 | operator=havoc           | rep=2     | file=id:000007,src:000000,time:124,execs:47,op:havoc,rep:2
+009 | operator=havoc           | rep=2     | file=id:000008,src:000000,time:152,execs:58,op:havoc,rep:2
+010 | operator=havoc           | rep=2     | file=id:000009,src:000000,time:220,execs:85,op:havoc,rep:2
+011 | operator=havoc           | rep=2     | file=id:000010,src:000000,time:239,execs:91,op:havoc,rep:2
+012 | operator=havoc           | rep=2     | file=id:000011,src:000000,time:256,execs:98,op:havoc,rep:2
+013 | operator=havoc           | rep=1     | file=id:000012,src:000000,time:271,execs:104,op:havoc,rep:1
+014 | operator=havoc           | rep=2     | file=id:000013,src:000000,time:362,execs:140,op:havoc,rep:2
+015 | operator=havoc           | rep=1     | file=id:000014,src:000000,time:382,execs:148,op:havoc,rep:1
+016 | operator=havoc           | rep=2     | file=id:000015,src:000000,time:425,execs:166,op:havoc,rep:2
+017 | operator=havoc           | rep=2     | file=id:000016,src:000000,time:691,execs:283,op:havoc,rep:2
+018 | operator=havoc           | rep=2     | file=id:000017,src:000000,time:743,execs:301,op:havoc,rep:2
+019 | operator=havoc           | rep=1     | file=id:000018,src:000000,time:826,execs:338,op:havoc,rep:1
+020 | operator=havoc           | rep=1     | file=id:000019,src:000000,time:839,execs:343,op:havoc,rep:1
+021 | operator=havoc           | rep=1     | file=id:000020,src:000000,time:851,execs:348,op:havoc,rep:1
+022 | operator=havoc           | rep=2     | file=id:000021,src:000000,time:879,execs:359,op:havoc,rep:2
+023 | operator=havoc           | rep=1     | file=id:000022,src:000000,time:1225,execs:495,op:havoc,rep:1
+024 | operator=havoc           | rep=2     | file=id:000023,src:000000,time:5399,execs:2430,op:havoc,rep:2
+025 | operator=havoc           | rep=2     | file=id:000024,src:000000,time:20251,execs:9084,op:havoc,rep:2
+026 | operator=havoc           | rep=6     | file=id:000025,src:000015,time:36181,execs:15252,op:havoc,rep:6

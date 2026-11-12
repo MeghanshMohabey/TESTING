@@ -1,0 +1,12 @@
+dataset,program,test_case_id,file_name,size_bytes,input_hex,is_crash,source
+SLR,program_7,0,"id:000000,time:0,execs:0,orig:seed.bin",4,00010203,0,initial_seed
+SLR,program_7,1,"id:000001,src:000000,time:34,execs:8,op:(null),pos:0,+cov",1,61,0,(null)
+SLR,program_7,2,"id:000002,src:000000,time:51,execs:13,op:(null),pos:0",4,01000203,0,(null)
+SLR,program_7,3,"id:000003,src:000000,time:90,execs:24,op:quick,pos:0,+cov",4,6f010203,0,quick
+SLR,program_7,4,"id:000004,src:000000,time:121,execs:35,op:flip1,pos:0",4,20010203,0,flip1
+SLR,program_7,5,"id:000005,src:000000,time:135,execs:40,op:flip1,pos:0",4,10010203,0,flip1
+SLR,program_7,6,"id:000006,src:000000,time:149,execs:46,op:flip1,pos:0",4,04010203,0,flip1
+SLR,program_7,7,"id:000007,src:000000,time:172,execs:58,op:flip2,pos:0,+cov",4,06010203,0,flip2
+SLR,program_7,8,"id:000008,src:000000,time:205,execs:73,op:flip8,pos:0",4,ff010203,0,flip8
+SLR,program_7,9,"id:000009,src:000000,time:239,execs:85,op:arith8,pos:0,val:-6",4,fa010203,0,arith8
+SLR,program_7,10,"id:000010,src:000000,time:311,execs:117,op:arith8,pos:0,val:+23",4,17010203,0,arith8

@@ -1,0 +1,28 @@
+========================================
+SLR PROGRAM 6 — MUTATION REPORT
+========================================
+
+--- TEST CASE CLASSIFICATION ---
+1   initial_seed id:000000,time:0,execs:0,orig:seed.bin
+2   (null)       id:000001,src:000000,time:35,execs:8,op:(null),pos:0,+cov
+3   (null)       id:000002,src:000000,time:51,execs:13,op:(null),pos:0,+cov
+4   quick        id:000003,src:000000,time:88,execs:24,op:quick,pos:0
+5   flip1        id:000004,src:000000,time:119,execs:38,op:flip1,pos:0
+6   flip2        id:000005,src:000000,time:141,execs:48,op:flip2,pos:0,+cov
+7   flip4        id:000006,src:000000,time:161,execs:58,op:flip4,pos:0
+8   flip4        id:000007,src:000000,time:171,execs:63,op:flip4,pos:0
+9   flip8        id:000008,src:000000,time:192,execs:73,op:flip8,pos:0
+
+--- MUTATION SUMMARY ---
+Total queue cases : 9
+Initial seed      : 1 (11.11%)
+(null)            : 2 (22.22%)
+quick             : 1 (11.11%)
+flip1             : 1 (11.11%)
+flip2             : 1 (11.11%)
+flip4             : 2 (22.22%)
+flip8             : 1 (11.11%)
+Havoc             : 0 (0.00%)
+
+Classification is based on AFL++ queue filename metadata.
+Deterministic operators (quick/flip1/flip2/flip4/flip8) are reported separately.

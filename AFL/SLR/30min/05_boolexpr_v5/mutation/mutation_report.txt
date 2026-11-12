@@ -1,0 +1,39 @@
+SLR PROGRAM 5 — MUTATION REPORT
+============================================================
+
+Total queue test cases: 27
+
+Mutation operator counts:
+  havoc: 20 (74.07%)
+  (null): 6 (22.22%)
+  initial_seed: 1 (3.70%)
+
+Detailed classification:
+------------------------------------------------------------
+initial_seed    id:000000,time:0,execs:0,orig:seed.bin
+(null)          id:000001,src:000000,time:25,execs:8,op:(null),pos:0,+cov
+(null)          id:000002,src:000000,time:41,execs:14,op:(null),pos:0
+(null)          id:000003,src:000000,time:52,execs:19,op:(null),pos:0,+cov
+(null)          id:000004,src:000000,time:67,execs:24,op:(null),pos:0,+cov
+(null)          id:000005,src:000000,time:78,execs:29,op:(null),pos:0
+(null)          id:000006,src:000000,time:94,execs:36,op:(null),pos:0
+havoc           id:000007,src:000000,time:115,execs:45,op:havoc,rep:3
+havoc           id:000008,src:000000,time:128,execs:50,op:havoc,rep:2
+havoc           id:000009,src:000000,time:143,execs:55,op:havoc,rep:3
+havoc           id:000010,src:000000,time:155,execs:60,op:havoc,rep:3
+havoc           id:000011,src:000000,time:177,execs:67,op:havoc,rep:3
+havoc           id:000012,src:000000,time:192,execs:73,op:havoc,rep:1
+havoc           id:000013,src:000000,time:218,execs:83,op:havoc,rep:4
+havoc           id:000014,src:000000,time:263,execs:98,op:havoc,rep:4
+havoc           id:000015,src:000000,time:277,execs:103,op:havoc,rep:3
+havoc           id:000016,src:000000,time:291,execs:109,op:havoc,rep:3
+havoc           id:000017,src:000000,time:303,execs:114,op:havoc,rep:3
+havoc           id:000018,src:000000,time:372,execs:144,op:havoc,rep:4
+havoc           id:000019,src:000000,time:396,execs:154,op:havoc,rep:3
+havoc           id:000020,src:000000,time:421,execs:165,op:havoc,rep:3
+havoc           id:000021,src:000000,time:1734,execs:719,op:havoc,rep:4
+havoc           id:000022,src:000000,time:1796,execs:746,op:havoc,rep:4
+havoc           id:000023,src:000000,time:1990,execs:833,op:havoc,rep:3
+havoc           id:000024,src:000000,time:3897,execs:1646,op:havoc,rep:4
+havoc           id:000025,src:000000,time:7490,execs:3193,op:havoc,rep:4
+havoc           id:000026,src:000012,time:32921,execs:13764,op:havoc,rep:11
