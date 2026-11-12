@@ -1,0 +1,21 @@
+KLEE: WARNING: Module and host target triples do not match: 'x86_64-unknown-linux-gnu' != 'x86_64-pc-linux-gnu'
+This may cause unexpected crashes or assertion violations.
+KLEE: output directory is "/mnt/d/KLEE_Project/Vp2-B2000/results/merged/klee-out"
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7de2ae400000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7de02e400000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7ce02e400000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7cc02e400000 size=128 GiB)
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(138402338963456) at Vp2-B2000/Vp2-B2000.c:1080 5
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
+KLEE: WARNING: killing 6570 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 6254 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5953 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5667 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5394 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5135 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 4888 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 4651 states (over memory cap: 2101MB)
