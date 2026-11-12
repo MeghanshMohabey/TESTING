@@ -1,0 +1,8 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(130374113951744) at Vp6-B1500/Vp6-B1500.c:4493 5
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
+KLEE: WARNING: killing 6385 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 6078 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5785 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5506 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 5239 states (over memory cap: 2101MB)
