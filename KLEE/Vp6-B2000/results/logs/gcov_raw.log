@@ -1,0 +1,15 @@
+File 'replay-source/Vp6-B2000_replay.c'
+Lines executed:95.43% of 9491
+Branches executed:85.61% of 18502
+Taken at least once:50.19% of 18502
+Calls executed:100.00% of 141
+Creating 'Vp6-B2000_replay.c.gcov'
+
+File 'replay-source/klee/klee.h'
+Lines executed:50.00% of 10
+Branches executed:40.00% of 20
+Taken at least once:25.00% of 20
+Calls executed:50.00% of 4
+Creating 'klee.h.gcov'
+
+Lines executed:95.38% of 9501
