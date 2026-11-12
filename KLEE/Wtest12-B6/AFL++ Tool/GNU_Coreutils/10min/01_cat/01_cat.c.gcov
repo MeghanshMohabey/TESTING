@@ -1,0 +1,196 @@
+        -:    0:Source:01_cat.c
+        -:    0:Graph:cat_cov-01_cat.gcno
+        -:    0:Data:cat_cov-01_cat.gcda
+        -:    0:Runs:34
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <stdbool.h>
+        -:    4:#include <string.h>
+        -:    5:#include <unistd.h>
+        -:    6:#include <getopt.h>
+        -:    7:#include <fcntl.h>
+        -:    8:#include <errno.h>
+        -:    9:
+        -:   10:static int line_number = 1;
+        -:   11:static bool pending_blank = false;
+        -:   12:
+function cat_file called 34 returned 100% blocks executed 57%
+       34:   13:static void cat_file(FILE *fp, bool number, bool number_nonblank, bool squeeze_blank, bool show_ends, bool show_tabs, bool show_nonprint) {
+       34:   14:    char *line = NULL;
+       34:   15:    size_t len = 0;
+        -:   16:    ssize_t read;
+        -:   17:
+     1342:   18:    while ((read = getline(&line, &len, fp)) != -1) {
+call    0 returned 1342
+branch  1 taken 1308
+branch  2 taken 34 (fallthrough)
+     1308:   19:        bool is_blank = (read == 1 && line[0] == '\n');
+branch  0 taken 779 (fallthrough)
+branch  1 taken 529
+branch  2 taken 777 (fallthrough)
+branch  3 taken 2
+        -:   20:
+    1308*:   21:        if (squeeze_blank && is_blank) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1308
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:   22:            if (pending_blank) continue;
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   23:            pending_blank = true;
+        -:   24:        } else {
+     1308:   25:            pending_blank = false;
+        -:   26:        }
+        -:   27:
+     1308:   28:        if (number_nonblank) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1308
+    #####:   29:            if (!is_blank) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   30:                printf("%6d\t", line_number++);
+call    0 never executed
+        -:   31:            }
+     1308:   32:        } else if (number) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1308
+    #####:   33:            printf("%6d\t", line_number++);
+call    0 never executed
+        -:   34:        }
+        -:   35:
+     6215:   36:        for (ssize_t i = 0; i < read; i++) {
+branch  0 taken 4907
+branch  1 taken 1308 (fallthrough)
+     4907:   37:            unsigned char c = line[i];
+     4907:   38:            if (c == '\n') {
+branch  0 taken 1286 (fallthrough)
+branch  1 taken 3621
+    1286*:   39:                if (show_ends) putchar('$');
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1286
+call    2 never executed
+     1286:   40:                putchar('\n');
+call    0 returned 1286
+     3621:   41:            } else if (c == '\t') {
+branch  0 taken 775 (fallthrough)
+branch  1 taken 2846
+     775*:   42:                if (show_tabs) fputs("^I", stdout);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 775
+call    2 never executed
+      775:   43:                else putchar('\t');
+call    0 returned 775
+     2846:   44:            } else if (show_nonprint) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2846
+    #####:   45:                if (c < 32 && c != '\t' && c != '\n') {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    #####:   46:                    putchar('^');
+call    0 never executed
+    #####:   47:                    putchar(c + 64);
+call    0 never executed
+    #####:   48:                } else if (c == 127) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   49:                    fputs("^?", stdout);
+call    0 never executed
+        -:   50:                } else {
+    #####:   51:                    putchar(c);
+call    0 never executed
+        -:   52:                }
+        -:   53:            } else {
+     2846:   54:                putchar(c);
+call    0 returned 2846
+        -:   55:            }
+        -:   56:        }
+        -:   57:    }
+       34:   58:    free(line);
+       34:   59:}
+        -:   60:
+function main called 34 returned 100% blocks executed 48%
+       34:   61:int main(int argc, char **argv) {
+       34:   62:    bool number = false;
+       34:   63:    bool number_nonblank = false;
+       34:   64:    bool squeeze_blank = false;
+       34:   65:    bool show_ends = false;
+       34:   66:    bool show_tabs = false;
+       34:   67:    bool show_nonprint = false;
+        -:   68:
+        -:   69:    static struct option long_options[] = {
+        -:   70:        {"number-nonblank", no_argument, 0, 'b'},
+        -:   71:        {"number", no_argument, 0, 'n'},
+        -:   72:        {"squeeze-blank", no_argument, 0, 's'},
+        -:   73:        {"show-ends", no_argument, 0, 'E'},
+        -:   74:        {"show-tabs", no_argument, 0, 'T'},
+        -:   75:        {"show-nonprinting", no_argument, 0, 'v'},
+        -:   76:        {"show-all", no_argument, 0, 'A'},
+        -:   77:        {0, 0, 0, 0}
+        -:   78:    };
+        -:   79:
+        -:   80:    int opt;
+       34:   81:    while ((opt = getopt_long(argc, argv, "benstuvAET", long_options, NULL)) != -1) {
+call    0 returned 34
+branch  1 taken 0
+branch  2 taken 34 (fallthrough)
+    #####:   82:        switch (opt) {
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:   83:            case 'b': number_nonblank = true; break;
+    #####:   84:            case 'n': number = true; break;
+    #####:   85:            case 's': squeeze_blank = true; break;
+    #####:   86:            case 'E': show_ends = true; break;
+    #####:   87:            case 'T': show_tabs = true; break;
+    #####:   88:            case 'v': show_nonprint = true; break;
+    #####:   89:            case 'A': show_ends = true; show_tabs = true; show_nonprint = true; break;
+    #####:   90:            case 'e': show_ends = true; show_nonprint = true; break;
+    #####:   91:            case 't': show_tabs = true; show_nonprint = true; break;
+    #####:   92:            case 'u': break;
+    #####:   93:            default: break;
+        -:   94:        }
+        -:   95:    }
+        -:   96:
+       34:   97:    if (optind >= argc) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 34
+    #####:   98:        cat_file(stdin, number, number_nonblank, squeeze_blank, show_ends, show_tabs, show_nonprint);
+call    0 never executed
+        -:   99:    } else {
+       68:  100:        for (int i = optind; i < argc; i++) {
+branch  0 taken 34
+branch  1 taken 34 (fallthrough)
+       34:  101:            if (strcmp(argv[i], "-") == 0) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 34
+    #####:  102:                cat_file(stdin, number, number_nonblank, squeeze_blank, show_ends, show_tabs, show_nonprint);
+call    0 never executed
+        -:  103:            } else {
+       34:  104:                FILE *fp = fopen(argv[i], "r");
+call    0 returned 34
+       34:  105:                if (fp) {
+branch  0 taken 34 (fallthrough)
+branch  1 taken 0
+       34:  106:                    cat_file(fp, number, number_nonblank, squeeze_blank, show_ends, show_tabs, show_nonprint);
+call    0 returned 34
+       34:  107:                    fclose(fp);
+call    0 returned 34
+        -:  108:                }
+        -:  109:            }
+        -:  110:        }
+        -:  111:    }
+       34:  112:    return 0;
+        -:  113:}

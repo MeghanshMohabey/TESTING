@@ -1,0 +1,20 @@
+KLEE: WARNING: Module and host target triples do not match: 'x86_64-unknown-linux-gnu' != 'x86_64-pc-linux-gnu'
+This may cause unexpected crashes or assertion violations.
+KLEE: output directory is "/mnt/d/KLEE/88Wtest10-B1000/merged/klee-out"
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7561a7400000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x755f27400000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x745f27400000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x743f27400000 size=128 GiB)
+KLEE: WARNING ONCE: skipping fork (memory cap exceeded)
+KLEE: WARNING: killing 2401 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 2285 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 2176 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 2071 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 1979 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 1892 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 1808 states (over memory cap: 2101MB)
+KLEE: WARNING: killing 1727 states (over memory cap: 2101MB)
+KLEE: ctrl-c detected, requesting interpreter to halt.

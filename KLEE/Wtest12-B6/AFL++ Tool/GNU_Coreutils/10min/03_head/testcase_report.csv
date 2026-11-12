@@ -1,0 +1,6 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,8,"Defa1De"
+2,id:000001,src:000000,time:89,execs:26,op:quick,pos:5,4,"Defa"
+3,id:000002,src:000000,time:576,execs:176,op:havoc,rep:3,12,"eefa1Dea1D"
+4,id:000003,src:000000,time:703,execs:219,op:havoc,rep:6,16,"Defa:Defa:a:D"
+5,id:000004,src:000000,time:1093,execs:330,op:havoc,rep:7,+cov,15,"DDDDce"

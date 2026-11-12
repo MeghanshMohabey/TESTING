@@ -1,0 +1,1 @@
+"/mnt/d/AFL++ Tool go/AFL++ Tool/run_all.sh" . 30m

@@ -1,0 +1,3 @@
+Timestamp,Command,Execution_Time_Sec,Max_RSS_KB,Avg_GPU_Memory_MB,Avg_GPU_Utilization_Pct
+2026-09-03 16:53:23,"timeout 600 afl-fuzz -i in -o out -- ./02.tac_afl",.120183767,7424,N/A,N/A
+2026-09-03 16:53:41,"timeout 600 afl-fuzz -i in -o out -- ./tac_afl",600.026356460,30848,160.002,2.71607

@@ -1,0 +1,109 @@
+        -:    0:Source:02_tac.c
+        -:    0:Graph:02_tac.gcno
+        -:    0:Data:02_tac.gcda
+        -:    0:Runs:11
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <string.h>
+        -:    4:#include <stdbool.h>
+        -:    5:#include <unistd.h>
+        -:    6:#include <getopt.h>
+        -:    7:
+function tac_file called 11 returned 100% blocks executed 92%
+       11:    8:static void tac_file(FILE *fp, const char *separator) {
+        -:    9:    char **lines = NULL;
+        -:   10:    size_t line_count = 0;
+        -:   11:    size_t capacity = 10;
+       11:   12:    char *line = NULL;
+       11:   13:    size_t len = 0;
+        -:   14:
+       11:   15:    lines = malloc(capacity * sizeof(char *));
+      11*:   16:    if (!lines) return;
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   17:
+      324:   18:    while (getline(&line, &len, fp) != -1) {
+call    0 returned 100%
+branch  1 taken 97%
+branch  2 taken 3% (fallthrough)
+      313:   19:        if (line_count >= capacity) {
+branch  0 taken 4% (fallthrough)
+branch  1 taken 96%
+       14:   20:            capacity *= 2;
+       14:   21:            char **temp = realloc(lines, capacity * sizeof(char *));
+       14:   22:            if (!temp) break;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+        -:   23:            lines = temp;
+        -:   24:        }
+      313:   25:        lines[line_count++] = strdup(line);
+        -:   26:    }
+       11:   27:    free(line);
+        -:   28:
+        -:   29:    // Print lines in reverse order
+      324:   30:    for (size_t i = line_count; i > 0; i--) {
+branch  0 taken 97%
+branch  1 taken 3% (fallthrough)
+      313:   31:        fputs(lines[i - 1], stdout);
+call    0 returned 100%
+      313:   32:        free(lines[i - 1]);
+        -:   33:    }
+       11:   34:    free(lines);
+        -:   35:}
+        -:   36:
+function main called 11 returned 100% blocks executed 71%
+       11:   37:int main(int argc, char **argv) {
+        -:   38:    char const *separator = "\n";
+        -:   39:    int opt;
+        -:   40:    
+        -:   41:    static struct option const longopts[] = {
+        -:   42:        {"before", no_argument, NULL, 'b'},
+        -:   43:        {"regex", no_argument, NULL, 'r'},
+        -:   44:        {"separator", required_argument, NULL, 's'},
+        -:   45:        {NULL, 0, NULL, 0}
+        -:   46:    };
+        -:   47:
+       11:   48:    while ((opt = getopt_long(argc, argv, "brs:", longopts, NULL)) != -1) {
+call    0 returned 100%
+branch  1 taken 0%
+branch  2 taken 100% (fallthrough)
+    #####:   49:        switch (opt) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   50:            case 'b': break;
+        -:   51:            case 'r': break;
+    #####:   52:            case 's': separator = optarg; break;
+        -:   53:            default: break;
+        -:   54:        }
+        -:   55:    }
+        -:   56:
+       11:   57:    if (optind >= argc) {
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+    #####:   58:        tac_file(stdin, separator);
+call    0 never executed
+        -:   59:    } else {
+       22:   60:        for (int i = optind; i < argc; i++) {
+branch  0 taken 50%
+branch  1 taken 50% (fallthrough)
+       11:   61:            if (strcmp(argv[i], "-") == 0) {
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+    #####:   62:                tac_file(stdin, separator);
+call    0 never executed
+        -:   63:            } else {
+       11:   64:                FILE *fp = fopen(argv[i], "r");
+call    0 returned 100%
+       11:   65:                if (fp) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       11:   66:                    tac_file(fp, separator);
+call    0 returned 100%
+       11:   67:                    fclose(fp);
+call    0 returned 100%
+        -:   68:                }
+        -:   69:            }
+        -:   70:        }
+        -:   71:    }
+        -:   72:    return 0;
+        -:   73:}

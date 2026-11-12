@@ -1,0 +1,2619 @@
+        -:    0:Source:replay-source/88Wtest10-B1000_replay.c
+        -:    0:Graph:88Wtest10-B1000_replay.gcno
+        -:    0:Data:88Wtest10-B1000_replay.gcda
+        -:    0:Runs:16339
+        -:    1:#include <assert.h>
+        -:    2:#include <math.h>
+        -:    3:#include<stdio.h>
+        -:    4:#ifdef LLBMC
+        -:    5:#include <llbmc.h>
+        -:    6:#else
+        -:    7:#include <klee/klee.h>
+        -:    8:#endif
+        -:    9:#include <assert.h>
+        -:   10:#define BOUND 1000
+        -:   11:
+        -:   12:	// inputs
+        -:   13:	int a= 1;
+        -:   14:	int e= 5;
+        -:   15:	int d= 4;
+        -:   16:	int f= 6;
+        -:   17:	int c= 3;
+        -:   18:
+        -:   19:	// outputs
+        -:   20:	int u = 21;
+        -:   21:	int v = 22;
+        -:   22:	int w = 23;
+        -:   23:	int x = 24;
+        -:   24:	int y = 25;
+        -:   25:	int z = 26;
+        -:   26:
+        -:   27:
+        -:   28:	int a25 = 0;
+        -:   29:	int a11 = 0;
+        -:   30:	int a28 = 7;
+        -:   31:	int a19 = 1;
+        -:   32:	int a21 = 1;
+        -:   33:	int a17 = 8;
+        -:   34:        int kappa;
+function calculate_output called 230503 returned 100% blocks executed 70%
+   230503:   35:	int calculate_output(int input) {
+   230503:   36:	    if((((!(a11==1)&&((a19==1)&&((input==4)&&((!(a25==1)&&(a28==8))||((a25==1)&&(a28==9))))))&&(a21==1))&&(a17==8))){
+branch  0 taken 209516 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 205935 (fallthrough)
+branch  3 taken 3581
+branch  4 taken 89740 (fallthrough)
+branch  5 taken 116195
+branch  6 taken 63449 (fallthrough)
+branch  7 taken 26291
+branch  8 taken 63449 (fallthrough)
+branch  9 taken 0
+branch 10 taken 26291 (fallthrough)
+branch 11 taken 63449
+branch 12 taken 235 (fallthrough)
+branch 13 taken 26056
+branch 14 taken 235 (fallthrough)
+branch 15 taken 0
+branch 16 taken 235 (fallthrough)
+branch 17 taken 0
+      235:   37:	    	a28 = 9;
+      235:   38:	    	a11 = 1;
+      235:   39:	    	a25 = 1;
+      235:   40:	    	return -1;
+   230268:   41:	    } else if(((a17==8)&&((((!(a11==1)&&((a21==1)&&(input==6)))&&(a28==7))&&(a19==1))&&!(a25==1)))){
+branch  0 taken 225768 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 209281 (fallthrough)
+branch  3 taken 16487
+branch  4 taken 209281 (fallthrough)
+branch  5 taken 0
+branch  6 taken 30757 (fallthrough)
+branch  7 taken 178524
+branch  8 taken 7569 (fallthrough)
+branch  9 taken 23188
+branch 10 taken 7269 (fallthrough)
+branch 11 taken 300
+branch 12 taken 7164 (fallthrough)
+branch 13 taken 105
+     7164:   42:	    	a28 = 10;
+     7164:   43:	    	return 22;
+  223104*:   44:	    } else if(((a21==1)&&((a19==1)&&((((((a25==1)||!(a25==1))&&(input==3))&&(a17==9))&&(a11==1))&&(a28==9))))){
+branch  0 taken 223104 (fallthrough)
+branch  1 taken 0
+branch  2 taken 209055 (fallthrough)
+branch  3 taken 14049
+branch  4 taken 143044 (fallthrough)
+branch  5 taken 66011
+branch  6 taken 143044 (fallthrough)
+branch  7 taken 0
+branch  8 taken 7593 (fallthrough)
+branch  9 taken 201462
+branch 10 taken 0 (fallthrough)
+branch 11 taken 7593
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:   45:	    	a28 = 7;
+    #####:   46:	    	a25 = 1;
+    #####:   47:	    	return 22;
+  223104*:   48:	    } else if(((a28==9)&&(!(a19==1)&&((a21==1)&&((((input==4)&&!(a25==1))&&!(a11==1))&&(a17==8)))))){
+branch  0 taken 75269 (fallthrough)
+branch  1 taken 147835
+branch  2 taken 309 (fallthrough)
+branch  3 taken 74960
+branch  4 taken 309 (fallthrough)
+branch  5 taken 0
+branch  6 taken 38 (fallthrough)
+branch  7 taken 271
+branch  8 taken 0 (fallthrough)
+branch  9 taken 38
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:   49:	    	a25 = 1;
+    #####:   50:	    	a19 = 1;
+    #####:   51:	    	a11 = 1;
+    #####:   52:	    	return -1;
+   223104:   53:	    } else if(((((a17==8)&&((((input==1)&&((a25==1)||!(a25==1)))&&!(a11==1))&&(a19==1)))&&(a21==1))&&(a28==10))){
+branch  0 taken 218604 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 66565 (fallthrough)
+branch  3 taken 152039
+branch  4 taken 46890 (fallthrough)
+branch  5 taken 19675
+branch  6 taken 46890 (fallthrough)
+branch  7 taken 0
+branch  8 taken 58724 (fallthrough)
+branch  9 taken 7841
+branch 10 taken 57252 (fallthrough)
+branch 11 taken 1472
+branch 12 taken 57252 (fallthrough)
+branch 13 taken 0
+branch 14 taken 37860 (fallthrough)
+branch 15 taken 19392
+    37860:   54:	    	a25 = 0;
+    37860:   55:	    	return -1;
+   185244:   56:	    } else if(((a19==1)&&(!(a25==1)&&((a21==1)&&((((input==1)&&(a17==8))&&!(a11==1))&&(a28==7)))))){
+branch  0 taken 171195 (fallthrough)
+branch  1 taken 14049
+branch  2 taken 121424 (fallthrough)
+branch  3 taken 49771
+branch  4 taken 121424 (fallthrough)
+branch  5 taken 0
+branch  6 taken 20161 (fallthrough)
+branch  7 taken 101263
+branch  8 taken 20161 (fallthrough)
+branch  9 taken 0
+branch 10 taken 18156 (fallthrough)
+branch 11 taken 2005
+branch 12 taken 1442 (fallthrough)
+branch 13 taken 16714
+     1442:   57:	    	a28 = 11;
+     1442:   58:	    	a25 = 1;
+     1442:   59:	    	return 26;
+   183802:   60:	    } else if(((((!(a19==1)&&((input==1)&&((((a25==1)&&(a28==7))||((a28==7)&&!(a25==1)))||((a25==1)&&(a28==8)))))&&(a21==1))&&(a17==8))&&!(a11==1))){
+branch  0 taken 14049 (fallthrough)
+branch  1 taken 169753
+branch  2 taken 6490 (fallthrough)
+branch  3 taken 7559
+branch  4 taken 304 (fallthrough)
+branch  5 taken 6186
+branch  6 taken 304 (fallthrough)
+branch  7 taken 0
+branch  8 taken 4784 (fallthrough)
+branch  9 taken 1706
+branch 10 taken 0 (fallthrough)
+branch 11 taken 4784
+branch 12 taken 304 (fallthrough)
+branch 13 taken 1402
+branch 14 taken 0 (fallthrough)
+branch 15 taken 304
+branch 16 taken 4784 (fallthrough)
+branch 17 taken 0
+branch 18 taken 4784 (fallthrough)
+branch 19 taken 0
+branch 20 taken 977 (fallthrough)
+branch 21 taken 3807
+      977:   61:	    	a28 = 7;
+      977:   62:	    	a11 = 1;
+      977:   63:	    	a25 = 0;
+      977:   64:	    	return -1;
+  182825*:   65:	    } else if(((a19==1)&&(((((input==1)&&(((a25==1)&&(a28==8))||(((a28==7)&&(a25==1))||((a28==7)&&!(a25==1)))))&&(a11==1))&&(a21==1))&&(a17==9)))){
+branch  0 taken 169753 (fallthrough)
+branch  1 taken 13072
+branch  2 taken 22932 (fallthrough)
+branch  3 taken 146821
+branch  4 taken 4213 (fallthrough)
+branch  5 taken 18719
+branch  6 taken 3660 (fallthrough)
+branch  7 taken 553
+branch  8 taken 1177 (fallthrough)
+branch  9 taken 21202
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1177
+branch 12 taken 0 (fallthrough)
+branch 13 taken 21202
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 taken 948 (fallthrough)
+branch 17 taken 782
+branch 18 taken 948 (fallthrough)
+branch 19 taken 0
+branch 20 taken 0 (fallthrough)
+branch 21 taken 948
+    #####:   66:	    	a28 = 11;
+    #####:   67:	    	a17 = 7;
+    #####:   68:	    	a11 = 0;
+    #####:   69:	    	a25 = 1;
+    #####:   70:	    	return 22;
+   182825:   71:	    } else if(((a19==1)&&(((a17==8)&&(((input==6)&&((!(a25==1)&&(a28==8))||((a25==1)&&(a28==9))))&&!(a11==1)))&&(a21==1)))){
+branch  0 taken 169753 (fallthrough)
+branch  1 taken 13072
+branch  2 taken 167822 (fallthrough)
+branch  3 taken 1931
+branch  4 taken 25322 (fallthrough)
+branch  5 taken 142500
+branch  6 taken 16702 (fallthrough)
+branch  7 taken 8620
+branch  8 taken 16702 (fallthrough)
+branch  9 taken 0
+branch 10 taken 8620 (fallthrough)
+branch 11 taken 16702
+branch 12 taken 1102 (fallthrough)
+branch 13 taken 7518
+branch 14 taken 482 (fallthrough)
+branch 15 taken 620
+branch 16 taken 482 (fallthrough)
+branch 17 taken 0
+      482:   72:	    	a28 = 10;
+      482:   73:	    	a25 = 0;
+      482:   74:	    	return 22;
+   182343:   75:	    } else if((!(a11==1)&&((((a21==1)&&((input==1)&&(((a28==8)&&!(a25==1))||((a25==1)&&(a28==9)))))&&!(a19==1))&&(a17==8)))){
+branch  0 taken 161356 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 161356 (fallthrough)
+branch  3 taken 0
+branch  4 taken 18445 (fallthrough)
+branch  5 taken 142911
+branch  6 taken 878 (fallthrough)
+branch  7 taken 17567
+branch  8 taken 553 (fallthrough)
+branch  9 taken 325
+branch 10 taken 1406 (fallthrough)
+branch 11 taken 16714
+branch 12 taken 291 (fallthrough)
+branch 13 taken 1115
+branch 14 taken 325 (fallthrough)
+branch 15 taken 291
+branch 16 taken 325 (fallthrough)
+branch 17 taken 0
+      325:   76:	    	a28 = 7;
+      325:   77:	    	a25 = 0;
+      325:   78:	    	a11 = 1;
+      325:   79:	    	return -1;
+   182018:   80:	    } else if((!(a19==1)&&(((((a17==8)&&((a25==1)&&(input==3)))&&(a28==10))&&!(a11==1))&&(a21==1)))){
+branch  0 taken 12747 (fallthrough)
+branch  1 taken 169271
+branch  2 taken 10178 (fallthrough)
+branch  3 taken 2569
+branch  4 taken 392 (fallthrough)
+branch  5 taken 9786
+branch  6 taken 93 (fallthrough)
+branch  7 taken 299
+branch  8 taken 93 (fallthrough)
+branch  9 taken 0
+branch 10 taken 93 (fallthrough)
+branch 11 taken 0
+branch 12 taken 93 (fallthrough)
+branch 13 taken 0
+       93:   81:	    	if((a19==1)){
+branch  0 taken 93 (fallthrough)
+branch  1 taken 0
+        -:   82:
+        -:   83:	    	}else{
+       93:   84:	    		a19 = 1;
+       93:   85:	    		a28 = 8;
+        -:   86:	    	}  
+       93:   87:	    	return 26;
+   181925:   88:	    } else if((((!(a19==1)&&((a21==1)&&((((a25==1)&&(a28==8))||(((a28==7)&&(a25==1))||((a28==7)&&!(a25==1))))&&(input==4))))&&!(a11==1))&&(a17==8))){
+branch  0 taken 12654 (fallthrough)
+branch  1 taken 169271
+branch  2 taken 12654 (fallthrough)
+branch  3 taken 0
+branch  4 taken 608 (fallthrough)
+branch  5 taken 12046
+branch  6 taken 608 (fallthrough)
+branch  7 taken 0
+branch  8 taken 9359 (fallthrough)
+branch  9 taken 3295
+branch 10 taken 9359 (fallthrough)
+branch 11 taken 0
+branch 12 taken 9359 (fallthrough)
+branch 13 taken 3295
+branch 14 taken 9359 (fallthrough)
+branch 15 taken 0
+branch 16 taken 2593 (fallthrough)
+branch 17 taken 6766
+branch 18 taken 703 (fallthrough)
+branch 19 taken 1890
+branch 20 taken 703 (fallthrough)
+branch 21 taken 0
+      703:   89:	    	if((a28==10)){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 703
+    #####:   90:	    		a28 = 7;
+    #####:   91:	    		a25 = 1;
+        -:   92:	    	}else{
+      703:   93:	    		a28 = 8;
+      703:   94:	    		a25 = 0;
+        -:   95:	    	}  
+      703:   96:	    	return 22;
+   181222:   97:	    } else if(((a17==8)&&((a21==1)&&((a25==1)&&((a19==1)&&(!(a11==1)&&((a28==11)&&(input==3)))))))){
+branch  0 taken 176722 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 176722 (fallthrough)
+branch  3 taken 0
+branch  4 taken 47657 (fallthrough)
+branch  5 taken 129065
+branch  6 taken 47358 (fallthrough)
+branch  7 taken 299
+branch  8 taken 42999 (fallthrough)
+branch  9 taken 4359
+branch 10 taken 1658 (fallthrough)
+branch 11 taken 41341
+branch 12 taken 468 (fallthrough)
+branch 13 taken 1190
+      468:   98:	    	a28 = 10;
+      468:   99:	    	a25 = 0;
+      468:  100:	    	return -1;
+  180754*:  101:	    } else if(((a28==9)&&(((!(a19==1)&&(((input==3)&&!(a11==1))&&(a17==8)))&&!(a25==1))&&(a21==1)))){
+branch  0 taken 74787 (fallthrough)
+branch  1 taken 105967
+branch  2 taken 309 (fallthrough)
+branch  3 taken 74478
+branch  4 taken 0 (fallthrough)
+branch  5 taken 309
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  102:	    	a28 = 10;
+    #####:  103:	    	a19 = 1;
+    #####:  104:	    	return 22;
+   180754:  105:	    } else if(((!(a11==1)&&(((a28==11)&&((a25==1)&&((input==1)&&(a19==1))))&&(a17==8)))&&(a21==1))){
+branch  0 taken 159767 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 1190 (fallthrough)
+branch  3 taken 158577
+branch  4 taken 1190 (fallthrough)
+branch  5 taken 0
+branch  6 taken 163 (fallthrough)
+branch  7 taken 1027
+branch  8 taken 163 (fallthrough)
+branch  9 taken 0
+branch 10 taken 163 (fallthrough)
+branch 11 taken 0
+branch 12 taken 163 (fallthrough)
+branch 13 taken 0
+      163:  106:	    	a17 = 7;
+      163:  107:	    	a25 = 0;
+      163:  108:	    	a11 = 1;
+      163:  109:	    	a28 = 10;
+      163:  110:	    	a19 = 0;
+      163:  111:	    	return -1;
+  180591*:  112:	    } else if((((a11==1)&&((((((a25==1)&&(a28==8))||(((a25==1)&&(a28==7))||(!(a25==1)&&(a28==7))))&&(input==6))&&(a19==1))&&(a17==9)))&&(a21==1))){
+branch  0 taken 20987 (fallthrough)
+branch  1 taken 159604
+branch  2 taken 6599 (fallthrough)
+branch  3 taken 14388
+branch  4 taken 6599 (fallthrough)
+branch  5 taken 0
+branch  6 taken 6599 (fallthrough)
+branch  7 taken 14388
+branch  8 taken 4668 (fallthrough)
+branch  9 taken 1931
+branch 10 taken 14388 (fallthrough)
+branch 11 taken 4668
+branch 12 taken 7899 (fallthrough)
+branch 13 taken 6489
+branch 14 taken 1447 (fallthrough)
+branch 15 taken 8383
+branch 16 taken 445 (fallthrough)
+branch 17 taken 1002
+branch 18 taken 0 (fallthrough)
+branch 19 taken 445
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  113:	    	a17 = 8;
+    #####:  114:	    	a25 = 0;
+    #####:  115:	    	a19 = 0;
+    #####:  116:	    	a28 = 11;
+    #####:  117:	    	a11 = 0;
+    #####:  118:	    	return 23;
+   180591:  119:	    } else if(((a17==8)&&((a21==1)&&(!(a11==1)&&(!(a19==1)&&(((!(a25==1)&&(a28==8))||((a25==1)&&(a28==9)))&&(input==3))))))){
+branch  0 taken 176091 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 176091 (fallthrough)
+branch  3 taken 0
+branch  4 taken 159604 (fallthrough)
+branch  5 taken 16487
+branch  6 taken 1483 (fallthrough)
+branch  7 taken 158121
+branch  8 taken 1184 (fallthrough)
+branch  9 taken 299
+branch 10 taken 757 (fallthrough)
+branch 11 taken 427
+branch 12 taken 299 (fallthrough)
+branch 13 taken 757
+branch 14 taken 0 (fallthrough)
+branch 15 taken 299
+branch 16 taken 183 (fallthrough)
+branch 17 taken 244
+      183:  120:	    	a28 = 10;
+      183:  121:	    	a19 = 1;
+      183:  122:	    	a11 = 1;
+      183:  123:	    	a25 = 1;
+      183:  124:	    	return -1;
+   180408:  125:	    } else if((((((a21==1)&&((a28==10)&&((input==1)&&(a25==1))))&&!(a11==1))&&(a17==8))&&!(a19==1))){
+branch  0 taken 180408 (fallthrough)
+branch  1 taken 0
+branch  2 taken 82579 (fallthrough)
+branch  3 taken 97829
+branch  4 taken 2132 (fallthrough)
+branch  5 taken 80447
+branch  6 taken 1055 (fallthrough)
+branch  7 taken 1077
+branch  8 taken 170 (fallthrough)
+branch  9 taken 885
+branch 10 taken 170 (fallthrough)
+branch 11 taken 0
+branch 12 taken 170 (fallthrough)
+branch 13 taken 0
+      170:  126:	    	a25 = 0;
+      170:  127:	    	a19 = 1;
+      170:  128:	    	return 26;
+   180238:  129:	    } else if((!(a11==1)&&(!(a19==1)&&(((a17==8)&&((input==6)&&((((a25==1)&&(a28==7))||((a28==7)&&!(a25==1)))||((a28==8)&&(a25==1)))))&&(a21==1))))){
+branch  0 taken 159251 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 1130 (fallthrough)
+branch  3 taken 158121
+branch  4 taken 1130 (fallthrough)
+branch  5 taken 0
+branch  6 taken 427 (fallthrough)
+branch  7 taken 703
+branch  8 taken 53 (fallthrough)
+branch  9 taken 374
+branch 10 taken 53 (fallthrough)
+branch 11 taken 0
+branch 12 taken 300 (fallthrough)
+branch 13 taken 127
+branch 14 taken 0 (fallthrough)
+branch 15 taken 300
+branch 16 taken 74 (fallthrough)
+branch 17 taken 53
+branch 18 taken 0 (fallthrough)
+branch 19 taken 74
+branch 20 taken 300 (fallthrough)
+branch 21 taken 0
+      300:  130:	    	a17 = 7;
+      300:  131:	    	a25 = 1;
+      300:  132:	    	a11 = 1;
+      300:  133:	    	a28 = 7;
+      300:  134:	    	a19 = 1;
+      300:  135:	    	return -1;
+   179938:  136:	    } else if(((((a17==8)&&(!(a19==1)&&(((input==6)&&(a21==1))&&!(a25==1))))&&!(a11==1))&&(a28==9))){
+branch  0 taken 175438 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 8729 (fallthrough)
+branch  3 taken 166709
+branch  4 taken 1129 (fallthrough)
+branch  5 taken 7600
+branch  6 taken 1129 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1076 (fallthrough)
+branch  9 taken 53
+branch 10 taken 74 (fallthrough)
+branch 11 taken 1002
+branch 12 taken 0 (fallthrough)
+branch 13 taken 74
+    #####:  137:	    	a28 = 10;
+    #####:  138:	    	a19 = 1;
+    #####:  139:	    	return 22;
+   179938:  140:	    } else if((!(a11==1)&&((!(a25==1)&&(((a21==1)&&((input==1)&&(a19==1)))&&(a17==8)))&&(a28==11)))){
+branch  0 taken 158951 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 116454 (fallthrough)
+branch  3 taken 42497
+branch  4 taken 116454 (fallthrough)
+branch  5 taken 0
+branch  6 taken 16714 (fallthrough)
+branch  7 taken 99740
+branch  8 taken 16714 (fallthrough)
+branch  9 taken 0
+branch 10 taken 16714 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 16714
+    #####:  141:	    	a28 = 7;
+    #####:  142:	    	a19 = 0;
+    #####:  143:	    	a11 = 1;
+    #####:  144:	    	return -1;
+  179938*:  145:	    } else if((((a11==1)&&(((a19==1)&&((a21==1)&&(((a25==1)||!(a25==1))&&(input==4))))&&(a17==9)))&&(a28==9))){
+branch  0 taken 20987 (fallthrough)
+branch  1 taken 158951
+branch  2 taken 10519 (fallthrough)
+branch  3 taken 10468
+branch  4 taken 10519 (fallthrough)
+branch  5 taken 0
+branch  6 taken 4229 (fallthrough)
+branch  7 taken 6290
+branch  8 taken 4229 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1345 (fallthrough)
+branch 11 taken 9174
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1345
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  146:	    	a25 = 0;
+    #####:  147:	    	a17 = 8;
+    #####:  148:	    	return -1;
+  179938*:  149:	    } else if(((!(a11==1)&&((a28==9)&&(((!(a19==1)&&(input==5))&&!(a25==1))&&(a21==1))))&&(a17==8))){
+branch  0 taken 158951 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 67779 (fallthrough)
+branch  3 taken 91172
+branch  4 taken 0 (fallthrough)
+branch  5 taken 67779
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  150:	    	a17 = 7;
+    #####:  151:	    	a11 = 1;
+    #####:  152:	    	a25 = 1;
+    #####:  153:	    	return -1;
+   179938:  154:	    } else if(((!(a11==1)&&(((a17==8)&&(((((a28==7)&&(a25==1))||(!(a25==1)&&(a28==7)))||((a28==8)&&(a25==1)))&&(input==3)))&&!(a19==1)))&&(a21==1))){
+branch  0 taken 158951 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 158951 (fallthrough)
+branch  3 taken 0
+branch  4 taken 9714 (fallthrough)
+branch  5 taken 149237
+branch  6 taken 8829 (fallthrough)
+branch  7 taken 885
+branch  8 taken 116454 (fallthrough)
+branch  9 taken 41612
+branch 10 taken 107625 (fallthrough)
+branch 11 taken 8829
+branch 12 taken 2171 (fallthrough)
+branch 13 taken 147066
+branch 14 taken 1927 (fallthrough)
+branch 15 taken 244
+branch 16 taken 1397 (fallthrough)
+branch 17 taken 10244
+branch 18 taken 178 (fallthrough)
+branch 19 taken 1219
+branch 20 taken 178 (fallthrough)
+branch 21 taken 0
+      178:  155:	    	a11 = 1;
+      178:  156:	    	a19 = 1;
+      178:  157:	    	a28 = 10;
+      178:  158:	    	a25 = 1;
+      178:  159:	    	return -1;
+   179760:  160:	    } else if(((a21==1)&&(!(a19==1)&&((((input==5)&&(((a28==8)&&(a25==1))||(((a25==1)&&(a28==7))||(!(a25==1)&&(a28==7)))))&&!(a11==1))&&(a17==8))))){
+branch  0 taken 179760 (fallthrough)
+branch  1 taken 0
+branch  2 taken 11120 (fallthrough)
+branch  3 taken 168640
+branch  4 taken 1441 (fallthrough)
+branch  5 taken 9679
+branch  6 taken 71 (fallthrough)
+branch  7 taken 1370
+branch  8 taken 71 (fallthrough)
+branch  9 taken 0
+branch 10 taken 117 (fallthrough)
+branch 11 taken 1324
+branch 12 taken 117 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1324 (fallthrough)
+branch 15 taken 117
+branch 16 taken 705 (fallthrough)
+branch 17 taken 619
+branch 18 taken 178 (fallthrough)
+branch 19 taken 527
+branch 20 taken 178 (fallthrough)
+branch 21 taken 0
+      178:  161:	    	a25 = 1;
+      178:  162:	    	a19 = 1;
+      178:  163:	    	a28 = 7;
+      178:  164:	    	return -1;
+  179582*:  165:	    } else if((((a17==9)&&(((a28==8)&&(((input==1)&&(a19==1))&&!(a25==1)))&&(a11==1)))&&(a21==1))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 179582
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  166:	    	a17 = 8;
+    #####:  167:	    	a19 = 0;
+    #####:  168:	    	a28 = 9;
+    #####:  169:	    	a25 = 1;
+    #####:  170:	    	return 22;
+   179582:  171:	    } else if((((a21==1)&&((a19==1)&&((a28==7)&&((a17==8)&&(!(a25==1)&&(input==3))))))&&!(a11==1))){
+branch  0 taken 179582 (fallthrough)
+branch  1 taken 0
+branch  2 taken 168640 (fallthrough)
+branch  3 taken 10942
+branch  4 taken 11188 (fallthrough)
+branch  5 taken 157452
+branch  6 taken 9257 (fallthrough)
+branch  7 taken 1931
+branch  8 taken 8372 (fallthrough)
+branch  9 taken 885
+branch 10 taken 855 (fallthrough)
+branch 11 taken 7517
+branch 12 taken 855 (fallthrough)
+branch 13 taken 0
+      855:  172:	    	a25 = 1;
+      855:  173:	    	a28 = 9;
+      855:  174:	    	return 26;
+  178727*:  175:	    } else if(((a28==11)&&(((a17==8)&&((((input==6)&&(a21==1))&&(a19==1))&&!(a25==1)))&&!(a11==1)))){
+branch  0 taken 1027 (fallthrough)
+branch  1 taken 177700
+branch  2 taken 1027 (fallthrough)
+branch  3 taken 0
+branch  4 taken 558 (fallthrough)
+branch  5 taken 469
+branch  6 taken 558 (fallthrough)
+branch  7 taken 0
+branch  8 taken 558 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 558
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  176:	    	a17 = 7;
+    #####:  177:	    	a11 = 1;
+    #####:  178:	    	a28 = 7;
+    #####:  179:	    	a25 = 1;
+    #####:  180:	    	return -1;
+   178727:  181:	    } else if(((!(a11==1)&&(((a17==8)&&((a21==1)&&((input==3)&&(a28==8))))&&(a19==1)))&&(a25==1))){
+branch  0 taken 157740 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 157740 (fallthrough)
+branch  3 taken 0
+branch  4 taken 157740 (fallthrough)
+branch  5 taken 0
+branch  6 taken 6183 (fallthrough)
+branch  7 taken 151557
+branch  8 taken 310 (fallthrough)
+branch  9 taken 5873
+branch 10 taken 310 (fallthrough)
+branch 11 taken 0
+branch 12 taken 310 (fallthrough)
+branch 13 taken 0
+      310:  182:	    	a28 = 10;
+      310:  183:	    	a19 = 0;
+      310:  184:	    	return 26;
+   178417:  185:	    } else if((((a21==1)&&(((a19==1)&&(((((a25==1)&&(a28==7))||((a28==7)&&!(a25==1)))||((a25==1)&&(a28==8)))&&(input==4)))&&(a11==1)))&&(a17==9))){
+branch  0 taken 178417 (fallthrough)
+branch  1 taken 0
+branch  2 taken 167475 (fallthrough)
+branch  3 taken 10942
+branch  4 taken 48348 (fallthrough)
+branch  5 taken 119127
+branch  6 taken 45532 (fallthrough)
+branch  7 taken 2816
+branch  8 taken 7517 (fallthrough)
+branch  9 taken 157142
+branch 10 taken 0 (fallthrough)
+branch 11 taken 7517
+branch 12 taken 45532 (fallthrough)
+branch 13 taken 111610
+branch 14 taken 1617 (fallthrough)
+branch 15 taken 43915
+branch 16 taken 7455 (fallthrough)
+branch 17 taken 4495
+branch 18 taken 228 (fallthrough)
+branch 19 taken 7227
+branch 20 taken 0 (fallthrough)
+branch 21 taken 228
+    #####:  186:	    	a17 = 8;
+    #####:  187:	    	a25 = 1;
+    #####:  188:	    	a11 = 0;
+    #####:  189:	    	a28 = 8;
+    #####:  190:	    	return -1;
+   178417:  191:	    } else if((((!(a11==1)&&((a17==8)&&(((input==4)&&(a19==1))&&(a28==8))))&&(a21==1))&&(a25==1))){
+branch  0 taken 157430 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 157430 (fallthrough)
+branch  3 taken 0
+branch  4 taken 89573 (fallthrough)
+branch  5 taken 67857
+branch  6 taken 89505 (fallthrough)
+branch  7 taken 68
+branch  8 taken 788 (fallthrough)
+branch  9 taken 88717
+branch 10 taken 788 (fallthrough)
+branch 11 taken 0
+branch 12 taken 788 (fallthrough)
+branch 13 taken 0
+      788:  192:	    	return 22;
+   177629:  193:	    } else if(((a19==1)&&((((((input==4)&&(a21==1))&&(a28==9))&&!(a25==1))&&!(a11==1))&&(a17==8)))){
+branch  0 taken 166687 (fallthrough)
+branch  1 taken 10942
+branch  2 taken 90062 (fallthrough)
+branch  3 taken 76625
+branch  4 taken 90062 (fallthrough)
+branch  5 taken 0
+branch  6 taken 33532 (fallthrough)
+branch  7 taken 56530
+branch  8 taken 33229 (fallthrough)
+branch  9 taken 303
+branch 10 taken 32648 (fallthrough)
+branch 11 taken 581
+branch 12 taken 32648 (fallthrough)
+branch 13 taken 0
+    32648:  194:	    	return 22;
+   144981:  195:	    } else if(((a17==8)&&((((((input==1)&&(a21==1))&&!(a11==1))&&(a19==1))&&!(a25==1))&&(a28==9)))){
+branch  0 taken 140481 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 25628 (fallthrough)
+branch  3 taken 114853
+branch  4 taken 25628 (fallthrough)
+branch  5 taken 0
+branch  6 taken 17787 (fallthrough)
+branch  7 taken 7841
+branch  8 taken 17787 (fallthrough)
+branch  9 taken 0
+branch 10 taken 16714 (fallthrough)
+branch 11 taken 1073
+branch 12 taken 16714 (fallthrough)
+branch 13 taken 0
+    16714:  196:	    	return 23;
+   128267:  197:	    } else if((((((((input==4)&&((a25==1)||!(a25==1)))&&!(a11==1))&&(a21==1))&&(a17==8))&&(a28==10))&&(a19==1))){
+branch  0 taken 59710 (fallthrough)
+branch  1 taken 68557
+branch  2 taken 33611 (fallthrough)
+branch  3 taken 26099
+branch  4 taken 33611 (fallthrough)
+branch  5 taken 0
+branch  6 taken 56137 (fallthrough)
+branch  7 taken 3573
+branch  8 taken 56137 (fallthrough)
+branch  9 taken 0
+branch 10 taken 56137 (fallthrough)
+branch 11 taken 0
+branch 12 taken 49306 (fallthrough)
+branch 13 taken 6831
+branch 14 taken 49277 (fallthrough)
+branch 15 taken 29
+    49277:  198:	    	a25 = 1;
+    49277:  199:	    	return 22;
+   78990*:  200:	    } else if(((!(a25==1)&&((a11==1)&&((a28==8)&&(((a17==9)&&(input==4))&&(a19==1)))))&&(a21==1))){
+branch  0 taken 55482 (fallthrough)
+branch  1 taken 23508
+branch  2 taken 14388 (fallthrough)
+branch  3 taken 41094
+branch  4 taken 0 (fallthrough)
+branch  5 taken 14388
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  201:	    	a17 = 7;
+    #####:  202:	    	a11 = 0;
+    #####:  203:	    	return 22;
+    78990:  204:	    } else if((!(a19==1)&&((a17==8)&&((a28==10)&&(((a25==1)&&(!(a11==1)&&(input==5)))&&(a21==1)))))){
+branch  0 taken 10942 (fallthrough)
+branch  1 taken 68048
+branch  2 taken 8373 (fallthrough)
+branch  3 taken 2569
+branch  4 taken 129 (fallthrough)
+branch  5 taken 8244
+branch  6 taken 129 (fallthrough)
+branch  7 taken 0
+branch  8 taken 129 (fallthrough)
+branch  9 taken 0
+branch 10 taken 37 (fallthrough)
+branch 11 taken 92
+branch 12 taken 37 (fallthrough)
+branch 13 taken 0
+       37:  205:	    	a19 = 1;
+       37:  206:	    	a28 = 11;
+       37:  207:	    	return 23;
+    78953:  208:	    } else if((((((a21==1)&&((input==1)&&((!(a25==1)&&(a28==8))||((a25==1)&&(a28==9)))))&&(a17==8))&&!(a11==1))&&(a19==1))){
+branch  0 taken 78953 (fallthrough)
+branch  1 taken 0
+branch  2 taken 11073 (fallthrough)
+branch  3 taken 67880
+branch  4 taken 6889 (fallthrough)
+branch  5 taken 4184
+branch  6 taken 6889 (fallthrough)
+branch  7 taken 0
+branch  8 taken 4184 (fallthrough)
+branch  9 taken 6889
+branch 10 taken 1569 (fallthrough)
+branch 11 taken 2615
+branch 12 taken 1435 (fallthrough)
+branch 13 taken 134
+branch 14 taken 291 (fallthrough)
+branch 15 taken 1144
+branch 16 taken 291 (fallthrough)
+branch 17 taken 0
+      291:  209:	    	if((a11==1)){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 291
+    #####:  210:	    		a19 = 0;
+    #####:  211:	    		a25 = 0;
+    #####:  212:	    		a28 = 9;
+        -:  213:	    	}else{
+      291:  214:	    		a25 = 1;
+      291:  215:	    		a28 = 9;
+        -:  216:	    	}  
+      291:  217:	    	return 23;
+    78662:  218:	    } else if(((a21==1)&&((((a19==1)&&((a25==1)&&((a28==11)&&(input==6))))&&!(a11==1))&&(a17==8)))){
+branch  0 taken 78662 (fallthrough)
+branch  1 taken 0
+branch  2 taken 67757 (fallthrough)
+branch  3 taken 10905
+branch  4 taken 22779 (fallthrough)
+branch  5 taken 44978
+branch  6 taken 1027 (fallthrough)
+branch  7 taken 21752
+branch  8 taken 558 (fallthrough)
+branch  9 taken 469
+branch 10 taken 558 (fallthrough)
+branch 11 taken 0
+branch 12 taken 558 (fallthrough)
+branch 13 taken 0
+      558:  219:	    	a28 = 10;
+      558:  220:	    	return -1;
+    78104:  221:	    } else if((!(a11==1)&&((a19==1)&&((a28==10)&&(((((a25==1)||!(a25==1))&&(input==5))&&(a17==8))&&(a21==1)))))){
+branch  0 taken 57117 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 56680 (fallthrough)
+branch  3 taken 437
+branch  4 taken 28854 (fallthrough)
+branch  5 taken 27826
+branch  6 taken 15272 (fallthrough)
+branch  7 taken 13582
+branch  8 taken 15272 (fallthrough)
+branch  9 taken 0
+branch 10 taken 7359 (fallthrough)
+branch 11 taken 21495
+branch 12 taken 7359 (fallthrough)
+branch 13 taken 0
+branch 14 taken 7359 (fallthrough)
+branch 15 taken 0
+     7359:  222:	    	a25 = 1;
+     7359:  223:	    	return -1;
+   70745*:  224:	    } else if((((((a17==9)&&((((a25==1)||!(a25==1))&&(input==6))&&(a11==1)))&&(a19==1))&&(a21==1))&&(a28==9))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 70745
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  225:	    	a17 = 8;
+    #####:  226:	    	a28 = 8;
+    #####:  227:	    	a25 = 1;
+    #####:  228:	    	return -1;
+    70745:  229:	    } else if((((a17==8)&&(((((input==6)&&(a25==1))&&!(a19==1))&&!(a11==1))&&(a28==10)))&&(a21==1))){
+branch  0 taken 66245 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 25411 (fallthrough)
+branch  3 taken 40834
+branch  4 taken 7633 (fallthrough)
+branch  5 taken 17778
+branch  6 taken 53 (fallthrough)
+branch  7 taken 7580
+branch  8 taken 53 (fallthrough)
+branch  9 taken 0
+branch 10 taken 53 (fallthrough)
+branch 11 taken 0
+branch 12 taken 53 (fallthrough)
+branch 13 taken 0
+       53:  230:	    	return 26;
+   70692*:  231:	    } else if(((!(a19==1)&&((a17==8)&&(!(a11==1)&&((input==1)&&((((a28==10)&&!(a25==1))||((a25==1)&&(a28==11)))||(!(a25==1)&&(a28==11)))))))&&(a21==1))){
+branch  0 taken 10852 (fallthrough)
+branch  1 taken 59840
+branch  2 taken 8283 (fallthrough)
+branch  3 taken 2569
+branch  4 taken 384 (fallthrough)
+branch  5 taken 7899
+branch  6 taken 0 (fallthrough)
+branch  7 taken 384
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  232:	    	a28 = 7;
+    #####:  233:	    	a25 = 1;
+    #####:  234:	    	a19 = 1;
+    #####:  235:	    	a17 = 7;
+    #####:  236:	    	a11 = 1;
+    #####:  237:	    	return 22;
+   70692*:  238:	    } else if((((((((input==1)&&(a21==1))&&(a28==9))&&!(a19==1))&&!(a25==1))&&(a17==8))&&!(a11==1))){
+branch  0 taken 10782 (fallthrough)
+branch  1 taken 59910
+branch  2 taken 10782 (fallthrough)
+branch  3 taken 0
+branch  4 taken 3283 (fallthrough)
+branch  5 taken 7499
+branch  6 taken 134 (fallthrough)
+branch  7 taken 3149
+branch  8 taken 0 (fallthrough)
+branch  9 taken 134
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  239:	    	return 23;
+    70692:  240:	    } else if(((a17==8)&&(((!(a11==1)&&((!(a25==1)&&(input==4))&&(a19==1)))&&(a28==7))&&(a21==1)))){
+branch  0 taken 66192 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 49705 (fallthrough)
+branch  3 taken 16487
+branch  4 taken 37212 (fallthrough)
+branch  5 taken 12493
+branch  6 taken 6053 (fallthrough)
+branch  7 taken 31159
+branch  8 taken 6014 (fallthrough)
+branch  9 taken 39
+branch 10 taken 6014 (fallthrough)
+branch 11 taken 0
+branch 12 taken 6014 (fallthrough)
+branch 13 taken 0
+     6014:  241:	    	a28 = 9;
+     6014:  242:	    	return 23;
+    64678:  243:	    } else if((!(a11==1)&&(((a17==8)&&((((!(a25==1)&&(a28==11))||((!(a25==1)&&(a28==10))||((a28==11)&&(a25==1))))&&(input==3))&&(a21==1)))&&!(a19==1)))){
+branch  0 taken 43691 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 43691 (fallthrough)
+branch  3 taken 0
+branch  4 taken 31198 (fallthrough)
+branch  5 taken 12493
+branch  6 taken 31198 (fallthrough)
+branch  7 taken 0
+branch  8 taken 31198 (fallthrough)
+branch  9 taken 12493
+branch 10 taken 19808 (fallthrough)
+branch 11 taken 11390
+branch 12 taken 469 (fallthrough)
+branch 13 taken 31832
+branch 14 taken 469 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1723 (fallthrough)
+branch 17 taken 10136
+branch 18 taken 1723 (fallthrough)
+branch 19 taken 0
+branch 20 taken 0 (fallthrough)
+branch 21 taken 1723
+    #####:  244:	    	if((a25==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  245:	    		a19 = 1;
+    #####:  246:	    		a28 = 7;
+    #####:  247:	    		a25 = 1;
+    #####:  248:	    		a11 = 1;
+        -:  249:	    	}else{
+    #####:  250:	    		a28 = 7;
+    #####:  251:	    		a25 = 1;
+        -:  252:	    	}  
+    #####:  253:	    	return -1;
+    64678:  254:	    } else if(((((!(a11==1)&&(((!(a25==1)&&(a28==8))||((a25==1)&&(a28==9)))&&(input==5)))&&(a21==1))&&!(a19==1))&&(a17==8))){
+branch  0 taken 43691 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 31198 (fallthrough)
+branch  3 taken 12493
+branch  4 taken 30954 (fallthrough)
+branch  5 taken 244
+branch  6 taken 12493 (fallthrough)
+branch  7 taken 30954
+branch  8 taken 166 (fallthrough)
+branch  9 taken 12327
+branch 10 taken 106 (fallthrough)
+branch 11 taken 304
+branch 12 taken 106 (fallthrough)
+branch 13 taken 0
+branch 14 taken 71 (fallthrough)
+branch 15 taken 35
+branch 16 taken 71 (fallthrough)
+branch 17 taken 0
+       71:  255:	    	a25 = 1;
+       71:  256:	    	a19 = 1;
+       71:  257:	    	a28 = 7;
+       71:  258:	    	return -1;
+   64607*:  259:	    } else if((((a17==9)&&(((((input==1)&&((a25==1)||!(a25==1)))&&(a11==1))&&(a21==1))&&(a19==1)))&&(a28==9))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 64607
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  260:	    	a28 = 7;
+    #####:  261:	    	a17 = 8;
+    #####:  262:	    	a25 = 0;
+    #####:  263:	    	a11 = 0;
+    #####:  264:	    	return -1;
+    64607:  265:	    } else if((!(a11==1)&&((a19==1)&&(((((a28==9)&&(input==6))&&(a21==1))&&(a17==8))&&!(a25==1))))){
+branch  0 taken 43620 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 43307 (fallthrough)
+branch  3 taken 313
+branch  4 taken 18126 (fallthrough)
+branch  5 taken 25181
+branch  6 taken 8739 (fallthrough)
+branch  7 taken 9387
+branch  8 taken 8739 (fallthrough)
+branch  9 taken 0
+branch 10 taken 8739 (fallthrough)
+branch 11 taken 0
+branch 12 taken 8739 (fallthrough)
+branch 13 taken 0
+     8739:  266:	    	return 23;
+   55868*:  267:	    } else if(((a17==9)&&((a21==1)&&((a11==1)&&(((input==3)&&(((a25==1)&&(a28==8))||(((a28==7)&&(a25==1))||(!(a25==1)&&(a28==7)))))&&(a19==1)))))){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 55868
+branch  2 never executed (fallthrough)
+branch  3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  268:	    	if((a19==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  269:	    		a25 = 0;
+    #####:  270:	    		a19 = 0;
+    #####:  271:	    		a17 = 7;
+    #####:  272:	    		a28 = 9;
+    #####:  273:	    		a11 = 0;
+        -:  274:	    	}else{
+    #####:  275:	    		a19 = 0;
+    #####:  276:	    		a11 = 0;
+    #####:  277:	    		a28 = 10;
+    #####:  278:	    		a25 = 1;
+    #####:  279:	    		a17 = 7;
+        -:  280:	    	}  
+    #####:  281:	    	return 23;
+    55868:  282:	    } else if(((a28==7)&&((a17==8)&&(!(a25==1)&&((a21==1)&&((a19==1)&&((input==5)&&!(a11==1)))))))){
+branch  0 taken 12319 (fallthrough)
+branch  1 taken 43549
+branch  2 taken 10388 (fallthrough)
+branch  3 taken 1931
+branch  4 taken 9503 (fallthrough)
+branch  5 taken 885
+branch  6 taken 9503 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1503 (fallthrough)
+branch  9 taken 8000
+branch 10 taken 864 (fallthrough)
+branch 11 taken 639
+branch 12 taken 864 (fallthrough)
+branch 13 taken 0
+      864:  283:	    	a25 = 1;
+      864:  284:	    	a28 = 8;
+      864:  285:	    	return 21;
+    55004:  286:	    } else if(((a28==8)&&((a21==1)&&((!(a11==1)&&(((input==1)&&(a17==8))&&(a19==1)))&&(a25==1))))){
+branch  0 taken 1002 (fallthrough)
+branch  1 taken 54002
+branch  2 taken 1002 (fallthrough)
+branch  3 taken 0
+branch  4 taken 1002 (fallthrough)
+branch  5 taken 0
+branch  6 taken 553 (fallthrough)
+branch  7 taken 449
+branch  8 taken 553 (fallthrough)
+branch  9 taken 0
+branch 10 taken 553 (fallthrough)
+branch 11 taken 0
+branch 12 taken 553 (fallthrough)
+branch 13 taken 0
+      553:  287:	    	a28 = 10;
+      553:  288:	    	return 26;
+    54451:  289:	    } else if((((((a17==8)&&(((input==6)&&((a25==1)||!(a25==1)))&&(a21==1)))&&(a28==10))&&!(a11==1))&&(a19==1))){
+branch  0 taken 49951 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 16619 (fallthrough)
+branch  3 taken 33332
+branch  4 taken 9039 (fallthrough)
+branch  5 taken 7580
+branch  6 taken 9039 (fallthrough)
+branch  7 taken 0
+branch  8 taken 16619 (fallthrough)
+branch  9 taken 0
+branch 10 taken 13580 (fallthrough)
+branch 11 taken 3039
+branch 12 taken 13109 (fallthrough)
+branch 13 taken 471
+branch 14 taken 13109 (fallthrough)
+branch 15 taken 0
+    13109:  290:	    	a25 = 0;
+    13109:  291:	    	return 22;
+   41342*:  292:	    } else if(((!(a11==1)&&((!(a19==1)&&(((!(a25==1)&&(a28==11))||(((a28==10)&&!(a25==1))||((a25==1)&&(a28==11))))&&(input==5)))&&(a17==8)))&&(a21==1))){
+branch  0 taken 20355 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 313 (fallthrough)
+branch  3 taken 20042
+branch  4 taken 274 (fallthrough)
+branch  5 taken 39
+branch  6 taken 274 (fallthrough)
+branch  7 taken 0
+branch  8 taken 39 (fallthrough)
+branch  9 taken 274
+branch 10 taken 39 (fallthrough)
+branch 11 taken 0
+branch 12 taken 39 (fallthrough)
+branch 13 taken 274
+branch 14 taken 0 (fallthrough)
+branch 15 taken 39
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  293:	    	a25 = 0;
+    #####:  294:	    	a19 = 1;
+    #####:  295:	    	a28 = 9;
+    #####:  296:	    	return -1;
+    41342:  297:	    } else if(((a17==8)&&(((a21==1)&&(!(a11==1)&&((a25==1)&&((a28==8)&&(input==6)))))&&(a19==1)))){
+branch  0 taken 36842 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 36842 (fallthrough)
+branch  3 taken 0
+branch  4 taken 20355 (fallthrough)
+branch  5 taken 16487
+branch  6 taken 5729 (fallthrough)
+branch  7 taken 14626
+branch  8 taken 276 (fallthrough)
+branch  9 taken 5453
+branch 10 taken 173 (fallthrough)
+branch 11 taken 103
+branch 12 taken 173 (fallthrough)
+branch 13 taken 0
+      173:  298:	    	return 26;
+    41169:  299:	    } else if((((a19==1)&&((a17==8)&&(((!(a25==1)&&(input==5))&&(a21==1))&&!(a11==1))))&&(a28==11))){
+branch  0 taken 30388 (fallthrough)
+branch  1 taken 10781
+branch  2 taken 28457 (fallthrough)
+branch  3 taken 1931
+branch  4 taken 18581 (fallthrough)
+branch  5 taken 9876
+branch  6 taken 4281 (fallthrough)
+branch  7 taken 14300
+branch  8 taken 4281 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4044 (fallthrough)
+branch 11 taken 237
+branch 12 taken 0 (fallthrough)
+branch 13 taken 4044
+    #####:  300:	    	a28 = 7;
+    #####:  301:	    	a25 = 1;
+    #####:  302:	    	return -1;
+   41169*:  303:	    } else if(((a11==1)&&(((a17==9)&&((a28==9)&&((a19==1)&&(((a25==1)||!(a25==1))&&(input==5)))))&&(a21==1)))){
+branch  0 taken 20987 (fallthrough)
+branch  1 taken 20182
+branch  2 taken 0 (fallthrough)
+branch  3 taken 20987
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  304:	    	if((a11==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  305:	    		a25 = 0;
+    #####:  306:	    		a17 = 8;
+        -:  307:	    	}else{
+    #####:  308:	    		a28 = 7;
+    #####:  309:	    		a25 = 0;
+    #####:  310:	    		a11 = 0;
+    #####:  311:	    		a19 = 0;
+    #####:  312:	    		a17 = 8;
+        -:  313:	    	}  
+    #####:  314:	    	return 25;
+   41169*:  315:	    } else if((((((((input==3)&&(a19==1))&&(a21==1))&&(a17==8))&&!(a25==1))&&(a28==11))&&!(a11==1))){
+branch  0 taken 5960 (fallthrough)
+branch  1 taken 35209
+branch  2 taken 5960 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5960 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5960 (fallthrough)
+branch  7 taken 0
+branch  8 taken 4098 (fallthrough)
+branch  9 taken 1862
+branch 10 taken 0 (fallthrough)
+branch 11 taken 4098
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  316:	    	a25 = 1;
+    #####:  317:	    	a11 = 1;
+    #####:  318:	    	a28 = 10;
+    #####:  319:	    	return -1;
+    41169:  320:	    } else if(((a19==1)&&((a21==1)&&((((input==5)&&(((a25==1)&&(a28==8))||(((a28==7)&&(a25==1))||(!(a25==1)&&(a28==7)))))&&(a11==1))&&(a17==9))))){
+branch  0 taken 30388 (fallthrough)
+branch  1 taken 10781
+branch  2 taken 30388 (fallthrough)
+branch  3 taken 0
+branch  4 taken 4853 (fallthrough)
+branch  5 taken 25535
+branch  6 taken 572 (fallthrough)
+branch  7 taken 4281
+branch  8 taken 506 (fallthrough)
+branch  9 taken 66
+branch 10 taken 133 (fallthrough)
+branch 11 taken 4654
+branch 12 taken 0 (fallthrough)
+branch 13 taken 133
+branch 14 taken 4281 (fallthrough)
+branch 15 taken 373
+branch 16 taken 0 (fallthrough)
+branch 17 taken 4281
+branch 18 taken 114 (fallthrough)
+branch 19 taken 85
+branch 20 taken 0 (fallthrough)
+branch 21 taken 114
+    #####:  321:	    	if((a25==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  322:	    		a11 = 0;
+    #####:  323:	    		a19 = 0;
+    #####:  324:	    		a25 = 1;
+    #####:  325:	    		a28 = 10;
+    #####:  326:	    		a17 = 8;
+        -:  327:	    	}else{
+    #####:  328:	    		a17 = 8;
+    #####:  329:	    		a25 = 1;
+    #####:  330:	    		a11 = 0;
+    #####:  331:	    		a28 = 8;
+        -:  332:	    	}  
+    #####:  333:	    	return 22;
+    41169:  334:	    } else if((((a19==1)&&(((!(a11==1)&&(((a25==1)||!(a25==1))&&(input==3)))&&(a28==10))&&(a21==1)))&&(a17==8))){
+branch  0 taken 30388 (fallthrough)
+branch  1 taken 10781
+branch  2 taken 19869 (fallthrough)
+branch  3 taken 10519
+branch  4 taken 14352 (fallthrough)
+branch  5 taken 5517
+branch  6 taken 14352 (fallthrough)
+branch  7 taken 0
+branch  8 taken 5873 (fallthrough)
+branch  9 taken 13996
+branch 10 taken 3345 (fallthrough)
+branch 11 taken 2528
+branch 12 taken 3345 (fallthrough)
+branch 13 taken 0
+branch 14 taken 3345 (fallthrough)
+branch 15 taken 0
+     3345:  335:	    	a25 = 0;
+     3345:  336:	    	return -1;
+   37824*:  337:	    } else if(((!(a11==1)&&(((((input==4)&&(a17==8))&&!(a25==1))&&(a21==1))&&(a28==11)))&&(a19==1))){
+branch  0 taken 16837 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 846 (fallthrough)
+branch  3 taken 15991
+branch  4 taken 846 (fallthrough)
+branch  5 taken 0
+branch  6 taken 39 (fallthrough)
+branch  7 taken 807
+branch  8 taken 39 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 39
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  338:	    	if((a11==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  339:	    		a28 = 8;
+    #####:  340:	    		a19 = 0;
+        -:  341:	    	} 
+    #####:  342:	    	return 22;
+   37824*:  343:	    } else if((((!(a19==1)&&(((input==4)&&(((!(a25==1)&&(a28==10))||((a28==11)&&(a25==1)))||(!(a25==1)&&(a28==11))))&&(a21==1)))&&(a17==8))&&!(a11==1))){
+branch  0 taken 10781 (fallthrough)
+branch  1 taken 27043
+branch  2 taken 2296 (fallthrough)
+branch  3 taken 8485
+branch  4 taken 2229 (fallthrough)
+branch  5 taken 67
+branch  6 taken 1929 (fallthrough)
+branch  7 taken 300
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1996
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 taken 1929 (fallthrough)
+branch 13 taken 67
+branch 14 taken 0 (fallthrough)
+branch 15 taken 1929
+branch 16 taken 300 (fallthrough)
+branch 17 taken 0
+branch 18 taken 0 (fallthrough)
+branch 19 taken 300
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  344:	    	if((a17==7)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  345:	    		a25 = 0;
+    #####:  346:	    		a28 = 9;
+        -:  347:	    	}else{
+    #####:  348:	    		a11 = 1;
+    #####:  349:	    		a17 = 7;
+    #####:  350:	    		a28 = 10;
+    #####:  351:	    		a25 = 0;
+    #####:  352:	    		a19 = 1;
+        -:  353:	    	}  
+    #####:  354:	    	return -1;
+    37824:  355:	    } else if((!(a11==1)&&(((a17==8)&&((((a25==1)&&(input==4))&&(a19==1))&&(a28==11)))&&(a21==1)))){
+branch  0 taken 16837 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 16837 (fallthrough)
+branch  3 taken 0
+branch  4 taken 3934 (fallthrough)
+branch  5 taken 12903
+branch  6 taken 807 (fallthrough)
+branch  7 taken 3127
+branch  8 taken 778 (fallthrough)
+branch  9 taken 29
+branch 10 taken 353 (fallthrough)
+branch 11 taken 425
+branch 12 taken 353 (fallthrough)
+branch 13 taken 0
+      353:  356:	    	a28 = 9;
+      353:  357:	    	a11 = 1;
+      353:  358:	    	a25 = 0;
+      353:  359:	    	return -1;
+    37471:  360:	    } else if((((((a21==1)&&((((a28==8)&&!(a25==1))||((a28==9)&&(a25==1)))&&(input==6)))&&!(a11==1))&&!(a19==1))&&(a17==8))){
+branch  0 taken 37471 (fallthrough)
+branch  1 taken 0
+branch  2 taken 276 (fallthrough)
+branch  3 taken 37195
+branch  4 taken 103 (fallthrough)
+branch  5 taken 173
+branch  6 taken 16395 (fallthrough)
+branch  7 taken 20903
+branch  8 taken 2945 (fallthrough)
+branch  9 taken 13450
+branch 10 taken 716 (fallthrough)
+branch 11 taken 2402
+branch 12 taken 74 (fallthrough)
+branch 13 taken 642
+branch 14 taken 74 (fallthrough)
+branch 15 taken 0
+branch 16 taken 74 (fallthrough)
+branch 17 taken 0
+       74:  361:	    	a19 = 1;
+       74:  362:	    	a11 = 1;
+       74:  363:	    	a17 = 7;
+       74:  364:	    	a28 = 7;
+       74:  365:	    	a25 = 1;
+       74:  366:	    	return -1;
+   37397*:  367:	    } else if(((a19==1)&&((((a21==1)&&((!(a25==1)&&(input==3))&&(a17==9)))&&(a28==8))&&(a11==1)))){
+branch  0 taken 26690 (fallthrough)
+branch  1 taken 10707
+branch  2 taken 26690 (fallthrough)
+branch  3 taken 0
+branch  4 taken 16858 (fallthrough)
+branch  5 taken 9832
+branch  6 taken 2375 (fallthrough)
+branch  7 taken 14483
+branch  8 taken 0 (fallthrough)
+branch  9 taken 2375
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  368:	    	a25 = 1;
+    #####:  369:	    	a11 = 0;
+    #####:  370:	    	a17 = 8;
+    #####:  371:	    	a28 = 7;
+    #####:  372:	    	a19 = 0;
+    #####:  373:	    	return -1;
+    37397:  374:	    } else if(((a17==8)&&(((a21==1)&&(((input==5)&&((!(a25==1)&&(a28==8))||((a28==9)&&(a25==1))))&&(a19==1)))&&!(a11==1)))){
+branch  0 taken 32897 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 32897 (fallthrough)
+branch  3 taken 0
+branch  4 taken 5266 (fallthrough)
+branch  5 taken 27631
+branch  6 taken 4808 (fallthrough)
+branch  7 taken 458
+branch  8 taken 4808 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4479 (fallthrough)
+branch 11 taken 787
+branch 12 taken 198 (fallthrough)
+branch 13 taken 4281
+branch 14 taken 198 (fallthrough)
+branch 15 taken 0
+branch 16 taken 35 (fallthrough)
+branch 17 taken 163
+       35:  375:	    	a11 = 1;
+       35:  376:	    	a19 = 0;
+       35:  377:	    	a25 = 1;
+       35:  378:	    	a17 = 7;
+       35:  379:	    	a28 = 9;
+       35:  380:	    	return -1;
+    37362:  381:	    } else if(((a19==1)&&(((((a17==8)&&((input==5)&&!(a11==1)))&&(a21==1))&&(a25==1))&&(a28==8)))){
+branch  0 taken 26655 (fallthrough)
+branch  1 taken 10707
+branch  2 taken 24724 (fallthrough)
+branch  3 taken 1931
+branch  4 taken 4704 (fallthrough)
+branch  5 taken 20020
+branch  6 taken 4212 (fallthrough)
+branch  7 taken 492
+branch  8 taken 4212 (fallthrough)
+branch  9 taken 0
+branch 10 taken 168 (fallthrough)
+branch 11 taken 4044
+branch 12 taken 66 (fallthrough)
+branch 13 taken 102
+       66:  382:	    	a28 = 11;
+       66:  383:	    	return 23;
+    37296:  384:	    } else if((((!(a11==1)&&((((a21==1)&&(input==4))&&(a28==10))&&(a17==8)))&&!(a19==1))&&(a25==1))){
+branch  0 taken 16309 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 16309 (fallthrough)
+branch  3 taken 0
+branch  4 taken 493 (fallthrough)
+branch  5 taken 15816
+branch  6 taken 29 (fallthrough)
+branch  7 taken 464
+branch  8 taken 29 (fallthrough)
+branch  9 taken 0
+branch 10 taken 29 (fallthrough)
+branch 11 taken 0
+branch 12 taken 29 (fallthrough)
+branch 13 taken 0
+       29:  385:	    	return 22;
+   37267*:  386:	    } else if(((a28==8)&&(((a19==1)&&((a11==1)&&(!(a25==1)&&((a17==9)&&(input==6)))))&&(a21==1)))){
+branch  0 taken 136 (fallthrough)
+branch  1 taken 37131
+branch  2 taken 37 (fallthrough)
+branch  3 taken 99
+branch  4 taken 0 (fallthrough)
+branch  5 taken 37
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  387:	    	if((a25==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  388:	    		a17 = 8;
+    #####:  389:	    		a11 = 0;
+        -:  390:	    	}else{
+    #####:  391:	    		a28 = 11;
+    #####:  392:	    		a17 = 7;
+        -:  393:	    	}  
+    #####:  394:	    	return 21;
+   37267*:  395:	    } else if((!(a11==1)&&((((a21==1)&&((input==6)&&((((a28==10)&&!(a25==1))||((a25==1)&&(a28==11)))||(!(a25==1)&&(a28==11)))))&&(a17==8))&&!(a19==1)))){
+branch  0 taken 16280 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 16280 (fallthrough)
+branch  3 taken 0
+branch  4 taken 105 (fallthrough)
+branch  5 taken 16175
+branch  6 taken 0 (fallthrough)
+branch  7 taken 105
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 105 (fallthrough)
+branch 11 taken 0
+branch 12 taken 105 (fallthrough)
+branch 13 taken 0
+branch 14 taken 0 (fallthrough)
+branch 15 taken 105
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    #####:  396:	    	a28 = 11;
+    #####:  397:	    	a19 = 1;
+    #####:  398:	    	a25 = 1;
+    #####:  399:	    	return 22;
+    37267:  400:	    } else if((((((!(a25==1)&&((a19==1)&&(input==3)))&&(a28==9))&&(a21==1))&&(a17==8))&&!(a11==1))){
+branch  0 taken 27217 (fallthrough)
+branch  1 taken 10050
+branch  2 taken 16858 (fallthrough)
+branch  3 taken 10359
+branch  4 taken 2375 (fallthrough)
+branch  5 taken 14483
+branch  6 taken 2375 (fallthrough)
+branch  7 taken 0
+branch  8 taken 2375 (fallthrough)
+branch  9 taken 0
+branch 10 taken 2375 (fallthrough)
+branch 11 taken 0
+branch 12 taken 2375 (fallthrough)
+branch 13 taken 0
+     2375:  401:	    	a19 = 0;
+     2375:  402:	    	a28 = 7;
+     2375:  403:	    	return 25;
+    34892:  404:	    } else if((((a17==8)&&((((input==4)&&(((a28==8)&&!(a25==1))||((a25==1)&&(a28==9))))&&(a21==1))&&!(a19==1)))&&!(a11==1))){
+branch  0 taken 30392 (fallthrough)
+branch  1 taken 4500
+branch  2 taken 3471 (fallthrough)
+branch  3 taken 26921
+branch  4 taken 39 (fallthrough)
+branch  5 taken 3432
+branch  6 taken 0 (fallthrough)
+branch  7 taken 39
+branch  8 taken 961 (fallthrough)
+branch  9 taken 2471
+branch 10 taken 303 (fallthrough)
+branch 11 taken 658
+branch 12 taken 342 (fallthrough)
+branch 13 taken 0
+branch 14 taken 39 (fallthrough)
+branch 15 taken 303
+branch 16 taken 39 (fallthrough)
+branch 17 taken 0
+       39:  405:	    	a28 = 8;
+       39:  406:	    	a25 = 0;
+       39:  407:	    	return 22;
+    34853:  408:	    } else if((((!(a11==1)&&((((a19==1)&&(input==5))&&(a17==8))&&(a21==1)))&&(a28==9))&&!(a25==1))){
+branch  0 taken 13866 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 13695 (fallthrough)
+branch  3 taken 171
+branch  4 taken 4146 (fallthrough)
+branch  5 taken 9549
+branch  6 taken 4146 (fallthrough)
+branch  7 taken 0
+branch  8 taken 4146 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4044 (fallthrough)
+branch 11 taken 102
+branch 12 taken 4044 (fallthrough)
+branch 13 taken 0
+     4044:  409:	    	return 21;
+   30809*:  410:	    } else if((((a11==1)&&((a19==1)&&((a21==1)&&(((a17==9)&&(input==5))&&!(a25==1)))))&&(a28==8))){
+branch  0 taken 20987 (fallthrough)
+branch  1 taken 9822
+branch  2 taken 10519 (fallthrough)
+branch  3 taken 10468
+branch  4 taken 10519 (fallthrough)
+branch  5 taken 0
+branch  6 taken 0 (fallthrough)
+branch  7 taken 10519
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  411:	    	a17 = 7;
+    #####:  412:	    	return -1;
+    30809:  413:	    } else if((!(a11==1)&&((a21==1)&&(((a19==1)&&((a17==8)&&((a25==1)&&(input==5))))&&(a28==11))))){
+branch  0 taken 9822 (fallthrough)
+branch  1 taken 20987
+branch  2 taken 9822 (fallthrough)
+branch  3 taken 0
+branch  4 taken 9651 (fallthrough)
+branch  5 taken 171
+branch  6 taken 9651 (fallthrough)
+branch  7 taken 0
+branch  8 taken 3441 (fallthrough)
+branch  9 taken 6210
+branch 10 taken 102 (fallthrough)
+branch 11 taken 3339
+branch 12 taken 83 (fallthrough)
+branch 13 taken 19
+       83:  414:	    	return -1;
+    30726:  415:	    } else if(((a19==1)&&((a17==8)&&(((((!(a25==1)&&(a28==8))||((a25==1)&&(a28==9)))&&(input==3))&&!(a11==1))&&(a21==1))))){
+branch  0 taken 20087 (fallthrough)
+branch  1 taken 10639
+branch  2 taken 18156 (fallthrough)
+branch  3 taken 1931
+branch  4 taken 10439 (fallthrough)
+branch  5 taken 7717
+branch  6 taken 10439 (fallthrough)
+branch  7 taken 0
+branch  8 taken 7717 (fallthrough)
+branch  9 taken 10439
+branch 10 taken 2601 (fallthrough)
+branch 11 taken 5116
+branch 12 taken 186 (fallthrough)
+branch 13 taken 2415
+branch 14 taken 99 (fallthrough)
+branch 15 taken 87
+branch 16 taken 99 (fallthrough)
+branch 17 taken 0
+       99:  416:	    	a25 = 0;
+       99:  417:	    	a28 = 10;
+       99:  418:	    	return 22;
+        -:  419:	    } 
+    30627:  420:	   if((((((!(a25==1)&&(a11==1))&&(a28==7))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 20759 (fallthrough)
+branch  1 taken 9868
+branch  2 taken 14388 (fallthrough)
+branch  3 taken 6371
+branch  4 taken 7899 (fallthrough)
+branch  5 taken 6489
+branch  6 taken 7899 (fallthrough)
+branch  7 taken 0
+branch  8 taken 7899 (fallthrough)
+branch  9 taken 0
+branch 10 taken 7899 (fallthrough)
+branch 11 taken 0
+     7899:  421:	    	return -1;
+        -:  422:	    } 
+    22728:  423:	    if(((((((a25==1)&&(a11==1))&&(a28==10))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 9868 (fallthrough)
+branch  1 taken 12860
+branch  2 taken 6599 (fallthrough)
+branch  3 taken 3269
+branch  4 taken 1889 (fallthrough)
+branch  5 taken 4710
+branch  6 taken 1889 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1889 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1889 (fallthrough)
+branch 11 taken 0
+     1889:  424:	    	return -1;
+        -:  425:	    } 
+    20839:  426:	    if(((((((a25==1)&&!(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 7979 (fallthrough)
+branch  1 taken 12860
+branch  2 taken 3269 (fallthrough)
+branch  3 taken 4710
+branch  4 taken 885 (fallthrough)
+branch  5 taken 2384
+branch  6 taken 885 (fallthrough)
+branch  7 taken 0
+branch  8 taken 885 (fallthrough)
+branch  9 taken 0
+branch 10 taken 885 (fallthrough)
+branch 11 taken 0
+      885:  427:	    	return -1;
+        -:  428:	    } 
+    19954:  429:	    if(((((((a25==1)&&(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 7094 (fallthrough)
+branch  1 taken 12860
+branch  2 taken 4710 (fallthrough)
+branch  3 taken 2384
+branch  4 taken 1931 (fallthrough)
+branch  5 taken 2779
+branch  6 taken 1931 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1931 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1931 (fallthrough)
+branch 11 taken 0
+     1931:  430:	    	return -1;
+        -:  431:	    } 
+    18023:  432:	    if(((((((a25==1)&&(a11==1))&&(a28==9))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 5163 (fallthrough)
+branch  1 taken 12860
+branch  2 taken 2779 (fallthrough)
+branch  3 taken 2384
+branch  4 taken 2779 (fallthrough)
+branch  5 taken 0
+branch  6 taken 2470 (fallthrough)
+branch  7 taken 309
+branch  8 taken 2470 (fallthrough)
+branch  9 taken 0
+branch 10 taken 2470 (fallthrough)
+branch 11 taken 0
+     2470:  433:	    	return -1;
+        -:  434:	    } 
+    15553:  435:	    if(((((((a25==1)&&(a11==1))&&(a28==9))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2693 (fallthrough)
+branch  1 taken 12860
+branch  2 taken 309 (fallthrough)
+branch  3 taken 2384
+branch  4 taken 309 (fallthrough)
+branch  5 taken 0
+branch  6 taken 309 (fallthrough)
+branch  7 taken 0
+branch  8 taken 309 (fallthrough)
+branch  9 taken 0
+branch 10 taken 309 (fallthrough)
+branch 11 taken 0
+      309:  436:	    	return -1;
+        -:  437:	    } 
+    15244:  438:	    if((((((!(a25==1)&&(a11==1))&&(a28==10))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 12860 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6489 (fallthrough)
+branch  3 taken 6371
+branch  4 taken 2260 (fallthrough)
+branch  5 taken 4229
+branch  6 taken 2260 (fallthrough)
+branch  7 taken 0
+branch  8 taken 2260 (fallthrough)
+branch  9 taken 0
+branch 10 taken 2260 (fallthrough)
+branch 11 taken 0
+     2260:  439:	    	return -1;
+        -:  440:	    } 
+    12984:  441:	    if((((((!(a25==1)&&(a11==1))&&(a28==9))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 10600 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 4229 (fallthrough)
+branch  3 taken 6371
+branch  4 taken 4229 (fallthrough)
+branch  5 taken 0
+branch  6 taken 4229 (fallthrough)
+branch  7 taken 0
+branch  8 taken 4229 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4229 (fallthrough)
+branch 11 taken 0
+     4229:  442:	    	return -1;
+        -:  443:	    } 
+    8755*:  444:	    if((((((!(a25==1)&&(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  445:	    	return -1;
+        -:  446:	    } 
+    8755*:  447:	    if(((((((a25==1)&&(a11==1))&&(a28==8))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  448:	    	return -1;
+        -:  449:	    } 
+    8755*:  450:	    if(((((((a25==1)&&(a11==1))&&(a28==11))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  451:	    	return -1;
+        -:  452:	    } 
+    8755*:  453:	    if(((((((a25==1)&&!(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 2384
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  454:	    	return -1;
+        -:  455:	    } 
+    8755*:  456:	    if((((((!(a25==1)&&(a11==1))&&(a28==8))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  457:	    	return -1;
+        -:  458:	    } 
+     8755:  459:	    if(((((((a25==1)&&!(a11==1))&&(a28==10))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2282 (fallthrough)
+branch  5 taken 102
+branch  6 taken 10 (fallthrough)
+branch  7 taken 2272
+branch  8 taken 10 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 10
+    #####:  460:	    	return -1;
+        -:  461:	    } 
+     8755:  462:	    if(((((((a25==1)&&!(a11==1))&&(a28==11))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 33 (fallthrough)
+branch  5 taken 2351
+branch  6 taken 33 (fallthrough)
+branch  7 taken 0
+branch  8 taken 33 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 33
+    #####:  463:	    	return -1;
+        -:  464:	    } 
+     8755:  465:	    if(((((((a25==1)&&!(a11==1))&&(a28==8))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 37 (fallthrough)
+branch  5 taken 2347
+branch  6 taken 37 (fallthrough)
+branch  7 taken 0
+branch  8 taken 37 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 37
+    #####:  466:	    	return -1;
+        -:  467:	    } 
+    8755*:  468:	    if((((((!(a25==1)&&!(a11==1))&&(a28==8))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 60 (fallthrough)
+branch  5 taken 6311
+branch  6 taken 0 (fallthrough)
+branch  7 taken 60
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  469:	    	return -1;
+        -:  470:	    } 
+    8755*:  471:	    if((((((!(a25==1)&&!(a11==1))&&(a28==9))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2802 (fallthrough)
+branch  5 taken 3569
+branch  6 taken 0 (fallthrough)
+branch  7 taken 2802
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  472:	    	return -1;
+        -:  473:	    } 
+     8755:  474:	    if((((((!(a25==1)&&!(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 740 (fallthrough)
+branch  5 taken 5631
+branch  6 taken 639 (fallthrough)
+branch  7 taken 101
+branch  8 taken 639 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 639
+    #####:  475:	    	return -1;
+        -:  476:	    } 
+    8755*:  477:	    if((((((!(a25==1)&&(a11==1))&&(a28==8))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  478:	    	return -1;
+        -:  479:	    } 
+    8755*:  480:	    if((((((!(a25==1)&&(a11==1))&&(a28==9))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  481:	    	return -1;
+        -:  482:	    } 
+    8755*:  483:	    if(((((((a25==1)&&!(a11==1))&&(a28==7))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 2384
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  484:	    	return -1;
+        -:  485:	    } 
+    8755*:  486:	    if((((((!(a25==1)&&(a11==1))&&(a28==11))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  487:	    	return -1;
+        -:  488:	    } 
+    8755*:  489:	    if((((((!(a25==1)&&(a11==1))&&(a28==8))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  490:	    	return -1;
+        -:  491:	    } 
+    8755*:  492:	    if(((((((a25==1)&&(a11==1))&&(a28==10))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  493:	    	return -1;
+        -:  494:	    } 
+    8755*:  495:	    if((((((!(a25==1)&&(a11==1))&&(a28==9))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  496:	    	return -1;
+        -:  497:	    } 
+    8755*:  498:	    if(((((((a25==1)&&(a11==1))&&(a28==11))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  499:	    	return -1;
+        -:  500:	    } 
+    8755*:  501:	    if(((((((a25==1)&&(a11==1))&&(a28==8))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  502:	    	return -1;
+        -:  503:	    } 
+     8755:  504:	    if((((((!(a25==1)&&!(a11==1))&&(a28==8))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 60 (fallthrough)
+branch  5 taken 6311
+branch  6 taken 60 (fallthrough)
+branch  7 taken 0
+branch  8 taken 60 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 60
+    #####:  505:	    	return -1;
+        -:  506:	    } 
+    8755*:  507:	    if(((((((a25==1)&&(a11==1))&&(a28==8))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  508:	    	return -1;
+        -:  509:	    } 
+    8755*:  510:	    if(((((((a25==1)&&(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  511:	    	return -1;
+        -:  512:	    } 
+    8755*:  513:	    if((((((!(a25==1)&&(a11==1))&&(a28==10))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  514:	    	return -1;
+        -:  515:	    } 
+    8755*:  516:	    if(((((((a25==1)&&(a11==1))&&(a28==8))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  517:	    	return -1;
+        -:  518:	    } 
+     8755:  519:	    if((((((!(a25==1)&&!(a11==1))&&(a28==9))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2802 (fallthrough)
+branch  5 taken 3569
+branch  6 taken 2802 (fallthrough)
+branch  7 taken 0
+branch  8 taken 2802 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 2802
+    #####:  520:	    	return -1;
+        -:  521:	    } 
+    8755*:  522:	    if((((((!(a25==1)&&(a11==1))&&(a28==7))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  523:	    	return -1;
+        -:  524:	    } 
+    8755*:  525:	    if(((((((a25==1)&&!(a11==1))&&(a28==8))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 37 (fallthrough)
+branch  5 taken 2347
+branch  6 taken 0 (fallthrough)
+branch  7 taken 37
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  526:	    	return -1;
+        -:  527:	    } 
+    8755*:  528:	    if((((((!(a25==1)&&(a11==1))&&(a28==9))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  529:	    	return -1;
+        -:  530:	    } 
+    8755*:  531:	    if((((((!(a25==1)&&(a11==1))&&(a28==8))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  532:	    	return -1;
+        -:  533:	    } 
+    8755*:  534:	    if(((((((a25==1)&&(a11==1))&&(a28==11))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  535:	    	return -1;
+        -:  536:	    } 
+    8755*:  537:	    if(((((((a25==1)&&!(a11==1))&&(a28==11))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 33 (fallthrough)
+branch  5 taken 2351
+branch  6 taken 0 (fallthrough)
+branch  7 taken 33
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  538:	    	return -1;
+        -:  539:	    } 
+    8755*:  540:	    if(((((((a25==1)&&(a11==1))&&(a28==7))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  541:	    	return -1;
+        -:  542:	    } 
+    8755*:  543:	    if((((((!(a25==1)&&(a11==1))&&(a28==11))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  544:	    	return -1;
+        -:  545:	    } 
+    8755*:  546:	    if((((((!(a25==1)&&(a11==1))&&(a28==10))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  547:	    	return -1;
+        -:  548:	    } 
+    8755*:  549:	    if((((((!(a25==1)&&!(a11==1))&&(a28==11))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 6371
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  550:	    	return -1;
+        -:  551:	    } 
+    8755*:  552:	    if(((((((a25==1)&&(a11==1))&&(a28==7))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  553:	    	return -1;
+        -:  554:	    } 
+    8755*:  555:	    if(((((((a25==1)&&(a11==1))&&(a28==10))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  556:	    	return -1;
+        -:  557:	    } 
+    8755*:  558:	    if((((((!(a25==1)&&(a11==1))&&(a28==11))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  559:	    	return -1;
+        -:  560:	    } 
+     8755:  561:	    if((((((!(a25==1)&&!(a11==1))&&(a28==7))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 740 (fallthrough)
+branch  5 taken 5631
+branch  6 taken 101 (fallthrough)
+branch  7 taken 639
+branch  8 taken 101 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 101
+    #####:  562:	    	return -1;
+        -:  563:	    } 
+    8755*:  564:	    if(((((((a25==1)&&(a11==1))&&(a28==9))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  565:	    	return -1;
+        -:  566:	    } 
+    8755*:  567:	    if(((((((a25==1)&&(a11==1))&&(a28==10))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  568:	    	return -1;
+        -:  569:	    } 
+    8755*:  570:	    if((((((!(a25==1)&&!(a11==1))&&(a28==11))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 6371
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  571:	    	return -1;
+        -:  572:	    } 
+    8755*:  573:	    if((((((!(a25==1)&&!(a11==1))&&(a28==10))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2769 (fallthrough)
+branch  5 taken 3602
+branch  6 taken 0 (fallthrough)
+branch  7 taken 2769
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  574:	    	return -1;
+        -:  575:	    } 
+     8755:  576:	    if(((((((a25==1)&&!(a11==1))&&(a28==9))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 32 (fallthrough)
+branch  5 taken 2352
+branch  6 taken 32 (fallthrough)
+branch  7 taken 0
+branch  8 taken 32 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 32
+    #####:  577:	    	return -1;
+        -:  578:	    } 
+     8755:  579:	    if(((((((a25==1)&&!(a11==1))&&(a28==10))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2282 (fallthrough)
+branch  5 taken 102
+branch  6 taken 2272 (fallthrough)
+branch  7 taken 10
+branch  8 taken 2272 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 2272
+    #####:  580:	    	return -1;
+        -:  581:	    } 
+    8755*:  582:	    if((((((!(a25==1)&&(a11==1))&&(a28==7))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  583:	    	return -1;
+        -:  584:	    } 
+     8755:  585:	    if((((((!(a25==1)&&!(a11==1))&&(a28==10))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 6371 (fallthrough)
+branch  3 taken 0
+branch  4 taken 2769 (fallthrough)
+branch  5 taken 3602
+branch  6 taken 2769 (fallthrough)
+branch  7 taken 0
+branch  8 taken 2769 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 2769
+    #####:  586:	    	return -1;
+        -:  587:	    } 
+    8755*:  588:	    if((((((!(a25==1)&&(a11==1))&&(a28==11))&&(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  589:	    	return -1;
+        -:  590:	    } 
+    8755*:  591:	    if(((((((a25==1)&&(a11==1))&&(a28==9))&&!(a19==1))&&(a21==1))&&(a17==8))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  592:	    	return -1;
+        -:  593:	    } 
+    8755*:  594:	    if(((((((a25==1)&&(a11==1))&&(a28==11))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2384
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  595:	    	return -1;
+        -:  596:	    } 
+    8755*:  597:	    if((((((!(a25==1)&&(a11==1))&&(a28==10))&&(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 6371 (fallthrough)
+branch  1 taken 2384
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6371
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  598:	    	return -1;
+        -:  599:	    } 
+    8755*:  600:	    if(((((((a25==1)&&!(a11==1))&&(a28==9))&&!(a19==1))&&(a21==1))&&(a17==7))){
+branch  0 taken 2384 (fallthrough)
+branch  1 taken 6371
+branch  2 taken 2384 (fallthrough)
+branch  3 taken 0
+branch  4 taken 32 (fallthrough)
+branch  5 taken 2352
+branch  6 taken 0 (fallthrough)
+branch  7 taken 32
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  601:	    	return -1;
+        -:  602:	    } 
+     8755:  603:	    return -2; 
+        -:  604:	}
+        -:  605:
+        -:  606:int input, output;
+        -:  607:
+function main called 16339 returned 0% blocks executed 86%
+    16339:  608:int main()
+        -:  609:{
+    16339:  610:kappa = 0;
+        -:  611:    // default output
+    16339:  612:    int output = -1;
+        -:  613:
+        -:  614:    // main i/o-loop
+        -:  615:    int symb;
+   246842:  616:   for (int FLAG=0;FLAG<BOUND;FLAG++)
+branch  0 taken 246842
+branch  1 taken 0 (fallthrough)
+        -:  617:    {
+   246842:  618:    klee_make_symbolic(&symb, sizeof(int ), "symb");     
+call    0 returned 230503
+        -:  619:
+        -:  620:        // operate eca engine
+   230503:  621:        output = calculate_output(symb);
+call    0 returned 230503
+        -:  622:
+        -:  623:        }
+    #####:  624:    return 0;
+        -:  625:
+        -:  626:}
+        -:  627: 

@@ -1,0 +1,4366 @@
+        -:    0:Source:replay-source/93Wtest12-B6_replay.c
+        -:    0:Graph:93Wtest12-B6_replay.gcno
+        -:    0:Data:93Wtest12-B6_replay.gcda
+        -:    0:Runs:44125
+        -:    1://This program is Problem11.c
+        -:    2:#include <assert.h>
+        -:    3:#include <math.h>
+        -:    4:#include<stdio.h>
+        -:    5:#ifdef LLBMC
+        -:    6:#include <llbmc.h>
+        -:    7:#else
+        -:    8:#include <klee/klee.h>
+        -:    9:#endif
+        -:   10:
+        -:   11:#define BOUND 6
+        -:   12:
+        -:   13:	// inputs
+        -:   14:	int inputA = 1;
+        -:   15:	int inputD = 4;
+        -:   16:	int inputB = 2;
+        -:   17:	int inputE = 5;
+        -:   18:	int inputF = 6;
+        -:   19:	int inputC = 3;
+        -:   20:
+        -:   21:
+        -:   22:	 int a29 = 130;
+        -:   23:	 int a4 = 1;
+        -:   24:	 int a23 = 312;
+        -:   25:	 int a8 = 15;
+        -:   26:	 int a25 = 10;
+        -:   27:	 int a3 = 1;
+        -:   28:         int kappa;
+function calculate_output called 264750 returned 100% blocks executed 77%
+   264750:   29:	int calculate_output(int input) {
+   264750:   30:		if(((((( a29 <=  140  && (a4==1)) && (a25==10)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 69921 (fallthrough)
+branch  1 taken 194829
+branch  2 taken 62512 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 54278 (fallthrough)
+branch  5 taken 8234
+branch  6 taken 54278 (fallthrough)
+branch  7 taken 0
+branch  8 taken 22 (fallthrough)
+branch  9 taken 54256
+branch 10 taken 22 (fallthrough)
+branch 11 taken 0
+       22:   31:		return -1;
+        -:   32:		}
+   264728:   33:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 157314 (fallthrough)
+branch  1 taken 107414
+branch  2 taken 78707 (fallthrough)
+branch  3 taken 78607
+branch  4 taken 63544 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 4944 (fallthrough)
+branch  7 taken 58600
+branch  8 taken 4944 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4944 (fallthrough)
+branch 11 taken 0
+branch 12 taken 22 (fallthrough)
+branch 13 taken 4922
+branch 14 taken 22 (fallthrough)
+branch 15 taken 0
+       22:   34:		return -1;
+        -:   35:		}
+   264706:   36:		if(((((( 277 < a29  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 78607 (fallthrough)
+branch  1 taken 186099
+branch  2 taken 75021 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 25208 (fallthrough)
+branch  5 taken 49813
+branch  6 taken 25208 (fallthrough)
+branch  7 taken 0
+branch  8 taken 24467 (fallthrough)
+branch  9 taken 741
+branch 10 taken 22 (fallthrough)
+branch 11 taken 24445
+branch 12 taken 22 (fallthrough)
+branch 13 taken 0
+       22:   37:		return -1;
+        -:   38:		}
+   264684:   39:		if(((((( a29 <=  140  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 69899 (fallthrough)
+branch  1 taken 194785
+branch  2 taken 62490 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 54256 (fallthrough)
+branch  5 taken 8234
+branch  6 taken 54256 (fallthrough)
+branch  7 taken 0
+branch  8 taken 54256 (fallthrough)
+branch  9 taken 0
+branch 10 taken 22 (fallthrough)
+branch 11 taken 54234
+branch 12 taken 22 (fallthrough)
+branch 13 taken 0
+       22:   40:		return -1;
+        -:   41:		}
+   264662:   42:		if(((((( a29 <=  140  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 69877 (fallthrough)
+branch  1 taken 194785
+branch  2 taken 62468 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 32 (fallthrough)
+branch  5 taken 62436
+branch  6 taken 32 (fallthrough)
+branch  7 taken 0
+branch  8 taken 32 (fallthrough)
+branch  9 taken 0
+branch 10 taken 32 (fallthrough)
+branch 11 taken 0
+branch 12 taken 32 (fallthrough)
+branch 13 taken 0
+       32:   43:		return -1;
+        -:   44:		}
+   264630:   45:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 157270 (fallthrough)
+branch  1 taken 107360
+branch  2 taken 78685 (fallthrough)
+branch  3 taken 78585
+branch  4 taken 63522 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 4922 (fallthrough)
+branch  7 taken 58600
+branch  8 taken 4922 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4922 (fallthrough)
+branch 11 taken 0
+branch 12 taken 459 (fallthrough)
+branch 13 taken 4463
+branch 14 taken 459 (fallthrough)
+branch 15 taken 0
+      459:   46:		return -1;
+        -:   47:		}
+   264171:   48:		if(((((( a29 <=  140  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 69845 (fallthrough)
+branch  1 taken 194326
+branch  2 taken 62436 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 7461 (fallthrough)
+branch  5 taken 54975
+branch  6 taken 7461 (fallthrough)
+branch  7 taken 0
+branch  8 taken 7461 (fallthrough)
+branch  9 taken 0
+branch 10 taken 20 (fallthrough)
+branch 11 taken 7441
+branch 12 taken 20 (fallthrough)
+branch 13 taken 0
+       20:   49:		return -1;
+        -:   50:		}
+   264151:   51:		if(((((( 277 < a29  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 78585 (fallthrough)
+branch  1 taken 185566
+branch  2 taken 74999 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 24358 (fallthrough)
+branch  5 taken 50641
+branch  6 taken 24358 (fallthrough)
+branch  7 taken 0
+branch  8 taken 24358 (fallthrough)
+branch  9 taken 0
+branch 10 taken 20 (fallthrough)
+branch 11 taken 24338
+branch 12 taken 20 (fallthrough)
+branch 13 taken 0
+       20:   52:		return -1;
+        -:   53:		}
+   264131:   54:		if(((((( 277 < a29  && (a4==1)) && (a25==10)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 78565 (fallthrough)
+branch  1 taken 185566
+branch  2 taken 74979 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 23718 (fallthrough)
+branch  5 taken 51261
+branch  6 taken 23718 (fallthrough)
+branch  7 taken 0
+branch  8 taken 240 (fallthrough)
+branch  9 taken 23478
+branch 10 taken 240 (fallthrough)
+branch 11 taken 0
+      240:   55:		return -1;
+        -:   56:		}
+   263891:   57:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==13)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 194066 (fallthrough)
+branch  1 taken 69825
+branch  2 taken 37515 (fallthrough)
+branch  3 taken 156551
+branch  4 taken 35713 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 19248 (fallthrough)
+branch  7 taken 16465
+branch  8 taken 19248 (fallthrough)
+branch  9 taken 0
+branch 10 taken 240 (fallthrough)
+branch 11 taken 19008
+branch 12 taken 240 (fallthrough)
+branch 13 taken 0
+      240:   58:		return -1;
+        -:   59:		}
+   263651:   60:		if(((((( 277 < a29  && (a4==1)) && (a25==9)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 78325 (fallthrough)
+branch  1 taken 185326
+branch  2 taken 74739 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 25186 (fallthrough)
+branch  5 taken 49553
+branch  6 taken 25186 (fallthrough)
+branch  7 taken 0
+branch  8 taken 741 (fallthrough)
+branch  9 taken 24445
+branch 10 taken 741 (fallthrough)
+branch 11 taken 0
+      741:   61:		return -1;
+        -:   62:		}
+   262910:   63:		if(((((( a29 <=  140  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 69825 (fallthrough)
+branch  1 taken 193085
+branch  2 taken 62416 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 741 (fallthrough)
+branch  5 taken 61675
+branch  6 taken 741 (fallthrough)
+branch  7 taken 0
+branch  8 taken 741 (fallthrough)
+branch  9 taken 0
+branch 10 taken 741 (fallthrough)
+branch 11 taken 0
+branch 12 taken 741 (fallthrough)
+branch 13 taken 0
+      741:   64:		return -1;
+        -:   65:		}
+   262169:   66:		if(((((( 277 < a29  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 77584 (fallthrough)
+branch  1 taken 184585
+branch  2 taken 73998 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 1737 (fallthrough)
+branch  5 taken 72261
+branch  6 taken 1737 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1737 (fallthrough)
+branch  9 taken 0
+branch 10 taken 91 (fallthrough)
+branch 11 taken 1646
+branch 12 taken 91 (fallthrough)
+branch 13 taken 0
+       91:   67:		return -1;
+        -:   68:		}
+   262078:   69:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 155719 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78226 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 63063 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 29341 (fallthrough)
+branch  7 taken 33722
+branch  8 taken 29341 (fallthrough)
+branch  9 taken 0
+branch 10 taken 29299 (fallthrough)
+branch 11 taken 42
+branch 12 taken 42 (fallthrough)
+branch 13 taken 29257
+branch 14 taken 42 (fallthrough)
+branch 15 taken 0
+       42:   70:		return -1;
+        -:   71:		}
+   262036:   72:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 155677 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78184 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 63021 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 29299 (fallthrough)
+branch  7 taken 33722
+branch  8 taken 29299 (fallthrough)
+branch  9 taken 0
+branch 10 taken 29299 (fallthrough)
+branch 11 taken 0
+branch 12 taken 42 (fallthrough)
+branch 13 taken 29257
+branch 14 taken 42 (fallthrough)
+branch 15 taken 0
+       42:   73:		return -1;
+        -:   74:		}
+  261994*:   75:		if(((((( a29 <=  140  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:   76:		return -1;
+        -:   77:		}
+  261994*:   78:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==10)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 14117 (fallthrough)
+branch  7 taken 48862
+branch  8 taken 14117 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 14117
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:   79:		return -1;
+        -:   80:		}
+  261994*:   81:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==12)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 7869 (fallthrough)
+branch  7 taken 27604
+branch  8 taken 7869 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 7869
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:   82:		return -1;
+        -:   83:		}
+  261994*:   84:		if(((((( a29 <=  140  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:   85:		return -1;
+        -:   86:		}
+  261994*:   87:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==12)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 15142 (fallthrough)
+branch  7 taken 47837
+branch  8 taken 15142 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 15142
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:   88:		return -1;
+        -:   89:		}
+  261994*:   90:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 3586 (fallthrough)
+branch  7 taken 31887
+branch  8 taken 3586 (fallthrough)
+branch  9 taken 0
+branch 10 taken 3586 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 3586
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:   91:		return -1;
+        -:   92:		}
+  261994*:   93:		if(((((( a29 <=  140  && (a4==1)) && (a25==9)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:   94:		return -1;
+        -:   95:		}
+  261994*:   96:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 0 (fallthrough)
+branch  7 taken 62979
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:   97:		return -1;
+        -:   98:		}
+  261994*:   99:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 14117 (fallthrough)
+branch  7 taken 48862
+branch  8 taken 14117 (fallthrough)
+branch  9 taken 0
+branch 10 taken 14117 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 14117
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  100:		return -1;
+        -:  101:		}
+  261994*:  102:		if(((((( a29 <=  140  && (a4==1)) && (a25==13)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 7441 (fallthrough)
+branch  5 taken 54234
+branch  6 taken 7441 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 7441
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  103:		return -1;
+        -:  104:		}
+  261994*:  105:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 5010 (fallthrough)
+branch  7 taken 30463
+branch  8 taken 5010 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5010 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 5010
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  106:		return -1;
+        -:  107:		}
+  261994*:  108:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 5010 (fallthrough)
+branch  7 taken 30463
+branch  8 taken 5010 (fallthrough)
+branch  9 taken 0
+branch 10 taken 5010 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 5010
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  109:		return -1;
+        -:  110:		}
+  261994*:  111:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==13)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 0 (fallthrough)
+branch  7 taken 62979
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  112:		return -1;
+        -:  113:		}
+  261994*:  114:		if(((((( 277 < a29  && (a4==1)) && (a25==13)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 1646 (fallthrough)
+branch  5 taken 72261
+branch  6 taken 1646 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1646
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  115:		return -1;
+        -:  116:		}
+  261994*:  117:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 7869 (fallthrough)
+branch  7 taken 27604
+branch  8 taken 7869 (fallthrough)
+branch  9 taken 0
+branch 10 taken 7869 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 7869
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  118:		return -1;
+        -:  119:		}
+  261994*:  120:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 14117 (fallthrough)
+branch  7 taken 48862
+branch  8 taken 14117 (fallthrough)
+branch  9 taken 0
+branch 10 taken 14117 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 14117
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  121:		return -1;
+        -:  122:		}
+  261994*:  123:		if(((((( 277 < a29  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 24445 (fallthrough)
+branch  5 taken 49462
+branch  6 taken 24445 (fallthrough)
+branch  7 taken 0
+branch  8 taken 24445 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 24445
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  124:		return -1;
+        -:  125:		}
+  261994*:  126:		if(((((( 277 < a29  && (a4==1)) && (a25==12)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 0 (fallthrough)
+branch  5 taken 73907
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  127:		return -1;
+        -:  128:		}
+  261994*:  129:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 0 (fallthrough)
+branch  7 taken 35473
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  130:		return -1;
+        -:  131:		}
+  261994*:  132:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 15142 (fallthrough)
+branch  7 taken 47837
+branch  8 taken 15142 (fallthrough)
+branch  9 taken 0
+branch 10 taken 15142 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 15142
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  133:		return -1;
+        -:  134:		}
+  261994*:  135:		if(((((( 277 < a29  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 24338 (fallthrough)
+branch  5 taken 49569
+branch  6 taken 24338 (fallthrough)
+branch  7 taken 0
+branch  8 taken 24338 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 24338
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  136:		return -1;
+        -:  137:		}
+  261994*:  138:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 7869 (fallthrough)
+branch  7 taken 27604
+branch  8 taken 7869 (fallthrough)
+branch  9 taken 0
+branch 10 taken 7869 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 7869
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  139:		return -1;
+        -:  140:		}
+  261994*:  141:		if(((((( 277 < a29  && (a4==1)) && (a25==11)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 24338 (fallthrough)
+branch  5 taken 49569
+branch  6 taken 24338 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 24338
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  142:		return -1;
+        -:  143:		}
+  261994*:  144:		if(((((( a29 <=  140  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 54234 (fallthrough)
+branch  5 taken 7441
+branch  6 taken 54234 (fallthrough)
+branch  7 taken 0
+branch  8 taken 54234 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 54234
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  145:		return -1;
+        -:  146:		}
+  261994*:  147:		if(((((( 277 < a29  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 23478 (fallthrough)
+branch  5 taken 50429
+branch  6 taken 23478 (fallthrough)
+branch  7 taken 0
+branch  8 taken 23478 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 23478
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  148:		return -1;
+        -:  149:		}
+  261994*:  150:		if(((((( 277 < a29  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 0 (fallthrough)
+branch  5 taken 73907
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  151:		return -1;
+        -:  152:		}
+  261994*:  153:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 0 (fallthrough)
+branch  7 taken 62979
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  154:		return -1;
+        -:  155:		}
+  261994*:  156:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 19008 (fallthrough)
+branch  7 taken 16465
+branch  8 taken 19008 (fallthrough)
+branch  9 taken 0
+branch 10 taken 19008 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 19008
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  157:		return -1;
+        -:  158:		}
+  261994*:  159:		if(((((( 277 < a29  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 0 (fallthrough)
+branch  5 taken 73907
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  160:		return -1;
+        -:  161:		}
+  261994*:  162:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 19008 (fallthrough)
+branch  7 taken 16465
+branch  8 taken 19008 (fallthrough)
+branch  9 taken 0
+branch 10 taken 19008 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 19008
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  163:		return -1;
+        -:  164:		}
+  261994*:  165:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 3586 (fallthrough)
+branch  7 taken 31887
+branch  8 taken 3586 (fallthrough)
+branch  9 taken 0
+branch 10 taken 3586 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 3586
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  166:		return -1;
+        -:  167:		}
+  261994*:  168:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 15142 (fallthrough)
+branch  7 taken 47837
+branch  8 taken 15142 (fallthrough)
+branch  9 taken 0
+branch 10 taken 15142 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 15142
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  169:		return -1;
+        -:  170:		}
+  261994*:  171:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==9)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 3586 (fallthrough)
+branch  7 taken 31887
+branch  8 taken 3586 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 3586
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  172:		return -1;
+        -:  173:		}
+  261994*:  174:		if(((((( a29 <=  140  && (a4==1)) && (a25==12)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  175:		return -1;
+        -:  176:		}
+  261994*:  177:		if(((((( a29 <=  140  && (a4==1)) && (a25==12)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  178:		return -1;
+        -:  179:		}
+  261994*:  180:		if(((((( a29 <=  140  && (a4==1)) && (a25==9)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  181:		return -1;
+        -:  182:		}
+  261994*:  183:		if(((((( a29 <=  140  && (a4==1)) && (a25==11)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  184:		return -1;
+        -:  185:		}
+  261994*:  186:		if(((((( 277 < a29  && (a4==1)) && (a25==10)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 23478 (fallthrough)
+branch  5 taken 50429
+branch  6 taken 23478 (fallthrough)
+branch  7 taken 0
+branch  8 taken 23478 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 23478
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  187:		return -1;
+        -:  188:		}
+  261994*:  189:		if(((((( a29 <=  140  && (a4==1)) && (a25==9)) && (a3==1)) &&  306 < a23 ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61675
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    #####:  190:		return -1;
+        -:  191:		}
+  261994*:  192:		if(((((( 277 < a29  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 77493 (fallthrough)
+branch  1 taken 184501
+branch  2 taken 73907 (fallthrough)
+branch  3 taken 3586
+branch  4 taken 1646 (fallthrough)
+branch  5 taken 72261
+branch  6 taken 1646 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1646 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1646
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  193:		return -1;
+        -:  194:		}
+  261994*:  195:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==11)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 4463 (fallthrough)
+branch  7 taken 58516
+branch  8 taken 4463 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 4463
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  196:		return -1;
+        -:  197:		}
+  261994*:  198:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==11)) && (a3==1)) &&   ((138 < a23) && (306 >= a23)) ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 0 (fallthrough)
+branch  7 taken 35473
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  199:		return -1;
+        -:  200:		}
+  261994*:  201:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==11)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 0 (fallthrough)
+branch  7 taken 35473
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  202:		return -1;
+        -:  203:		}
+  261994*:  204:		if((((((  ((140 < a29) && (245 >= a29))  && (a4==1)) && (a25==10)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 35473 (fallthrough)
+branch  5 taken 1802
+branch  6 taken 5010 (fallthrough)
+branch  7 taken 30463
+branch  8 taken 5010 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 5010
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  205:		return -1;
+        -:  206:		}
+  261994*:  207:		if(((((( a29 <=  140  && (a4==1)) && (a25==13)) && (a3==1)) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15))){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192910
+branch  2 taken 61675 (fallthrough)
+branch  3 taken 7409
+branch  4 taken 7441 (fallthrough)
+branch  5 taken 54234
+branch  6 taken 7441 (fallthrough)
+branch  7 taken 0
+branch  8 taken 7441 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 7441
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  208:		return -1;
+        -:  209:		}
+  261994*:  210:		if((((((  ((245 < a29) && (277 >= a29))  && (a4==1)) && (a25==9)) && (a3==1)) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 155635 (fallthrough)
+branch  1 taken 106359
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77493
+branch  4 taken 62979 (fallthrough)
+branch  5 taken 15163
+branch  6 taken 29257 (fallthrough)
+branch  7 taken 33722
+branch  8 taken 29257 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 29257
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  211:		return -1;
+        -:  212:		}
+        -:  213:
+   261994:  214:	    if(((  ((140 < a29) && (245 >= a29))  && ((a25==12) && ( a23 <=  -43  && ((a8==15) && ((input == 6) && (a3==1)))))) && !(a4==1))){
+branch  0 taken 192910 (fallthrough)
+branch  1 taken 69084
+branch  2 taken 37275 (fallthrough)
+branch  3 taken 155635
+branch  4 taken 9671 (fallthrough)
+branch  5 taken 27604
+branch  6 taken 1802 (fallthrough)
+branch  7 taken 7869
+branch  8 taken 1802 (fallthrough)
+branch  9 taken 0
+branch 10 taken 26 (fallthrough)
+branch 11 taken 1776
+branch 12 taken 26 (fallthrough)
+branch 13 taken 0
+branch 14 taken 26 (fallthrough)
+branch 15 taken 0
+       26:  215:	    	a29 = (((((a29 - 289151) % 15)- -275) - 470904) + 470889);
+       26:  216:	    	a23 = ((((a23 / 5) - 37070) % 90)- -122);
+       26:  217:	    		a4 = 1; 
+       26:  218:	    		a25 = 9; 
+        -:  219:
+       26:  220:	    	 return -1;
+  261968*:  221:	    } else if((!(a4==1) && (((a3==1) && ((((((a25==13) &&   ((140 < a29) && (245 >= a29)) ) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) )) || (  ((245 < a29) && (277 >= a29))  && (a25==10))) && (input == 4)) &&  a23 <=  -43 )) && (a8==15)))){
+branch  0 taken 27934 (fallthrough)
+branch  1 taken 234034
+branch  2 taken 27934 (fallthrough)
+branch  3 taken 0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 27934
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 3944 (fallthrough)
+branch 11 taken 23990
+branch 12 taken 3586 (fallthrough)
+branch 13 taken 358
+branch 14 taken 3586 (fallthrough)
+branch 15 taken 0
+branch 16 taken 18749 (fallthrough)
+branch 17 taken 9185
+branch 18 taken 15163 (fallthrough)
+branch 19 taken 3586
+branch 20 taken 0 (fallthrough)
+branch 21 taken 15163
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  222:	    	a29 = ((((((a29 % 52)- -187) * 9)/ 10) - 397575) + 397600);
+    #####:  223:	    	a23 = ((((a23 - -296917) * 1) % 299846)- -300152);
+    #####:  224:	    		a4 = 1; 
+    #####:  225:	    		a25 = 13; 
+        -:  226:
+    #####:  227:	    	 return 25;
+  261968*:  228:	    } else if(((a25==11) && (!(a4==1) && (((((input == 2) && (a3==1)) &&  a23 <=  -43 ) && (a8==15)) &&   ((245 < a29) && (277 >= a29)) )))){
+branch  0 taken 29369 (fallthrough)
+branch  1 taken 232599
+branch  2 taken 568 (fallthrough)
+branch  3 taken 28801
+branch  4 taken 94 (fallthrough)
+branch  5 taken 474
+branch  6 taken 94 (fallthrough)
+branch  7 taken 0
+branch  8 taken 94 (fallthrough)
+branch  9 taken 0
+branch 10 taken 94 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 94
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  229:	    	a23 = (((((a23 - -225688) * 1) * 1) % 299846)- -300152);
+    #####:  230:	    		a4 = 1; 
+    #####:  231:	    		a25 = 10; 
+        -:  232:
+    #####:  233:	    	 return 25;
+   261968:  234:	    } else if(((( a29 <=  140  && ((a3==1) && (((input == 5) && (a25==13)) && (a4==1)))) && (a8==15)) &&  306 < a23 )){
+branch  0 taken 69084 (fallthrough)
+branch  1 taken 192884
+branch  2 taken 69084 (fallthrough)
+branch  3 taken 0
+branch  4 taken 12516 (fallthrough)
+branch  5 taken 56568
+branch  6 taken 31 (fallthrough)
+branch  7 taken 12485
+branch  8 taken 31 (fallthrough)
+branch  9 taken 0
+branch 10 taken 31 (fallthrough)
+branch 11 taken 0
+branch 12 taken 31 (fallthrough)
+branch 13 taken 0
+       31:  235:	    	a29 = ((((a29 + 355924) * 1) % 15)+ 262);
+       31:  236:	    	a23 = (((((a23 % 83)+ 162) + -17) / 5) + 170);
+       31:  237:	    		a25 = 9; 
+        -:  238:
+       31:  239:	    	 return -1;
+  261937*:  240:	    } else if((((a8==15) && (((((((a4==1) &&  277 < a29 ) && (a25==12)) &&  306 < a23 ) || ( 306 < a23  && (((a4==1) &&  277 < a29 ) && (a25==13)))) || ((( a29 <=  140  && !(a4==1)) && (a25==9)) &&  a23 <=  -43 )) && (input == 6))) && (a3==1))){
+branch  0 taken 261937 (fallthrough)
+branch  1 taken 0
+branch  2 taken 234003 (fallthrough)
+branch  3 taken 27934
+branch  4 taken 73907 (fallthrough)
+branch  5 taken 160096
+branch  6 taken 0 (fallthrough)
+branch  7 taken 73907
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 234003 (fallthrough)
+branch 11 taken 27934
+branch 12 taken 234003 (fallthrough)
+branch 13 taken 0
+branch 14 taken 73907 (fallthrough)
+branch 15 taken 160096
+branch 16 taken 72261 (fallthrough)
+branch 17 taken 1646
+branch 18 taken 69053 (fallthrough)
+branch 19 taken 191238
+branch 20 taken 7409 (fallthrough)
+branch 21 taken 61644
+branch 22 taken 358 (fallthrough)
+branch 23 taken 7051
+branch 24 taken 358 (fallthrough)
+branch 25 taken 0
+branch 26 taken 42 (fallthrough)
+branch 27 taken 1962
+branch 28 taken 42 (fallthrough)
+branch 29 taken 0
+       42:  241:	    	a29 = ((((a29 / 5) - -25349) / 5) + 110879);
+       42:  242:	    	a23 = ((((((a23 * 9)/ 10) + 1944) + 57035) % 90)- -48);
+       42:  243:	    		a4 = 1; 
+       42:  244:	    		a25 = 9; 
+        -:  245:
+       42:  246:	    	 return -1;
+  261895*:  247:	    } else if(((((input == 4) && (( a23 <=  -43  && ((a25==9) && (!(a4==1) &&  a29 <=  140 ))) || (((( 277 < a29  && (a4==1)) && (a25==12)) &&  306 < a23 ) || ( 306 < a23  && ((a25==13) && ( 277 < a29  && (a4==1))))))) && (a8==15)) && (a3==1))){
+branch  0 taken 41686 (fallthrough)
+branch  1 taken 220209
+branch  2 taken 5004 (fallthrough)
+branch  3 taken 36682
+branch  4 taken 674 (fallthrough)
+branch  5 taken 4330
+branch  6 taken 674 (fallthrough)
+branch  7 taken 0
+branch  8 taken 658 (fallthrough)
+branch  9 taken 16
+branch 10 taken 13779 (fallthrough)
+branch 11 taken 27891
+branch 12 taken 13121 (fallthrough)
+branch 13 taken 658
+branch 14 taken 0 (fallthrough)
+branch 15 taken 13121
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 taken 36682 (fallthrough)
+branch 19 taken 4988
+branch 20 taken 4563 (fallthrough)
+branch 21 taken 32119
+branch 22 taken 26 (fallthrough)
+branch 23 taken 4537
+branch 24 taken 26 (fallthrough)
+branch 25 taken 0
+branch 26 taken 42 (fallthrough)
+branch 27 taken 0
+branch 28 taken 42 (fallthrough)
+branch 29 taken 0
+       42:  248:	    	a29 = ((((a29 / 5) % 15)+ 260) + 1);
+       42:  249:	    	a23 = (((((a23 / 5) % 90)- -47) - -159208) - 159206);
+       42:  250:	    		a4 = 1; 
+       42:  251:	    		a25 = 11; 
+        -:  252:
+       42:  253:	    	 return -1;
+  261853*:  254:	    } else if((((a3==1) && (!(a4==1) && (( a29 <=  140  && ((input == 1) && ((a25==12) || ((a25==10) || (a25==11))))) &&   ((-43 < a23) && (138 >= a23)) ))) && (a8==15))){
+branch  0 taken 261853 (fallthrough)
+branch  1 taken 0
+branch  2 taken 27902 (fallthrough)
+branch  3 taken 233951
+branch  4 taken 7377 (fallthrough)
+branch  5 taken 20525
+branch  6 taken 1193 (fallthrough)
+branch  7 taken 6184
+branch  8 taken 520 (fallthrough)
+branch  9 taken 673
+branch 10 taken 170 (fallthrough)
+branch 11 taken 350
+branch 12 taken 88 (fallthrough)
+branch 13 taken 82
+branch 14 taken 0 (fallthrough)
+branch 15 taken 1111
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  255:	    	a29 = (((((a29 % 52)- -193) / 5) / 5) - -221);
+    #####:  256:	    	a23 = (((a23 + 566446) / 5) - -123263);
+    #####:  257:	    		a4 = 1; 
+    #####:  258:	    		a25 = 12; 
+        -:  259:
+    #####:  260:	    	 return -1;
+  261853*:  261:	    } else if((((  ((245 < a29) && (277 >= a29))  && (( a23 <=  -43  && (!(a4==1) && (input == 1))) && (a25==11))) && (a8==15)) && (a3==1))){
+branch  0 taken 155583 (fallthrough)
+branch  1 taken 106270
+branch  2 taken 78142 (fallthrough)
+branch  3 taken 77441
+branch  4 taken 15163 (fallthrough)
+branch  5 taken 62979
+branch  6 taken 15163 (fallthrough)
+branch  7 taken 0
+branch  8 taken 439 (fallthrough)
+branch  9 taken 14724
+branch 10 taken 0 (fallthrough)
+branch 11 taken 439
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  262:	    	a23 = ((((a23 % 299846)- -300152) + -441356) - -571000);
+    #####:  263:	    		a4 = 1; 
+    #####:  264:	    		a25 = 9; 
+        -:  265:
+    #####:  266:	    	 return 25;
+   261853:  267:	    } else if(((((a4==1) && (((input == 1) && ((  ((245 < a29) && (277 >= a29))  && (a25==10)) || (((a25==13) &&   ((140 < a29) && (245 >= a29)) ) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) )))) && (a8==15))) &&  306 < a23 ) && (a3==1))){
+branch  0 taken 233951 (fallthrough)
+branch  1 taken 27902
+branch  2 taken 36136 (fallthrough)
+branch  3 taken 197815
+branch  4 taken 23954 (fallthrough)
+branch  5 taken 12182
+branch  6 taken 10419 (fallthrough)
+branch  7 taken 13535
+branch  8 taken 8074 (fallthrough)
+branch  9 taken 2345
+branch 10 taken 4923 (fallthrough)
+branch 11 taken 28868
+branch 12 taken 3446 (fallthrough)
+branch 13 taken 1477
+branch 14 taken 440 (fallthrough)
+branch 15 taken 3006
+branch 16 taken 9306 (fallthrough)
+branch 17 taken 21479
+branch 18 taken 9158 (fallthrough)
+branch 19 taken 148
+branch 20 taken 4627 (fallthrough)
+branch 21 taken 4531
+branch 22 taken 9978 (fallthrough)
+branch 23 taken 0
+branch 24 taken 9978 (fallthrough)
+branch 25 taken 0
+branch 26 taken 9978 (fallthrough)
+branch 27 taken 0
+     9978:  268:	    	a29 = ((((a29 + 352955) % 15)- -253) + 6);
+     9978:  269:	    		a25 = 9; 
+        -:  270:
+     9978:  271:	    	 return 24;
+   251875:  272:	    } else if((( 277 < a29  && (((a8==15) && ( a23 <=  -43  && ((input == 2) && (a3==1)))) && !(a4==1))) && (a25==13))){
+branch  0 taken 77441 (fallthrough)
+branch  1 taken 174434
+branch  2 taken 77441 (fallthrough)
+branch  3 taken 0
+branch  4 taken 3586 (fallthrough)
+branch  5 taken 73855
+branch  6 taken 658 (fallthrough)
+branch  7 taken 2928
+branch  8 taken 658 (fallthrough)
+branch  9 taken 0
+branch 10 taken 658 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 658
+    #####:  273:	    	a29 = (((a29 / 5) + -560839) + -16116);
+    #####:  274:	    	 return -1;
+   251875:  275:	    } else if(( a29 <=  140  && ((((a8==15) && ((a3==1) && ((input == 1) && ((a25==12) || (a25==13))))) && !(a4==1)) &&  a23 <=  -43 ))){
+branch  0 taken 69021 (fallthrough)
+branch  1 taken 182854
+branch  2 taken 69021 (fallthrough)
+branch  3 taken 0
+branch  4 taken 69021 (fallthrough)
+branch  5 taken 0
+branch  6 taken 8526 (fallthrough)
+branch  7 taken 60495
+branch  8 taken 7853 (fallthrough)
+branch  9 taken 673
+branch 10 taken 1477 (fallthrough)
+branch 11 taken 6376
+branch 12 taken 673 (fallthrough)
+branch 13 taken 1477
+branch 14 taken 673 (fallthrough)
+branch 15 taken 0
+      673:  276:	    	a29 = (((((a29 / 5) * 4) / 5) % 15)- -261);
+      673:  277:	    	a23 = ((((((a23 % 299846)- -300152) * 10)/ 9) / 5) - -34608);
+      673:  278:	    		a4 = 1; 
+      673:  279:	    		a25 = 9; 
+        -:  280:
+      673:  281:	    	 return 25;
+   251202:  282:	    } else if((((a4==1) && ((a8==15) && (((a3==1) && (((a25==9) || (a25==10)) && (input == 5))) &&   ((140 < a29) && (245 >= a29)) ))) &&  306 < a23 )){
+branch  0 taken 223973 (fallthrough)
+branch  1 taken 27229
+branch  2 taken 223973 (fallthrough)
+branch  3 taken 0
+branch  4 taken 223973 (fallthrough)
+branch  5 taken 0
+branch  6 taken 171312 (fallthrough)
+branch  7 taken 52661
+branch  8 taken 94494 (fallthrough)
+branch  9 taken 76818
+branch 10 taken 20435 (fallthrough)
+branch 11 taken 126720
+branch 12 taken 9239 (fallthrough)
+branch 13 taken 11196
+branch 14 taken 388 (fallthrough)
+branch 15 taken 8851
+branch 16 taken 388 (fallthrough)
+branch 17 taken 0
+      388:  283:	    	a23 = ((((a23 * -2)/ 10) * 4) * 1);
+      388:  284:	    		a25 = 13; 
+        -:  285:
+      388:  286:	    	 return -1;
+  250814*:  287:	    } else if(((a3==1) && (((((input == 5) && ((  ((245 < a29) && (277 >= a29))  && (a25==10)) || ((  ((140 < a29) && (245 >= a29))  && (a25==13)) || (  ((245 < a29) && (277 >= a29))  && (a25==9))))) && (a8==15)) && !(a4==1)) &&  a23 <=  -43 ))){
+branch  0 taken 250814 (fallthrough)
+branch  1 taken 0
+branch  2 taken 30611 (fallthrough)
+branch  3 taken 220203
+branch  4 taken 15079 (fallthrough)
+branch  5 taken 15532
+branch  6 taken 11086 (fallthrough)
+branch  7 taken 3993
+branch  8 taken 8741 (fallthrough)
+branch  9 taken 2345
+branch 10 taken 15781 (fallthrough)
+branch 11 taken 12485
+branch 12 taken 3047 (fallthrough)
+branch 13 taken 12734
+branch 14 taken 41 (fallthrough)
+branch 15 taken 3006
+branch 16 taken 12734 (fallthrough)
+branch 17 taken 12526
+branch 18 taken 8741 (fallthrough)
+branch 19 taken 3993
+branch 20 taken 4627 (fallthrough)
+branch 21 taken 4114
+branch 22 taken 9978 (fallthrough)
+branch 23 taken 0
+branch 24 taken 0 (fallthrough)
+branch 25 taken 9978
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  288:	    	a29 = ((((a29 % 15)- -258) * 1) * 1);
+    #####:  289:	    	a23 = ((((a23 * 9)/ 10) - -561577) * 1);
+    #####:  290:	    		a4 = 1; 
+    #####:  291:	    		a25 = 9; 
+        -:  292:
+    #####:  293:	    	 return 24;
+   250814:  294:	    } else if(((a8==15) && ((((!(a4==1) && (((a25==12) || (a25==13)) && (input == 4))) &&  a23 <=  -43 ) &&  a29 <=  140 ) && (a3==1)))){
+branch  0 taken 250814 (fallthrough)
+branch  1 taken 0
+branch  2 taken 27229 (fallthrough)
+branch  3 taken 223585
+branch  4 taken 6834 (fallthrough)
+branch  5 taken 20395
+branch  6 taken 0 (fallthrough)
+branch  7 taken 6834
+branch  8 taken 3892 (fallthrough)
+branch  9 taken 16503
+branch 10 taken 3892 (fallthrough)
+branch 11 taken 0
+branch 12 taken 673 (fallthrough)
+branch 13 taken 3219
+branch 14 taken 673 (fallthrough)
+branch 15 taken 0
+      673:  295:	    	a29 = (((((a29 * 9)/ 10) % 15)- -261) + -1);
+      673:  296:	    	a23 = ((((a23 % 299846)+ 300152) + 31462) / 5);
+      673:  297:	    		a4 = 1; 
+      673:  298:	    		a25 = 9; 
+        -:  299:
+      673:  300:	    	 return 25;
+  250141*:  301:	    } else if(((a8==15) && (!(a4==1) && ( a23 <=  -43  && ((a3==1) && ( 277 < a29  && (((a25==12) || ((a25==10) || (a25==11))) && (input == 6)))))))){
+branch  0 taken 250141 (fallthrough)
+branch  1 taken 0
+branch  2 taken 26556 (fallthrough)
+branch  3 taken 223585
+branch  4 taken 26556 (fallthrough)
+branch  5 taken 0
+branch  6 taken 26556 (fallthrough)
+branch  7 taken 0
+branch  8 taken 3586 (fallthrough)
+branch  9 taken 22970
+branch 10 taken 3586 (fallthrough)
+branch 11 taken 0
+branch 12 taken 3586 (fallthrough)
+branch 13 taken 0
+branch 14 taken 0 (fallthrough)
+branch 15 taken 3586
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    #####:  302:	    	a29 = ((((((a29 % 52)- -186) * 5) + -589505) % 52)+ 205);
+    #####:  303:	    		a25 = 12; 
+        -:  304:
+    #####:  305:	    	 return 26;
+   250141:  306:	    } else if(( 306 < a23  && (((a8==15) && ((a3==1) && ((a4==1) && (((a25==11) || (a25==12)) && (input == 6))))) &&   ((140 < a29) && (245 >= a29)) ))){
+branch  0 taken 223585 (fallthrough)
+branch  1 taken 26556
+branch  2 taken 223585 (fallthrough)
+branch  3 taken 0
+branch  4 taken 223585 (fallthrough)
+branch  5 taken 0
+branch  6 taken 223585 (fallthrough)
+branch  7 taken 0
+branch  8 taken 194784 (fallthrough)
+branch  9 taken 28801
+branch 10 taken 23011 (fallthrough)
+branch 11 taken 171773
+branch 12 taken 1748 (fallthrough)
+branch 13 taken 50064
+branch 14 taken 1748 (fallthrough)
+branch 15 taken 0
+branch 16 taken 15 (fallthrough)
+branch 17 taken 1733
+       15:  307:	    	a29 = ((((a29 + 107715) * 10)/ 9) - -27123);
+       15:  308:	    	a23 = ((((a23 % 90)+ -31) - 5) + 32);
+       15:  309:	    		a25 = 11; 
+        -:  310:
+       15:  311:	    	 return -1;
+   250126:  312:	    } else if(((((a8==15) && ( a29 <=  140  && ( a23 <=  -43  && ((input == 2) && ((a25==10) || (a25==11)))))) && !(a4==1)) && (a3==1))){
+branch  0 taken 250126 (fallthrough)
+branch  1 taken 0
+branch  2 taken 67675 (fallthrough)
+branch  3 taken 182451
+branch  4 taken 6031 (fallthrough)
+branch  5 taken 61644
+branch  6 taken 1265 (fallthrough)
+branch  7 taken 4766
+branch  8 taken 843 (fallthrough)
+branch  9 taken 422
+branch 10 taken 94 (fallthrough)
+branch 11 taken 749
+branch 12 taken 516 (fallthrough)
+branch 13 taken 0
+branch 14 taken 516 (fallthrough)
+branch 15 taken 0
+        -:  313:
+      516:  314:	    		a25 = 11; 
+        -:  315:
+      516:  316:	    	 return -1;
+   249610:  317:	    } else if(((a3==1) && (  ((245 < a29) && (277 >= a29))  && (((a4==1) && ((a8==15) && ((((a25==11) || (a25==12)) || (a25==13)) && (input == 5)))) &&  306 < a23 )))){
+branch  0 taken 249610 (fallthrough)
+branch  1 taken 0
+branch  2 taken 148611 (fallthrough)
+branch  3 taken 100999
+branch  4 taken 71170 (fallthrough)
+branch  5 taken 77441
+branch  6 taken 56007 (fallthrough)
+branch  7 taken 15163
+branch  8 taken 56007 (fallthrough)
+branch  9 taken 0
+branch 10 taken 51544 (fallthrough)
+branch 11 taken 4463
+branch 12 taken 36402 (fallthrough)
+branch 13 taken 15142
+branch 14 taken 0 (fallthrough)
+branch 15 taken 36402
+branch 16 taken 3675 (fallthrough)
+branch 17 taken 15930
+branch 18 taken 3675 (fallthrough)
+branch 19 taken 0
+     3675:  318:	    	a29 = (((a29 / 5) / 5) + -580303);
+     3675:  319:	    	a23 = (((a23 - 600264) + -12) / 5);
+     3675:  320:	    		a4 = 0; 
+     3675:  321:	    		a25 = 12; 
+        -:  322:
+     3675:  323:	    	 return -1;
+   245935:  324:	    } else if(((((a8==15) && (((a4==1) && ((input == 2) && ((a25==13) || ((a25==11) || (a25==12))))) &&   ((245 < a29) && (277 >= a29)) )) &&  306 < a23 ) && (a3==1))){
+branch  0 taken 245935 (fallthrough)
+branch  1 taken 0
+branch  2 taken 219895 (fallthrough)
+branch  3 taken 26040
+branch  4 taken 37396 (fallthrough)
+branch  5 taken 182499
+branch  6 taken 32665 (fallthrough)
+branch  7 taken 4731
+branch  8 taken 27648 (fallthrough)
+branch  9 taken 5017
+branch 10 taken 4639 (fallthrough)
+branch 11 taken 23009
+branch 12 taken 8071 (fallthrough)
+branch 13 taken 6316
+branch 14 taken 3447 (fallthrough)
+branch 15 taken 4624
+branch 16 taken 3447 (fallthrough)
+branch 17 taken 0
+branch 18 taken 3447 (fallthrough)
+branch 19 taken 0
+        -:  325:
+     3447:  326:	    		a25 = 12; 
+        -:  327:
+     3447:  328:	    	 return 23;
+   242488:  329:	    } else if((( 306 < a23  && ((a8==15) && ((((input == 6) && ((a25==9) || (a25==10))) &&   ((140 < a29) && (245 >= a29)) ) && (a3==1)))) && (a4==1))){
+branch  0 taken 216448 (fallthrough)
+branch  1 taken 26040
+branch  2 taken 216448 (fallthrough)
+branch  3 taken 0
+branch  4 taken 13577 (fallthrough)
+branch  5 taken 202871
+branch  6 taken 10529 (fallthrough)
+branch  7 taken 3048
+branch  8 taken 7793 (fallthrough)
+branch  9 taken 2736
+branch 10 taken 4985 (fallthrough)
+branch 11 taken 5856
+branch 12 taken 1564 (fallthrough)
+branch 13 taken 3421
+branch 14 taken 1564 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1564 (fallthrough)
+branch 17 taken 0
+     1564:  330:	    	a29 = ((((a29 % 15)+ 254) - 8) - -1);
+     1564:  331:	    	a23 = (((a23 + -292614) - 307487) + -105);
+     1564:  332:	    		a4 = 0; 
+     1564:  333:	    		a25 = 12; 
+        -:  334:
+     1564:  335:	    	 return 24;
+   240924:  336:	    } else if(((((a8==15) && (((((a25==11) || (a25==12)) && (input == 4)) &&  306 < a23 ) && (a3==1))) && (a4==1)) &&   ((140 < a29) && (245 >= a29)) )){
+branch  0 taken 240924 (fallthrough)
+branch  1 taken 0
+branch  2 taken 213171 (fallthrough)
+branch  3 taken 27753
+branch  4 taken 37118 (fallthrough)
+branch  5 taken 176053
+branch  6 taken 11709 (fallthrough)
+branch  7 taken 53162
+branch  8 taken 8402 (fallthrough)
+branch  9 taken 3307
+branch 10 taken 8402 (fallthrough)
+branch 11 taken 0
+branch 12 taken 8402 (fallthrough)
+branch 13 taken 0
+branch 14 taken 8402 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1455 (fallthrough)
+branch 17 taken 6947
+     1455:  337:	    	a29 = (((a29 * 5) * 5) - -378187);
+     1455:  338:	    		a25 = 10; 
+        -:  339:
+     1455:  340:	    	 return 24;
+  239469*:  341:	    } else if(( a23 <=  -43  && (  ((140 < a29) && (245 >= a29))  && (((a8==15) && (((input == 4) && ((a25==11) || ((a25==9) || (a25==10)))) && !(a4==1))) && (a3==1))))){
+branch  0 taken 26040 (fallthrough)
+branch  1 taken 213429
+branch  2 taken 20525 (fallthrough)
+branch  3 taken 5515
+branch  4 taken 1776 (fallthrough)
+branch  5 taken 18749
+branch  6 taken 1776 (fallthrough)
+branch  7 taken 0
+branch  8 taken 362 (fallthrough)
+branch  9 taken 1414
+branch 10 taken 362 (fallthrough)
+branch 11 taken 0
+branch 12 taken 362 (fallthrough)
+branch 13 taken 0
+branch 14 taken 0 (fallthrough)
+branch 15 taken 362
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  342:	    	a23 = ((((a23 * 9)/ 10) * 1) - -596689);
+    #####:  343:	    		a4 = 1; 
+    #####:  344:	    		a25 = 11; 
+        -:  345:
+    #####:  346:	    	 return 26;
+   239469:  347:	    } else if((((((((((a25==12) &&   ((245 < a29) && (277 >= a29)) ) || ((a25==13) &&   ((245 < a29) && (277 >= a29)) )) || ( 277 < a29  && (a25==9))) && (input == 1)) &&  a23 <=  -43 ) && (a8==15)) && !(a4==1)) && (a3==1))){
+branch  0 taken 35663 (fallthrough)
+branch  1 taken 203806
+branch  2 taken 24705 (fallthrough)
+branch  3 taken 10958
+branch  4 taken 0 (fallthrough)
+branch  5 taken 24705
+branch  6 taken 25006 (fallthrough)
+branch  7 taken 189758
+branch  8 taken 1594 (fallthrough)
+branch  9 taken 23412
+branch 10 taken 1594 (fallthrough)
+branch 11 taken 0
+branch 12 taken 77441 (fallthrough)
+branch 13 taken 137323
+branch 14 taken 28031 (fallthrough)
+branch 15 taken 49410
+branch 16 taken 7810 (fallthrough)
+branch 17 taken 44926
+branch 18 taken 587 (fallthrough)
+branch 19 taken 7223
+branch 20 taken 587 (fallthrough)
+branch 21 taken 0
+branch 22 taken 587 (fallthrough)
+branch 23 taken 0
+branch 24 taken 587 (fallthrough)
+branch 25 taken 0
+      587:  348:	    	a29 = ((((a29 % 299861)- -278) + 162880) - -51725);
+      587:  349:	    		a4 = 1; 
+      587:  350:	    		a25 = 10; 
+        -:  351:
+      587:  352:	    	 return -1;
+   238882:  353:	    } else if((!(a4==1) && ( a29 <=  140  && ((((((a25==12) || (a25==13)) && (input == 2)) &&  a23 <=  -43 ) && (a3==1)) && (a8==15))))){
+branch  0 taken 25453 (fallthrough)
+branch  1 taken 213429
+branch  2 taken 5515 (fallthrough)
+branch  3 taken 19938
+branch  4 taken 2732 (fallthrough)
+branch  5 taken 2783
+branch  6 taken 0 (fallthrough)
+branch  7 taken 2732
+branch  8 taken 673 (fallthrough)
+branch  9 taken 2110
+branch 10 taken 673 (fallthrough)
+branch 11 taken 0
+branch 12 taken 673 (fallthrough)
+branch 13 taken 0
+branch 14 taken 673 (fallthrough)
+branch 15 taken 0
+      673:  354:	    	a29 = (((((a29 * 9)/ 10) / 5) % 52)+ 193);
+      673:  355:	    	a23 = (((((a23 % 299846)- -300152) + 67658) * 10)/ 9);
+      673:  356:	    		a4 = 1; 
+      673:  357:	    		a25 = 13; 
+        -:  358:
+      673:  359:	    	 return 25;
+   238209:  360:	    } else if(((a8==15) && (( 306 < a23  && ((a3==1) && ((input == 4) && ((  ((245 < a29) && (277 >= a29))  && (a25==10)) || ((  ((140 < a29) && (245 >= a29))  && (a25==13)) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) )))))) && (a4==1)))){
+branch  0 taken 238209 (fallthrough)
+branch  1 taken 0
+branch  2 taken 213429 (fallthrough)
+branch  3 taken 24780
+branch  4 taken 213429 (fallthrough)
+branch  5 taken 0
+branch  6 taken 35201 (fallthrough)
+branch  7 taken 178228
+branch  8 taken 22752 (fallthrough)
+branch  9 taken 12449
+branch 10 taken 9657 (fallthrough)
+branch 11 taken 13095
+branch 12 taken 7312 (fallthrough)
+branch 13 taken 2345
+branch 14 taken 24977 (fallthrough)
+branch 15 taken 7879
+branch 16 taken 4570 (fallthrough)
+branch 17 taken 20407
+branch 18 taken 1564 (fallthrough)
+branch 19 taken 3006
+branch 20 taken 9816 (fallthrough)
+branch 21 taken 20034
+branch 22 taken 9158 (fallthrough)
+branch 23 taken 658
+branch 24 taken 4627 (fallthrough)
+branch 25 taken 4531
+branch 26 taken 9978 (fallthrough)
+branch 27 taken 0
+     9978:  361:	    	a29 = (((((a29 * 5) % 15)+ 256) + 221783) - 221776);
+     9978:  362:	    		a25 = 9; 
+        -:  363:
+     9978:  364:	    	 return 25;
+   228231:  365:	    } else if(((((input == 3) && (( a23 <=  -43  && ((!(a4==1) &&  a29 <=  140 ) && (a25==9))) || (( 306 < a23  && (( 277 < a29  && (a4==1)) && (a25==12))) || ((((a4==1) &&  277 < a29 ) && (a25==13)) &&  306 < a23 )))) && (a3==1)) && (a8==15))){
+branch  0 taken 44566 (fallthrough)
+branch  1 taken 183665
+branch  2 taken 5004 (fallthrough)
+branch  3 taken 39562
+branch  4 taken 5004 (fallthrough)
+branch  5 taken 0
+branch  6 taken 1127 (fallthrough)
+branch  7 taken 3877
+branch  8 taken 1111 (fallthrough)
+branch  9 taken 16
+branch 10 taken 39562 (fallthrough)
+branch 11 taken 4988
+branch 12 taken 13121 (fallthrough)
+branch 13 taken 26441
+branch 14 taken 13121 (fallthrough)
+branch 15 taken 0
+branch 16 taken 13121 (fallthrough)
+branch 17 taken 0
+branch 18 taken 39562 (fallthrough)
+branch 19 taken 4988
+branch 20 taken 13121 (fallthrough)
+branch 21 taken 26441
+branch 22 taken 26 (fallthrough)
+branch 23 taken 13095
+branch 24 taken 26 (fallthrough)
+branch 25 taken 0
+branch 26 taken 42 (fallthrough)
+branch 27 taken 0
+branch 28 taken 42 (fallthrough)
+branch 29 taken 0
+       42:  366:	    	a29 = (((a29 / 5) + -137957) * 2);
+       42:  367:	    	a23 = ((((a23 - 0) / 5) / 5) + -127612);
+       42:  368:	    		a4 = 1; 
+       42:  369:	    		a25 = 10; 
+        -:  370:
+       42:  371:	    	 return -1;
+   228189:  372:	    } else if(( 306 < a23  && ((a4==1) && (((((((a25==11) || (a25==12)) || (a25==13)) && (input == 3)) && (a8==15)) && (a3==1)) &&   ((245 < a29) && (277 >= a29)) )))){
+branch  0 taken 203425 (fallthrough)
+branch  1 taken 24764
+branch  2 taken 203425 (fallthrough)
+branch  3 taken 0
+branch  4 taken 176146 (fallthrough)
+branch  5 taken 27279
+branch  6 taken 160205 (fallthrough)
+branch  7 taken 15941
+branch  8 taken 21974 (fallthrough)
+branch  9 taken 138231
+branch 10 taken 12939 (fallthrough)
+branch 11 taken 52255
+branch 12 taken 12939 (fallthrough)
+branch 13 taken 0
+branch 14 taken 12939 (fallthrough)
+branch 15 taken 0
+branch 16 taken 6947 (fallthrough)
+branch 17 taken 5992
+branch 18 taken 2685 (fallthrough)
+branch 19 taken 4262
+     2685:  373:	    	a29 = ((((a29 * 10)/ 8) - -359749) + 211625);
+     2685:  374:	    		a25 = 9; 
+        -:  375:
+     2685:  376:	    	 return 21;
+  225504*:  377:	    } else if((  ((245 < a29) && (277 >= a29))  && (((((!(a4==1) && (input == 6)) && (a3==1)) && (a25==11)) && (a8==15)) &&  a23 <=  -43 ))){
+branch  0 taken 131219 (fallthrough)
+branch  1 taken 94285
+branch  2 taken 53952 (fallthrough)
+branch  3 taken 77267
+branch  4 taken 14724 (fallthrough)
+branch  5 taken 39228
+branch  6 taken 2857 (fallthrough)
+branch  7 taken 11867
+branch  8 taken 2857 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 2857
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  378:	    	a29 = (((a29 + -243145) + 695905) / -5);
+    #####:  379:	    	a23 = (((((a23 % 83)- -225) - 2) * 10)/ 9);
+    #####:  380:	    		a4 = 1; 
+    #####:  381:	    		a25 = 9; 
+        -:  382:
+    #####:  383:	    	 return -1;
+  225504*:  384:	    } else if(((  ((-43 < a23) && (138 >= a23))  && (((a8==15) && ((input == 2) && ((( a29 <=  140  && (a25==13)) || (  ((140 < a29) && (245 >= a29))  && (a25==9))) || ((a25==10) &&   ((140 < a29) && (245 >= a29)) )))) && (a3==1))) && !(a4==1))){
+branch  0 taken 200740 (fallthrough)
+branch  1 taken 24764
+branch  2 taken 0 (fallthrough)
+branch  3 taken 200740
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  385:	    	a29 = ((((((a29 % 52)+ 193) - -1) * 5) % 52)+ 154);
+    #####:  386:	    	a23 = (((((a23 + -68867) + -415062) + 938623) * -1)/ 10);
+    #####:  387:	    		a4 = 1; 
+    #####:  388:	    		a25 = 13; 
+        -:  389:
+    #####:  390:	    	 return 23;
+   225504:  391:	    } else if(( a29 <=  140  && ((a8==15) && ((((((a25==10) || (a25==11)) && (input == 3)) &&  a23 <=  -43 ) && (a3==1)) && !(a4==1))))){
+branch  0 taken 66470 (fallthrough)
+branch  1 taken 159034
+branch  2 taken 66470 (fallthrough)
+branch  3 taken 0
+branch  4 taken 10304 (fallthrough)
+branch  5 taken 56166
+branch  6 taken 474 (fallthrough)
+branch  7 taken 9830
+branch  8 taken 9666 (fallthrough)
+branch  9 taken 46974
+branch 10 taken 438 (fallthrough)
+branch 11 taken 9228
+branch 12 taken 438 (fallthrough)
+branch 13 taken 0
+branch 14 taken 438 (fallthrough)
+branch 15 taken 0
+      438:  392:	    	a29 = (((((a29 % 299861)- -300138) - 0) + -82465) - -82467);
+      438:  393:	    	a23 = (((((a23 % 299846)+ 300152) - 224877) - 52803) + 360092);
+      438:  394:	    		a4 = 1; 
+      438:  395:	    		a25 = 10; 
+        -:  396:
+      438:  397:	    	 return -1;
+   225066:  398:	    } else if((((((a8==15) && (((input == 3) && (((a25==10) || (a25==11)) || (a25==12))) && (a3==1))) &&  a23 <=  -43 ) && !(a4==1)) &&  277 < a29 )){
+branch  0 taken 225066 (fallthrough)
+branch  1 taken 0
+branch  2 taken 41401 (fallthrough)
+branch  3 taken 183665
+branch  4 taken 24620 (fallthrough)
+branch  5 taken 16781
+branch  6 taken 20358 (fallthrough)
+branch  7 taken 4262
+branch  8 taken 5347 (fallthrough)
+branch  9 taken 15011
+branch 10 taken 26390 (fallthrough)
+branch 11 taken 0
+branch 12 taken 3892 (fallthrough)
+branch 13 taken 22498
+branch 14 taken 3892 (fallthrough)
+branch 15 taken 0
+branch 16 taken 0 (fallthrough)
+branch 17 taken 3892
+    #####:  399:	    	a29 = (((((a29 * 9)/ 10) * 1) % 52)+ 152);
+    #####:  400:	    	a23 = (((((a23 % 299846)+ 300152) - -144203) + -381637) - -454912);
+    #####:  401:	    		a4 = 1; 
+    #####:  402:	    		a25 = 11; 
+        -:  403:
+    #####:  404:	    	 return 21;
+  225066*:  405:	    } else if(((!(a4==1) && ((a25==9) && ((a8==15) && ((a3==1) && (  ((-43 < a23) && (138 >= a23))  && (input == 1)))))) &&  a29 <=  140 )){
+branch  0 taken 24326 (fallthrough)
+branch  1 taken 200740
+branch  2 taken 3748 (fallthrough)
+branch  3 taken 20578
+branch  4 taken 3748 (fallthrough)
+branch  5 taken 0
+branch  6 taken 3748 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 3748
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  406:	    	if(  ((140 < a29) && (245 >= a29)) ){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  407:	    	a29 = (((((a29 + 0) + 0) + 562933) % 299861)- -300138);
+    #####:  408:	    	a23 = (((a23 * 5) + 502005) + 15697);
+    #####:  409:	    		a4 = 1; 
+    #####:  410:	    		a25 = 10; 
+        -:  411:
+        -:  412:	    	} else{
+    #####:  413:	    		a29 = ((((a29 % 299861)+ 300138) + 0) + 0);
+    #####:  414:	    		a23 = (((a23 * 5) + -560195) - 17437);
+    #####:  415:	    		a25 = 11; 
+        -:  416:
+    #####:  417:	    	} return 24;
+   225066:  418:	    } else if(((a8==15) && ((( 306 < a23  && (((((a25==11) || (a25==12)) || (a25==13)) && (input == 6)) &&   ((245 < a29) && (277 >= a29)) )) && (a4==1)) && (a3==1)))){
+branch  0 taken 225066 (fallthrough)
+branch  1 taken 0
+branch  2 taken 200740 (fallthrough)
+branch  3 taken 24326
+branch  4 taken 174120 (fallthrough)
+branch  5 taken 26620
+branch  6 taken 160205 (fallthrough)
+branch  7 taken 13915
+branch  8 taken 21974 (fallthrough)
+branch  9 taken 138231
+branch 10 taken 2736 (fallthrough)
+branch 11 taken 59773
+branch 12 taken 1733 (fallthrough)
+branch 13 taken 1003
+branch 14 taken 219 (fallthrough)
+branch 15 taken 1514
+branch 16 taken 219 (fallthrough)
+branch 17 taken 0
+branch 18 taken 219 (fallthrough)
+branch 19 taken 0
+      219:  419:	    	a29 = ((((a29 * 12)/ 10) / 5) + 99853);
+      219:  420:	    	a23 = ((((a23 / 5) * 4) % 83)- -180);
+      219:  421:	    		a25 = 13; 
+        -:  422:
+      219:  423:	    	 return -1;
+   224847:  424:	    } else if((((((!(a4==1) && ((a8==15) && (input == 2))) && (a3==1)) &&   ((140 < a29) && (245 >= a29)) ) && (a25==12)) &&  a23 <=  -43 )){
+branch  0 taken 24326 (fallthrough)
+branch  1 taken 200521
+branch  2 taken 24326 (fallthrough)
+branch  3 taken 0
+branch  4 taken 3905 (fallthrough)
+branch  5 taken 20421
+branch  6 taken 3905 (fallthrough)
+branch  7 taken 0
+branch  8 taken 3829 (fallthrough)
+branch  9 taken 76
+branch 10 taken 314 (fallthrough)
+branch 11 taken 3515
+branch 12 taken 314 (fallthrough)
+branch 13 taken 0
+branch 14 taken 314 (fallthrough)
+branch 15 taken 0
+      314:  425:	    	a29 = (((a29 - 152245) * 3) - 98036);
+      314:  426:	    		a25 = 9; 
+        -:  427:
+      314:  428:	    	 return 23;
+   224533:  429:	    } else if(( a23 <=  -43  && (( a29 <=  140  && ((a8==15) && (!(a4==1) && (((a25==12) || (a25==13)) && (input == 3))))) && (a3==1)))){
+branch  0 taken 24012 (fallthrough)
+branch  1 taken 200521
+branch  2 taken 4388 (fallthrough)
+branch  3 taken 19624
+branch  4 taken 4388 (fallthrough)
+branch  5 taken 0
+branch  6 taken 4388 (fallthrough)
+branch  7 taken 0
+branch  8 taken 2278 (fallthrough)
+branch  9 taken 2110
+branch 10 taken 0 (fallthrough)
+branch 11 taken 2278
+branch 12 taken 673 (fallthrough)
+branch 13 taken 1437
+branch 14 taken 673 (fallthrough)
+branch 15 taken 0
+      673:  430:	    	a29 = (((((a29 % 15)+ 262) - 1) - 302300) + 302301);
+      673:  431:	    	a23 = ((((a23 % 299846)- -300152) / 5) + 400348);
+      673:  432:	    		a4 = 1; 
+      673:  433:	    		a25 = 10; 
+        -:  434:
+      673:  435:	    	 return 24;
+  223860*:  436:	    } else if(((((((input == 6) && ((((a25==13) &&  a29 <=  140 ) || (  ((140 < a29) && (245 >= a29))  && (a25==9))) || (  ((140 < a29) && (245 >= a29))  && (a25==10)))) && (a8==15)) && (a3==1)) && !(a4==1)) &&   ((-43 < a23) && (138 >= a23)) )){
+branch  0 taken 15442 (fallthrough)
+branch  1 taken 208418
+branch  2 taken 1003 (fallthrough)
+branch  3 taken 14439
+branch  4 taken 972 (fallthrough)
+branch  5 taken 31
+branch  6 taken 9422 (fallthrough)
+branch  7 taken 5989
+branch  8 taken 972 (fallthrough)
+branch  9 taken 8450
+branch 10 taken 972 (fallthrough)
+branch 11 taken 0
+branch 12 taken 9422 (fallthrough)
+branch 13 taken 5989
+branch 14 taken 972 (fallthrough)
+branch 15 taken 8450
+branch 16 taken 0 (fallthrough)
+branch 17 taken 972
+branch 18 taken 31 (fallthrough)
+branch 19 taken 0
+branch 20 taken 31 (fallthrough)
+branch 21 taken 0
+branch 22 taken 0 (fallthrough)
+branch 23 taken 31
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  437:	    	a29 = ((((a29 * 9)/ 10) * 1) - 16027);
+    #####:  438:	    	a23 = (((((a23 + -40837) + 418328) / 5) * -1)/ 10);
+    #####:  439:	    		a4 = 1; 
+    #####:  440:	    		a25 = 12; 
+        -:  441:
+    #####:  442:	    	 return -1;
+  223860*:  443:	    } else if(((!(a4==1) && (((((a3==1) && (input == 4)) && (a25==11)) &&   ((245 < a29) && (277 >= a29)) ) &&  a23 <=  -43 )) && (a8==15))){
+branch  0 taken 23339 (fallthrough)
+branch  1 taken 200521
+branch  2 taken 23339 (fallthrough)
+branch  3 taken 0
+branch  4 taken 4315 (fallthrough)
+branch  5 taken 19024
+branch  6 taken 88 (fallthrough)
+branch  7 taken 4227
+branch  8 taken 0 (fallthrough)
+branch  9 taken 88
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  444:	    	a29 = ((((a29 * 10)/ 12) - 30) - -40);
+    #####:  445:	    	a23 = (((a23 / 5) - -331475) - -221993);
+    #####:  446:	    		a4 = 1; 
+    #####:  447:	    		a25 = 13; 
+        -:  448:
+    #####:  449:	    	 return 25;
+  223860*:  450:	    } else if(((a3==1) && (  ((140 < a29) && (245 >= a29))  && ( a23 <=  -43  && ((a8==15) && (!(a4==1) && ((((a25==9) || (a25==10)) || (a25==11)) && (input == 3)))))))){
+branch  0 taken 223860 (fallthrough)
+branch  1 taken 0
+branch  2 taken 158501 (fallthrough)
+branch  3 taken 65359
+branch  4 taken 27501 (fallthrough)
+branch  5 taken 131000
+branch  6 taken 1462 (fallthrough)
+branch  7 taken 26039
+branch  8 taken 1462 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1462 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1462 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1462 (fallthrough)
+branch 15 taken 0
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1462
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  451:	    	a29 = ((((a29 - -42105) * 5) % 15)+ 250);
+    #####:  452:	    	a23 = ((((a23 * 9)/ 10) - -571253) + 9989);
+    #####:  453:	    		a4 = 1; 
+    #####:  454:	    		a25 = 11; 
+        -:  455:
+    #####:  456:	    	 return 24;
+  223860*:  457:	    } else if(((((!(a4==1) && (((((a25==10) || (a25==11)) || (a25==12)) && (input == 4)) &&  277 < a29 )) &&  a23 <=  -43 ) && (a8==15)) && (a3==1))){
+branch  0 taken 23339 (fallthrough)
+branch  1 taken 200521
+branch  2 taken 21757 (fallthrough)
+branch  3 taken 1582
+branch  4 taken 21371 (fallthrough)
+branch  5 taken 386
+branch  6 taken 17623 (fallthrough)
+branch  7 taken 3748
+branch  8 taken 3657 (fallthrough)
+branch  9 taken 15934
+branch 10 taken 0 (fallthrough)
+branch 11 taken 3657
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    #####:  458:	    	a29 = ((((a29 * 9)/ 10) + -599272) * 1);
+    #####:  459:	    	a23 = ((((a23 % 90)+ 49) + -2) - 0);
+    #####:  460:	    		a25 = 13; 
+        -:  461:
+    #####:  462:	    	 return 24;
+   223860:  463:	    } else if((  ((140 < a29) && (245 >= a29))  && ((a8==15) && (((a25==12) && (!(a4==1) && ( a23 <=  -43  && (input == 4)))) && (a3==1))))){
+branch  0 taken 158501 (fallthrough)
+branch  1 taken 65359
+branch  2 taken 27501 (fallthrough)
+branch  3 taken 131000
+branch  4 taken 27501 (fallthrough)
+branch  5 taken 0
+branch  6 taken 7861 (fallthrough)
+branch  7 taken 19640
+branch  8 taken 1462 (fallthrough)
+branch  9 taken 6399
+branch 10 taken 1462 (fallthrough)
+branch 11 taken 0
+branch 12 taken 362 (fallthrough)
+branch 13 taken 1100
+branch 14 taken 362 (fallthrough)
+branch 15 taken 0
+      362:  464:	    	a29 = ((((a29 * 10)/ 5) - -284909) * 2);
+      362:  465:	    	a23 = ((((a23 + 248770) % 299846)- -300152) - 0);
+      362:  466:	    		a4 = 1; 
+      362:  467:	    		a25 = 11; 
+        -:  468:
+      362:  469:	    	 return 23;
+  223498*:  470:	    } else if(((a3==1) && ((((((( 277 < a29  && (a4==1)) && (a25==12)) &&  306 < a23 ) || ( 306 < a23  && (((a4==1) &&  277 < a29 ) && (a25==13)))) || (((a25==9) && (!(a4==1) &&  a29 <=  140 )) &&  a23 <=  -43 )) && (input == 2)) && (a8==15)))){
+branch  0 taken 223498 (fallthrough)
+branch  1 taken 0
+branch  2 taken 77267 (fallthrough)
+branch  3 taken 146231
+branch  4 taken 73829 (fallthrough)
+branch  5 taken 3438
+branch  6 taken 0 (fallthrough)
+branch  7 taken 73829
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 200521 (fallthrough)
+branch 11 taken 22977
+branch 12 taken 200521 (fallthrough)
+branch 13 taken 0
+branch 14 taken 73829 (fallthrough)
+branch 15 taken 126692
+branch 16 taken 72261 (fallthrough)
+branch 17 taken 1568
+branch 18 taken 50976 (fallthrough)
+branch 19 taken 170954
+branch 20 taken 3748 (fallthrough)
+branch 21 taken 47228
+branch 22 taken 310 (fallthrough)
+branch 23 taken 3438
+branch 24 taken 310 (fallthrough)
+branch 25 taken 0
+branch 26 taken 438 (fallthrough)
+branch 27 taken 1440
+branch 28 taken 438 (fallthrough)
+branch 29 taken 0
+      438:  471:	    	a29 = ((((a29 % 299861)+ 300138) - 0) + 1);
+      438:  472:	    	a23 = ((((a23 % 299846)- -300152) + 2) - 0);
+      438:  473:	    		a4 = 1; 
+      438:  474:	    		a25 = 9; 
+        -:  475:
+      438:  476:	    	 return 21;
+  223060*:  477:	    } else if(((((input == 5) && (((((a25==12) && ((a4==1) &&  277 < a29 )) &&  306 < a23 ) || ((( 277 < a29  && (a4==1)) && (a25==13)) &&  306 < a23 )) || ((( a29 <=  140  && !(a4==1)) && (a25==9)) &&  a23 <=  -43 ))) && (a8==15)) && (a3==1))){
+branch  0 taken 26936 (fallthrough)
+branch  1 taken 196124
+branch  2 taken 1153 (fallthrough)
+branch  3 taken 25783
+branch  4 taken 15 (fallthrough)
+branch  5 taken 1138
+branch  6 taken 0 (fallthrough)
+branch  7 taken 15
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 3993 (fallthrough)
+branch 11 taken 22943
+branch 12 taken 3845 (fallthrough)
+branch 13 taken 148
+branch 14 taken 452 (fallthrough)
+branch 15 taken 3393
+branch 16 taken 0 (fallthrough)
+branch 17 taken 452
+branch 18 taken 12485 (fallthrough)
+branch 19 taken 13999
+branch 20 taken 1289 (fallthrough)
+branch 21 taken 11196
+branch 22 taken 82 (fallthrough)
+branch 23 taken 1207
+branch 24 taken 82 (fallthrough)
+branch 25 taken 0
+branch 26 taken 534 (fallthrough)
+branch 27 taken 0
+branch 28 taken 534 (fallthrough)
+branch 29 taken 0
+      534:  478:	    	a29 = ((((a29 % 52)+ 192) / 5) - -183);
+      534:  479:	    	a23 = (((a23 / 5) - -232517) + 138613);
+      534:  480:	    		a4 = 1; 
+      534:  481:	    		a25 = 13; 
+        -:  482:
+      534:  483:	    	 return 25;
+   222526:  484:	    } else if(((a25==12) && (((a3==1) && ((((input == 1) &&  a23 <=  -43 ) &&   ((140 < a29) && (245 >= a29)) ) && !(a4==1))) && (a8==15)))){
+branch  0 taken 31070 (fallthrough)
+branch  1 taken 191456
+branch  2 taken 31070 (fallthrough)
+branch  3 taken 0
+branch  4 taken 4503 (fallthrough)
+branch  5 taken 26567
+branch  6 taken 356 (fallthrough)
+branch  7 taken 4147
+branch  8 taken 356 (fallthrough)
+branch  9 taken 0
+branch 10 taken 356 (fallthrough)
+branch 11 taken 0
+branch 12 taken 356 (fallthrough)
+branch 13 taken 0
+branch 14 taken 356 (fallthrough)
+branch 15 taken 0
+      356:  485:	    	if((a8==17)){
+branch  0 taken 356 (fallthrough)
+branch  1 taken 0
+        -:  486:
+        -:  487:	    	} else{
+      356:  488:	    		a29 = ((((a29 - 520725) * 10)/ 9) + -10894);
+      356:  489:	    		a23 = (((((a23 + 0) + 435838) * 1) % 299846)- -300152);
+      356:  490:	    		a4 = 1; 
+      356:  491:	    		a25 = 13; 
+        -:  492:
+      356:  493:	    	} return 21;
+  222170*:  494:	    } else if((((a8==15) && ((  ((-43 < a23) && (138 >= a23))  && ((input == 1) && ((  ((140 < a29) && (245 >= a29))  && (a25==10)) || (((a25==13) &&  a29 <=  140 ) || ((a25==9) &&   ((140 < a29) && (245 >= a29)) ))))) && (a3==1))) && !(a4==1))){
+branch  0 taken 222170 (fallthrough)
+branch  1 taken 0
+branch  2 taken 199707 (fallthrough)
+branch  3 taken 22463
+branch  4 taken 0 (fallthrough)
+branch  5 taken 199707
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  495:	    	if((a8==16)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  496:	    	a29 = ((((a29 / 5) % 52)- -193) + 1);
+    #####:  497:	    		a4 = 1; 
+    #####:  498:	    		a25 = 11; 
+        -:  499:
+        -:  500:	    	} else{
+    #####:  501:	    		a29 = (((((a29 / 5) + 25722) * 5) % 15)+ 261);
+    #####:  502:	    		a23 = (((a23 + -482365) + -35629) * 1);
+    #####:  503:	    		a4 = 1; 
+    #####:  504:	    		a25 = 11; 
+        -:  505:
+    #####:  506:	    	} return -1;
+  222170*:  507:	    } else if(((a3==1) && ((a8==15) && ((((((  ((140 < a29) && (245 >= a29))  && (a25==13)) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) )) || (  ((245 < a29) && (277 >= a29))  && (a25==10))) && (input == 3)) && !(a4==1)) &&  a23 <=  -43 )))){
+branch  0 taken 222170 (fallthrough)
+branch  1 taken 0
+branch  2 taken 222170 (fallthrough)
+branch  3 taken 0
+branch  4 taken 156969 (fallthrough)
+branch  5 taken 65201
+branch  6 taken 26783 (fallthrough)
+branch  7 taken 130186
+branch  8 taken 13787 (fallthrough)
+branch  9 taken 12996
+branch 10 taken 50818 (fallthrough)
+branch 11 taken 158356
+branch 12 taken 47886 (fallthrough)
+branch 13 taken 2932
+branch 14 taken 27883 (fallthrough)
+branch 15 taken 20003
+branch 16 taken 110183 (fallthrough)
+branch 17 taken 78988
+branch 18 taken 33730 (fallthrough)
+branch 19 taken 76453
+branch 20 taken 9427 (fallthrough)
+branch 21 taken 24303
+branch 22 taken 9978 (fallthrough)
+branch 23 taken 32448
+branch 24 taken 0 (fallthrough)
+branch 25 taken 9978
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  508:	    	a29 = (((a29 / 5) + 220) + -1);
+    #####:  509:	    	a23 = ((((a23 % 299846)+ 300152) * 1) * 1);
+    #####:  510:	    		a4 = 1; 
+    #####:  511:	    		a25 = 9; 
+        -:  512:
+    #####:  513:	    	 return 24;
+  222170*:  514:	    } else if((( a29 <=  140  && (  ((-43 < a23) && (138 >= a23))  && ((a3==1) && ((a8==15) && (((a25==12) || ((a25==10) || (a25==11))) && (input == 2)))))) && !(a4==1))){
+branch  0 taken 65201 (fallthrough)
+branch  1 taken 156969
+branch  2 taken 61644 (fallthrough)
+branch  3 taken 3557
+branch  4 taken 0 (fallthrough)
+branch  5 taken 61644
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  515:	    	a29 = ((((a29 % 15)- -260) - 0) + 0);
+    #####:  516:	    	a23 = (((a23 - -414471) + 29992) - -47819);
+    #####:  517:	    		a4 = 1; 
+    #####:  518:	    		a25 = 10; 
+        -:  519:
+    #####:  520:	    	 return -1;
+   222170:  521:	    } else if((((a4==1) && ( 306 < a23  && ((((input == 3) && ((a25==9) || (a25==10))) &&   ((140 < a29) && (245 >= a29)) ) && (a3==1)))) && (a8==15))){
+branch  0 taken 199707 (fallthrough)
+branch  1 taken 22463
+branch  2 taken 199707 (fallthrough)
+branch  3 taken 0
+branch  4 taken 36851 (fallthrough)
+branch  5 taken 162856
+branch  6 taken 27035 (fallthrough)
+branch  7 taken 9816
+branch  8 taken 16781 (fallthrough)
+branch  9 taken 10254
+branch 10 taken 17369 (fallthrough)
+branch 11 taken 9228
+branch 12 taken 1564 (fallthrough)
+branch 13 taken 15805
+branch 14 taken 1564 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1564 (fallthrough)
+branch 17 taken 0
+     1564:  522:	    	if(  ((138 < a23) && (306 >= a23)) ){
+branch  0 taken 1564 (fallthrough)
+branch  1 taken 0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1564
+    #####:  523:	    	a29 = (((((a29 % 15)+ 261) * 5) % 15)- -261);
+    #####:  524:	    	a23 = (((a23 + -579505) * 1) + -20667);
+    #####:  525:	    		a4 = 0; 
+    #####:  526:	    		a25 = 12; 
+        -:  527:
+        -:  528:	    	} else{
+        -:  529:
+     1564:  530:	    		a25 = 10; 
+        -:  531:
+     1564:  532:	    	} return 21;
+   220606:  533:	    } else if(((a4==1) && ((((a3==1) && ( 306 < a23  && (((a25==12) || ((a25==10) || (a25==11))) && (input == 4)))) &&  a29 <=  140 ) && (a8==15)))){
+branch  0 taken 198143 (fallthrough)
+branch  1 taken 22463
+branch  2 taken 198143 (fallthrough)
+branch  3 taken 0
+branch  4 taken 198143 (fallthrough)
+branch  5 taken 0
+branch  6 taken 184334 (fallthrough)
+branch  7 taken 13809
+branch  8 taken 94237 (fallthrough)
+branch  9 taken 90097
+branch 10 taken 26507 (fallthrough)
+branch 11 taken 67730
+branch 12 taken 18503 (fallthrough)
+branch 13 taken 111910
+branch 14 taken 6348 (fallthrough)
+branch 15 taken 12155
+branch 16 taken 6348 (fallthrough)
+branch 17 taken 0
+     6348:  534:	    	a29 = (((((a29 % 52)- -193) * 5) % 52)- -169);
+     6348:  535:	    		a25 = 12; 
+        -:  536:
+     6348:  537:	    	 return 26;
+  214258*:  538:	    } else if(((((  ((-43 < a23) && (138 >= a23))  && ((!(a4==1) && (input == 5)) && (a3==1))) && (a25==9)) &&  a29 <=  140 ) && (a8==15))){
+branch  0 taken 191795 (fallthrough)
+branch  1 taken 22463
+branch  2 taken 0 (fallthrough)
+branch  3 taken 191795
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  539:	    	a23 = (((a23 - 230720) - 160568) / 5);
+    #####:  540:	    		a4 = 1; 
+    #####:  541:	    		a25 = 10; 
+        -:  542:
+    #####:  543:	    	 return -1;
+   214258:  544:	    } else if(( 306 < a23  && (((a8==15) && ((((input == 1) && ((a25==11) || (a25==12))) && (a4==1)) && (a3==1))) &&   ((140 < a29) && (245 >= a29)) ))){
+branch  0 taken 191795 (fallthrough)
+branch  1 taken 22463
+branch  2 taken 191795 (fallthrough)
+branch  3 taken 0
+branch  4 taken 26158 (fallthrough)
+branch  5 taken 165637
+branch  6 taken 21141 (fallthrough)
+branch  7 taken 5017
+branch  8 taken 4147 (fallthrough)
+branch  9 taken 16994
+branch 10 taken 9164 (fallthrough)
+branch 11 taken 0
+branch 12 taken 9164 (fallthrough)
+branch 13 taken 0
+branch 14 taken 9164 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1455 (fallthrough)
+branch 17 taken 7709
+     1455:  545:	    	a29 = ((((a29 + 511565) * 10)/ 9) / 5);
+     1455:  546:	    		a25 = 10; 
+        -:  547:
+     1455:  548:	    	 return 21;
+   212803:  549:	    } else if(((((a8==15) && ( a23 <=  -43  && (((input == 1) && ((a25==10) || (a25==11))) &&  a29 <=  140 ))) && !(a4==1)) && (a3==1))){
+branch  0 taken 212803 (fallthrough)
+branch  1 taken 0
+branch  2 taken 22463 (fallthrough)
+branch  3 taken 190340
+branch  4 taken 520 (fallthrough)
+branch  5 taken 21943
+branch  6 taken 170 (fallthrough)
+branch  7 taken 350
+branch  8 taken 88 (fallthrough)
+branch  9 taken 82
+branch 10 taken 438 (fallthrough)
+branch 11 taken 0
+branch 12 taken 438 (fallthrough)
+branch 13 taken 0
+branch 14 taken 438 (fallthrough)
+branch 15 taken 0
+      438:  550:	    	a29 = ((((a29 * 9)/ 10) + 588187) - -3575);
+      438:  551:	    	a23 = ((((a23 % 299846)- -300152) * 1) - -64092);
+      438:  552:	    		a4 = 1; 
+      438:  553:	    		a25 = 10; 
+        -:  554:
+      438:  555:	    	 return 24;
+   212365:  556:	    } else if(((( a23 <=  -43  && (!(a4==1) && ((a3==1) && (((a25==11) || ((a25==9) || (a25==10))) && (input == 5))))) && (a8==15)) &&   ((140 < a29) && (245 >= a29)) )){
+branch  0 taken 22025 (fallthrough)
+branch  1 taken 190340
+branch  2 taken 22025 (fallthrough)
+branch  3 taken 0
+branch  4 taken 22025 (fallthrough)
+branch  5 taken 0
+branch  6 taken 21727 (fallthrough)
+branch  7 taken 298
+branch  8 taken 18137 (fallthrough)
+branch  9 taken 3590
+branch 10 taken 1232 (fallthrough)
+branch 11 taken 16905
+branch 12 taken 682 (fallthrough)
+branch 13 taken 4438
+branch 14 taken 682 (fallthrough)
+branch 15 taken 0
+branch 16 taken 148 (fallthrough)
+branch 17 taken 534
+branch 18 taken 0 (fallthrough)
+branch 19 taken 148
+    #####:  557:	    	a23 = ((((((a23 * 9)/ 10) / 5) + -446258) * -1)/ 10);
+    #####:  558:	    		a4 = 1; 
+    #####:  559:	    		a25 = 13; 
+        -:  560:
+    #####:  561:	    	 return 21;
+  212365*:  562:	    } else if(((a3==1) && (  ((-43 < a23) && (138 >= a23))  && ((a8==15) && ((((((a25==10) || (a25==11)) || (a25==12)) && (input == 5)) &&  a29 <=  140 ) && !(a4==1)))))){
+branch  0 taken 212365 (fallthrough)
+branch  1 taken 0
+branch  2 taken 190340 (fallthrough)
+branch  3 taken 22025
+branch  4 taken 0 (fallthrough)
+branch  5 taken 190340
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  563:	    	a29 = ((((a29 % 52)- -193) + -1) + 0);
+    #####:  564:	    		a4 = 1; 
+    #####:  565:	    		a25 = 9; 
+        -:  566:
+    #####:  567:	    	 return -1;
+   212365:  568:	    } else if(( 306 < a23  && (((a3==1) && ( 277 < a29  && (((input == 4) && (((a25==9) || (a25==10)) || (a25==11))) && (a8==15)))) && (a4==1)))){
+branch  0 taken 190340 (fallthrough)
+branch  1 taken 22025
+branch  2 taken 190340 (fallthrough)
+branch  3 taken 0
+branch  4 taken 73015 (fallthrough)
+branch  5 taken 117325
+branch  6 taken 13095 (fallthrough)
+branch  7 taken 59920
+branch  8 taken 8564 (fallthrough)
+branch  9 taken 4531
+branch 10 taken 4262 (fallthrough)
+branch 11 taken 4302
+branch 12 taken 4262 (fallthrough)
+branch 13 taken 0
+branch 14 taken 13095 (fallthrough)
+branch 15 taken 0
+branch 16 taken 13095 (fallthrough)
+branch 17 taken 0
+        -:  569:
+    13095:  570:	    		a25 = 11; 
+        -:  571:
+    13095:  572:	    	 return 26;
+  199270*:  573:	    } else if((!(a4==1) && ( a23 <=  -43  && ((a8==15) && (((((a25==12) || ((a25==10) || (a25==11))) && (input == 1)) && (a3==1)) &&  277 < a29 ))))){
+branch  0 taken 22025 (fallthrough)
+branch  1 taken 177245
+branch  2 taken 22025 (fallthrough)
+branch  3 taken 0
+branch  4 taken 22025 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5120 (fallthrough)
+branch  7 taken 16905
+branch  8 taken 3888 (fallthrough)
+branch  9 taken 1232
+branch 10 taken 298 (fallthrough)
+branch 11 taken 3590
+branch 12 taken 0 (fallthrough)
+branch 13 taken 18435
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    #####:  574:	    	a29 = (((a29 - 0) - 600170) + -6);
+    #####:  575:	    	a23 = (((((a23 % 90)+ 137) - 81281) + -93071) - -174340);
+    #####:  576:	    		a25 = 12; 
+        -:  577:
+    #####:  578:	    	 return 21;
+  199270*:  579:	    } else if(( 277 < a29  && (((a25==13) && ( a23 <=  -43  && (!(a4==1) && ((input == 1) && (a3==1))))) && (a8==15)))){
+branch  0 taken 63358 (fallthrough)
+branch  1 taken 135912
+branch  2 taken 754 (fallthrough)
+branch  3 taken 62604
+branch  4 taken 0 (fallthrough)
+branch  5 taken 754
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  580:	    	a29 = ((((a29 % 15)+ 248) + -175571) - -175577);
+    #####:  581:	    	 return 24;
+  199270*:  582:	    } else if((((  ((-43 < a23) && (138 >= a23))  && (((a25==9) && ((input == 4) && !(a4==1))) &&  a29 <=  140 )) && (a3==1)) && (a8==15))){
+branch  0 taken 177245 (fallthrough)
+branch  1 taken 22025
+branch  2 taken 0 (fallthrough)
+branch  3 taken 177245
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  583:	    	a23 = ((((a23 + -79386) * 10)/ 9) - 20806);
+    #####:  584:	    		a4 = 1; 
+    #####:  585:	    		a25 = 10; 
+        -:  586:
+    #####:  587:	    	 return 21;
+   199270:  588:	    } else if(((a8==15) && ((((a3==1) && (((((a25==10) || (a25==11)) || (a25==12)) && (input == 3)) && (a4==1))) &&  306 < a23 ) &&  a29 <=  140 ))){
+branch  0 taken 199270 (fallthrough)
+branch  1 taken 0
+branch  2 taken 199270 (fallthrough)
+branch  3 taken 0
+branch  4 taken 118591 (fallthrough)
+branch  5 taken 80679
+branch  6 taken 96048 (fallthrough)
+branch  7 taken 22543
+branch  8 taken 29259 (fallthrough)
+branch  9 taken 66789
+branch 10 taken 24811 (fallthrough)
+branch 11 taken 107670
+branch 12 taken 21592 (fallthrough)
+branch 13 taken 3219
+branch 14 taken 21592 (fallthrough)
+branch 15 taken 0
+branch 16 taken 9228 (fallthrough)
+branch 17 taken 12364
+     9228:  589:	    	a29 = (((((a29 - 0) % 15)+ 262) + 241270) + -241271);
+     9228:  590:	    		a25 = 12; 
+        -:  591:
+     9228:  592:	    	 return 24;
+  190042*:  593:	    } else if(((  ((-43 < a23) && (138 >= a23))  && ((a3==1) && (!(a4==1) && ((input == 4) && (((a25==10) &&   ((140 < a29) && (245 >= a29)) ) || (((a25==13) &&  a29 <=  140 ) || (  ((140 < a29) && (245 >= a29))  && (a25==9)))))))) && (a8==15))){
+branch  0 taken 168017 (fallthrough)
+branch  1 taken 22025
+branch  2 taken 0 (fallthrough)
+branch  3 taken 168017
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  594:	    	if((a3==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  595:	    	a29 = (((((a29 / 5) % 52)+ 192) / 5) - -175);
+    #####:  596:	    	a23 = ((((a23 / 5) * 5) % 83)- -223);
+    #####:  597:	    		a4 = 1; 
+    #####:  598:	    		a25 = 13; 
+        -:  599:
+        -:  600:	    	} else{
+    #####:  601:	    		a29 = ((((a29 % 300070)- 299929) - 2) - 0);
+    #####:  602:	    		a25 = 12; 
+        -:  603:
+    #####:  604:	    	} return -1;
+   190042:  605:	    } else if(((((a8==15) && ((!(a4==1) && (((a25==11) || ((a25==9) || (a25==10))) && (input == 6))) && (a3==1))) &&  a23 <=  -43 ) &&   ((140 < a29) && (245 >= a29)) )){
+branch  0 taken 190042 (fallthrough)
+branch  1 taken 0
+branch  2 taken 22025 (fallthrough)
+branch  3 taken 168017
+branch  4 taken 21727 (fallthrough)
+branch  5 taken 298
+branch  6 taken 18137 (fallthrough)
+branch  7 taken 3590
+branch  8 taken 1232 (fallthrough)
+branch  9 taken 16905
+branch 10 taken 700 (fallthrough)
+branch 11 taken 4420
+branch 12 taken 700 (fallthrough)
+branch 13 taken 0
+branch 14 taken 700 (fallthrough)
+branch 15 taken 0
+branch 16 taken 658 (fallthrough)
+branch 17 taken 42
+branch 18 taken 0 (fallthrough)
+branch 19 taken 658
+    #####:  606:	    	a29 = (((a29 + 500141) + 20116) / 5);
+    #####:  607:	    		a25 = 9; 
+        -:  608:
+    #####:  609:	    	 return 24;
+   190042:  610:	    } else if(( a29 <=  140  && (((a4==1) && ((a8==15) && (((input == 6) && (((a25==10) || (a25==11)) || (a25==12))) &&  306 < a23 ))) && (a3==1)))){
+branch  0 taken 49187 (fallthrough)
+branch  1 taken 140855
+branch  2 taken 46068 (fallthrough)
+branch  3 taken 3119
+branch  4 taken 46068 (fallthrough)
+branch  5 taken 0
+branch  6 taken 5887 (fallthrough)
+branch  7 taken 40181
+branch  8 taken 31 (fallthrough)
+branch  9 taken 5856
+branch 10 taken 31 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 31
+branch 14 taken 5856 (fallthrough)
+branch 15 taken 0
+branch 16 taken 5856 (fallthrough)
+branch 17 taken 0
+     5856:  611:	    	if((a4==1)){
+branch  0 taken 5856 (fallthrough)
+branch  1 taken 0
+     5856:  612:	    	a29 = ((((a29 % 15)+ 262) - -1) + -3);
+     5856:  613:	    	a23 = ((((a23 - 600285) - 8) + 385102) + -384893);
+     5856:  614:	    		a4 = 0; 
+     5856:  615:	    		a25 = 12; 
+        -:  616:
+        -:  617:	    	} else{
+    #####:  618:	    		a29 = ((((((a29 % 52)+ 192) - 0) * 5) % 52)- -166);
+    #####:  619:	    		a25 = 9; 
+        -:  620:
+     5856:  621:	    	} return 24;
+   184186:  622:	    } else if(((((((a3==1) && ((input == 5) && ((a25==11) || (a25==12)))) && (a4==1)) &&  306 < a23 ) &&   ((140 < a29) && (245 >= a29)) ) && (a8==15))){
+branch  0 taken 184186 (fallthrough)
+branch  1 taken 0
+branch  2 taken 26402 (fallthrough)
+branch  3 taken 157784
+branch  4 taken 24794 (fallthrough)
+branch  5 taken 1608
+branch  6 taken 1153 (fallthrough)
+branch  7 taken 23641
+branch  8 taken 1529 (fallthrough)
+branch  9 taken 1232
+branch 10 taken 1529 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1529 (fallthrough)
+branch 13 taken 0
+branch 14 taken 15 (fallthrough)
+branch 15 taken 1514
+branch 16 taken 15 (fallthrough)
+branch 17 taken 0
+       15:  623:	    	a29 = (((a29 + -194923) / 5) / 5);
+       15:  624:	    	a23 = ((((a23 % 83)- -169) + 501114) - 501118);
+       15:  625:	    		a25 = 13; 
+        -:  626:
+       15:  627:	    	 return -1;
+   184171:  628:	    } else if(((((a4==1) && ( 306 < a23  && ((a8==15) && (((a25==11) || (a25==12)) && (input == 2))))) &&   ((140 < a29) && (245 >= a29)) ) && (a3==1))){
+branch  0 taken 162146 (fallthrough)
+branch  1 taken 22025
+branch  2 taken 162146 (fallthrough)
+branch  3 taken 0
+branch  4 taken 162146 (fallthrough)
+branch  5 taken 0
+branch  6 taken 139901 (fallthrough)
+branch  7 taken 22245
+branch  8 taken 12339 (fallthrough)
+branch  9 taken 127562
+branch 10 taken 6209 (fallthrough)
+branch 11 taken 28375
+branch 12 taken 6209 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1947 (fallthrough)
+branch 15 taken 4262
+branch 16 taken 1947 (fallthrough)
+branch 17 taken 0
+     1947:  629:	    	a29 = ((((a29 / -5) - 119439) + 125177) * -5);
+     1947:  630:	    	a23 = (((a23 + 0) - 600293) - 11);
+     1947:  631:	    		a4 = 0; 
+     1947:  632:	    		a25 = 10; 
+        -:  633:
+     1947:  634:	    	 return 21;
+  182224*:  635:	    } else if(((((a8==15) && ( a23 <=  -43  && (!(a4==1) && ((a25==11) && (input == 5))))) && (a3==1)) &&   ((245 < a29) && (277 >= a29)) )){
+branch  0 taken 182224 (fallthrough)
+branch  1 taken 0
+branch  2 taken 22025 (fallthrough)
+branch  3 taken 160199
+branch  4 taken 22025 (fallthrough)
+branch  5 taken 0
+branch  6 taken 298 (fallthrough)
+branch  7 taken 21727
+branch  8 taken 94 (fallthrough)
+branch  9 taken 204
+branch 10 taken 94 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 94
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  636:	    	a29 = (((((a29 / 5) * 10)/ 3) + -17091) + 17084);
+    #####:  637:	    	a23 = (((((a23 % 299846)+ 300152) * 1) / 5) + 472915);
+    #####:  638:	    		a4 = 1; 
+    #####:  639:	    		a25 = 13; 
+        -:  640:
+    #####:  641:	    	 return 24;
+   182224:  642:	    } else if((((((((input == 2) && ((a25==9) || (a25==10))) && (a8==15)) &&   ((140 < a29) && (245 >= a29)) ) &&  306 < a23 ) && (a3==1)) && (a4==1))){
+branch  0 taken 35155 (fallthrough)
+branch  1 taken 147069
+branch  2 taken 24681 (fallthrough)
+branch  3 taken 10474
+branch  4 taken 13193 (fallthrough)
+branch  5 taken 11488
+branch  6 taken 23667 (fallthrough)
+branch  7 taken 0
+branch  8 taken 18027 (fallthrough)
+branch  9 taken 5640
+branch 10 taken 1564 (fallthrough)
+branch 11 taken 16463
+branch 12 taken 1564 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1564 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1564 (fallthrough)
+branch 17 taken 0
+     1564:  643:	    	a29 = (((((a29 % 15)+ 251) - 4) + 70998) - 70986);
+     1564:  644:	    	a23 = (((a23 + -600145) - -264493) + -264420);
+     1564:  645:	    		a4 = 0; 
+     1564:  646:	    		a25 = 12; 
+        -:  647:
+     1564:  648:	    	 return 25;
+   180660:  649:	    } else if(((a8==15) && (((( 277 < a29  && ((input == 2) && ((a25==11) || ((a25==9) || (a25==10))))) && (a4==1)) && (a3==1)) &&  306 < a23 ))){
+branch  0 taken 180660 (fallthrough)
+branch  1 taken 0
+branch  2 taken 63358 (fallthrough)
+branch  3 taken 117302
+branch  4 taken 13753 (fallthrough)
+branch  5 taken 49605
+branch  6 taken 9491 (fallthrough)
+branch  7 taken 4262
+branch  8 taken 4302 (fallthrough)
+branch  9 taken 5189
+branch 10 taken 4302 (fallthrough)
+branch 11 taken 0
+branch 12 taken 13095 (fallthrough)
+branch 13 taken 658
+branch 14 taken 13095 (fallthrough)
+branch 15 taken 0
+branch 16 taken 13095 (fallthrough)
+branch 17 taken 0
+        -:  650:
+    13095:  651:	    		a25 = 10; 
+        -:  652:
+    13095:  653:	    	 return 26;
+  167565*:  654:	    } else if((((((  ((-43 < a23) && (138 >= a23))  && ((input == 3) && ((a25==12) || ((a25==10) || (a25==11))))) && !(a4==1)) && (a8==15)) &&  a29 <=  140 ) && (a3==1))){
+branch  0 taken 145540 (fallthrough)
+branch  1 taken 22025
+branch  2 taken 0 (fallthrough)
+branch  3 taken 145540
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  655:	    	if(  ((-43 < a23) && (138 >= a23)) ){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+        -:  656:
+    #####:  657:	    		a25 = 9; 
+        -:  658:
+        -:  659:	    	} else{
+    #####:  660:	    		a29 = ((((((a29 % 15)- -261) * 1) * 5) % 15)+ 258);
+    #####:  661:	    		a23 = (((a23 + -383249) + 378537) / 5);
+    #####:  662:	    		a25 = 11; 
+        -:  663:
+    #####:  664:	    	} return 21;
+  167565*:  665:	    } else if((((!(a4==1) && ((((input == 6) && ((a25==12) || ((a25==10) || (a25==11)))) && (a8==15)) &&   ((-43 < a23) && (138 >= a23)) )) && (a3==1)) &&  a29 <=  140 )){
+branch  0 taken 22025 (fallthrough)
+branch  1 taken 145540
+branch  2 taken 3648 (fallthrough)
+branch  3 taken 18377
+branch  4 taken 700 (fallthrough)
+branch  5 taken 2948
+branch  6 taken 680 (fallthrough)
+branch  7 taken 20
+branch  8 taken 22 (fallthrough)
+branch  9 taken 658
+branch 10 taken 2990 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 2990
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+        -:  666:
+    #####:  667:	    		a25 = 10; 
+        -:  668:
+    #####:  669:	    	 return 24;
+  167565*:  670:	    } else if(((a25==9) && (( a29 <=  140  && ((a3==1) && (!(a4==1) && (  ((-43 < a23) && (138 >= a23))  && (input == 2))))) && (a8==15)))){
+branch  0 taken 40440 (fallthrough)
+branch  1 taken 127125
+branch  2 taken 152 (fallthrough)
+branch  3 taken 40288
+branch  4 taken 152 (fallthrough)
+branch  5 taken 0
+branch  6 taken 152 (fallthrough)
+branch  7 taken 0
+branch  8 taken 0 (fallthrough)
+branch  9 taken 152
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  671:	    	a29 = (((((a29 * 9)/ 10) / 5) * 5) - -549278);
+    #####:  672:	    	a23 = (((((a23 % 83)- -221) + 0) - 573144) + 573144);
+    #####:  673:	    		a4 = 1; 
+    #####:  674:	    		a25 = 11; 
+        -:  675:
+    #####:  676:	    	 return 25;
+  167565*:  677:	    } else if((!(a4==1) && ( a23 <=  -43  && (((a8==15) && (((((a25==12) &&   ((245 < a29) && (277 >= a29)) ) || (  ((245 < a29) && (277 >= a29))  && (a25==13))) || ((a25==9) &&  277 < a29 )) && (input == 3))) && (a3==1))))){
+branch  0 taken 22025 (fallthrough)
+branch  1 taken 145540
+branch  2 taken 22025 (fallthrough)
+branch  3 taken 0
+branch  4 taken 22025 (fallthrough)
+branch  5 taken 0
+branch  6 taken 16905 (fallthrough)
+branch  7 taken 5120
+branch  8 taken 14724 (fallthrough)
+branch  9 taken 2181
+branch 10 taken 0 (fallthrough)
+branch 11 taken 14724
+branch 12 taken 3438 (fallthrough)
+branch 13 taken 3863
+branch 14 taken 0 (fallthrough)
+branch 15 taken 3438
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 taken 3590 (fallthrough)
+branch 19 taken 3711
+branch 20 taken 3438 (fallthrough)
+branch 21 taken 152
+branch 22 taken 3515 (fallthrough)
+branch 23 taken 14647
+branch 24 taken 3515 (fallthrough)
+branch 25 taken 0
+     3515:  678:	    	a29 = ((((a29 % 299861)+ 278) + -585161) + 595133);
+     3515:  679:	    		a25 = 9; 
+        -:  680:
+     3515:  681:	    	 return 21;
+  164050*:  682:	    } else if((((!(a4==1) && ((a3==1) && ((input == 5) && (((  ((245 < a29) && (277 >= a29))  && (a25==12)) || ((a25==13) &&   ((245 < a29) && (277 >= a29)) )) || ((a25==9) &&  277 < a29 ))))) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 18510 (fallthrough)
+branch  1 taken 145540
+branch  2 taken 18510 (fallthrough)
+branch  3 taken 0
+branch  4 taken 1820 (fallthrough)
+branch  5 taken 16690
+branch  6 taken 587 (fallthrough)
+branch  7 taken 1233
+branch  8 taken 439 (fallthrough)
+branch  9 taken 148
+branch 10 taken 0 (fallthrough)
+branch 11 taken 439
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1381
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 taken 148 (fallthrough)
+branch 19 taken 1233
+branch 20 taken 148 (fallthrough)
+branch 21 taken 0
+branch 22 taken 587 (fallthrough)
+branch 23 taken 0
+branch 24 taken 587 (fallthrough)
+branch 25 taken 0
+      587:  683:	    	a29 = (((((a29 / 5) % 52)- -147) - 494611) + 494614);
+      587:  684:	    		a4 = 1; 
+      587:  685:	    		a25 = 13; 
+        -:  686:
+      587:  687:	    	 return -1;
+  163463*:  688:	    } else if(( a23 <=  -43  && (!(a4==1) && (  ((245 < a29) && (277 >= a29))  && ((a8==15) && ((a25==11) && ((a3==1) && (input == 3)))))))){
+branch  0 taken 17923 (fallthrough)
+branch  1 taken 145540
+branch  2 taken 17923 (fallthrough)
+branch  3 taken 0
+branch  4 taken 14060 (fallthrough)
+branch  5 taken 3863
+branch  6 taken 11428 (fallthrough)
+branch  7 taken 2632
+branch  8 taken 11428 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 11428
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  689:	    	a29 = (((a29 - 50975) - -50903) - -16);
+    #####:  690:	    	a23 = (((((a23 % 299846)+ 300152) + 161217) * 10)/ 9);
+    #####:  691:	    		a4 = 1; 
+    #####:  692:	    		a25 = 13; 
+        -:  693:
+    #####:  694:	    	 return 24;
+   163463:  695:	    } else if(((((a8==15) && ( 306 < a23  && (  ((140 < a29) && (245 >= a29))  && ((input == 1) && ((a25==9) || (a25==10)))))) && (a4==1)) && (a3==1))){
+branch  0 taken 163463 (fallthrough)
+branch  1 taken 0
+branch  2 taken 145540 (fallthrough)
+branch  3 taken 17923
+branch  4 taken 105328 (fallthrough)
+branch  5 taken 40212
+branch  6 taken 19494 (fallthrough)
+branch  7 taken 85834
+branch  8 taken 388 (fallthrough)
+branch  9 taken 19106
+branch 10 taken 240 (fallthrough)
+branch 11 taken 148
+branch 12 taken 240 (fallthrough)
+branch 13 taken 0
+branch 14 taken 388 (fallthrough)
+branch 15 taken 0
+branch 16 taken 388 (fallthrough)
+branch 17 taken 0
+      388:  696:	    	a29 = (((a29 - -245917) - -241779) - -92559);
+      388:  697:	    	a23 = ((((a23 - 0) - 0) * -2)/ 10);
+      388:  698:	    		a25 = 10; 
+        -:  699:
+      388:  700:	    	 return -1;
+  163075*:  701:	    } else if((!(a4==1) && (((((a3==1) && ((input == 2) && (((a25==9) || (a25==10)) || (a25==11)))) &&   ((140 < a29) && (245 >= a29)) ) &&  a23 <=  -43 ) && (a8==15)))){
+branch  0 taken 17923 (fallthrough)
+branch  1 taken 145152
+branch  2 taken 17923 (fallthrough)
+branch  3 taken 0
+branch  4 taken 3515 (fallthrough)
+branch  5 taken 14408
+branch  6 taken 2857 (fallthrough)
+branch  7 taken 658
+branch  8 taken 2857 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 2857
+branch 12 taken 658 (fallthrough)
+branch 13 taken 0
+branch 14 taken 0 (fallthrough)
+branch 15 taken 658
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  702:	    	if( a23 <=  -43 ){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  703:
+    #####:  704:	    		a25 = 12; 
+        -:  705:
+        -:  706:	    	} else{
+    #####:  707:	    		a29 = (((a29 * -5) + -348745) - 116970);
+    #####:  708:	    		a23 = ((((a23 - -289833) * 1) / 5) + 133441);
+    #####:  709:	    		a4 = 1; 
+    #####:  710:	    		a25 = 13; 
+        -:  711:
+    #####:  712:	    	} return 23;
+   163075:  713:	    } else if((((((((  ((245 < a29) && (277 >= a29))  && (a25==10)) || ((  ((140 < a29) && (245 >= a29))  && (a25==13)) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) ))) && (input == 6)) && (a3==1)) &&  306 < a23 ) && (a4==1)) && (a8==15))){
+branch  0 taken 99894 (fallthrough)
+branch  1 taken 63181
+branch  2 taken 50437 (fallthrough)
+branch  3 taken 49457
+branch  4 taken 41010 (fallthrough)
+branch  5 taken 9427
+branch  6 taken 110317 (fallthrough)
+branch  7 taken 43331
+branch  8 taken 19850 (fallthrough)
+branch  9 taken 90467
+branch 10 taken 6854 (fallthrough)
+branch 11 taken 12996
+branch 12 taken 39486 (fallthrough)
+branch 13 taken 101166
+branch 14 taken 38018 (fallthrough)
+branch 15 taken 1468
+branch 16 taken 20003 (fallthrough)
+branch 17 taken 18015
+branch 18 taken 2514 (fallthrough)
+branch 19 taken 39912
+branch 20 taken 2514 (fallthrough)
+branch 21 taken 0
+branch 22 taken 2514 (fallthrough)
+branch 23 taken 0
+branch 24 taken 2514 (fallthrough)
+branch 25 taken 0
+branch 26 taken 2514 (fallthrough)
+branch 27 taken 0
+     2514:  714:	    	a29 = ((((((a29 % 15)+ 248) + 12) * 5) % 15)- -247);
+     2514:  715:	    	a23 = ((((a23 % 83)- -151) + 459589) - 459544);
+     2514:  716:	    		a25 = 11; 
+        -:  717:
+     2514:  718:	    	 return -1;
+   160561:  719:	    } else if(( 306 < a23  && ((a8==15) && ( 277 < a29  && ((a4==1) && ((a3==1) && ((((a25==9) || (a25==10)) || (a25==11)) && (input == 5)))))))){
+branch  0 taken 142638 (fallthrough)
+branch  1 taken 17923
+branch  2 taken 142638 (fallthrough)
+branch  3 taken 0
+branch  4 taken 46825 (fallthrough)
+branch  5 taken 95813
+branch  6 taken 46825 (fallthrough)
+branch  7 taken 0
+branch  8 taken 46825 (fallthrough)
+branch  9 taken 0
+branch 10 taken 31442 (fallthrough)
+branch 11 taken 15383
+branch 12 taken 16568 (fallthrough)
+branch 13 taken 14874
+branch 14 taken 15814 (fallthrough)
+branch 15 taken 754
+branch 16 taken 3393 (fallthrough)
+branch 17 taken 42678
+     3393:  720:	    	a23 = ((((a23 + -600132) - -470437) + -414459) + -56058);
+     3393:  721:	    		a25 = 9; 
+        -:  722:
+     3393:  723:	    	 return -1;
+  157168*:  724:	    } else if(((( 277 < a29  && ((a8==15) && (((input == 6) &&  a23 <=  -43 ) && (a25==13)))) && !(a4==1)) && (a3==1))){
+branch  0 taken 46064 (fallthrough)
+branch  1 taken 111104
+branch  2 taken 46064 (fallthrough)
+branch  3 taken 0
+branch  4 taken 4051 (fallthrough)
+branch  5 taken 42013
+branch  6 taken 658 (fallthrough)
+branch  7 taken 3393
+branch  8 taken 0 (fallthrough)
+branch  9 taken 658
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  725:	    	if((a25==9)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  726:	    	a29 = (((((a29 * 9)/ 10) / 5) % 15)+ 257);
+    #####:  727:	    	a23 = ((((a23 * 9)/ 10) - -541147) - -8866);
+    #####:  728:	    		a4 = 1; 
+    #####:  729:	    		a25 = 12; 
+        -:  730:
+        -:  731:	    	} else{
+    #####:  732:	    		a29 = (((((a29 % 15)- -252) / 5) * 10)/ 2);
+    #####:  733:	    		a23 = ((((a23 % 83)+ 255) - -326012) + -326023);
+    #####:  734:	    		a4 = 1; 
+    #####:  735:	    		a25 = 10; 
+        -:  736:
+    #####:  737:	    	} return 24;
+  157168*:  738:	    } else if(((a3==1) && (((!(a4==1) && (((  ((140 < a29) && (245 >= a29))  && (a25==10)) || (( a29 <=  140  && (a25==13)) || ((a25==9) &&   ((140 < a29) && (245 >= a29)) ))) && (input == 3))) &&   ((-43 < a23) && (138 >= a23)) ) && (a8==15)))){
+branch  0 taken 157168 (fallthrough)
+branch  1 taken 0
+branch  2 taken 17923 (fallthrough)
+branch  3 taken 139245
+branch  4 taken 14804 (fallthrough)
+branch  5 taken 3119
+branch  6 taken 744 (fallthrough)
+branch  7 taken 14060
+branch  8 taken 744 (fallthrough)
+branch  9 taken 0
+branch 10 taken 3119 (fallthrough)
+branch 11 taken 14804
+branch 12 taken 3119 (fallthrough)
+branch 13 taken 0
+branch 14 taken 2784 (fallthrough)
+branch 15 taken 15139
+branch 16 taken 2632 (fallthrough)
+branch 17 taken 152
+branch 18 taken 0 (fallthrough)
+branch 19 taken 2632
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  739:	    	a29 = (((((a29 % 300070)+ -299929) * 1) - -399992) + -399993);
+    #####:  740:	    	a23 = ((((a23 - -466319) * 1) - 536307) - -562918);
+    #####:  741:	    		a4 = 1; 
+    #####:  742:	    		a25 = 12; 
+        -:  743:
+    #####:  744:	    	 return 24;
+   157168:  745:	    } else if(((a3==1) && (( 306 < a23  && (((a4==1) && (((a25==12) || ((a25==10) || (a25==11))) && (input == 1))) &&  a29 <=  140 )) && (a8==15)))){
+branch  0 taken 157168 (fallthrough)
+branch  1 taken 0
+branch  2 taken 139245 (fallthrough)
+branch  3 taken 17923
+branch  4 taken 139245 (fallthrough)
+branch  5 taken 0
+branch  6 taken 128853 (fallthrough)
+branch  7 taken 10392
+branch  8 taken 70969 (fallthrough)
+branch  9 taken 57884
+branch 10 taken 16469 (fallthrough)
+branch 11 taken 54500
+branch 12 taken 17867 (fallthrough)
+branch 13 taken 66878
+branch 14 taken 5856 (fallthrough)
+branch 15 taken 12011
+branch 16 taken 5856 (fallthrough)
+branch 17 taken 0
+     5856:  746:	    	a29 = ((((a29 + 161077) + -91920) % 299861)- -300138);
+     5856:  747:	    		a25 = 9; 
+        -:  748:
+     5856:  749:	    	 return 26;
+  151312*:  750:	    } else if((((( a23 <=  -43  && ((input == 1) && ((  ((245 < a29) && (277 >= a29))  && (a25==10)) || ((  ((140 < a29) && (245 >= a29))  && (a25==13)) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) ))))) && (a3==1)) && !(a4==1)) && (a8==15))){
+branch  0 taken 17923 (fallthrough)
+branch  1 taken 133389
+branch  2 taken 82 (fallthrough)
+branch  3 taken 17841
+branch  4 taken 0 (fallthrough)
+branch  5 taken 82
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 0 (fallthrough)
+branch 11 taken 82
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 taken 82 (fallthrough)
+branch 17 taken 0
+branch 18 taken 0 (fallthrough)
+branch 19 taken 82
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  751:	    	a29 = ((((a29 + -499856) % 52)- -211) - 16);
+    #####:  752:	    	a23 = (((a23 / 5) - 109698) + 347082);
+    #####:  753:	    		a4 = 1; 
+    #####:  754:	    		a25 = 13; 
+        -:  755:
+    #####:  756:	    	 return 25;
+   151312:  757:	    } else if(((!(a4==1) && (((a8==15) && ( a29 <=  140  && (((a25==10) || (a25==11)) && (input == 5)))) &&  a23 <=  -43 )) && (a3==1))){
+branch  0 taken 17923 (fallthrough)
+branch  1 taken 133389
+branch  2 taken 17923 (fallthrough)
+branch  3 taken 0
+branch  4 taken 3119 (fallthrough)
+branch  5 taken 14804
+branch  6 taken 1887 (fallthrough)
+branch  7 taken 1232
+branch  8 taken 298 (fallthrough)
+branch  9 taken 1589
+branch 10 taken 534 (fallthrough)
+branch 11 taken 996
+branch 12 taken 534 (fallthrough)
+branch 13 taken 0
+branch 14 taken 534 (fallthrough)
+branch 15 taken 0
+      534:  758:	    	a29 = ((((a29 % 15)- -260) * 1) * 1);
+      534:  759:	    	a23 = (((((a23 % 299846)- -300152) - -162376) * 10)/ 9);
+      534:  760:	    		a4 = 1; 
+      534:  761:	    		a25 = 9; 
+        -:  762:
+      534:  763:	    	 return 25;
+  150778*:  764:	    } else if((((((a8==15) && ((a3==1) && ( a23 <=  -43  && (input == 5)))) && !(a4==1)) && (a25==13)) &&  277 < a29 )){
+branch  0 taken 150778 (fallthrough)
+branch  1 taken 0
+branch  2 taken 150778 (fallthrough)
+branch  3 taken 0
+branch  4 taken 17389 (fallthrough)
+branch  5 taken 133389
+branch  6 taken 699 (fallthrough)
+branch  7 taken 16690
+branch  8 taken 699 (fallthrough)
+branch  9 taken 0
+branch 10 taken 0 (fallthrough)
+branch 11 taken 699
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  765:	    	if((a8==17)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  766:	    	a29 = ((((a29 % 15)- -255) + -332583) - -332576);
+    #####:  767:	    	a23 = (((((a23 % 90)- -99) + -41) + 369325) + -369311);
+    #####:  768:	    		a4 = 1; 
+    #####:  769:	    		a25 = 10; 
+        -:  770:
+        -:  771:	    	} else{
+    #####:  772:	    		a29 = ((((a29 + -600024) * 1) - -257168) + -257162);
+    #####:  773:	    		a25 = 10; 
+        -:  774:
+    #####:  775:	    	} return 24;
+   150778:  776:	    } else if(((a8==15) && ((a3==1) && ( 306 < a23  && ((((((a25==11) || (a25==12)) || (a25==13)) && (input == 1)) && (a4==1)) &&   ((245 < a29) && (277 >= a29)) ))))){
+branch  0 taken 150778 (fallthrough)
+branch  1 taken 0
+branch  2 taken 150778 (fallthrough)
+branch  3 taken 0
+branch  4 taken 133389 (fallthrough)
+branch  5 taken 17389
+branch  6 taken 116920 (fallthrough)
+branch  7 taken 16469
+branch  8 taken 106528 (fallthrough)
+branch  9 taken 10392
+branch 10 taken 20188 (fallthrough)
+branch 11 taken 86340
+branch 12 taken 9626 (fallthrough)
+branch 13 taken 37423
+branch 14 taken 9626 (fallthrough)
+branch 15 taken 0
+branch 16 taken 8149 (fallthrough)
+branch 17 taken 1477
+branch 18 taken 3447 (fallthrough)
+branch 19 taken 4702
+        -:  777:
+     3447:  778:	    		a25 = 11; 
+        -:  779:
+     3447:  780:	    	 return 26;
+   147331:  781:	    } else if((!(a4==1) && (((((((a25==12) || (a25==13)) && (input == 6)) && (a8==15)) &&  a23 <=  -43 ) && (a3==1)) &&  a29 <=  140 ))){
+branch  0 taken 17389 (fallthrough)
+branch  1 taken 129942
+branch  2 taken 3780 (fallthrough)
+branch  3 taken 13609
+branch  4 taken 0 (fallthrough)
+branch  5 taken 3780
+branch  6 taken 2948 (fallthrough)
+branch  7 taken 10661
+branch  8 taken 2948 (fallthrough)
+branch  9 taken 0
+branch 10 taken 2948 (fallthrough)
+branch 11 taken 0
+branch 12 taken 2948 (fallthrough)
+branch 13 taken 0
+branch 14 taken 91 (fallthrough)
+branch 15 taken 2857
+       91:  782:	    	a23 = (((((a23 % 83)- -241) * 10)/ 9) - 2);
+       91:  783:	    		a4 = 1; 
+       91:  784:	    		a25 = 9; 
+        -:  785:
+       91:  786:	    	 return -1;
+  147240*:  787:	    } else if(((a3==1) && (( a23 <=  -43  && (((input == 6) && ((  ((245 < a29) && (277 >= a29))  && (a25==10)) || (((a25==13) &&   ((140 < a29) && (245 >= a29)) ) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) )))) && !(a4==1))) && (a8==15)))){
+branch  0 taken 147240 (fallthrough)
+branch  1 taken 0
+branch  2 taken 17298 (fallthrough)
+branch  3 taken 129942
+branch  4 taken 3557 (fallthrough)
+branch  5 taken 13741
+branch  6 taken 3515 (fallthrough)
+branch  7 taken 42
+branch  8 taken 2857 (fallthrough)
+branch  9 taken 658
+branch 10 taken 2857 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 3557
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 taken 658 (fallthrough)
+branch 19 taken 2899
+branch 20 taken 658 (fallthrough)
+branch 21 taken 0
+branch 22 taken 0 (fallthrough)
+branch 23 taken 658
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  788:	    	a29 = ((((a29 / -5) + 241460) / 5) + -586950);
+    #####:  789:	    	a23 = ((((a23 % 83)+ 273) + 269852) - 269901);
+    #####:  790:	    		a4 = 1; 
+    #####:  791:	    		a25 = 9; 
+        -:  792:
+    #####:  793:	    	 return -1;
+  147240*:  794:	    } else if(((((  ((-43 < a23) && (138 >= a23))  && ((!(a4==1) && (input == 6)) && (a25==9))) &&  a29 <=  140 ) && (a3==1)) && (a8==15))){
+branch  0 taken 129942 (fallthrough)
+branch  1 taken 17298
+branch  2 taken 0 (fallthrough)
+branch  3 taken 129942
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    #####:  795:	    	a29 = ((((a29 % 299861)- -300138) + 0) + 0);
+    #####:  796:	    		a4 = 1; 
+        -:  797:
+    #####:  798:	    	 return 23;
+   147240:  799:	    } else if((( a29 <=  140  && ((a3==1) && ((a8==15) && ((a25==13) && ( 306 < a23  && (input == 1)))))) && (a4==1))){
+branch  0 taken 36850 (fallthrough)
+branch  1 taken 110390
+branch  2 taken 36850 (fallthrough)
+branch  3 taken 0
+branch  4 taken 36850 (fallthrough)
+branch  5 taken 0
+branch  6 taken 7410 (fallthrough)
+branch  7 taken 29440
+branch  8 taken 7410 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1477 (fallthrough)
+branch 11 taken 5933
+branch 12 taken 1477 (fallthrough)
+branch 13 taken 0
+     1477:  800:	    	a29 = (((((a29 - -23296) + 347282) * 1) % 52)- -192);
+     1477:  801:	    	a23 = (((a23 + -600218) * 1) - 2);
+     1477:  802:	    		a4 = 0; 
+     1477:  803:	    		a25 = 12; 
+        -:  804:
+     1477:  805:	    	 return 21;
+   145763:  806:	    } else if(((a3==1) && (((a8==15) && ((((  ((245 < a29) && (277 >= a29))  && (a25==10)) || ((  ((140 < a29) && (245 >= a29))  && (a25==13)) || (  ((245 < a29) && (277 >= a29))  && (a25==9)))) && (input == 5)) &&  306 < a23 )) && (a4==1)))){
+branch  0 taken 145763 (fallthrough)
+branch  1 taken 0
+branch  2 taken 145763 (fallthrough)
+branch  3 taken 0
+branch  4 taken 91512 (fallthrough)
+branch  5 taken 54251
+branch  6 taken 45448 (fallthrough)
+branch  7 taken 46064
+branch  8 taken 36068 (fallthrough)
+branch  9 taken 9380
+branch 10 taken 101010 (fallthrough)
+branch 11 taken 35373
+branch 12 taken 18878 (fallthrough)
+branch 13 taken 82132
+branch 14 taken 6854 (fallthrough)
+branch 15 taken 12024
+branch 16 taken 82132 (fallthrough)
+branch 17 taken 42227
+branch 18 taken 36068 (fallthrough)
+branch 19 taken 46064
+branch 20 taken 18508 (fallthrough)
+branch 21 taken 17560
+branch 22 taken 9978 (fallthrough)
+branch 23 taken 29934
+branch 24 taken 9978 (fallthrough)
+branch 25 taken 0
+branch 26 taken 9978 (fallthrough)
+branch 27 taken 0
+     9978:  807:	    	a29 = ((((((a29 % 52)- -170) - 134399) * 4) % 52)- -194);
+     9978:  808:	    		a25 = 13; 
+        -:  809:
+     9978:  810:	    	 return 24;
+   135785:  811:	    } else if((((((a8==15) && ((input == 4) && (( 277 < a29  && (a25==9)) || ((  ((245 < a29) && (277 >= a29))  && (a25==12)) || (  ((245 < a29) && (277 >= a29))  && (a25==13)))))) && !(a4==1)) &&  a23 <=  -43 ) && (a3==1))){
+branch  0 taken 135785 (fallthrough)
+branch  1 taken 0
+branch  2 taken 9733 (fallthrough)
+branch  3 taken 126052
+branch  4 taken 658 (fallthrough)
+branch  5 taken 9075
+branch  6 taken 0 (fallthrough)
+branch  7 taken 658
+branch  8 taken 5542 (fallthrough)
+branch  9 taken 3533
+branch 10 taken 5542 (fallthrough)
+branch 11 taken 0
+branch 12 taken 659 (fallthrough)
+branch 13 taken 4883
+branch 14 taken 659 (fallthrough)
+branch 15 taken 3533
+branch 16 taken 659 (fallthrough)
+branch 17 taken 0
+branch 18 taken 0 (fallthrough)
+branch 19 taken 659
+branch 20 taken 3515 (fallthrough)
+branch 21 taken 2026
+branch 22 taken 3515 (fallthrough)
+branch 23 taken 0
+branch 24 taken 3515 (fallthrough)
+branch 25 taken 0
+     3515:  812:	    	if((a8==15)){
+branch  0 taken 3515 (fallthrough)
+branch  1 taken 0
+     3515:  813:	    	a29 = ((((a29 + 0) - 0) % 15)+ 256);
+     3515:  814:	    		a25 = 12; 
+        -:  815:
+        -:  816:	    	} else{
+    #####:  817:	    		a29 = ((((((a29 % 52)- -157) - 13) * 5) % 52)+ 159);
+    #####:  818:	    		a23 = ((((a23 * 9)/ 10) - -391167) + 156164);
+    #####:  819:	    		a4 = 1; 
+    #####:  820:	    		a25 = 9; 
+        -:  821:
+     3515:  822:	    	} return 24;
+  132270*:  823:	    } else if((((  ((-43 < a23) && (138 >= a23))  && (!(a4==1) && ((input == 5) && ((  ((140 < a29) && (245 >= a29))  && (a25==10)) || (( a29 <=  140  && (a25==13)) || ((a25==9) &&   ((140 < a29) && (245 >= a29)) )))))) && (a8==15)) && (a3==1))){
+branch  0 taken 118487 (fallthrough)
+branch  1 taken 13783
+branch  2 taken 0 (fallthrough)
+branch  3 taken 118487
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  824:	    	a29 = ((((a29 / 5) % 15)+ 260) + 0);
+    #####:  825:	    	a23 = (((((a23 + -6217) - -239558) * 2) * -1)/ 10);
+    #####:  826:	    		a25 = 12; 
+        -:  827:
+    #####:  828:	    	 return -1;
+   132270:  829:	    } else if(( a29 <=  140  && ((((( 306 < a23  && (input == 2)) && (a25==13)) && (a4==1)) && (a3==1)) && (a8==15)))){
+branch  0 taken 35373 (fallthrough)
+branch  1 taken 96897
+branch  2 taken 32879 (fallthrough)
+branch  3 taken 2494
+branch  4 taken 7003 (fallthrough)
+branch  5 taken 25876
+branch  6 taken 1363 (fallthrough)
+branch  7 taken 5640
+branch  8 taken 1363 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1363 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1363 (fallthrough)
+branch 13 taken 0
+     1363:  830:	    	a29 = (((a29 / 5) + 165004) + 41645);
+     1363:  831:	    	 return 23;
+   130907:  832:	    } else if(((a8==15) && ((((a3==1) && ((((a25==10) || (a25==11)) && (input == 6)) &&  a29 <=  140 )) &&  a23 <=  -43 ) && !(a4==1)))){
+branch  0 taken 130907 (fallthrough)
+branch  1 taken 0
+branch  2 taken 130907 (fallthrough)
+branch  3 taken 0
+branch  4 taken 80432 (fallthrough)
+branch  5 taken 50475
+branch  6 taken 15918 (fallthrough)
+branch  7 taken 64514
+branch  8 taken 2540 (fallthrough)
+branch  9 taken 63853
+branch 10 taken 42 (fallthrough)
+branch 11 taken 2498
+branch 12 taken 42 (fallthrough)
+branch 13 taken 0
+branch 14 taken 42 (fallthrough)
+branch 15 taken 0
+       42:  833:	    	a23 = (((((a23 / 5) + -54477) / 5) % 90)- -119);
+       42:  834:	    		a4 = 1; 
+       42:  835:	    		a25 = 10; 
+        -:  836:
+       42:  837:	    	 return -1;
+   130865:  838:	    } else if((  ((245 < a29) && (277 >= a29))  && (((((a8==15) && (((a25==13) || ((a25==11) || (a25==12))) && (input == 4))) && (a4==1)) && (a3==1)) &&  306 < a23 ))){
+branch  0 taken 81025 (fallthrough)
+branch  1 taken 49840
+branch  2 taken 35619 (fallthrough)
+branch  3 taken 45406
+branch  4 taken 35619 (fallthrough)
+branch  5 taken 0
+branch  6 taken 35619 (fallthrough)
+branch  7 taken 0
+branch  8 taken 34205 (fallthrough)
+branch  9 taken 1414
+branch 10 taken 13289 (fallthrough)
+branch 11 taken 20916
+branch 12 taken 2685 (fallthrough)
+branch 13 taken 12018
+branch 14 taken 2685 (fallthrough)
+branch 15 taken 0
+branch 16 taken 2685 (fallthrough)
+branch 17 taken 0
+branch 18 taken 2685 (fallthrough)
+branch 19 taken 0
+     2685:  839:	    	a29 = (((((a29 * 12)/ 10) * 10)/ 9) + 97056);
+     2685:  840:	    		a25 = 10; 
+        -:  841:
+     2685:  842:	    	 return 21;
+   128180:  843:	    } else if((((a3==1) && ((a8==15) && ((((a25==13) && (input == 4)) && (a4==1)) &&  a29 <=  140 ))) &&  306 < a23 )){
+branch  0 taken 128180 (fallthrough)
+branch  1 taken 0
+branch  2 taken 128180 (fallthrough)
+branch  3 taken 0
+branch  4 taken 14342 (fallthrough)
+branch  5 taken 113838
+branch  6 taken 1531 (fallthrough)
+branch  7 taken 12811
+branch  8 taken 1531 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1531 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1531 (fallthrough)
+branch 13 taken 0
+     1531:  844:	    	a29 = ((((a29 % 299861)+ 300138) / 5) + 212399);
+     1531:  845:	    		a25 = 9; 
+        -:  846:
+     1531:  847:	    	 return 23;
+   126649:  848:	    } else if((( 306 < a23  && ((a25==13) && ((((input == 3) &&  a29 <=  140 ) && (a3==1)) && (a4==1)))) && (a8==15))){
+branch  0 taken 112908 (fallthrough)
+branch  1 taken 13741
+branch  2 taken 12811 (fallthrough)
+branch  3 taken 100097
+branch  4 taken 4537 (fallthrough)
+branch  5 taken 8274
+branch  6 taken 1531 (fallthrough)
+branch  7 taken 3006
+branch  8 taken 1531 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1531 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1531 (fallthrough)
+branch 13 taken 0
+     1531:  849:	    	a29 = (((a29 / 5) + 549120) - -37000);
+     1531:  850:	    		a25 = 10; 
+        -:  851:
+     1531:  852:	    	 return 23;
+  125118*:  853:	    } else if((!(a4==1) && (( 277 < a29  && ((((input == 4) &&  a23 <=  -43 ) && (a8==15)) && (a3==1))) && (a25==13)))){
+branch  0 taken 13741 (fallthrough)
+branch  1 taken 111377
+branch  2 taken 1974 (fallthrough)
+branch  3 taken 11767
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1974
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  854:	    	a23 = ((((a23 * 9)/ 10) - -544088) + 7197);
+    #####:  855:	    		a4 = 1; 
+    #####:  856:	    		a25 = 9; 
+        -:  857:
+    #####:  858:	    	 return 25;
+   125118:  859:	    } else if(((a3==1) && (((((( a29 <=  140  && !(a4==1)) && (a25==9)) &&  a23 <=  -43 ) || (( 306 < a23  && (((a4==1) &&  277 < a29 ) && (a25==12))) || ( 306 < a23  && (((a4==1) &&  277 < a29 ) && (a25==13))))) && (input == 1)) && (a8==15)))){
+branch  0 taken 125118 (fallthrough)
+branch  1 taken 0
+branch  2 taken 30906 (fallthrough)
+branch  3 taken 94212
+branch  4 taken 2452 (fallthrough)
+branch  5 taken 28454
+branch  6 taken 152 (fallthrough)
+branch  7 taken 2300
+branch  8 taken 0 (fallthrough)
+branch  9 taken 152
+branch 10 taken 111377 (fallthrough)
+branch 11 taken 13589
+branch 12 taken 111377 (fallthrough)
+branch 13 taken 0
+branch 14 taken 43432 (fallthrough)
+branch 15 taken 67945
+branch 16 taken 43432 (fallthrough)
+branch 17 taken 0
+branch 18 taken 111377 (fallthrough)
+branch 19 taken 13589
+branch 20 taken 111377 (fallthrough)
+branch 21 taken 0
+branch 22 taken 43432 (fallthrough)
+branch 23 taken 67945
+branch 24 taken 754 (fallthrough)
+branch 25 taken 42678
+branch 26 taken 522 (fallthrough)
+branch 27 taken 384
+branch 28 taken 522 (fallthrough)
+branch 29 taken 0
+      522:  860:	    	a29 = ((((a29 / 5) / 5) % 15)- -260);
+      522:  861:	    	a23 = (((((a23 + 0) % 299846)- -300152) - 80832) - -80835);
+      522:  862:	    		a4 = 1; 
+      522:  863:	    		a25 = 11; 
+        -:  864:
+      522:  865:	    	 return 26;
+   124596:  866:	    } else if(( 277 < a29  && ((a3==1) && ((a8==15) && ((a4==1) && ( 306 < a23  && ((input == 6) && (((a25==9) || (a25==10)) || (a25==11))))))))){
+branch  0 taken 44966 (fallthrough)
+branch  1 taken 79630
+branch  2 taken 44966 (fallthrough)
+branch  3 taken 0
+branch  4 taken 44966 (fallthrough)
+branch  5 taken 0
+branch  6 taken 42992 (fallthrough)
+branch  7 taken 1974
+branch  8 taken 42992 (fallthrough)
+branch  9 taken 0
+branch 10 taken 3393 (fallthrough)
+branch 11 taken 39599
+branch 12 taken 2498 (fallthrough)
+branch 13 taken 895
+branch 14 taken 1514 (fallthrough)
+branch 15 taken 984
+branch 16 taken 1514 (fallthrough)
+branch 17 taken 0
+     3393:  867:	    	a29 = (((a29 - 600020) * 1) * 1);
+     3393:  868:	    	a23 = ((((((a23 % 83)+ 161) * 10)/ 9) * 9)/ 10);
+     3393:  869:	    		a25 = 12; 
+        -:  870:
+     3393:  871:	    	 return -1;
+  121203*:  872:	    } else if((((((  ((-43 < a23) && (138 >= a23))  && ((input == 4) && ((a25==12) || ((a25==10) || (a25==11))))) && (a8==15)) && !(a4==1)) && (a3==1)) &&  a29 <=  140 )){
+branch  0 taken 107544 (fallthrough)
+branch  1 taken 13659
+branch  2 taken 0 (fallthrough)
+branch  3 taken 107544
+branch  4 never executed (fallthrough)
+branch  5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  873:	    	if((a4==1)){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  874:	    	a29 = (((((a29 - 0) % 52)- -193) + -44781) - -44780);
+    #####:  875:	    	a23 = ((((a23 * 5) - -64823) - 40453) - 265564);
+    #####:  876:	    		a25 = 12; 
+        -:  877:
+        -:  878:	    	} else{
+    #####:  879:	    		a23 = (((a23 * 5) * 5) - 287786);
+    #####:  880:	    		a25 = 11; 
+        -:  881:
+    #####:  882:	    	} return 23;
+  121203*:  883:	    } else if(((((( a23 <=  -43  && ((input == 5) && ((a25==12) || ((a25==10) || (a25==11))))) && (a3==1)) && !(a4==1)) &&  277 < a29 ) && (a8==15))){
+branch  0 taken 13659 (fallthrough)
+branch  1 taken 107544
+branch  2 taken 699 (fallthrough)
+branch  3 taken 12960
+branch  4 taken 0 (fallthrough)
+branch  5 taken 699
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 taken 699 (fallthrough)
+branch 11 taken 0
+branch 12 taken 699 (fallthrough)
+branch 13 taken 0
+branch 14 taken 0 (fallthrough)
+branch 15 taken 699
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    #####:  884:	    	a29 = ((((a29 + 0) + -365392) * 1) - 234748);
+    #####:  885:	    		a25 = 12; 
+        -:  886:
+    #####:  887:	    	 return 25;
+   121203:  888:	    } else if(((((a8==15) && ((a4==1) && ((((  ((140 < a29) && (245 >= a29))  && (a25==13)) || ((a25==9) &&   ((245 < a29) && (277 >= a29)) )) || (  ((245 < a29) && (277 >= a29))  && (a25==10))) && (input == 2)))) && (a3==1)) &&  306 < a23 )){
+branch  0 taken 121203 (fallthrough)
+branch  1 taken 0
+branch  2 taken 107544 (fallthrough)
+branch  3 taken 13659
+branch  4 taken 79090 (fallthrough)
+branch  5 taken 28454
+branch  6 taken 15128 (fallthrough)
+branch  7 taken 63962
+branch  8 taken 6110 (fallthrough)
+branch  9 taken 9018
+branch 10 taken 28790 (fallthrough)
+branch 11 taken 69736
+branch 12 taken 27474 (fallthrough)
+branch 13 taken 1316
+branch 14 taken 13593 (fallthrough)
+branch 15 taken 13881
+branch 16 taken 50081 (fallthrough)
+branch 17 taken 34564
+branch 18 taken 10482 (fallthrough)
+branch 19 taken 39599
+branch 20 taken 7035 (fallthrough)
+branch 21 taken 3447
+branch 22 taken 9978 (fallthrough)
+branch 23 taken 19956
+branch 24 taken 9978 (fallthrough)
+branch 25 taken 0
+branch 26 taken 9978 (fallthrough)
+branch 27 taken 0
+     9978:  889:	    	a29 = (((((a29 % 52)+ 189) * 5) % 52)- -156);
+     9978:  890:	    		a25 = 13; 
+        -:  891:
+     9978:  892:	    	 return 21;
+  111225*:  893:	    } else if((( a23 <=  -43  && (((  ((140 < a29) && (245 >= a29))  && ((input == 1) && (((a25==9) || (a25==10)) || (a25==11)))) && !(a4==1)) && (a8==15))) && (a3==1))){
+branch  0 taken 13659 (fallthrough)
+branch  1 taken 97566
+branch  2 taken 11289 (fallthrough)
+branch  3 taken 2370
+branch  4 taken 744 (fallthrough)
+branch  5 taken 10545
+branch  6 taken 0 (fallthrough)
+branch  7 taken 744
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    #####:  894:	    	a29 = (((((a29 + 110111) + 157516) + -418483) * -1)/ 10);
+    #####:  895:	    	a23 = (((((a23 % 299846)+ 300152) - -110948) * 10)/ 9);
+    #####:  896:	    		a4 = 1; 
+    #####:  897:	    		a25 = 9; 
+        -:  898:
+    #####:  899:	    	 return 26;
+   111225:  900:	    } else if(((((a3==1) && ((((input == 2) && ((a25==12) || ((a25==10) || (a25==11)))) && (a4==1)) && (a8==15))) &&  a29 <=  140 ) &&  306 < a23 )){
+branch  0 taken 111225 (fallthrough)
+branch  1 taken 0
+branch  2 taken 9155 (fallthrough)
+branch  3 taken 102070
+branch  4 taken 6298 (fallthrough)
+branch  5 taken 2857
+branch  6 taken 658 (fallthrough)
+branch  7 taken 5640
+branch  8 taken 0 (fallthrough)
+branch  9 taken 658
+branch 10 taken 5640 (fallthrough)
+branch 11 taken 2857
+branch 12 taken 5640 (fallthrough)
+branch 13 taken 0
+branch 14 taken 5640 (fallthrough)
+branch 15 taken 0
+branch 16 taken 5640 (fallthrough)
+branch 17 taken 0
+        -:  901:
+     5640:  902:	    		a25 = 13; 
+        -:  903:
+     5640:  904:	    	 return 23;
+   105585:  905:	    } else if((((((a3==1) && (((input == 1) && (((a25==9) || (a25==10)) || (a25==11))) &&  277 < a29 )) && (a4==1)) && (a8==15)) &&  306 < a23 )){
+branch  0 taken 105585 (fallthrough)
+branch  1 taken 0
+branch  2 taken 13095 (fallthrough)
+branch  3 taken 92490
+branch  4 taken 8564 (fallthrough)
+branch  5 taken 4531
+branch  6 taken 4262 (fallthrough)
+branch  7 taken 4302
+branch  8 taken 4262 (fallthrough)
+branch  9 taken 0
+branch 10 taken 13095 (fallthrough)
+branch 11 taken 0
+branch 12 taken 13095 (fallthrough)
+branch 13 taken 0
+branch 14 taken 13095 (fallthrough)
+branch 15 taken 0
+branch 16 taken 13095 (fallthrough)
+branch 17 taken 0
+        -:  906:
+    13095:  907:	    		a25 = 11; 
+        -:  908:
+    13095:  909:	    	 return 24;
+   92490*:  910:	    } else if((((a3==1) && ( a23 <=  -43  && ((a8==15) && ((input == 2) && (((a25==9) &&  277 < a29 ) || ((  ((245 < a29) && (277 >= a29))  && (a25==12)) || ((a25==13) &&   ((245 < a29) && (277 >= a29)) ))))))) && !(a4==1))){
+branch  0 taken 92490 (fallthrough)
+branch  1 taken 0
+branch  2 taken 13659 (fallthrough)
+branch  3 taken 78831
+branch  4 taken 13659 (fallthrough)
+branch  5 taken 0
+branch  6 taken 3515 (fallthrough)
+branch  7 taken 10144
+branch  8 taken 658 (fallthrough)
+branch  9 taken 2857
+branch 10 taken 0 (fallthrough)
+branch 11 taken 658
+branch 12 taken 2857 (fallthrough)
+branch 13 taken 0
+branch 14 taken 2857 (fallthrough)
+branch 15 taken 0
+branch 16 taken 0 (fallthrough)
+branch 17 taken 2857
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 taken 3515 (fallthrough)
+branch 25 taken 0
+     3515:  911:	    	if((a8==16)){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3515
+    #####:  912:	    	a29 = ((((a29 % 15)+ 252) - -1) - -2);
+    #####:  913:	    		a25 = 13; 
+        -:  914:
+        -:  915:	    	} else{
+     3515:  916:	    		a29 = (((((a29 + -291973) + -33784) + 320278) % 52)+ 193);
+     3515:  917:	    		a23 = (((a23 / 5) + 68698) - -233201);
+     3515:  918:	    		a4 = 1; 
+     3515:  919:	    		a25 = 10; 
+        -:  920:
+     3515:  921:	    	} return 25;
+    88975:  922:	    } else if((((((a8==15) && ((a4==1) && ((input == 4) && ((a25==9) || (a25==10))))) &&  306 < a23 ) && (a3==1)) &&   ((140 < a29) && (245 >= a29)) )){
+branch  0 taken 88975 (fallthrough)
+branch  1 taken 0
+branch  2 taken 78831 (fallthrough)
+branch  3 taken 10144
+branch  4 taken 1564 (fallthrough)
+branch  5 taken 77267
+branch  6 taken 906 (fallthrough)
+branch  7 taken 658
+branch  8 taken 906 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1564 (fallthrough)
+branch 11 taken 0
+branch 12 taken 1564 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1564 (fallthrough)
+branch 15 taken 0
+branch 16 taken 1564 (fallthrough)
+branch 17 taken 0
+     1564:  923:	    	if((a3==1)){
+branch  0 taken 1564 (fallthrough)
+branch  1 taken 0
+     1564:  924:	    	a29 = (((((a29 / 5) * 5) + 422148) % 15)- -262);
+     1564:  925:	    	a23 = ((((a23 * -2)/ 10) / 5) + -379592);
+     1564:  926:	    		a4 = 0; 
+     1564:  927:	    		a25 = 12; 
+        -:  928:
+        -:  929:	    	} else{
+        -:  930:
+    #####:  931:	    		a25 = 9; 
+        -:  932:
+     1564:  933:	    	} return 24;
+   87411*:  934:	    } else if(((( 277 < a29  && ( a23 <=  -43  && (((a25==13) && (input == 3)) && (a3==1)))) && (a8==15)) && !(a4==1))){
+branch  0 taken 27820 (fallthrough)
+branch  1 taken 59591
+branch  2 taken 1316 (fallthrough)
+branch  3 taken 26504
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1316
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    #####:  935:	    	a29 = (((a29 - 599900) - 90) + -278);
+    #####:  936:	    		a25 = 11; 
+        -:  937:
+    #####:  938:	    	 return 21;
+   87411*:  939:	    } else if((((a8==15) && ( a23 <=  -43  && ((((  ((245 < a29) && (277 >= a29))  && (a25==10)) || ((  ((140 < a29) && (245 >= a29))  && (a25==13)) || (  ((245 < a29) && (277 >= a29))  && (a25==9)))) && (input == 2)) && !(a4==1)))) && (a3==1))){
+branch  0 taken 87411 (fallthrough)
+branch  1 taken 0
+branch  2 taken 10144 (fallthrough)
+branch  3 taken 77267
+branch  4 taken 7030 (fallthrough)
+branch  5 taken 3114
+branch  6 taken 5714 (fallthrough)
+branch  7 taken 1316
+branch  8 taken 5714 (fallthrough)
+branch  9 taken 0
+branch 10 taken 7774 (fallthrough)
+branch 11 taken 2370
+branch 12 taken 744 (fallthrough)
+branch 13 taken 7030
+branch 14 taken 744 (fallthrough)
+branch 15 taken 0
+branch 16 taken 7030 (fallthrough)
+branch 17 taken 3114
+branch 18 taken 5714 (fallthrough)
+branch 19 taken 1316
+branch 20 taken 0 (fallthrough)
+branch 21 taken 5714
+branch 22 never executed (fallthrough)
+branch 23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    #####:  940:	    	a29 = ((((a29 % 15)+ 256) + -2) + -6);
+    #####:  941:	    	a23 = ((((a23 % 299846)- -300152) + 298433) * 1);
+    #####:  942:	    		a4 = 1; 
+    #####:  943:	    		a25 = 9; 
+        -:  944:
+    #####:  945:	    	 return 25;
+   87411*:  946:	    } else if((((a8==15) && ( 277 < a29  && (!(a4==1) && ( a23 <=  -43  && ((((a25==10) || (a25==11)) || (a25==12)) && (input == 2)))))) && (a3==1))){
+branch  0 taken 87411 (fallthrough)
+branch  1 taken 0
+branch  2 taken 27820 (fallthrough)
+branch  3 taken 59591
+branch  4 taken 1316 (fallthrough)
+branch  5 taken 26504
+branch  6 taken 1316 (fallthrough)
+branch  7 taken 0
+branch  8 taken 1316 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1316 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1316
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    #####:  947:	    	if( a29 <=  140 ){
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  948:	    	a29 = (((a29 - 600254) + -10) + -13);
+    #####:  949:	    	a23 = ((((a23 % 299846)+ 300152) * 1) - -232087);
+    #####:  950:	    		a4 = 1; 
+    #####:  951:	    		a25 = 11; 
+        -:  952:
+        -:  953:	    	} else{
+    #####:  954:	    		a29 = (((a29 / 5) / -5) - 29157);
+    #####:  955:	    		a23 = (((((((a23 % 90)- -134) * 9)/ 10) * 5) % 90)- -49);
+    #####:  956:	    		a4 = 1; 
+    #####:  957:	    		a25 = 12; 
+        -:  958:
+    #####:  959:	    	} return 23;
+   87411*:  960:	    } else if(((a3==1) && ((  ((-43 < a23) && (138 >= a23))  && ((a8==15) && ((a25==9) && (!(a4==1) && (input == 3))))) &&  a29 <=  140 ))){
+branch  0 taken 87411 (fallthrough)
+branch  1 taken 0
+branch  2 taken 77267 (fallthrough)
+branch  3 taken 10144
+branch  4 taken 0 (fallthrough)
+branch  5 taken 77267
+branch  6 never executed (fallthrough)
+branch  7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed
+        -:  961:
+    #####:  962:	    		a25 = 10; 
+        -:  963:
+    #####:  964:	    	 return -1;
+    87411:  965:	    } else if(((a4==1) && (  ((140 < a29) && (245 >= a29))  && ((a3==1) && ( 306 < a23  && (((input == 3) && ((a25==11) || (a25==12))) && (a8==15))))))){
+branch  0 taken 77267 (fallthrough)
+branch  1 taken 10144
+branch  2 taken 54453 (fallthrough)
+branch  3 taken 22814
+branch  4 taken 10558 (fallthrough)
+branch  5 taken 43895
+branch  6 taken 10558 (fallthrough)
+branch  7 taken 0
+branch  8 taken 10558 (fallthrough)
+branch  9 taken 0
+branch 10 taken 4461 (fallthrough)
+branch 11 taken 6097
+branch 12 taken 4461 (fallthrough)
+branch 13 taken 0
+branch 14 taken 1455 (fallthrough)
+branch 15 taken 3006
+branch 16 taken 1455 (fallthrough)
+branch 17 taken 0
+     1455:  966:	    	a29 = (((a29 - -21719) / 5) * 5);
+     1455:  967:	    		a25 = 10; 
+        -:  968:
+     1455:  969:	    	 return 26;
+    85956:  970:	    } else if((((a4==1) && ((a3==1) && ((a25==13) && ( 306 < a23  && ((input == 6) && (a8==15)))))) &&  a29 <=  140 )){
+branch  0 taken 75812 (fallthrough)
+branch  1 taken 10144
+branch  2 taken 75812 (fallthrough)
+branch  3 taken 0
+branch  4 taken 7834 (fallthrough)
+branch  5 taken 67978
+branch  6 taken 7834 (fallthrough)
+branch  7 taken 0
+branch  8 taken 31 (fallthrough)
+branch  9 taken 7803
+branch 10 taken 31 (fallthrough)
+branch 11 taken 0
+branch 12 taken 31 (fallthrough)
+branch 13 taken 0
+       31:  971:	    	a29 = (((((a29 % 15)- -260) / 5) + -306402) - -306603);
+       31:  972:	    	a23 = (((((a23 % 90)- -12) / 5) * 9)/ 10);
+       31:  973:	    		a25 = 9; 
+        -:  974:
+       31:  975:	    	 return -1;
+   85925*:  976:	    } else if((((!(a4==1) && (((input == 6) && (((a25==9) &&  277 < a29 ) || ((  ((245 < a29) && (277 >= a29))  && (a25==12)) || ((a25==13) &&   ((245 < a29) && (277 >= a29)) )))) && (a3==1))) &&  a23 <=  -43 ) && (a8==15))){
+branch  0 taken 10144 (fallthrough)
+branch  1 taken 75781
+branch  2 taken 3515 (fallthrough)
+branch  3 taken 6629
+branch  4 taken 658 (fallthrough)
+branch  5 taken 2857
+branch  6 taken 0 (fallthrough)
+branch  7 taken 658
+branch  8 taken 2857 (fallthrough)
+branch  9 taken 0
+branch 10 taken 2857 (fallthrough)
+branch 11 taken 0
+branch 12 taken 0 (fallthrough)
+branch 13 taken 2857
+branch 14 never executed (fallthrough)
+branch 15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed
+branch 20 taken 3515 (fallthrough)
+branch 21 taken 0
+branch 22 taken 3515 (fallthrough)
+branch 23 taken 0
+branch 24 taken 3515 (fallthrough)
+branch 25 taken 0
+     3515:  977:	    	if((a4==1)){
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3515
+    #####:  978:	    	a29 = ((((a29 / 5) * 4) / 5) + 430216);
+    #####:  979:	    		a25 = 9; 
+        -:  980:
+        -:  981:	    	} else{
+     3515:  982:	    		a29 = (((((a29 % 52)+ 144) + -3) + -456403) + 456445);
+     3515:  983:	    		a23 = ((((a23 - 0) % 299846)+ 300152) - -259793);
+     3515:  984:	    		a4 = 1; 
+     3515:  985:	    		a25 = 9; 
+        -:  986:
+     3515:  987:	    	} return 24;
+   82410*:  988:	    } else if(((a8==15) && (( a23 <=  -43  && ( a29 <=  140  && (((input == 5) && ((a25==12) || (a25==13))) && !(a4==1)))) && (a3==1)))){
+branch  0 taken 82410 (fallthrough)
+branch  1 taken 0
+branch  2 taken 6629 (fallthrough)
+branch  3 taken 75781
+branch  4 taken 2370 (fallthrough)
+branch  5 taken 4259
+branch  6 taken 673 (fallthrough)
+branch  7 taken 1697
+branch  8 taken 0 (fallthrough)
+branch  9 taken 673
+branch 10 never executed (fallthrough)
+branch 11 never executed
+branch 12 taken 673 (fallthrough)
+branch 13 taken 0
+branch 14 taken 673 (fallthrough)
+branch 15 taken 0
+      673:  989:	    	a29 = ((((a29 % 15)+ 260) - 0) * 1);
+      673:  990:	    	a23 = ((((a23 % 299846)- -300152) + 134725) - -121532);
+      673:  991:	    		a4 = 1; 
+      673:  992:	    		a25 = 9; 
+        -:  993:
+      673:  994:	    	 return 24;
+    81737:  995:	    } else if((((((((  ((245 < a29) && (277 >= a29))  && (a25==10)) || (((a25==13) &&   ((140 < a29) && (245 >= a29)) ) || (  ((245 < a29) && (277 >= a29))  && (a25==9)))) && (input == 3)) && (a3==1)) && (a8==15)) && (a4==1)) &&  306 < a23 )){
+branch  0 taken 47410 (fallthrough)
+branch  1 taken 34327
+branch  2 taken 20248 (fallthrough)
+branch  3 taken 27162
+branch  4 taken 15558 (fallthrough)
+branch  5 taken 4690
+branch  6 taken 7803 (fallthrough)
+branch  7 taken 69244
+branch  8 taken 6326 (fallthrough)
+branch  9 taken 1477
+branch 10 taken 314 (fallthrough)
+branch 11 taken 6012
+branch 12 taken 42720 (fallthrough)
+branch 13 taken 28315
+branch 14 taken 15558 (fallthrough)
+branch 15 taken 27162
+branch 16 taken 9254 (fallthrough)
+branch 17 taken 6304
+branch 18 taken 9978 (fallthrough)
+branch 19 taken 9978
+branch 20 taken 9978 (fallthrough)
+branch 21 taken 0
+branch 22 taken 9978 (fallthrough)
+branch 23 taken 0
+branch 24 taken 9978 (fallthrough)
+branch 25 taken 0
+branch 26 taken 9978 (fallthrough)
+branch 27 taken 0
+     9978:  996:	    	a29 = (((a29 / 5) - -221) - 1);
+     9978:  997:	    		a25 = 9; 
+        -:  998:
+     9978:  999:	    	 return 25;
+    71759: 1000:	    } else if((((a3==1) && ((((!(a4==1) && (input == 3)) && (a25==12)) &&  a23 <=  -43 ) &&   ((140 < a29) && (245 >= a29)) )) && (a8==15))){
+branch  0 taken 71759 (fallthrough)
+branch  1 taken 0
+branch  2 taken 5956 (fallthrough)
+branch  3 taken 65803
+branch  4 taken 362 (fallthrough)
+branch  5 taken 5594
+branch  6 taken 362 (fallthrough)
+branch  7 taken 0
+branch  8 taken 362 (fallthrough)
+branch  9 taken 0
+branch 10 taken 362 (fallthrough)
+branch 11 taken 0
+branch 12 taken 362 (fallthrough)
+branch 13 taken 0
+branch 14 taken 362 (fallthrough)
+branch 15 taken 0
+      362: 1001:	    	a29 = (((a29 - -578317) / 5) - -263649);
+      362: 1002:	    	a23 = ((((((a23 % 299846)- -300152) * 10)/ 9) / 5) + 377459);
+      362: 1003:	    		a4 = 1; 
+      362: 1004:	    		a25 = 11; 
+        -: 1005:
+      362: 1006:	    	 return 23;
+    71397: 1007:	    } else if(( a29 <=  140  && ((a8==15) && ((a3==1) && (( 306 < a23  && (((a25==12) || ((a25==10) || (a25==11))) && (input == 5))) && (a4==1)))))){
+branch  0 taken 24480 (fallthrough)
+branch  1 taken 46917
+branch  2 taken 24480 (fallthrough)
+branch  3 taken 0
+branch  4 taken 24480 (fallthrough)
+branch  5 taken 0
+branch  6 taken 22783 (fallthrough)
+branch  7 taken 1697
+branch  8 taken 22783 (fallthrough)
+branch  9 taken 0
+branch 10 taken 1477 (fallthrough)
+branch 11 taken 21306
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1477
+branch 14 taken 11196 (fallthrough)
+branch 15 taken 10110
+branch 16 taken 11196 (fallthrough)
+branch 17 taken 0
+    11196: 1008:	    	a29 = (((((a29 / 5) * 4) + 211235) % 15)- -260);
+    11196: 1009:	    		a25 = 10; 
+        -: 1010:
+    11196: 1011:	    	 return 21;
+    60201: 1012:	    } else if(((a3==1) && (((a8==15) && ((((input == 4) && ((a25==10) || (a25==11))) &&  a29 <=  140 ) &&  a23 <=  -43 )) && !(a4==1)))){
+branch  0 taken 60201 (fallthrough)
+branch  1 taken 0
+branch  2 taken 60201 (fallthrough)
+branch  3 taken 0
+branch  4 taken 438 (fallthrough)
+branch  5 taken 59763
+branch  6 taken 88 (fallthrough)
+branch  7 taken 350
+branch  8 taken 88 (fallthrough)
+branch  9 taken 0
+branch 10 taken 438 (fallthrough)
+branch 11 taken 0
+branch 12 taken 438 (fallthrough)
+branch 13 taken 0
+branch 14 taken 438 (fallthrough)
+branch 15 taken 0
+      438: 1013:	    	a29 = (((a29 / 5) + 364725) - -148383);
+      438: 1014:	    	a23 = (((((a23 - 0) - 0) - 0) % 299846)+ 300152);
+      438: 1015:	    		a4 = 1; 
+      438: 1016:	    		a25 = 10; 
+        -: 1017:
+      438: 1018:	    	 return 21;
+    59763: 1019:	    } else if((((a3==1) && (( 306 < a23  && (((input == 3) && ((a25==11) || ((a25==9) || (a25==10)))) && (a8==15))) && (a4==1))) &&  277 < a29 )){
+branch  0 taken 59763 (fallthrough)
+branch  1 taken 0
+branch  2 taken 54607 (fallthrough)
+branch  3 taken 5156
+branch  4 taken 13095 (fallthrough)
+branch  5 taken 41512
+branch  6 taken 8833 (fallthrough)
+branch  7 taken 4262
+branch  8 taken 4302 (fallthrough)
+branch  9 taken 4531
+branch 10 taken 4302 (fallthrough)
+branch 11 taken 0
+branch 12 taken 13095 (fallthrough)
+branch 13 taken 0
+branch 14 taken 13095 (fallthrough)
+branch 15 taken 0
+branch 16 taken 13095 (fallthrough)
+branch 17 taken 0
+        -: 1020:
+    13095: 1021:	    		a25 = 9; 
+        -: 1022:
+    13095: 1023:	    	 return 21;
+    46668: 1024:	    } else if(((a25==12) && (  ((140 < a29) && (245 >= a29))  && (((!(a4==1) && ((input == 5) && (a3==1))) && (a8==15)) &&  a23 <=  -43 )))){
+branch  0 taken 8131 (fallthrough)
+branch  1 taken 38537
+branch  2 taken 7458 (fallthrough)
+branch  3 taken 673
+branch  4 taken 1909 (fallthrough)
+branch  5 taken 5549
+branch  6 taken 382 (fallthrough)
+branch  7 taken 1527
+branch  8 taken 26 (fallthrough)
+branch  9 taken 356
+branch 10 taken 26 (fallthrough)
+branch 11 taken 0
+branch 12 taken 26 (fallthrough)
+branch 13 taken 0
+branch 14 taken 26 (fallthrough)
+branch 15 taken 0
+       26: 1025:	    	a29 = ((((a29 - -297437) * 2) % 15)- -247);
+       26: 1026:	    	a23 = ((((a23 % 83)- -242) + 1) + -2);
+       26: 1027:	    		a4 = 1; 
+       26: 1028:	    		a25 = 9; 
+        -: 1029:
+       26: 1030:	    	 return -1;
+        -: 1031:	    } 
+    46642: 1032:	    return -2;
+        -: 1033:	}
+        -: 1034:
+        -: 1035:int input, output;
+        -: 1036:		
+function main called 44125 returned 100% blocks executed 100%
+    44125: 1037:int main()
+        -: 1038:{ 
+    44125: 1039:kappa = 0;
+        -: 1040:    // default output
+    44125: 1041:    output = -1;
+        -: 1042:
+        -: 1043:    // main i/o-loop
+        -: 1044:int symb;
+   308875: 1045:   for (int FLAG=0;FLAG<BOUND;FLAG++)
+branch  0 taken 264750
+branch  1 taken 44125 (fallthrough)
+        -: 1046:    {
+   264750: 1047:    klee_make_symbolic(&symb, sizeof(int ), "symb");     
+call    0 returned 264750
+        -: 1048:
+        -: 1049:        // operate eca engine
+   264750: 1050:        output = calculate_output(symb);
+call    0 returned 264750
+        -: 1051:		
+        -: 1052:    }
+        -: 1053:    
+    44125: 1054: return 0;
+        -: 1055:
+        -: 1056:}
+        -: 1057:
+        -: 1058: 

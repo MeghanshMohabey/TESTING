@@ -1,0 +1,111 @@
+95Wtest12-B50/Wtest12-B50.c:485:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a8==17)){
+                    ~~^~~~
+95Wtest12-B50/Wtest12-B50.c:485:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a8==17)){
+                   ~  ^   ~
+95Wtest12-B50/Wtest12-B50.c:485:13: note: use '=' to turn this equality comparison into an assignment
+                if((a8==17)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:495:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a8==16)){
+                    ~~^~~~
+95Wtest12-B50/Wtest12-B50.c:495:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a8==16)){
+                   ~  ^   ~
+95Wtest12-B50/Wtest12-B50.c:495:13: note: use '=' to turn this equality comparison into an assignment
+                if((a8==16)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:594:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a3==1)){
+                    ~~^~~
+95Wtest12-B50/Wtest12-B50.c:594:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a3==1)){
+                   ~  ^  ~
+95Wtest12-B50/Wtest12-B50.c:594:13: note: use '=' to turn this equality comparison into an assignment
+                if((a3==1)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:611:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a4==1)){
+                    ~~^~~
+95Wtest12-B50/Wtest12-B50.c:611:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a4==1)){
+                   ~  ^  ~
+95Wtest12-B50/Wtest12-B50.c:611:13: note: use '=' to turn this equality comparison into an assignment
+                if((a4==1)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:725:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a25==9)){
+                    ~~~^~~
+95Wtest12-B50/Wtest12-B50.c:725:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a25==9)){
+                   ~   ^  ~
+95Wtest12-B50/Wtest12-B50.c:725:14: note: use '=' to turn this equality comparison into an assignment
+                if((a25==9)){
+                       ^~
+                       =
+95Wtest12-B50/Wtest12-B50.c:765:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a8==17)){
+                    ~~^~~~
+95Wtest12-B50/Wtest12-B50.c:765:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a8==17)){
+                   ~  ^   ~
+95Wtest12-B50/Wtest12-B50.c:765:13: note: use '=' to turn this equality comparison into an assignment
+                if((a8==17)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:812:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a8==15)){
+                    ~~^~~~
+95Wtest12-B50/Wtest12-B50.c:812:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a8==15)){
+                   ~  ^   ~
+95Wtest12-B50/Wtest12-B50.c:812:13: note: use '=' to turn this equality comparison into an assignment
+                if((a8==15)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:873:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a4==1)){
+                    ~~^~~
+95Wtest12-B50/Wtest12-B50.c:873:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a4==1)){
+                   ~  ^  ~
+95Wtest12-B50/Wtest12-B50.c:873:13: note: use '=' to turn this equality comparison into an assignment
+                if((a4==1)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:911:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a8==16)){
+                    ~~^~~~
+95Wtest12-B50/Wtest12-B50.c:911:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a8==16)){
+                   ~  ^   ~
+95Wtest12-B50/Wtest12-B50.c:911:13: note: use '=' to turn this equality comparison into an assignment
+                if((a8==16)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:923:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a3==1)){
+                    ~~^~~
+95Wtest12-B50/Wtest12-B50.c:923:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a3==1)){
+                   ~  ^  ~
+95Wtest12-B50/Wtest12-B50.c:923:13: note: use '=' to turn this equality comparison into an assignment
+                if((a3==1)){
+                      ^~
+                      =
+95Wtest12-B50/Wtest12-B50.c:977:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a4==1)){
+                    ~~^~~
+95Wtest12-B50/Wtest12-B50.c:977:13: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a4==1)){
+                   ~  ^  ~
+95Wtest12-B50/Wtest12-B50.c:977:13: note: use '=' to turn this equality comparison into an assignment
+                if((a4==1)){
+                      ^~
+                      =
+11 warnings generated.

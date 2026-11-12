@@ -1,0 +1,10 @@
+Testcase_ID,File_Name,File_Size_Bytes,Preview_Content
+1,id:000000,time:0,execs:0,orig:seed.txt,12,"Defa1Dee 2"
+2,id:000001,src:000000,time:71,execs:26,op:quick,pos:5,12,"Defa1zDee 2"
+3,id:000002,src:000000,time:116,execs:39,op:quick,pos:11,+cov,12,"Defa1Dee 2ê"
+4,id:000003,src:000000,time:1061,execs:316,op:havoc,rep:4,+cov,4,"D@"
+5,id:000004,src:000000,time:1102,execs:329,op:havoc,rep:1,12,"efa1Dee 2"
+6,id:000005,src:000000,time:1203,execs:360,op:havoc,rep:1,20,"Defa1Defa12Dee 2"
+7,id:000006,src:000000,time:1362,execs:408,op:havoc,rep:4,31,"Defae 2a1Da 2a1ee 2ee 2"
+8,id:000007,src:000000,time:1514,execs:455,op:havoc,rep:4,+cov,12,"ewa1DeD@D"
+9,id:000008,src:000000,time:3936,execs:1158,op:havoc,rep:1,+cov,20,"DefaDee 2"

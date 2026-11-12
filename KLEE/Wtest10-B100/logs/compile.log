@@ -1,0 +1,101 @@
+86Wtest10-B100/Wtest10-B100.c:81:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a19==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:81:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a19==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:81:14: note: use '=' to turn this equality comparison into an assignment
+                if((a19==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:89:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a28==10)){
+                    ~~~^~~~
+86Wtest10-B100/Wtest10-B100.c:89:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a28==10)){
+                   ~   ^   ~
+86Wtest10-B100/Wtest10-B100.c:89:14: note: use '=' to turn this equality comparison into an assignment
+                if((a28==10)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:209:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a11==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:209:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a11==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:209:14: note: use '=' to turn this equality comparison into an assignment
+                if((a11==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:244:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a25==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:244:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a25==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:244:14: note: use '=' to turn this equality comparison into an assignment
+                if((a25==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:268:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a19==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:268:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a19==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:268:14: note: use '=' to turn this equality comparison into an assignment
+                if((a19==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:304:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a11==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:304:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a11==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:304:14: note: use '=' to turn this equality comparison into an assignment
+                if((a11==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:321:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a25==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:321:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a25==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:321:14: note: use '=' to turn this equality comparison into an assignment
+                if((a25==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:338:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a11==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:338:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a11==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:338:14: note: use '=' to turn this equality comparison into an assignment
+                if((a11==1)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:344:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a17==7)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:344:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a17==7)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:344:14: note: use '=' to turn this equality comparison into an assignment
+                if((a17==7)){
+                       ^~
+                       =
+86Wtest10-B100/Wtest10-B100.c:387:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+                if((a25==1)){
+                    ~~~^~~
+86Wtest10-B100/Wtest10-B100.c:387:14: note: remove extraneous parentheses around the comparison to silence this warning
+                if((a25==1)){
+                   ~   ^  ~
+86Wtest10-B100/Wtest10-B100.c:387:14: note: use '=' to turn this equality comparison into an assignment
+                if((a25==1)){
+                       ^~
+                       =
+10 warnings generated.

@@ -1,0 +1,15 @@
+File 'replay-source/97Wtest12-B500_replay.c'
+Lines executed:54.01% of 785
+Branches executed:77.45% of 3300
+Taken at least once:60.48% of 3300
+Calls executed:100.00% of 2
+Creating '97Wtest12-B500_replay.c.gcov'
+
+File 'replay-source/klee/klee.h'
+Lines executed:50.00% of 10
+Branches executed:40.00% of 20
+Taken at least once:25.00% of 20
+Calls executed:50.00% of 4
+Creating 'klee.h.gcov'
+
+Lines executed:53.96% of 795
