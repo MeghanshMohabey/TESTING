@@ -1,0 +1,4 @@
+Prob11-REACH-P-SEQ-B4/Prob11-REACH-P-SEQ-B4.c:635:2: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+        }
+        ^
+1 warning generated.

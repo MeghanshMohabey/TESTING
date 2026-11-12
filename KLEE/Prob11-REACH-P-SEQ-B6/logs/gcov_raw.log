@@ -1,0 +1,15 @@
+File 'replay-source/Prob11-REACH-P-SEQ-B6_replay.c'
+Lines executed:70.70% of 1075
+Branches executed:72.73% of 1782
+Taken at least once:48.88% of 1782
+Calls executed:76.19% of 63
+Creating 'Prob11-REACH-P-SEQ-B6_replay.c.gcov'
+
+File 'replay-source/klee/klee.h'
+Lines executed:50.00% of 10
+Branches executed:40.00% of 20
+Taken at least once:20.00% of 20
+Calls executed:25.00% of 4
+Creating 'klee.h.gcov'
+
+Lines executed:70.51% of 1085

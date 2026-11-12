@@ -1,0 +1,11 @@
+test_case,ktest_file,num_args,num_objects,object_names,object_sizes,values,raw_hex
+test000001,test000001.ktest,1,1,symb,4,0,00000000
+test000002,test000002.ktest,1,2,symb;symb,4;4,9 0,09000000;00000000
+test000003,test000003.ktest,1,2,symb;symb,4;4,1 0,01000000;00000000
+test000004,test000004.ktest,1,2,symb;symb,4;4,9 2,09000000;02000000
+test000005,test000005.ktest,1,2,symb;symb,4;4,1 9,01000000;09000000
+test000006,test000006.ktest,1,2,symb;symb,4;4,1 1,01000000;01000000
+test000007,test000007.ktest,1,2,symb;symb,4;4,9 7,09000000;07000000
+test000008,test000008.ktest,1,2,symb;symb,4;4,9 3,09000000;03000000
+test000009,test000009.ktest,1,2,symb;symb,4;4,9 5,09000000;05000000
+test000010,test000010.ktest,1,2,symb;symb,4;4,9 1,09000000;01000000
