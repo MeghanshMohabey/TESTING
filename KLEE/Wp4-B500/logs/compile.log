@@ -1,0 +1,11 @@
+77Wp4-B500/Wp4-B500.c:8719:11: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if((cf==1)) 
+        ~~^~~
+77Wp4-B500/Wp4-B500.c:8719:11: note: remove extraneous parentheses around the comparison to silence this warning
+    if((cf==1)) 
+       ~  ^  ~
+77Wp4-B500/Wp4-B500.c:8719:11: note: use '=' to turn this equality comparison into an assignment
+    if((cf==1)) 
+          ^~
+          =
+1 warning generated.

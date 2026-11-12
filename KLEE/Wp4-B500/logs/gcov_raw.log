@@ -1,0 +1,15 @@
+File 'replay-source/77Wp4-B500_replay.c'
+Lines executed:97.82% of 6329
+Branches executed:87.19% of 12244
+Taken at least once:51.06% of 12244
+Calls executed:98.08% of 104
+Creating '77Wp4-B500_replay.c.gcov'
+
+File 'replay-source/klee/klee.h'
+Lines executed:50.00% of 10
+Branches executed:40.00% of 20
+Taken at least once:25.00% of 20
+Calls executed:50.00% of 4
+Creating 'klee.h.gcov'
+
+Lines executed:97.74% of 6339
